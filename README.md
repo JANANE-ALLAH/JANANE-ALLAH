@@ -115,7 +115,7 @@ researcher = {
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamed_JANANE_ALLAH-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mohamed-janane-allah)
 [![Email](https://img.shields.io/badge/Email-mohamedjanane147@gmail.com-EA4335?style=for-the-badge&logo=gmail)](mailto:mohamedjanane147@gmail.com)
-[![Medium](https://img.shields.io/badge/Medium-Blog-000000?style=for-the-badge&logo=medium)](https://medium.com/@mohamedjanane147)
+[![Medium](https://img.shields.io/badge/Medium-Blog-000000?style=for-the-badge&logo=medium)](https://medium.com/@M.janane_allah)
 
 📍 FSTM — BP 146, Mohammedia 28806, Maroc
 
