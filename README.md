@@ -43,7 +43,7 @@ researcher = {
 ![Nonlinear](https://img.shields.io/badge/Dynamique-Non_Linéaire-purple?style=flat-square)
 ![MCDM](https://img.shields.io/badge/MCDM-TOPSIS_AHP-yellow?style=flat-square)
 ![LSTM](https://img.shields.io/badge/Deep_Learning-LSTM_pour_FGM-darkred?style=flat-square)
-![Vibration](https://img.shields.io/badge/libre-force-resonnance?style=flat-square)
+![vibration](https://img.shields.io/badge/vibration-libre_force_resonnance-orange?style=flat-square)
 
 
 </div>
