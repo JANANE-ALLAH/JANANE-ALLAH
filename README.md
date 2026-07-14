@@ -49,6 +49,10 @@ researcher = {
 </div>
 
 ---
+## 📄Cours enseignés à FSTM
+![Cours](https://img.shields.io/badge/Licence_Génie_Mécanique-blue?style=flat-square)
+![Cours](https://img.shields.io/badge/Master_Matériaux-purple?style=flat-square)
+
 
 ## 📄 Publications récentes
 
@@ -122,5 +126,6 @@ researcher = {
 📍 FSTM — BP 146, Mohammedia 28806, Maroc
 
 ![Profile views](https://komarev.com/ghpvc/?username=JANANE-ALLAH&color=2E86AB&style=flat-square&label=Visites+du+profil)
+
 
 </div>
