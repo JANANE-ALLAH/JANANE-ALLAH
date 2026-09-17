@@ -50,7 +50,7 @@ researcher = {
 
 ---
 ## 📄Cours enseignés à FSTM
-![Cours](https://img.shields.io/badge/Licence_Génie_Mécanique-blue?style=flat-square)
+[![Licence Génie Mécanique](https://img.shields.io/badge/Licence_Génie_Mécanique-Méthodes_Numériques_pour_la_Mécanique-blue?style=flat-square)](cours/licence-genie-mecanique.md)
 ![Cours](https://img.shields.io/badge/Master_Matériaux-purple?style=flat-square)
 
 ## 📄Cours enseignés à ENSAM
