@@ -27,15 +27,16 @@ ordinaires et aux dérivées partielles, avec mise en œuvre sur ordinateur.
 
 ## 📚 Plan du cours
 
-| # | Chapitre | 📄 Cours | 📝 TD | 🎥 Vidéo |
-|---|----------|:--------:|:-----:|:--------:|
-| 1 | *À définir* | — | — | — |
-| 2 | *À définir* | — | — | — |
-| 3 | *À définir* | — | — | — |
-| 4 | *À définir* | — | — | — |
-| 5 | *À définir* | — | — | — |
+| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
+|---|----------|:--------:|:-----:|:-----:|:--------:|
+| 1 | *À définir* | — | — | — | 🚧 |
+| 2 | *À définir* | — | — | — | 🚧 |
+| 3 | *À définir* | — | — | — | 🚧 |
+| 4 | *À définir* | — | — | — | 🚧 |
+| 5 | *À définir* | — | — | — | 🚧 |
 
-> 🚧 Les chapitres, TD et vidéos sont ajoutés progressivement.
+> 📘 **Cours, TD et TP** : ajoutés progressivement.
+> 🎥 **Vidéos** : 🚧 mise en ligne prévue d'ici fin septembre 2026.
 
 ---
 
@@ -48,6 +49,7 @@ cours/
     ├── chapitre-1/
     │   ├── cours.pdf
     │   ├── td.pdf
+    │   ├── tp.pdf
     │   └── corrige.pdf
     └── chapitre-2/
         └── ...
