@@ -49,14 +49,25 @@ researcher = {
 </div>
 
 ---
-## 📄Cours enseignés à FSTM
-[![Licence Génie Mécanique](https://img.shields.io/badge/Licence_Génie_Mécanique-Méthodes_Numériques_pour_la_Mécanique-blue?style=flat-square)](cours/licence-genie-mecanique.md)
-![Cours](https://img.shields.io/badge/Master_Matériaux-purple?style=flat-square)
+## 📚 Cours enseignés
 
-## 📄Cours enseignés à ENSAM
-![Cours](https://img.shields.io/badge/License_Professionnelle-blue?style=flat-square)
-![Cours](https://img.shields.io/badge/Master_Professionnel-purple?style=flat-square)
+<div align="center">
 
+**FSTM — Université Hassan II de Casablanca**
+
+[![Licence Génie Mécanique](https://img.shields.io/badge/Licence_Génie_Mécanique-Méthodes_Numériques_pour_la_Mécanique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-genie-mecanique.md)
+![Master Matériaux](https://img.shields.io/badge/Master_Matériaux-6A4C93?style=for-the-badge)
+
+**ENSAM Casablanca**
+
+![Licence Professionnelle](https://img.shields.io/badge/Licence_Professionnelle-2E86AB?style=for-the-badge)
+![Master Professionnel](https://img.shields.io/badge/Master_Professionnel-6A4C93?style=for-the-badge)
+
+📘 *Les badges colorés en bleu vif donnent accès aux supports (cours, TD, TP).*
+
+</div>
+
+---
 
 ## 📄 Publications récentes
 
