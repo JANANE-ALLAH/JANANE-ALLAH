@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=M%C3%A9thodes+Num%C3%A9riques+pour+la+M%C3%A9canique;LST+G%C3%A9nie+M%C3%A9canique+%E2%80%94+FSTM%2C+UH2C;12+chapitres+%C2%B7+11+TD+%C2%B7+6+TP+MATLAB" alt="Methodes Numeriques pour la Mecanique" />
 
-**Pr. Mohamed JANANE ALLAH**, PhD — Maître de Conférence
+**Pr. Mohamed JANANE ALLAH**, PhD — Maître de Conférence<br/>
 Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de Casablanca
 
 <br/>
