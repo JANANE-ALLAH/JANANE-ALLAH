@@ -163,6 +163,11 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
 qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.
 
+> 🔒 **Accès réservé aux étudiants de l'Université Hassan II de Casablanca.**
+> Connectez-vous à votre **compte universitaire** avant d'ouvrir un lien vidéo : depuis un
+> compte personnel, Google affichera une demande d'autorisation. Si l'accès vous est refusé
+> alors que vous êtes bien inscrit au module, écrivez-moi.
+
 ---
 
 ## 📫 Contact
