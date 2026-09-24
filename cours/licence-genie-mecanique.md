@@ -46,7 +46,7 @@ finies, et **équations différentielles ordinaires**.
 
 | # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
 |:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view?usp=drive_link) |
+| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view) |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
