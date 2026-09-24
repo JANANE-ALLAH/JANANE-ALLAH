@@ -13,6 +13,8 @@ Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de C
 ![TP](https://img.shields.io/badge/TP-6-C1121F?style=for-the-badge)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
 
+[![Pourquoi ce module](https://img.shields.io/badge/▶_Pourquoi_ce_module_%3F-Regarder_la_vidéo_d'accroche-C1121F?style=for-the-badge)](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)
+
 [**Plan du cours**](#-plan-du-cours) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
@@ -181,6 +183,9 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 ## 🎥 Vidéos
 
 🎬 **1 capsule(s) en ligne** sur 12 chapitres.
+
+🎯 **[Pourquoi ce module ?](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)** — la vidéo d'accroche à regarder avant tout le reste :
+où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.
 
 Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
 qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.

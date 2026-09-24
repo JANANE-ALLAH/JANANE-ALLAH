@@ -39,6 +39,9 @@ VIDEOS = {
 }
 
 
+# Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
+MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
+
 def video(num):
     url = VIDEOS.get(num)
     return "[▶ Voir](%s)" % url if url else "🚧"
@@ -98,6 +101,8 @@ Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de C
 ![TD](https://img.shields.io/badge/TD-11-6A4C93?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-6-C1121F?style=for-the-badge)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
+
+[![Pourquoi ce module](https://img.shields.io/badge/▶_Pourquoi_ce_module_%3F-Regarder_la_vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
 
 [**Plan du cours**](#-plan-du-cours) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
 
@@ -160,6 +165,9 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 
 %(videos)s
 
+🎯 **[Pourquoi ce module ?](%(motiv)s)** — la vidéo d'accroche à regarder avant tout le reste :
+où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.
+
 Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
 qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.
 
@@ -183,6 +191,6 @@ qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disp
 """
 
 compteur = u"🎬 **%d capsule(s) en ligne** sur %d chapitres." % (len(VIDEOS), len(CH))
-page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur)
+page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur).replace("%(motiv)s", MOTIVATION)
 io.open(os.path.join(ROOT, "licence-genie-mecanique.md"), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %d lignes" % page.count("\n"))
