@@ -33,6 +33,17 @@ CH = {
         "L'évolution temporelle des systèmes à nombre fini de degrés de liberté : oscillateurs, mécanismes, circuits équivalents."),
 }
 
+# Liens video par chapitre (YouTube, Google Drive...). Chapitre absent = 🚧 a venir.
+VIDEOS = {
+ "00": "https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view?usp=drive_link",
+}
+
+
+def video(num):
+    url = VIDEOS.get(num)
+    return "[▶ Voir](%s)" % url if url else "🚧"
+
+
 PARTS = [
  ("🚩", "Introduction", ["00"], ""),
  ("🧮", "Partie I — Systèmes algébriques", ["01", "02", "03", "04"],
@@ -62,8 +73,9 @@ for icon, title, nums, blurb in PARTS:
     body.append("| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |")
     body.append("|:-:|----------|:--------:|:-----:|:-----:|:--------:|")
     for n in nums:
-        body.append("| **%s** | %s | %s | %s | %s | 🚧 |" % (
-            n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP")))
+        body.append("| **%s** | %s | %s | %s | %s | %s |" % (
+            n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP"),
+            video(n)))
     body.append("")
     body.append("<details>\n<summary><i>Descriptif des chapitres</i></summary>\n<br/>\n")
     for n in nums:
@@ -146,8 +158,10 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 
 ## 🎥 Vidéos
 
-🚧 Les capsules vidéo de chaque chapitre sont en préparation — mise en ligne prévue **d'ici fin septembre 2026**.
-La colonne 🎥 du plan sera remplie au fur et à mesure.
+%(videos)s
+
+Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
+qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.
 
 ---
 
@@ -163,6 +177,7 @@ La colonne 🎥 du plan sera remplie au fur et à mesure.
 </div>
 """
 
-page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree)
+compteur = u"🎬 **%d capsule(s) en ligne** sur %d chapitres." % (len(VIDEOS), len(CH))
+page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur)
 io.open(os.path.join(ROOT, "licence-genie-mecanique.md"), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %d lignes" % page.count("\n"))

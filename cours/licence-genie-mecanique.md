@@ -46,7 +46,7 @@ finies, et **équations différentielles ordinaires**.
 
 | # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
 |:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | 🚧 |
+| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view?usp=drive_link) |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -180,8 +180,10 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 
 ## 🎥 Vidéos
 
-🚧 Les capsules vidéo de chaque chapitre sont en préparation — mise en ligne prévue **d'ici fin septembre 2026**.
-La colonne 🎥 du plan sera remplie au fur et à mesure.
+🎬 **1 capsule(s) en ligne** sur 12 chapitres.
+
+Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
+qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.
 
 ---
 
