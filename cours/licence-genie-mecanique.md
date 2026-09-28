@@ -65,7 +65,7 @@ Résoudre *Ax = b*, puis *F(x) = 0* : les briques sur lesquelles repose tout le 
 
 | # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
 |:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **01** | Rappels numériques : erreurs, normes et conditionnement | [PDF](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf) | [TD](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf) | — | 🚧 |
+| **01** | Rappels numériques : erreurs, normes et conditionnement | [PDF](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf) | [TD](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf) | — | [▶ Voir](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view) |
 | **02** | Systèmes linéaires : méthodes directes | [PDF](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf) | [TD](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf) | [TP1](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf) | 🚧 |
 | **03** | Systèmes linéaires : méthodes itératives | [PDF](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf) | [TD](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf) | [TP2](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf) | 🚧 |
 | **04** | Systèmes non linéaires | [PDF](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf) | [TD](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf) | [TP3](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf) | 🚧 |
@@ -182,7 +182,7 @@ Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_eno
 
 ## 🎥 Vidéos
 
-🎬 **1 capsule(s) en ligne** sur 12 chapitres.
+🎬 **2 capsule(s) en ligne** sur 12 chapitres.
 
 🎯 **[Pourquoi ce module ?](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)** — la vidéo d'accroche à regarder avant tout le reste :
 où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.

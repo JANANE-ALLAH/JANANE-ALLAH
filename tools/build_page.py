@@ -36,6 +36,7 @@ CH = {
 # Liens video par chapitre (YouTube, Google Drive...). Chapitre absent = 🚧 a venir.
 VIDEOS = {
  "00": "https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view",
+ "01": "https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view",
 }
 
 
