@@ -40,13 +40,30 @@ VIDEOS = {
  "02": "https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view",
 }
 
+# Videos d atelier TP (ex. 7b_Video_TP1_atelier_MATLAB), affichees a cote de
+# la video de cours du meme chapitre. Cle = numero du chapitre, valeur =
+# (numero du TP, url).
+VIDEOS_TP = {
+ "02": ("TP1", "https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view"),
+}
+
 
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
 def video(num):
-    url = VIDEOS.get(num)
-    return "[▶ Voir](%s)" % url if url else "🚧"
+    cours = VIDEOS.get(num)
+    tp = VIDEOS_TP.get(num)
+    if not cours and not tp:
+        return "🚧"
+    parts = []
+    if cours:
+        label = "▶ Cours" if tp else "▶ Voir"
+        parts.append("[%s](%s)" % (label, cours))
+    if tp:
+        tp_num, tp_url = tp
+        parts.append("[▶ %s — atelier MATLAB](%s)" % (tp_num, tp_url))
+    return "<br>".join(parts)
 
 
 PARTS = [
