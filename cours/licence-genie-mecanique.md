@@ -46,9 +46,9 @@ finies, et **équations différentielles ordinaires**.
 
 ### 🚩 Introduction
 
-| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
-|:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view) |
+| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
+|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
+| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view) |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -63,12 +63,12 @@ Pourquoi le calcul numérique en mécanique, et à quoi il sert concrètement da
 
 Résoudre *Ax = b*, puis *F(x) = 0* : les briques sur lesquelles repose tout le reste du module.
 
-| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
-|:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **01** | Rappels numériques : erreurs, normes et conditionnement | [PDF](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf) | [TD](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf) | — | [▶ Voir](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view) |
-| **02** | Systèmes linéaires : méthodes directes | [PDF](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf) | [TD](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf) | [TP1](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf) | [▶ Cours](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)<br>[▶ TP1 — atelier MATLAB](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view) |
-| **03** | Systèmes linéaires : méthodes itératives | [PDF](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf) | [TD](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf) | [TP2](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf) | [▶ Voir](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view) |
-| **04** | Systèmes non linéaires | [PDF](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf) | [TD](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf) | [TP3](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf) | 🚧 |
+| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
+|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
+| **01** | Rappels numériques : erreurs, normes et conditionnement | [PDF](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf) | [TD](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view) |
+| **02** | Systèmes linéaires : méthodes directes | [PDF](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf) | [TD](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf) | [TP1](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf) | — | [▶ Cours](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)<br>[▶ TP1 — atelier MATLAB](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view) |
+| **03** | Systèmes linéaires : méthodes itératives | [PDF](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf) | [TD](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf) | [TP2](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf) | [📦 TP2 — scripts MATLAB](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_corrige_scripts_MATLAB.zip) | [▶ Voir](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view) |
+| **04** | Systèmes non linéaires | [PDF](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf) | [TD](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf) | [TP3](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf) | — | 🚧 |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -92,14 +92,14 @@ Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge 
 
 De la classification des EDP aux trois équations modèles de la mécanique : chaleur, Laplace-Poisson, ondes.
 
-| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
-|:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **05** | Généralités sur les EDP en mécanique et classification | [PDF](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf) | [TD](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf) | — | 🚧 |
-| **06** | Principe de la méthode des différences finies | [PDF](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf) | [TD](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf) | — | 🚧 |
-| **07** | Consistance, stabilité, convergence | [PDF](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf) | [TD](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf) | — | 🚧 |
-| **08** | Équation de la chaleur | [PDF](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf) | [TD](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf) | — | 🚧 |
-| **09** | Équation de Laplace-Poisson et advection-diffusion | [PDF](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf) | [TD](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf) | [TP5](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf) | 🚧 |
-| **10** | Équation des ondes | [PDF](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf) | [TD](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf) | — | 🚧 |
+| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
+|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
+| **05** | Généralités sur les EDP en mécanique et classification | [PDF](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf) | [TD](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf) | — | — | 🚧 |
+| **06** | Principe de la méthode des différences finies | [PDF](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf) | [TD](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf) | — | — | 🚧 |
+| **07** | Consistance, stabilité, convergence | [PDF](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf) | [TD](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf) | — | — | 🚧 |
+| **08** | Équation de la chaleur | [PDF](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf) | [TD](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf) | — | — | 🚧 |
+| **09** | Équation de Laplace-Poisson et advection-diffusion | [PDF](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf) | [TD](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf) | [TP5](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf) | — | 🚧 |
+| **10** | Équation des ondes | [PDF](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf) | [TD](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf) | — | — | 🚧 |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -129,9 +129,9 @@ La corde vibrante et sa condition de stabilité — la condition CFL, avec son i
 
 Retour au temps : Euler, Runge-Kutta et la question de la stabilité du pas de temps.
 
-| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |
-|:-:|----------|:--------:|:-----:|:-----:|:--------:|
-| **11** | Résolution numérique des équations différentielles ordinaires | [PDF](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf) | [TD](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf) | [TP4](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)<br>[TP6](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf) | 🚧 |
+| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
+|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
+| **11** | Résolution numérique des équations différentielles ordinaires | [PDF](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf) | [TD](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf) | [TP4](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)<br>[TP6](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf) | — | 🚧 |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -174,7 +174,8 @@ cours/methodes-numeriques/
 ├── Chapitre_11_EDO_Euler_Runge_Kutta/
 ```
 
-Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`.
+Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
 
 </details>
 

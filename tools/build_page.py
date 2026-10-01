@@ -80,7 +80,8 @@ PARTS = [
 
 def links(num, prefix, label):
     d = CH[num][0]
-    hits = sorted(f for f in os.listdir(os.path.join(ROOT, B, d)) if f.startswith(prefix))
+    hits = sorted(f for f in os.listdir(os.path.join(ROOT, B, d))
+                  if f.startswith(prefix) and "corrige" not in f.lower())
     if not hits:
         return "—"
     return "<br>".join(
@@ -88,17 +89,39 @@ def links(num, prefix, label):
         for f in hits)
 
 
+def corriges(num):
+    """Corriges de TD/TP (ex. 4_TP2_corrige_scripts_MATLAB.zip). Fichier
+    librement telechargeable, a la difference des videos."""
+    d = CH[num][0]
+    hits = sorted(f for f in os.listdir(os.path.join(ROOT, B, d)) if "corrige" in f.lower())
+    if not hits:
+        return "—"
+    out = []
+    for f in hits:
+        stem, ext = os.path.splitext(f)
+        tokens = [t for t in stem.split("_") if t]
+        if tokens and tokens[0].isdigit():
+            tokens = tokens[1:]
+        tokens = [t for t in tokens if t.lower() != "corrige"]
+        ref = tokens[0] if tokens else "Corrige"
+        rest = " ".join(tokens[1:])
+        label = "%s — %s" % (ref, rest) if rest else ref
+        icon = "📦" if ext.lower() == ".zip" else "📄"
+        out.append("[%s %s](%s/%s/%s)" % (icon, label, B, d, f))
+    return "<br>".join(out)
+
+
 body = []
 for icon, title, nums, blurb in PARTS:
     body.append("### %s %s\n" % (icon, title))
     if blurb:
         body.append("%s\n" % blurb)
-    body.append("| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | 🎥 Vidéo |")
-    body.append("|:-:|----------|:--------:|:-----:|:-----:|:--------:|")
+    body.append("| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |")
+    body.append("|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|")
     for n in nums:
-        body.append("| **%s** | %s | %s | %s | %s | %s |" % (
+        body.append("| **%s** | %s | %s | %s | %s | %s | %s |" % (
             n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP"),
-            video(n)))
+            corriges(n), video(n)))
     body.append("")
     body.append("<details>\n<summary><i>Descriptif des chapitres</i></summary>\n<br/>\n")
     for n in nums:
@@ -175,7 +198,8 @@ cours/methodes-numeriques/
 %(tree)s
 ```
 
-Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`.
+Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
 
 </details>
 
