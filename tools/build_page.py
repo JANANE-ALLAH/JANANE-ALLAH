@@ -46,6 +46,7 @@ VIDEOS = {
 # (numero du TP, url).
 VIDEOS_TP = {
  "02": ("TP1", "https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view"),
+ "03": ("TP2", "https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view"),
 }
 
 
