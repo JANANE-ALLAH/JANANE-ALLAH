@@ -43,10 +43,12 @@ VIDEOS = {
 
 # Videos d atelier TP (ex. 7b_Video_TP1_atelier_MATLAB), affichees a cote de
 # la video de cours du meme chapitre. Cle = numero du chapitre, valeur =
-# (numero du TP, url).
+# (numero du TP, url[, description]) ; description par defaut : atelier MATLAB.
 VIDEOS_TP = {
  "02": ("TP1", "https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view"),
  "03": ("TP2", "https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view"),
+ "04": ("TP3", "https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view",
+        "programmation de Newton"),
 }
 
 
@@ -62,9 +64,12 @@ def video(num):
     if cours:
         label = "▶ Cours" if tp else "▶ Voir"
         parts.append("[%s](%s)" % (label, cours))
+    elif tp:
+        parts.append("🚧 Cours")
     if tp:
-        tp_num, tp_url = tp
-        parts.append("[▶ %s — atelier MATLAB](%s)" % (tp_num, tp_url))
+        tp_num, tp_url = tp[0], tp[1]
+        desc = tp[2] if len(tp) > 2 else "atelier MATLAB"
+        parts.append("[▶ %s — %s](%s)" % (tp_num, desc, tp_url))
     return "<br>".join(parts)
 
 
