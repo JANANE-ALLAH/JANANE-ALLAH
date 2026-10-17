@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import io, os
+import io, os, re
 
 # Regenere cours/licence-genie-mecanique.md a partir des PDF presents
 # dans cours/methodes-numeriques/.  Usage :  python tools/build_page.py
@@ -150,11 +150,12 @@ Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de C
 ![Chapitres](https://img.shields.io/badge/Chapitres-12-4C9A2A?style=for-the-badge)
 ![TD](https://img.shields.io/badge/TD-11-6A4C93?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-6-C1121F?style=for-the-badge)
+![Examens](https://img.shields.io/badge/Examens-%(nb_exam)s_sujets-E67E22?style=for-the-badge)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
 
 [![Pourquoi ce module](https://img.shields.io/badge/▶_Pourquoi_ce_module_%3F-Regarder_la_vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
 
-[**Plan du cours**](#-plan-du-cours) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
+[**Plan du cours**](#-plan-du-cours) · [**Examens**](#-examens-archive) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -186,6 +187,18 @@ finies, et **équations différentielles ordinaires**.
 %(body)s
 ---
 
+## 📝 Examens (Archive)
+
+Sujets des sessions précédentes, en accès libre, pour s'entraîner dans les conditions de
+l'épreuve (durée : 2 h). Les sujets **A** et **B** posent les mêmes questions avec des
+données numériques différentes.
+
+%(examens)s
+> 💡 **Conseil :** traitez un sujet en temps limité avant de relire le cours, puis comparez avec
+> vos TD. Les examens de préparation sont de **niveau difficile** : un bon test avant l'épreuve.
+
+---
+
 ## 🧭 Comment travailler ce module
 
 | Étape | Support | Objectif |
@@ -203,10 +216,13 @@ finies, et **équations différentielles ordinaires**.
 ```
 cours/methodes-numeriques/
 %(tree)s
+└── Examens/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
 et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
+Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
+`examen_preparation_N_AAAA_AAAA.pdf`.
 
 </details>
 
@@ -241,7 +257,63 @@ qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disp
 </div>
 """
 
+# Examens (archive) : tous les PDF de cours/methodes-numeriques/Examens/,
+# sous-dossiers compris, regroupes par annee universitaire (la plus recente
+# d'abord). Type d'epreuve, numero de preparation et sujet A/B sont lus dans
+# le nom du fichier ; un nom non reconnu est quand meme publie, sous son nom.
+EXAMENS = "Examens"
+TYPES_EXAMEN = [  # (motif dans le nom, epreuve, programme)
+    ("partie1", u"Examen — Partie I", u"Systèmes d'équations linéaires et non linéaires"),
+    ("partie2", u"Examen — Partie II", u"Méthodes des différences finies"),
+    ("mixte", u"Examen — Parties I et II", u"Systèmes d'équations et méthodes des différences finies"),
+    ("preparation", u"Examen de préparation n°%s", u"Parties I et II — niveau difficile"),
+]
+
+
+def examens():
+    racine = os.path.join(ROOT, B, EXAMENS)
+    annees, total = {}, 0
+    for dossier, _, noms in os.walk(racine):
+        for nom in sorted(noms):
+            if not nom.lower().endswith(".pdf"):
+                continue
+            total += 1
+            rel = os.path.relpath(os.path.join(dossier, nom), ROOT).replace(os.sep, "/")
+            m = re.search(r"(\d{4})_(\d{4})", nom)
+            annee = "%s/%s" % m.groups() if m else u"Autres"
+            typ = next((i for i, t in enumerate(TYPES_EXAMEN) if t[0] in nom.lower()), None)
+            if typ is None:
+                cle, epreuve, prog = (99, nom), nom, u""
+            else:
+                _, epreuve, prog = TYPES_EXAMEN[typ]
+                if "%s" in epreuve:
+                    num = re.search(r"preparation_(\d+)", nom.lower())
+                    epreuve = epreuve % (num.group(1) if num else "")
+                cle = (typ, epreuve)
+            sujet = re.search(r"sujet([A-Z])", nom)
+            ligne = annees.setdefault(annee, {}).setdefault(
+                cle, {"epreuve": epreuve, "prog": prog, "sujets": []})
+            ligne["sujets"].append((sujet.group(1) if sujet else u"", rel))
+    if not total:
+        return u"*Aucun sujet archivé pour l'instant.*\n", 0
+    ordre = sorted((a for a in annees if a != u"Autres"), reverse=True)
+    ordre += [u"Autres"] if u"Autres" in annees else []
+    out = []
+    for annee in ordre:
+        out.append(u"### 🗂️ Année universitaire %s\n" % annee)
+        out.append(u"| Épreuve | Programme | 📄 Sujets |")
+        out.append(u"|---|---|:-:|")
+        for cle in sorted(annees[annee]):
+            l = annees[annee][cle]
+            liens = u" · ".join(u"[Sujet %s](%s)" % (s_, r) if s_ else u"[PDF](%s)" % r
+                                for s_, r in sorted(l["sujets"]))
+            out.append(u"| **%s** | %s | %s |" % (l["epreuve"], l["prog"], liens))
+        out.append(u"")
+    return u"\n".join(out), total
+
+
+texte_examens, nb_examens = examens()
 compteur = u"🎬 **%d capsule(s) en ligne** sur %d chapitres." % (len(VIDEOS), len(CH))
-page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur).replace("%(motiv)s", MOTIVATION)
+page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur).replace("%(motiv)s", MOTIVATION).replace("%(examens)s", texte_examens).replace("%(nb_exam)s", str(nb_examens))
 io.open(os.path.join(ROOT, "licence-genie-mecanique.md"), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %d lignes" % page.count("\n"))

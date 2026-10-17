@@ -11,11 +11,12 @@ Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de C
 ![Chapitres](https://img.shields.io/badge/Chapitres-12-4C9A2A?style=for-the-badge)
 ![TD](https://img.shields.io/badge/TD-11-6A4C93?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-6-C1121F?style=for-the-badge)
+![Examens](https://img.shields.io/badge/Examens-8_sujets-E67E22?style=for-the-badge)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
 
 [![Pourquoi ce module](https://img.shields.io/badge/▶_Pourquoi_ce_module_%3F-Regarder_la_vidéo_d'accroche-C1121F?style=for-the-badge)](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)
 
-[**Plan du cours**](#-plan-du-cours) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
+[**Plan du cours**](#-plan-du-cours) · [**Examens**](#-examens-archive) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -144,6 +145,32 @@ L'évolution temporelle des systèmes à nombre fini de degrés de liberté : os
 
 ---
 
+## 📝 Examens (Archive)
+
+Sujets des sessions précédentes, en accès libre, pour s'entraîner dans les conditions de
+l'épreuve (durée : 2 h). Les sujets **A** et **B** posent les mêmes questions avec des
+données numériques différentes.
+
+### 🗂️ Année universitaire 2025/2026
+
+| Épreuve | Programme | 📄 Sujets |
+|---|---|:-:|
+| **Examen — Partie I** | Systèmes d'équations linéaires et non linéaires | [Sujet A](methodes-numeriques/Examens/examen_partie1_2025_2026_sujetA.pdf) · [Sujet B](methodes-numeriques/Examens/examen_partie1_2025_2026_sujetB.pdf) |
+| **Examen — Partie II** | Méthodes des différences finies | [Sujet A](methodes-numeriques/Examens/examen_partie2_2025_2026_sujetA.pdf) · [Sujet B](methodes-numeriques/Examens/examen_partie2_2025_2026_sujetB.pdf) |
+| **Examen de préparation n°1** | Parties I et II — niveau difficile | [PDF](methodes-numeriques/Examens/examens_preparation_2025_2026/examen_preparation_1_2025_2026.pdf) |
+| **Examen de préparation n°2** | Parties I et II — niveau difficile | [PDF](methodes-numeriques/Examens/examens_preparation_2025_2026/examen_preparation_2_2025_2026.pdf) |
+
+### 🗂️ Année universitaire 2024/2025
+
+| Épreuve | Programme | 📄 Sujets |
+|---|---|:-:|
+| **Examen — Parties I et II** | Systèmes d'équations et méthodes des différences finies | [Sujet A](methodes-numeriques/Examens/examen_mixte_2024_2025_sujetA.pdf) · [Sujet B](methodes-numeriques/Examens/examen_mixte_2024_2025_sujetB.pdf) |
+
+> 💡 **Conseil :** traitez un sujet en temps limité avant de relire le cours, puis comparez avec
+> vos TD. Les examens de préparation sont de **niveau difficile** : un bon test avant l'épreuve.
+
+---
+
 ## 🧭 Comment travailler ce module
 
 | Étape | Support | Objectif |
@@ -172,10 +199,13 @@ cours/methodes-numeriques/
 ├── Chapitre_09_Laplace_Poisson_advection/
 ├── Chapitre_10_Equation_ondes/
 ├── Chapitre_11_EDO_Euler_Runge_Kutta/
+└── Examens/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
 et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
+Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
+`examen_preparation_N_AAAA_AAAA.pdf`.
 
 </details>
 
