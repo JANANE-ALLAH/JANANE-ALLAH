@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=M%C3%A9thodes+Num%C3%A9riques+pour+la+M%C3%A9canique;LST+G%C3%A9nie+M%C3%A9canique+%E2%80%94+FSTM%2C+UH2C;1re+ann%C3%A9e+Cycle+Ing%C3%A9nieur+G%C3%A9nie+%C3%89nerg%C3%A9tique;12+chapitres+%C2%B7+11+TD+%C2%B7+6+TP+MATLAB" alt="Methodes Numeriques pour la Mecanique" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=M%C3%A9thodes+Num%C3%A9riques+pour+la+M%C3%A9canique;FSTM+%E2%80%94+Universit%C3%A9+Hassan+II+de+Casablanca;LST+G%C3%A9nie+M%C3%A9canique+%C2%B7+1re+ann%C3%A9e+Ing%C3%A9nieur+GE;12+chapitres+%C2%B7+11+TD+%C2%B7+6+TP+MATLAB" alt="Methodes Numeriques pour la Mecanique" />
 
 **Pr. Mohamed JANANE ALLAH**, PhD — Maître de Conférence<br/>
 Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de Casablanca
 
-🎓 **Public :** LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)
+🎓 **Public — FSTM, UH2C :** LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)
 
 <br/>
 
@@ -40,7 +40,7 @@ finies, et **équations différentielles ordinaires**.
 - ✅ programmer ces méthodes en **MATLAB** et valider un schéma sur un cas test analytique ;
 - ✅ interpréter physiquement les conditions de stabilité (CFL, critères de convergence).
 
-> 📌 Module **mutualisé** entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)** :
+> 📌 Module **mutualisé**, à la **FSTM — UH2C**, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)** :
 > les outils numériques sont exactement les mêmes de part et d'autre, seules changent les applications.
 
 ---
