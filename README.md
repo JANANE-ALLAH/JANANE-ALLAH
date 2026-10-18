@@ -56,6 +56,7 @@ researcher = {
 **FSTM — Université Hassan II de Casablanca**
 
 [![Licence Génie Mécanique](https://img.shields.io/badge/Licence_Génie_Mécanique-Méthodes_Numériques_pour_la_Mécanique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-genie-mecanique.md)
+[![Cycle Ingénieur Génie Énergétique](https://img.shields.io/badge/Cycle_Ingénieur_GE_—_1re_année-Méthodes_Numériques_pour_la_Mécanique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-genie-mecanique.md)
 ![Master Matériaux](https://img.shields.io/badge/Master_Matériaux-6A4C93?style=for-the-badge)
 
 **ENSAM Casablanca**
