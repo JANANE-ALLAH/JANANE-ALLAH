@@ -61,7 +61,7 @@ researcher = {
 
 **ENSAM Casablanca**
 
-![Licence Professionnelle](https://img.shields.io/badge/Licence_Professionnelle-2E86AB?style=for-the-badge)
+[![Licence Professionnelle IMPI](https://img.shields.io/badge/Licence_Professionnelle_IMPI-Hydraulique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-pro-hydraulique.md)
 ![Master Professionnel](https://img.shields.io/badge/Master_Professionnel-6A4C93?style=for-the-badge)
 
 📘 *Les badges colorés en bleu vif donnent accès aux supports (cours, TD, TP).*
