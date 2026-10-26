@@ -20,7 +20,12 @@ CH = {
         "(pression, débit, force, puissance, rendement), Bernoulli, viscosité, régimes d'écoulement, "
         "compressibilité et pertes de charge. Durée indicative 6 à 8 h, applications chiffrées et "
         "TD corrigés intégrés, QCM d'auto-évaluation."),
- "02": ("Chapitre_02_Schemas_hydrauliques_pneumatiques", "Schémas hydrauliques et pneumatiques", ""),
+ "02": ("Chapitre_02_Schemas_hydrauliques_pneumatiques", "Schémas hydrauliques et pneumatiques",
+        "Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et limiteurs ; "
+        "lecture d'un distributeur et chemin du fluide ; régulation de pression et de débit ; règles "
+        "de représentation et de repérage ; construction d'un circuit simple à partir d'un cahier "
+        "des charges. Exemple fil rouge : commande d'un vérin hydraulique à double effet. Durée "
+        "indicative 5 à 7 h, exercices corrigés, QCM d'auto-évaluation."),
  "03": ("Chapitre_03_Technologie_systemes_hydrauliques", "Technologie des systèmes hydrauliques", ""),
  "04": ("Chapitre_04_Circuits_hydrauliques", "Circuits hydrauliques", ""),
  "05": ("Chapitre_05_Maintenance_installations", "Maintenance des installations", ""),
@@ -30,8 +35,10 @@ CH = {
 VIDEOS = {
 }
 
-# Detail du chapitre 1 (feuille de route et TP, tires du support de cours).
-PARTIES_CH1 = [
+# Detail par chapitre (feuille de route et TP, tires du support de cours).
+PARTIES = {}
+TPS = {}
+PARTIES["01"] = [
     ("Hydraulique et pneumatique", "Pourquoi choisir l'huile plutôt que l'air ?"),
     ("Énergie mécanique et hydraulique", "Comment l'énergie circule-t-elle de la source à la charge ?"),
     ("Grandeurs hydrauliques", "Comment calculer pression, débit, force, puissance ?"),
@@ -41,13 +48,29 @@ PARTIES_CH1 = [
     ("Compressibilité et dilatation", "L'huile est-elle vraiment incompressible ?"),
     ("Pertes de charge", "Combien de pression perd-on en route ?"),
 ]
-TP_CH1 = [
+TPS["01"] = [
     ("Lire la machine", "repérer moteur, pompes, distributeur, vérins ; lire plaques et symboles"),
     ("Pression et force", "lire un manomètre, relever la pression de tarage, calculer F = p · S"),
     ("Débit et vitesse", "chronométrer une course de vérin et en déduire Q = S · v"),
     ("Huile et température", "relever la température, lire la fiche d'huile, estimer le régime (Re)"),
     ("Pertes et diagnostic", "mesurer Δp d'un filtre ou d'un flexible, lire le vacuomètre d'aspiration"),
 ]
+PARTIES["02"] = [
+    ("Le langage du schéma", "Comment dessine-t-on des lignes, un réservoir, une source ?"),
+    ("Régulation et protection", "Comment limiter la pression et régler le débit ?"),
+    ("Distribution de l'énergie", "Comment aiguiller le fluide vers le bon actionneur ?"),
+    ("Conversion de l'énergie", "Comment représenter pompes, moteurs et vérins ?"),
+    ("Mesure et appareils complémentaires", "Comment voir ce qui se passe dans le circuit ?"),
+    ("Lire et dessiner un schéma complet", "Comment lire, puis construire un circuit ?"),
+]
+TPS["02"] = [
+    ("Lire la machine", "retrouver sur le schéma constructeur les symboles et leurs repères"),
+    ("Identifier les composants", "associer chaque symbole à un composant du banc : plaques, orifices"),
+    ("Câbler un circuit", "réaliser la commande d'un vérin double effet et vérifier les 3 positions"),
+    ("Régler et mesurer", "tarer le limiteur de pression, régler la vitesse, lire les manomètres"),
+    ("Dessiner et simuler", "dessiner le schéma d'une application et le valider, par simulation si possible"),
+]
+NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
 
 def fichiers(num):
@@ -100,12 +123,14 @@ desc = []
 for n in publies:
     np_ = pages(n)
     desc.append("**%s — %s**%s  \n%s\n" % (n, CH[n][1], " · %d pages" % np_ if np_ else "", CH[n][2]))
-    if n == "01":
-        desc.append("*Les huit parties du chapitre, une question chacune :*\n")
-        desc += ["%d. **%s** — %s" % (i + 1, t, q) for i, (t, q) in enumerate(PARTIES_CH1)]
+    if n in PARTIES:
+        k = len(PARTIES[n])
+        desc.append("*Les %s parties du chapitre, une question chacune :*\n" % NOMBRES.get(k, k))
+        desc += ["%d. **%s** — %s" % (i + 1, t, q) for i, (t, q) in enumerate(PARTIES[n])]
+    if n in TPS:
         desc.append("\n*Les TP associés, sur machine :*\n")
-        desc += ["- **TP %d — %s** : %s" % (i + 1, t, d) for i, (t, d) in enumerate(TP_CH1)]
-        desc.append("")
+        desc += ["- **TP %d — %s** : %s" % (i + 1, t, d) for i, (t, d) in enumerate(TPS[n])]
+    desc.append("")
 descriptif = "\n".join(desc)
 
 TPL = u"""<div align="center">

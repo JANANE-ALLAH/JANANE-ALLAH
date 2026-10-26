@@ -11,7 +11,7 @@
 
 ![Formation](https://img.shields.io/badge/Licence_Pro-IMPI-2E86AB?style=for-the-badge)
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
-![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-1_%2F_5-E67E22?style=for-the-badge)
+![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-2_%2F_5-E67E22?style=for-the-badge)
 
 [**Plan du module**](#-plan-du-module) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
@@ -38,7 +38,7 @@
 | # | Chapitre | 📄 Cours |
 |:-:|----------|:--------:|
 | **01** | Généralités sur les systèmes hydrauliques | [PDF](hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf) |
-| **02** | *Schémas hydrauliques et pneumatiques* | 🚧 À venir |
+| **02** | Schémas hydrauliques et pneumatiques | [PDF](hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf) |
 | **03** | *Technologie des systèmes hydrauliques* | 🚧 À venir |
 | **04** | *Circuits hydrauliques* | 🚧 À venir |
 | **05** | *Maintenance des installations* | 🚧 À venir |
@@ -70,6 +70,26 @@ Hydraulique face au pneumatique et à l'électrique, chaîne d'énergie, grandeu
 - **TP 3 — Débit et vitesse** : chronométrer une course de vérin et en déduire Q = S · v
 - **TP 4 — Huile et température** : relever la température, lire la fiche d'huile, estimer le régime (Re)
 - **TP 5 — Pertes et diagnostic** : mesurer Δp d'un filtre ou d'un flexible, lire le vacuomètre d'aspiration
+
+**02 — Schémas hydrauliques et pneumatiques** · 73 pages  
+Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et limiteurs ; lecture d'un distributeur et chemin du fluide ; régulation de pression et de débit ; règles de représentation et de repérage ; construction d'un circuit simple à partir d'un cahier des charges. Exemple fil rouge : commande d'un vérin hydraulique à double effet. Durée indicative 5 à 7 h, exercices corrigés, QCM d'auto-évaluation.
+
+*Les six parties du chapitre, une question chacune :*
+
+1. **Le langage du schéma** — Comment dessine-t-on des lignes, un réservoir, une source ?
+2. **Régulation et protection** — Comment limiter la pression et régler le débit ?
+3. **Distribution de l'énergie** — Comment aiguiller le fluide vers le bon actionneur ?
+4. **Conversion de l'énergie** — Comment représenter pompes, moteurs et vérins ?
+5. **Mesure et appareils complémentaires** — Comment voir ce qui se passe dans le circuit ?
+6. **Lire et dessiner un schéma complet** — Comment lire, puis construire un circuit ?
+
+*Les TP associés, sur machine :*
+
+- **TP 1 — Lire la machine** : retrouver sur le schéma constructeur les symboles et leurs repères
+- **TP 2 — Identifier les composants** : associer chaque symbole à un composant du banc : plaques, orifices
+- **TP 3 — Câbler un circuit** : réaliser la commande d'un vérin double effet et vérifier les 3 positions
+- **TP 4 — Régler et mesurer** : tarer le limiteur de pression, régler la vitesse, lire les manomètres
+- **TP 5 — Dessiner et simuler** : dessiner le schéma d'une application et le valider, par simulation si possible
 
 </details>
 
