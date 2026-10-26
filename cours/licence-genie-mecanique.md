@@ -99,7 +99,7 @@ De la classification des EDP aux trois équations modèles de la mécanique : ch
 |:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
 | **05** | Généralités sur les EDP en mécanique et classification | [PDF](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf) | [TD](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1wxEG6bzlLQPGz-evjzRmrmuqnVQsqqgs/view) |
 | **06** | Principe de la méthode des différences finies | [PDF](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf) | [TD](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1F-IuYtpVuRNhaj7w13zxnSUldtZj1PoB/view) |
-| **07** | Consistance, stabilité, convergence | [PDF](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf) | [TD](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf) | — | — | 🚧 |
+| **07** | Consistance, stabilité, convergence | [PDF](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf) | [TD](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1AT_64YZW3ebVt21abcGkxcZUoLHFnnkg/view) |
 | **08** | Équation de la chaleur | [PDF](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf) | [TD](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf) | — | — | 🚧 |
 | **09** | Équation de Laplace-Poisson et advection-diffusion | [PDF](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf) | [TD](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf) | [TP5](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf) | — | 🚧 |
 | **10** | Équation des ondes | [PDF](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf) | [TD](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf) | — | — | 🚧 |
@@ -215,7 +215,7 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 
 ## 🎥 Vidéos
 
-🎬 **7 capsule(s) en ligne** sur 12 chapitres.
+🎬 **8 capsule(s) en ligne** sur 12 chapitres.
 
 🎯 **[Pourquoi ce module ?](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)** — la vidéo d'accroche à regarder avant tout le reste :
 où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.
