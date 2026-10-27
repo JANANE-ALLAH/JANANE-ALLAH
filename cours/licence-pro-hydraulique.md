@@ -35,13 +35,13 @@
 
 ## 📚 Plan du module
 
-| # | Chapitre | 📄 Cours |
-|:-:|----------|:--------:|
-| **01** | Généralités sur les systèmes hydrauliques | [PDF](hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf) |
-| **02** | Schémas hydrauliques et pneumatiques | [PDF](hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf) |
-| **03** | *Technologie des systèmes hydrauliques* | 🚧 À venir |
-| **04** | *Circuits hydrauliques* | 🚧 À venir |
-| **05** | *Maintenance des installations* | 🚧 À venir |
+| # | Chapitre | 📄 Cours | 🎥 Vidéo |
+|:-:|----------|:--------:|:--------:|
+| **01** | Généralités sur les systèmes hydrauliques | [PDF](hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf) | — |
+| **02** | Schémas hydrauliques et pneumatiques | [PDF](hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf) | [▶ Voir](https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view) |
+| **03** | *Technologie des systèmes hydrauliques* | 🚧 À venir | — |
+| **04** | *Circuits hydrauliques* | 🚧 À venir | — |
+| **05** | *Maintenance des installations* | 🚧 À venir | — |
 
 > 📘 Les chapitres sont publiés au fur et à mesure ; 🚧 signale un chapitre pas encore en ligne.
 

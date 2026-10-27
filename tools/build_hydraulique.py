@@ -33,6 +33,7 @@ CH = {
 
 # Liens video par chapitre (meme regle d'acces que l'autre cours : compte UH2C).
 VIDEOS = {
+ "02": "https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view",
 }
 
 # Detail par chapitre (feuille de route et TP, tires du support de cours).
