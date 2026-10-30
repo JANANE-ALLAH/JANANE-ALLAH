@@ -56,6 +56,8 @@ VIDEOS_TP = {
  "03": ("TP2", "https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view"),
  "04": ("TP3", "https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view",
         "programmation de Newton"),
+ "09": ("TP5", "https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view",
+        "correction"),
 }
 
 
