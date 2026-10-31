@@ -24,7 +24,7 @@ researcher = {
     "PhD"        : "Génie Mécanique, ENSAM Casablanca",
     "research"   : ["FGM plates", "TSDT", "FEM", "ANN surrogate models",
                     "Nonlinear dynamics", "Crashworthiness"],
-    "publications": {"total": 5, "Q1": 4, "book_chapters": 1, "conferences": 8},
+    "publications": {"total": 6, "Q1": 5, "book_chapters": 1, "conferences": 8},
     "contact"    : "mohamedjanane147@gmail.com",
     "location"   : "Casablanca, Maroc 🇲🇦",
 }
@@ -74,6 +74,7 @@ researcher = {
 
 | # | Année | Journal | Impact | Titre |
 |---|-------|---------|--------|-------|
+| J8 | 2026 | *Engineering Analysis with Boundary Elements* | **Q1** Elsevier | [A 3D extension of weak–strong formulation using a hybrid FE-meshless method for nonlinear structural analysis](https://doi.org/10.1016/j.enganabound.2026.107110) |
 | J1 | 2024 | *Materials Today Communications* | **Q1** Elsevier | LSTM-based neural network for nonlinear dynamic behavior of FGM viscoelastic porous plates |
 | J2 | 2023 | *Steel and Composite Structures* | **Q1** | Free vibration of FGM plates — ANN + TSDT optimization |
 | J3 | 2023 | *Materials Today Communications* | **Q1** Elsevier | Nonlinear dynamic analysis of viscoelastic FGM with porosity |
@@ -81,7 +82,7 @@ researcher = {
 | C1 | 2022 | *CRC Press* | Livre | Crashworthiness of Composite Sandwich Structures |
 | J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | TSDT for free vibration of FGM plates |
 
-> 📊 **5 articles · 4 revues Q1 · 8 conférences · 2 en soumission (2025)**
+> 📊 **6 articles · 5 revues Q1 · 8 conférences · 2 en soumission (2025)**
 > 🔗 [Liste complète](https://janane-allah.github.io/publications/)
 
 ---
