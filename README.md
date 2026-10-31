@@ -75,7 +75,7 @@ researcher = {
 | # | Année | Journal | Impact | Titre |
 |---|-------|---------|--------|-------|
 | J8 | 2026 | *Engineering Analysis with Boundary Elements* | **Q1** Elsevier | [A 3D extension of weak–strong formulation using a hybrid FE-meshless method for nonlinear structural analysis](https://doi.org/10.1016/j.enganabound.2026.107110) |
-| J1 | 2024 | *Materials Today Communications* | **Q1** Elsevier | LSTM-based neural network for nonlinear dynamic behavior of FGM viscoelastic porous plates |
+| J1 | 2024 | *Materials Today Communications* | **Q1** Elsevier | [LSTM-based neural network for nonlinear dynamic behavior of FGM viscoelastic porous plates](https://doi.org/10.1016/j.mtcomm.2024.111269) |
 | J2 | 2023 | *Steel and Composite Structures* | **Q1** | Free vibration of FGM plates — ANN + TSDT optimization |
 | J3 | 2023 | *Materials Today Communications* | **Q1** Elsevier | Nonlinear dynamic analysis of viscoelastic FGM with porosity |
 | J4 | 2022 | *Steel and Composite Structures* | **Q1** | Nonlinear dynamic analysis of porous FGM — new TSDT |
