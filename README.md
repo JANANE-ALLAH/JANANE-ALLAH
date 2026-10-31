@@ -79,7 +79,7 @@ researcher = {
 | J2 | 2023 | *Steel and Composite Structures* | **Q1** | Free vibration of FGM plates — ANN + TSDT optimization |
 | J3 | 2023 | *Materials Today Communications* | **Q1** Elsevier | [Nonlinear dynamic analysis of viscoelastic FGM with porosity](https://doi.org/10.1016/j.mtcomm.2023.106306) |
 | J4 | 2022 | *Steel and Composite Structures* | **Q1** | [Nonlinear dynamic analysis of porous FGM — new TSDT](https://doi.org/10.12989/scs.2022.43.1.001) |
-| C1 | 2022 | *CRC Press* | Livre | Crashworthiness of Composite Sandwich Structures |
+| C1 | 2022 | *CRC Press* | Livre | [Crashworthiness of Composite Sandwich Structures](https://doi.org/10.1201/9781003143031-16) |
 | J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | [TSDT for free vibration of FGM plates](https://doi.org/10.23939/mmc2021.04.691) |
 
 > 📊 **6 articles · 5 revues Q1 · 8 conférences · 2 en soumission (2025)**
