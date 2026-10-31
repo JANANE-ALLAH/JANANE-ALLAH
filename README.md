@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-5_publications-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=lNF8AUoAAAAJ&hl=fr)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-6_publications-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=lNF8AUoAAAAJ&hl=fr)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5852--9212-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0000-0001-5852-9212)
 [![ResearchGate](https://img.shields.io/badge/ResearchGate-Profile-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/M-Allah)
 [![Site académique](https://img.shields.io/badge/Site_Web-janane--allah.github.io-0A66C2?style=for-the-badge&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
