@@ -76,7 +76,7 @@ researcher = {
 |---|-------|---------|--------|-------|
 | J8 | 2026 | *Engineering Analysis with Boundary Elements* | **Q1** Elsevier | [A 3D extension of weak–strong formulation using a hybrid FE-meshless method for nonlinear structural analysis](https://doi.org/10.1016/j.enganabound.2026.107110) |
 | J1 | 2024 | *Materials Today Communications* | **Q1** Elsevier | [LSTM-based neural network for nonlinear dynamic behavior of FGM viscoelastic porous plates](https://doi.org/10.1016/j.mtcomm.2024.111269) |
-| J2 | 2023 | *Steel and Composite Structures* | **Q1** | Free vibration of FGM plates — ANN + TSDT optimization |
+| J2 | 2023 | *Steel and Composite Structures* | **Q1** | [Free vibration of FGM plates — ANN + TSDT optimization](https://doi.org/10.12989/scs.2023.49.6.633) |
 | J3 | 2023 | *Materials Today Communications* | **Q1** Elsevier | [Nonlinear dynamic analysis of viscoelastic FGM with porosity](https://doi.org/10.1016/j.mtcomm.2023.106306) |
 | J4 | 2022 | *Steel and Composite Structures* | **Q1** | [Nonlinear dynamic analysis of porous FGM — new TSDT](https://doi.org/10.12989/scs.2022.43.1.001) |
 | C1 | 2022 | *CRC Press* | Livre | [Crashworthiness of Composite Sandwich Structures](https://doi.org/10.1201/9781003143031-16) |
