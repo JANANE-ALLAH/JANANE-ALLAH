@@ -80,7 +80,7 @@ researcher = {
 | J3 | 2023 | *Materials Today Communications* | **Q1** Elsevier | [Nonlinear dynamic analysis of viscoelastic FGM with porosity](https://doi.org/10.1016/j.mtcomm.2023.106306) |
 | J4 | 2022 | *Steel and Composite Structures* | **Q1** | Nonlinear dynamic analysis of porous FGM — new TSDT |
 | C1 | 2022 | *CRC Press* | Livre | Crashworthiness of Composite Sandwich Structures |
-| J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | TSDT for free vibration of FGM plates |
+| J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | [TSDT for free vibration of FGM plates](https://doi.org/10.23939/mmc2021.04.691) |
 
 > 📊 **6 articles · 5 revues Q1 · 8 conférences · 2 en soumission (2025)**
 > 🔗 [Liste complète](https://janane-allah.github.io/publications/)
