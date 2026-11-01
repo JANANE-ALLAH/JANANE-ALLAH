@@ -13,7 +13,7 @@
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-2_%2F_5-E67E22?style=for-the-badge)
 
-[**Plan du module**](#-plan-du-module) · [**Mini-projet**](#-mini-projet) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · [**Mini-projets**](#-mini-projets) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -95,17 +95,18 @@ Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et l
 
 ---
 
-## 🧩 Mini-projet
+## 🧩 Mini-projets
 
-Exemple de **présentation orale d'un mini-projet** : *Système hydraulique de la pelle DOOSAN Solar 225LC-V*, en 15 minutes.
+Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit son système hydraulique complet : le circuit, le réservoir et sa filtration, les pompes, puis les autres composants. Le travail mobilise les cinq chapitres du cours et les TP.
 
 | | |
 |---|---|
-| **Fichier** | [📊 Exemple de présentation (PowerPoint)](hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx) · 20 diapositives · 3,1 Mo |
-| **Durée** | 15 minutes : 18 diapositives minutées, plus une annexe et les crédits hors minutage. |
-| **Plan** | Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. |
-| **Ce qu'il montre** | comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service ; recouper des fiches techniques ; refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). |
-| **À savoir** | Exemple pédagogique : les valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée. Il renvoie aux chapitres 1 à 5 du cours ; les chapitres 3 à 5 ne sont pas encore en ligne. |
+| **📋 Les 28 sujets** | [Liste des mini-projets (PDF)](hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf) · 2 pages · 118 Ko |
+| **📊 Un exemple** | [Présentation de 15 min : pelle DOOSAN Solar 225LC-V (PowerPoint)](hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx) · 20 diapositives · 3,1 Mo |
+
+**Les 28 sujets**, en six familles : terrassement et BTP (7), levage et manutention (6), véhicules utilitaires et poids lourds (5), agriculture (2), industrie (5), énergie, eau et air (3). Les architectures indiquées sont des cas courants, à confirmer sur le schéma constructeur du modèle choisi ; les valeurs chiffrées se relèvent sur la plaque, la fiche technique ou le manuel.
+
+**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 3 à 5 ne sont pas encore en ligne.
 
 ---
 

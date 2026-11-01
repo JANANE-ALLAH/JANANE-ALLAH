@@ -73,8 +73,10 @@ TPS["02"] = [
 ]
 NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
-# Mini-projet : exemple de presentation (hors chapitres), dans cours/hydraulique/Mini_projet/.
+# Mini-projets (hors chapitres), dans cours/hydraulique/Mini_projet/ :
+# la liste des sujets (PDF) et un exemple de presentation (PowerPoint).
 MINI = "Mini_projet"
+SUJETS = "Liste_28_sujets_mini_projets.pdf"
 EXEMPLE = "Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx"
 
 
@@ -140,28 +142,46 @@ descriptif = "\n".join(desc)
 
 
 def mini_projet():
-    """Section 'Mini-projet' ; vide tant que l'exemple n'est pas dans le depot."""
-    p = os.path.join(ROOT, B, MINI, EXEMPLE)
-    if not os.path.isfile(p):
-        return ""
+    """Section 'Mini-projets' ; vide tant que ni la liste ni l'exemple ne sont dans le depot."""
     import re, zipfile
-    diapos = sum(1 for n in zipfile.ZipFile(p).namelist() if re.match(r"ppt/slides/slide\d+\.xml$", n))
-    mo = ("%.1f" % (os.path.getsize(p) / 1e6)).replace(".", ",")
-    return u"""## 🧩 Mini-projet
+    liste = os.path.join(ROOT, B, MINI, SUJETS)
+    exemple = os.path.join(ROOT, B, MINI, EXEMPLE)
+    lignes = []
+    if os.path.isfile(liste):
+        try:
+            import pypdf
+            n = len(pypdf.PdfReader(liste).pages)
+            detail = "%d pages · " % n
+        except Exception:
+            detail = ""
+        ko = "%d" % round(os.path.getsize(liste) / 1e3)
+        lignes.append("| **📋 Les 28 sujets** | [Liste des mini-projets (PDF)](%s/%s/%s) · %s%s Ko |"
+                      % (B, MINI, SUJETS, detail, ko))
+    if os.path.isfile(exemple):
+        diapos = sum(1 for n in zipfile.ZipFile(exemple).namelist() if re.match(r"ppt/slides/slide\d+\.xml$", n))
+        mo = ("%.1f" % (os.path.getsize(exemple) / 1e6)).replace(".", ",")
+        lignes.append("| **📊 Un exemple** | [Présentation de 15 min : pelle DOOSAN Solar 225LC-V (PowerPoint)](%s/%s/%s)"
+                      " · %d diapositives · %s Mo |" % (B, MINI, EXEMPLE, diapos, mo))
+    if not lignes:
+        return ""
+    texte = u"""## 🧩 Mini-projets
 
-Exemple de **présentation orale d'un mini-projet** : *Système hydraulique de la pelle DOOSAN Solar 225LC-V*, en 15 minutes.
+Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit son système hydraulique complet : le circuit, le réservoir et sa filtration, les pompes, puis les autres composants. Le travail mobilise les cinq chapitres du cours et les TP.
 
 | | |
 |---|---|
-| **Fichier** | [📊 Exemple de présentation (PowerPoint)](%s/%s/%s) · %d diapositives · %s Mo |
-| **Durée** | 15 minutes : 18 diapositives minutées, plus une annexe et les crédits hors minutage. |
-| **Plan** | Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. |
-| **Ce qu'il montre** | comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service ; recouper des fiches techniques ; refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). |
-| **À savoir** | Exemple pédagogique : les valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée. Il renvoie aux chapitres 1 à 5 du cours ; les chapitres 3 à 5 ne sont pas encore en ligne. |
+%s
 
----
+""" % "\n".join(lignes)
+    if os.path.isfile(liste):
+        texte += u"""**Les 28 sujets**, en six familles : terrassement et BTP (7), levage et manutention (6), véhicules utilitaires et poids lourds (5), agriculture (2), industrie (5), énergie, eau et air (3). Les architectures indiquées sont des cas courants, à confirmer sur le schéma constructeur du modèle choisi ; les valeurs chiffrées se relèvent sur la plaque, la fiche technique ou le manuel.
 
-""" % (B, MINI, EXEMPLE, diapos, mo)
+"""
+    if os.path.isfile(exemple):
+        texte += u"""**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 3 à 5 ne sont pas encore en ligne.
+
+"""
+    return texte + u"---\n\n"
 
 
 mini = mini_projet()
@@ -239,6 +259,6 @@ TPL = u"""<div align="center">
 
 page = TPL.replace("%%", "%").replace("%(plan)s", plan).replace("%(descriptif)s", descriptif) \
           .replace("%(publies)s", str(len(publies))).replace("%(mini)s", mini) \
-          .replace("%(nav_mini)s", "[**Mini-projet**](#-mini-projet) · " if mini else "")
+          .replace("%(nav_mini)s", "[**Mini-projets**](#-mini-projets) · " if mini else "")
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))
