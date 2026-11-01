@@ -13,7 +13,7 @@
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-2_%2F_5-E67E22?style=for-the-badge)
 
-[**Plan du module**](#-plan-du-module) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · [**Mini-projet**](#-mini-projet) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -92,6 +92,20 @@ Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et l
 - **TP 5 — Dessiner et simuler** : dessiner le schéma d'une application et le valider, par simulation si possible
 
 </details>
+
+---
+
+## 🧩 Mini-projet
+
+Exemple de **présentation orale d'un mini-projet** : *Système hydraulique de la pelle DOOSAN Solar 225LC-V*, en 15 minutes.
+
+| | |
+|---|---|
+| **Fichier** | [📊 Exemple de présentation (PowerPoint)](hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx) · 20 diapositives · 3,1 Mo |
+| **Durée** | 15 minutes : 18 diapositives minutées, plus une annexe et les crédits hors minutage. |
+| **Plan** | Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. |
+| **Ce qu'il montre** | comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service ; recouper des fiches techniques ; refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). |
+| **À savoir** | Exemple pédagogique : les valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée. Il renvoie aux chapitres 1 à 5 du cours ; les chapitres 3 à 5 ne sont pas encore en ligne. |
 
 ---
 

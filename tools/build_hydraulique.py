@@ -73,6 +73,10 @@ TPS["02"] = [
 ]
 NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
+# Mini-projet : exemple de presentation (hors chapitres), dans cours/hydraulique/Mini_projet/.
+MINI = "Mini_projet"
+EXEMPLE = "Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx"
+
 
 def fichiers(num):
     d = os.path.join(ROOT, B, CH[num][0])
@@ -134,6 +138,34 @@ for n in publies:
     desc.append("")
 descriptif = "\n".join(desc)
 
+
+def mini_projet():
+    """Section 'Mini-projet' ; vide tant que l'exemple n'est pas dans le depot."""
+    p = os.path.join(ROOT, B, MINI, EXEMPLE)
+    if not os.path.isfile(p):
+        return ""
+    import re, zipfile
+    diapos = sum(1 for n in zipfile.ZipFile(p).namelist() if re.match(r"ppt/slides/slide\d+\.xml$", n))
+    mo = ("%.1f" % (os.path.getsize(p) / 1e6)).replace(".", ",")
+    return u"""## 🧩 Mini-projet
+
+Exemple de **présentation orale d'un mini-projet** : *Système hydraulique de la pelle DOOSAN Solar 225LC-V*, en 15 minutes.
+
+| | |
+|---|---|
+| **Fichier** | [📊 Exemple de présentation (PowerPoint)](%s/%s/%s) · %d diapositives · %s Mo |
+| **Durée** | 15 minutes : 18 diapositives minutées, plus une annexe et les crédits hors minutage. |
+| **Plan** | Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. |
+| **Ce qu'il montre** | comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service ; recouper des fiches techniques ; refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). |
+| **À savoir** | Exemple pédagogique : les valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée. Il renvoie aux chapitres 1 à 5 du cours ; les chapitres 3 à 5 ne sont pas encore en ligne. |
+
+---
+
+""" % (B, MINI, EXEMPLE, diapos, mo)
+
+
+mini = mini_projet()
+
 TPL = u"""<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=Syst%C3%A8mes+Hydrauliques;Licence+Professionnelle+IMPI+%E2%80%94+ENSAM+Casablanca;Module+6+%3A+Hydraulique+%C2%B7+5+chapitres" alt="Systemes Hydrauliques" />
@@ -149,7 +181,7 @@ TPL = u"""<div align="center">
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-%(publies)s_%%2F_5-E67E22?style=for-the-badge)
 
-[**Plan du module**](#-plan-du-module) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · %(nav_mini)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -184,7 +216,7 @@ TPL = u"""<div align="center">
 
 ---
 
-## 🧭 Prérequis et évaluation
+%(mini)s## 🧭 Prérequis et évaluation
 
 | | |
 |---|---|
@@ -206,6 +238,7 @@ TPL = u"""<div align="center">
 """
 
 page = TPL.replace("%%", "%").replace("%(plan)s", plan).replace("%(descriptif)s", descriptif) \
-          .replace("%(publies)s", str(len(publies)))
+          .replace("%(publies)s", str(len(publies))).replace("%(mini)s", mini) \
+          .replace("%(nav_mini)s", "[**Mini-projet**](#-mini-projet) · " if mini else "")
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))
