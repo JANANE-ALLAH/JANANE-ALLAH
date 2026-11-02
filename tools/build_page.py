@@ -70,24 +70,6 @@ VIDEOS_TP = {
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
-def video(num):
-    cours = VIDEOS.get(num)
-    tp = VIDEOS_TP.get(num)
-    if tp and isinstance(tp[0], str):
-        tp = [tp]
-    if not cours and not tp:
-        return "🚧"
-    parts = []
-    if cours:
-        label = "▶ Cours" if tp else "▶ Voir"
-        parts.append("[%s](%s)" % (label, cours))
-    elif tp:
-        parts.append("🚧 Cours")
-    for t in tp or []:
-        tp_num, tp_url = t[0], t[1]
-        desc = t[2] if len(t) > 2 else "atelier MATLAB"
-        parts.append("[▶ %s — %s](%s)" % (tp_num, desc, tp_url))
-    return "<br>".join(parts)
 
 
 PARTS = [
@@ -101,40 +83,6 @@ PARTS = [
 ]
 
 
-def links(num, prefix, label):
-    d = CH[num][0]
-    hits = sorted(f for f in os.listdir(os.path.join(ROOT, B, d))
-                  if f.startswith(prefix) and "corrige" not in f.lower())
-    if not hits:
-        return "—"
-    return "<br>".join(
-        "[%s](%s/%s/%s)" % (f.split("_")[1] if prefix == "4_" else label, B, d, f)
-        for f in hits)
-
-
-def corriges(num):
-    """Corriges de TD/TP (ex. 4_TP2_corrige_scripts_MATLAB.zip). Fichier
-    librement telechargeable, a la difference des videos."""
-    d = CH[num][0]
-    hits = sorted(f for f in os.listdir(os.path.join(ROOT, B, d)) if "corrige" in f.lower())
-    if not hits:
-        return "—"
-    out = []
-    for f in hits:
-        stem, ext = os.path.splitext(f)
-        tokens = [t for t in stem.split("_") if t]
-        if tokens and tokens[0].isdigit():
-            tokens = tokens[1:]
-        tokens = [t for t in tokens if t.lower() != "corrige"]
-        ref = tokens[0] if tokens else "Corrige"
-        rest = " ".join(tokens[1:])
-        label = "%s — %s" % (ref, rest) if rest else ref
-        icon = "📦" if ext.lower() == ".zip" else "📄"
-        out.append("[%s %s](%s/%s/%s)" % (icon, label, B, d, f))
-    return "<br>".join(out)
-
-
-
 def fichiers(num):
     return sorted(os.listdir(os.path.join(ROOT, B, CH[num][0])))
 
@@ -146,55 +94,39 @@ def videos_tp(num):
     return tp or []
 
 
+# Couleurs des boutons, par type de support
+COULEURS = {"cours": "0056D2", "td": "6A4C93", "tp": "C1121F", "corrige": "2E7D32", "video": "E67E22"}
+
+
 def ressources(num):
-    """Liens d'un module, dans l'ordre de travail : cours, TD, TP, corriges, videos."""
+    """Supports d'un module, dans l'ordre de travail : cours, TD, TP, corriges, videos.
+    Chaque element : (type, libelle du bouton, message du bouton, lien)."""
     d, out = CH[num][0], []
     chemin = lambda f: "%s/%s/%s" % (B, d, f)
-    for f in fichiers(num):
-        if f.startswith("1_"):
-            out.append(("📄", "Cours — %d pages (PDF)" % CH[num][2], chemin(f)))
-    for f in fichiers(num):
-        if f.startswith("3_") and "corrige" not in f.lower():
-            out.append(("📝", "TD — énoncé (PDF)", chemin(f)))
-    for f in fichiers(num):
-        if f.startswith("4_") and "corrige" not in f.lower():
-            out.append(("🔬", "%s — énoncé (PDF)" % f.split("_")[1], chemin(f)))
-    for f in fichiers(num):
-        if "corrige" in f.lower():
-            ref = f.split("_")[1]
-            quoi = "scripts MATLAB (zip)" if f.lower().endswith(".zip") else "corrigé (PDF)"
-            out.append(("✅", "%s — %s" % (ref, quoi), chemin(f)))
+    fs = fichiers(num)
+    out += [("cours", "📄 Cours", "%d pages" % CH[num][2], chemin(f)) for f in fs if f.startswith("1_")]
+    out += [("td", "📝 TD", "énoncé", chemin(f)) for f in fs if f.startswith("3_") and "corrige" not in f.lower()]
+    out += [("tp", "🔬 " + f.split("_")[1], "énoncé", chemin(f))
+            for f in fs if f.startswith("4_") and "corrige" not in f.lower()]
+    out += [("corrige", "✅ " + f.split("_")[1], "corrigé MATLAB" if f.lower().endswith(".zip") else "corrigé",
+             chemin(f)) for f in fs if "corrige" in f.lower()]
     if num in VIDEOS:
-        out.append(("🎥", "Vidéo du cours 🔒", VIDEOS[num]))
-    for t in videos_tp(num):
-        out.append(("🎥", "Vidéo %s — %s 🔒" % (t[0], t[2] if len(t) > 2 else "atelier MATLAB"), t[1]))
+        out.append(("video", "▶ Vidéo", "cours", VIDEOS[num]))
+    out += [("video", "▶ Vidéo", t[0], t[1]) for t in videos_tp(num)]
     return out
 
 
-def resume(num):
-    """Ligne de resume sous le titre d'un module (comme « ce qui est inclus » sur Coursera)."""
-    r = ressources(num)
-    nb_v = sum(1 for i, _, _ in r if i == "🎥")
-    tps = [l.split(" ")[0] for i, l, _ in r if i == "🔬"]
-    bouts = ["📄 %d pages" % CH[num][2]]
-    if nb_v:
-        bouts.append("🎥 %d vidéo%s" % (nb_v, "s" if nb_v > 1 else ""))
-    if any(i == "📝" for i, _, _ in r):
-        bouts.append("📝 TD")
-    if tps:
-        bouts.append("🔬 " + " · ".join(tps))
-    if any(i == "✅" for i, _, _ in r):
-        bouts.append("✅ corrigé")
-    return " · ".join(bouts)
+def bouton(typ, libelle, message, url):
+    from urllib.parse import quote
+    q = lambda t: quote(t.replace("-", "--").replace("_", "__"), safe="")
+    image = "https://img.shields.io/badge/%s-%s-%s?style=for-the-badge" % (q(libelle), q(message), COULEURS[typ])
+    return "[![%s %s](%s)](%s)" % (libelle, message, image, url)
 
 
 def module(num):
-    lignes = ["<details>",
-              "<summary><b>Module %s · %s</b><br><sub>%s</sub></summary>" % (num, CH[num][1], resume(num)),
-              "<br>", "", CH[num][3], ""]
-    lignes += ["- %s [%s](%s)" % (i, l, u) for i, l, u in ressources(num)]
-    lignes += ["", "</details>", ""]
-    return "\n".join(lignes)
+    """Un module en clair : titre, description, puis un bouton par support (rien a deplier)."""
+    return "\n".join(["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
+                      "\n".join(bouton(*r) for r in ressources(num)), ""])
 
 
 programme = []
@@ -205,13 +137,6 @@ for icon, title, nums, blurb in PARTS:
     if blurb:
         programme.append("%s\n" % blurb)
     programme += [module(n) for n in nums]
-
-# Vue tableau de toutes les ressources (acces rapide, replie par defaut)
-tableau = ["| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |",
-           "|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|"]
-for n in sorted(CH):
-    tableau.append("| **%s** | %s | %s | %s | %s | %s | %s |" % (
-        n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP"), corriges(n), video(n)))
 
 tree = "\n".join("├── %s/" % CH[n][0] for n in sorted(CH))
 
@@ -302,18 +227,12 @@ finies, et **équations différentielles ordinaires**.
 
 ## 📚 Programme du module
 
-Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Ouvrez un module
-pour voir son contenu et accéder à ses supports.
+Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
+donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
+
+<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C)</sub>
 
 %(programme)s
-<details>
-<summary>📋 <b>Toutes les ressources en un tableau</b> (accès rapide)</summary>
-<br/>
-
-%(tableau)s
-
-</details>
-
 ---
 
 ## 📝 Examens
@@ -490,7 +409,7 @@ def examens():
 texte_examens, nb_examens = examens()
 ch0 = "%s/%s/%s" % (B, CH["00"][0], next(f for f in fichiers("00") if f.startswith("1_")))
 valeurs = {
-    "programme": "\n".join(programme), "tableau": "\n".join(tableau), "tree": tree,
+    "programme": "\n".join(programme), "tree": tree,
     "motiv": MOTIVATION, "ch0": ch0, "examens": texte_examens, "nb_exam": str(nb_examens),
     "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES), "nb_td": str(NB_TD), "nb_tp": str(NB_TP),
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),

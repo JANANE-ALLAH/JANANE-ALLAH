@@ -69,23 +69,21 @@ finies, et **équations différentielles ordinaires**.
 
 ## 📚 Programme du module
 
-Il y a **12 modules** dans ce cours, en trois parties précédées d'une introduction. Ouvrez un module
-pour voir son contenu et accéder à ses supports.
+Il y a **12 modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
+donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
+
+<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C)</sub>
 
 ### 🚩 Introduction
 
 <sub>1 module · 8 pages de cours</sub>
 
-<details>
-<summary><b>Module 00 · Introduction générale</b><br><sub>📄 8 pages · 🎥 1 vidéo</sub></summary>
-<br>
+#### Module 00 · Introduction générale
 
 Pourquoi le calcul numérique en mécanique, et à quoi il sert concrètement dans le métier d'ingénieur. Présentation des exemples fils conducteurs du module.
 
-- 📄 [Cours — 8 pages (PDF)](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view)
-
-</details>
+[![📄 Cours 8 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-8%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view)
 
 ### 🧮 Partie I — Systèmes algébriques
 
@@ -93,62 +91,46 @@ Pourquoi le calcul numérique en mécanique, et à quoi il sert concrètement da
 
 Résoudre *Ax = b*, puis *F(x) = 0* : les briques sur lesquelles repose tout le reste du module.
 
-<details>
-<summary><b>Module 01 · Rappels numériques : erreurs, normes et conditionnement</b><br><sub>📄 13 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 01 · Rappels numériques : erreurs, normes et conditionnement
 
 Un ordinateur ne calcule jamais exactement : erreurs d'arrondi, normes vectorielles et matricielles, conditionnement d'une matrice.
 
-- 📄 [Cours — 13 pages (PDF)](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view)
+[![📄 Cours 13 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-13%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view)
 
-</details>
-
-<details>
-<summary><b>Module 02 · Systèmes linéaires : méthodes directes</b><br><sub>📄 16 pages · 🎥 2 vidéos · 📝 TD · 🔬 TP1 · ✅ corrigé</sub></summary>
-<br>
+#### Module 02 · Systèmes linéaires : méthodes directes
 
 Résolution de Ax = b en un nombre fini d'opérations — la brique de base de tout calcul par éléments finis.
 
-- 📄 [Cours — 16 pages (PDF)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf)
-- 🔬 [TP1 — énoncé (PDF)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf)
-- ✅ [TP1 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_corrige_scripts_MATLAB.zip)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)
-- 🎥 [Vidéo TP1 — atelier MATLAB 🔒](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
+[![📄 Cours 16 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-16%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf)
+[![🔬 TP1 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP1-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf)
+[![✅ TP1 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP1-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)
+[![▶ Vidéo TP1](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP1-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
 
-</details>
-
-<details>
-<summary><b>Module 03 · Systèmes linéaires : méthodes itératives</b><br><sub>📄 12 pages · 🎥 2 vidéos · 📝 TD · 🔬 TP2 · ✅ corrigé</sub></summary>
-<br>
+#### Module 03 · Systèmes linéaires : méthodes itératives
 
 Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination de Gauss coûte trop cher et détruit le caractère creux (fill-in).
 
-- 📄 [Cours — 12 pages (PDF)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf)
-- 🔬 [TP2 — énoncé (PDF)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf)
-- ✅ [TP2 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_corrige_scripts_MATLAB.zip)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
-- 🎥 [Vidéo TP2 — atelier MATLAB 🔒](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
+[![📄 Cours 12 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-12%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf)
+[![🔬 TP2 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP2-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf)
+[![✅ TP2 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP2-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
+[![▶ Vidéo TP2](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP2-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
 
-</details>
-
-<details>
-<summary><b>Module 04 · Systèmes non linéaires</b><br><sub>📄 18 pages · 🎥 2 vidéos · 📝 TD · 🔬 TP3 · ✅ corrigé</sub></summary>
-<br>
+#### Module 04 · Systèmes non linéaires
 
 Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge quadratiques, ressort durcissant, grandes déformations.
 
-- 📄 [Cours — 18 pages (PDF)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf)
-- 🔬 [TP3 — énoncé (PDF)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf)
-- ✅ [TP3 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_corrige_scripts_MATLAB.zip)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/125--JQ7p31u2xEMZVsSO3x2MCeXNOXYA/view)
-- 🎥 [Vidéo TP3 — programmation de Newton 🔒](https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view)
-
-</details>
+[![📄 Cours 18 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-18%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf)
+[![🔬 TP3 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP3-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf)
+[![✅ TP3 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP3-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/125--JQ7p31u2xEMZVsSO3x2MCeXNOXYA/view)
+[![▶ Vidéo TP3](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP3-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view)
 
 ### 🌡️ Partie II — EDP et différences finies
 
@@ -156,80 +138,56 @@ Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge 
 
 De la classification des EDP aux trois équations modèles de la mécanique : chaleur, Laplace-Poisson, ondes.
 
-<details>
-<summary><b>Module 05 · Généralités sur les EDP en mécanique et classification</b><br><sub>📄 10 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 05 · Généralités sur les EDP en mécanique et classification
 
 L'inconnue n'est plus un vecteur mais un champ. Classification elliptique / parabolique / hyperbolique et conditions aux limites associées.
 
-- 📄 [Cours — 10 pages (PDF)](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1wxEG6bzlLQPGz-evjzRmrmuqnVQsqqgs/view)
+[![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1wxEG6bzlLQPGz-evjzRmrmuqnVQsqqgs/view)
 
-</details>
-
-<details>
-<summary><b>Module 06 · Principe de la méthode des différences finies</b><br><sub>📄 10 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 06 · Principe de la méthode des différences finies
 
 L'étape décisive : remplacer les dérivées, objets continus, par des quantités calculables sur ordinateur.
 
-- 📄 [Cours — 10 pages (PDF)](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1F-IuYtpVuRNhaj7w13zxnSUldtZj1PoB/view)
+[![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1F-IuYtpVuRNhaj7w13zxnSUldtZj1PoB/view)
 
-</details>
-
-<details>
-<summary><b>Module 07 · Consistance, stabilité, convergence</b><br><sub>📄 10 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 07 · Consistance, stabilité, convergence
 
 Pourquoi un schéma parfaitement construit sur le papier peut produire des résultats absurdes — des oscillations qui grandissent jusqu'à faire déborder les calculs.
 
-- 📄 [Cours — 10 pages (PDF)](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1AT_64YZW3ebVt21abcGkxcZUoLHFnnkg/view)
+[![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1AT_64YZW3ebVt21abcGkxcZUoLHFnnkg/view)
 
-</details>
-
-<details>
-<summary><b>Module 08 · Équation de la chaleur</b><br><sub>📄 11 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 08 · Équation de la chaleur
 
 Un problème physique résolu de bout en bout : la paroi de four en régime transitoire, de l'état initial jusqu'à l'équilibre.
 
-- 📄 [Cours — 11 pages (PDF)](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/18wNa17e4CPXprrvWbSh1HTMUlAU2F5dD/view)
+[![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/18wNa17e4CPXprrvWbSh1HTMUlAU2F5dD/view)
 
-</details>
-
-<details>
-<summary><b>Module 09 · Équation de Laplace-Poisson et advection-diffusion</b><br><sub>📄 11 pages · 🎥 2 vidéos · 📝 TD · 🔬 TP5 · ✅ corrigé</sub></summary>
-<br>
+#### Module 09 · Équation de Laplace-Poisson et advection-diffusion
 
 Discrétisation 2D complète (Dirichlet puis Neumann), validation sur un cas test analytique, puis introduction de l'advection-diffusion.
 
-- 📄 [Cours — 11 pages (PDF)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf)
-- 🔬 [TP5 — énoncé (PDF)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf)
-- ✅ [TP5 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_corrige_scripts_MATLAB.zip)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view)
-- 🎥 [Vidéo TP5 — correction 🔒](https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view)
+[![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf)
+[![🔬 TP5 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP5-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf)
+[![✅ TP5 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP5-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view)
+[![▶ Vidéo TP5](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP5-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view)
 
-</details>
-
-<details>
-<summary><b>Module 10 · Équation des ondes</b><br><sub>📄 11 pages · 🎥 1 vidéo · 📝 TD</sub></summary>
-<br>
+#### Module 10 · Équation des ondes
 
 La corde vibrante et sa condition de stabilité — la condition CFL, avec son interprétation géométrique remarquable.
 
-- 📄 [Cours — 11 pages (PDF)](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1IQh3d69BFptw47AmVj_zgeMaxRPnpFTB/view)
-
-</details>
+[![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1IQh3d69BFptw47AmVj_zgeMaxRPnpFTB/view)
 
 ### 📈 Partie III — Équations différentielles ordinaires
 
@@ -237,44 +195,19 @@ La corde vibrante et sa condition de stabilité — la condition CFL, avec son i
 
 Retour au temps : Euler, Runge-Kutta et la question de la stabilité du pas de temps.
 
-<details>
-<summary><b>Module 11 · Résolution numérique des équations différentielles ordinaires</b><br><sub>📄 14 pages · 🎥 3 vidéos · 📝 TD · 🔬 TP4 · TP6 · ✅ corrigé</sub></summary>
-<br>
+#### Module 11 · Résolution numérique des équations différentielles ordinaires
 
 L'évolution temporelle des systèmes à nombre fini de degrés de liberté : oscillateurs, mécanismes, circuits équivalents.
 
-- 📄 [Cours — 14 pages (PDF)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf)
-- 📝 [TD — énoncé (PDF)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf)
-- 🔬 [TP4 — énoncé (PDF)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)
-- 🔬 [TP6 — énoncé (PDF)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf)
-- ✅ [TP4 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_corrige_scripts_MATLAB.zip)
-- ✅ [TP6 — scripts MATLAB (zip)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_corrige_scripts_MATLAB.zip)
-- 🎥 [Vidéo du cours 🔒](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view)
-- 🎥 [Vidéo TP4 — programmation complète 🔒](https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view)
-- 🎥 [Vidéo TP6 — programmation complète 🔒](https://drive.google.com/file/d/1FFd2tp73XQvZY2wPG-ukHws2T4iTNNlx/view)
-
-</details>
-
-<details>
-<summary>📋 <b>Toutes les ressources en un tableau</b> (accès rapide)</summary>
-<br/>
-
-| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
-|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
-| **00** | Introduction générale | [PDF](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf) | — | — | — | [▶ Voir](https://drive.google.com/file/d/18AdF62vRubU5swh_zy52d6AvmlzcVybn/view) |
-| **01** | Rappels numériques : erreurs, normes et conditionnement | [PDF](methodes-numeriques/Chapitre_01_Rappels_numeriques/1_Cours_chapitre_01.pdf) | [TD](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view) |
-| **02** | Systèmes linéaires : méthodes directes | [PDF](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/1_Cours_chapitre_02.pdf) | [TD](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/3_TD02_enonce.pdf) | [TP1](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_enonce.pdf) | [📦 TP1 — scripts MATLAB](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_corrige_scripts_MATLAB.zip) | [▶ Cours](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)<br>[▶ TP1 — atelier MATLAB](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view) |
-| **03** | Systèmes linéaires : méthodes itératives | [PDF](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf) | [TD](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/3_TD03_enonce.pdf) | [TP2](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_enonce.pdf) | [📦 TP2 — scripts MATLAB](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_corrige_scripts_MATLAB.zip) | [▶ Cours](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)<br>[▶ TP2 — atelier MATLAB](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view) |
-| **04** | Systèmes non linéaires | [PDF](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf) | [TD](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/3_TD04_enonce.pdf) | [TP3](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_enonce.pdf) | [📦 TP3 — scripts MATLAB](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_corrige_scripts_MATLAB.zip) | [▶ Cours](https://drive.google.com/file/d/125--JQ7p31u2xEMZVsSO3x2MCeXNOXYA/view)<br>[▶ TP3 — programmation de Newton](https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view) |
-| **05** | Généralités sur les EDP en mécanique et classification | [PDF](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf) | [TD](methodes-numeriques/Chapitre_05_Generalites_EDP/3_TD05_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1wxEG6bzlLQPGz-evjzRmrmuqnVQsqqgs/view) |
-| **06** | Principe de la méthode des différences finies | [PDF](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf) | [TD](methodes-numeriques/Chapitre_06_Principe_differences_finies/3_TD06_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1F-IuYtpVuRNhaj7w13zxnSUldtZj1PoB/view) |
-| **07** | Consistance, stabilité, convergence | [PDF](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf) | [TD](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/3_TD07_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1AT_64YZW3ebVt21abcGkxcZUoLHFnnkg/view) |
-| **08** | Équation de la chaleur | [PDF](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf) | [TD](methodes-numeriques/Chapitre_08_Equation_chaleur/3_TD08_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/18wNa17e4CPXprrvWbSh1HTMUlAU2F5dD/view) |
-| **09** | Équation de Laplace-Poisson et advection-diffusion | [PDF](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf) | [TD](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/3_TD09_enonce.pdf) | [TP5](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_enonce.pdf) | [📦 TP5 — scripts MATLAB](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_corrige_scripts_MATLAB.zip) | [▶ Cours](https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view)<br>[▶ TP5 — correction](https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view) |
-| **10** | Équation des ondes | [PDF](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf) | [TD](methodes-numeriques/Chapitre_10_Equation_ondes/3_TD10_enonce.pdf) | — | — | [▶ Voir](https://drive.google.com/file/d/1IQh3d69BFptw47AmVj_zgeMaxRPnpFTB/view) |
-| **11** | Résolution numérique des équations différentielles ordinaires | [PDF](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf) | [TD](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf) | [TP4](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)<br>[TP6](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf) | [📦 TP4 — scripts MATLAB](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_corrige_scripts_MATLAB.zip)<br>[📦 TP6 — scripts MATLAB](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_corrige_scripts_MATLAB.zip) | [▶ Cours](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view)<br>[▶ TP4 — programmation complète](https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view)<br>[▶ TP6 — programmation complète](https://drive.google.com/file/d/1FFd2tp73XQvZY2wPG-ukHws2T4iTNNlx/view) |
-
-</details>
+[![📄 Cours 14 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-14%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf)
+[![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf)
+[![🔬 TP4 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP4-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)
+[![🔬 TP6 énoncé](https://img.shields.io/badge/%F0%9F%94%AC%20TP6-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf)
+[![✅ TP4 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP4-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_corrige_scripts_MATLAB.zip)
+[![✅ TP6 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP6-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view)
+[![▶ Vidéo TP4](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP4-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view)
+[![▶ Vidéo TP6](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP6-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1FFd2tp73XQvZY2wPG-ukHws2T4iTNNlx/view)
 
 ---
 
