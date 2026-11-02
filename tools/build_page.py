@@ -70,17 +70,31 @@ VIDEOS_TP = {
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
-# Jeux interactifs d'un TP : pages HTML sur le site janane-allah.github.io (le Markdown de
-# GitHub n'execute pas de JavaScript). Cle = chapitre ; valeur = (TP, adresse, sous-titre,
-# [(ancre, titre, notion)]). Vignettes : methodes-numeriques/images/jeux-<tp>/<ancre>.jpg
+# Jeux interactifs des TP : pages HTML sur le site janane-allah.github.io (le Markdown de
+# GitHub n'execute pas de JavaScript). Cle = chapitre ; valeur = liste de (TP, adresse,
+# sous-titre, [(ancre, titre, notion)]). Vignettes : methodes-numeriques/images/jeux-<tp>/<ancre>.jpg
 JEUX = {
- "09": ("TP5", "https://janane-allah.github.io/jeux/tp5/", "la salle de sport (Poisson 2D)", [
+ "09": [("TP5", "https://janane-allah.github.io/jeux/tp5/", "la salle de sport (Poisson 2D)", [
    ("jeu-1", "Numéro, s'il vous plaît !", "La numérotation k = (j − 1)·nx + i"),
    ("jeu-2", "Le pochoir à 5 points", "Assembler une ligne de A et de b"),
    ("jeu-3", "Thermostat de la salle", "T = A \\ b, principe du maximum, mur isolé"),
    ("jeu-4", "Course SOR", "Battre Gauss-Seidel, trouver le ω optimal"),
    ("jeu-5", "Détective du code", "Reconnaître un bug à sa sortie console"),
- ]),
+ ])],
+ "11": [("TP4", "https://janane-allah.github.io/jeux/tp4/", "la paroi de four (EDO non linéaire)", [
+   ("jeu-1", "Le pas de trop", "Euler explicite : précision, pas critique, implicite"),
+   ("jeu-2", "Newton, pas à pas", "La boucle de Newton d'Euler implicite"),
+   ("jeu-3", "Le duel des schémas", "Ordre de convergence et coût égal"),
+   ("jeu-4", "Convection contre rayonnement", "Deux flux, un seul en T⁴"),
+   ("jeu-5", "Détective du code", "Reconnaître un bug à sa sortie console"),
+  ]),
+  ("TP6", "https://janane-allah.github.io/jeux/tp6/", "l'attracteur de Lorenz (système d'EDO)", [
+   ("jeu-1", "Le papillon de Lorenz", "RK4 pour un système, centres, rôle de ρ"),
+   ("jeu-2", "L'effet papillon", "Sensibilité aux conditions initiales"),
+   ("jeu-3", "Crash test : Euler contre RK4", "Pas de temps, explosion, coût égal"),
+   ("jeu-4", "Instabilité, chaos ou erreur ?", "Classer huit courbes calculées"),
+   ("jeu-5", "Détective du code", "Reconnaître un bug à sa sortie console"),
+  ])],
 }
 
 
@@ -127,8 +141,7 @@ def ressources(num):
     if num in VIDEOS:
         out.append(("video", "▶ Vidéo", "cours", VIDEOS[num]))
     out += [("video", "▶ Vidéo", t[0], t[1]) for t in videos_tp(num)]
-    if num in JEUX:
-        out.append(("jeu", "🎮 Jeux", "%s · %d jeux" % (JEUX[num][0], len(JEUX[num][3])), JEUX[num][1]))
+    out += [("jeu", "🎮 Jeux", "%s · %d jeux" % (j[0], len(j[3])), j[1]) for j in JEUX.get(num, [])]
     return out
 
 
@@ -149,8 +162,7 @@ def section_jeux():
     """Une carte par jeu (vignette, titre, notion, bouton), trois par rangee, puis une carte « Comment jouer »."""
     from urllib.parse import quote
     out = []
-    for num in sorted(JEUX):
-        tp, url, sous_titre, liste = JEUX[num]
+    for num, (tp, url, sous_titre, liste) in sorted(((n, j) for n in JEUX for j in JEUX[n]), key=lambda x: x[1][0]):
         dossier = "%s/images/jeux-%s" % (B, tp.lower())
         out.append("### %s · Module %s — %s\n" % (tp, num, sous_titre))
         cartes = []

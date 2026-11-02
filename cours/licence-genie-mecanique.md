@@ -209,6 +209,8 @@ L'évolution temporelle des systèmes à nombre fini de degrés de liberté : os
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view)
 [![▶ Vidéo TP4](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP4-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view)
 [![▶ Vidéo TP6](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP6-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1FFd2tp73XQvZY2wPG-ukHws2T4iTNNlx/view)
+[![🎮 Jeux TP4 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP4%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp4/)
+[![🎮 Jeux TP6 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP6%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp6/)
 
 ---
 
@@ -348,6 +350,21 @@ Des jeux, dans le navigateur, pour **manipuler un TP avant de le programmer** : 
 manipulation de l'énoncé. Tous les nombres affichés sont calculés en direct par le code MATLAB du TP, porté
 ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
 
+### TP4 · Module 11 — la paroi de four (EDO non linéaire)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp4/#jeu-1"><img src="methodes-numeriques/images/jeux-tp4/jeu-1.jpg" width="100%" alt="Jeu 1 : Le pas de trop"></a><br/><b>1 · Le pas de trop</b><br/><sub>Euler explicite : précision, pas critique, implicite</sub><br/><a href="https://janane-allah.github.io/jeux/tp4/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp4/#jeu-2"><img src="methodes-numeriques/images/jeux-tp4/jeu-2.jpg" width="100%" alt="Jeu 2 : Newton, pas à pas"></a><br/><b>2 · Newton, pas à pas</b><br/><sub>La boucle de Newton d'Euler implicite</sub><br/><a href="https://janane-allah.github.io/jeux/tp4/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp4/#jeu-3"><img src="methodes-numeriques/images/jeux-tp4/jeu-3.jpg" width="100%" alt="Jeu 3 : Le duel des schémas"></a><br/><b>3 · Le duel des schémas</b><br/><sub>Ordre de convergence et coût égal</sub><br/><a href="https://janane-allah.github.io/jeux/tp4/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp4/#jeu-4"><img src="methodes-numeriques/images/jeux-tp4/jeu-4.jpg" width="100%" alt="Jeu 4 : Convection contre rayonnement"></a><br/><b>4 · Convection contre rayonnement</b><br/><sub>Deux flux, un seul en T⁴</sub><br/><a href="https://janane-allah.github.io/jeux/tp4/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp4/#jeu-5"><img src="methodes-numeriques/images/jeux-tp4/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Reconnaître un bug à sa sortie console</sub><br/><a href="https://janane-allah.github.io/jeux/tp4/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
+
 ### TP5 · Module 09 — la salle de sport (Poisson 2D)
 
 <table>
@@ -359,6 +376,21 @@ ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
 <tr>
 <td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-4"><img src="methodes-numeriques/images/jeux-tp5/jeu-4.jpg" width="100%" alt="Jeu 4 : Course SOR"></a><br/><b>4 · Course SOR</b><br/><sub>Battre Gauss-Seidel, trouver le ω optimal</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
 <td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-5"><img src="methodes-numeriques/images/jeux-tp5/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Reconnaître un bug à sa sortie console</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
+
+### TP6 · Module 11 — l'attracteur de Lorenz (système d'EDO)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp6/#jeu-1"><img src="methodes-numeriques/images/jeux-tp6/jeu-1.jpg" width="100%" alt="Jeu 1 : Le papillon de Lorenz"></a><br/><b>1 · Le papillon de Lorenz</b><br/><sub>RK4 pour un système, centres, rôle de ρ</sub><br/><a href="https://janane-allah.github.io/jeux/tp6/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp6/#jeu-2"><img src="methodes-numeriques/images/jeux-tp6/jeu-2.jpg" width="100%" alt="Jeu 2 : L'effet papillon"></a><br/><b>2 · L'effet papillon</b><br/><sub>Sensibilité aux conditions initiales</sub><br/><a href="https://janane-allah.github.io/jeux/tp6/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp6/#jeu-3"><img src="methodes-numeriques/images/jeux-tp6/jeu-3.jpg" width="100%" alt="Jeu 3 : Crash test : Euler contre RK4"></a><br/><b>3 · Crash test : Euler contre RK4</b><br/><sub>Pas de temps, explosion, coût égal</sub><br/><a href="https://janane-allah.github.io/jeux/tp6/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp6/#jeu-4"><img src="methodes-numeriques/images/jeux-tp6/jeu-4.jpg" width="100%" alt="Jeu 4 : Instabilité, chaos ou erreur ?"></a><br/><b>4 · Instabilité, chaos ou erreur ?</b><br/><sub>Classer huit courbes calculées</sub><br/><a href="https://janane-allah.github.io/jeux/tp6/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp6/#jeu-5"><img src="methodes-numeriques/images/jeux-tp6/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Reconnaître un bug à sa sortie console</sub><br/><a href="https://janane-allah.github.io/jeux/tp6/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
 <td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
 </tr>
 </table>
