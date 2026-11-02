@@ -13,8 +13,8 @@
 
 ![Formation](https://img.shields.io/badge/Licence_Pro-IMPI-2E86AB?style=for-the-badge)
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
-![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-2_%2F_5-E67E22?style=for-the-badge)
-![Cours](https://img.shields.io/badge/Cours_en_ligne-144_pages-1F6FEB?style=for-the-badge)
+![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-3_%2F_5-E67E22?style=for-the-badge)
+![Cours](https://img.shields.io/badge/Cours_en_ligne-259_pages-1F6FEB?style=for-the-badge)
 ![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 
@@ -52,8 +52,8 @@ flowchart LR
     classDef ok fill:#2E86AB,stroke:#1d5d7a,color:#fff
     classDef soon fill:#eeeeee,stroke:#aaaaaa,color:#555555,stroke-dasharray: 4 3
     classDef goal fill:#8E44AD,stroke:#6c3483,color:#fff
-    class C01,C02 ok
-    class C03,C04,C05 soon
+    class C01,C02,C03 ok
+    class C04,C05 soon
     class MP goal
 ```
 
@@ -63,7 +63,7 @@ flowchart LR
 |:-:|----------|:--------:|:--------:|
 | **01** | Généralités sur les systèmes hydrauliques | [PDF](hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf) | — |
 | **02** | Schémas hydrauliques et pneumatiques | [PDF](hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf) | [▶ Voir](https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view) |
-| **03** | *Technologie des systèmes hydrauliques* | 🚧 À venir | — |
+| **03** | Technologie des systèmes hydrauliques | [PDF](hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf) | — |
 | **04** | *Circuits hydrauliques* | 🚧 À venir | — |
 | **05** | *Maintenance des installations* | 🚧 À venir | — |
 
@@ -115,6 +115,29 @@ Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et l
 - **TP 4 — Régler et mesurer** : tarer le limiteur de pression, régler la vitesse, lire les manomètres
 - **TP 5 — Dessiner et simuler** : dessiner le schéma d'une application et le valider, par simulation si possible
 
+**03 — Technologie des systèmes hydrauliques** · 115 pages  
+Les composants d'une installation, famille par famille : centrale, réservoirs, filtres, accumulateurs, pompes, moteurs, vérins, distributeurs, protection et régulation. Calculs de cylindrée, débit, couple et rendements, volume d'un accumulateur, effort et flambage d'un vérin, dimensionnement d'une centrale ; diagnostic des symptômes types (cavitation, colmatage, usure interne). Durée indicative 12 à 16 h hors TP, 9 exercices corrigés, fiches de formules, QCM d'auto-évaluation.
+
+*Les neuf parties du chapitre, une question chacune :*
+
+1. **Centrale hydraulique** — Comment est organisé le groupe de puissance ?
+2. **Réservoirs** — Quel volume, quelles règles de conception ?
+3. **Filtres** — Où placer le filtre et avec quelle finesse ?
+4. **Accumulateurs** — Comment stocker l'énergie et l'amortir ?
+5. **Pompes** — Quel type, quelle cylindrée, quel rendement ?
+6. **Moteurs hydrauliques** — Quel couple, quelle vitesse ?
+7. **Vérins** — Quel effort, quelle tige, quelle course ?
+8. **Distributeurs** — Quelle taille, quelle commande ?
+9. **Protection et régulation** — Comment limiter la pression et le débit ?
+
+*Les TP associés, sur machine :*
+
+- **TP 1 — Identifier** : nommer les composants d'une centrale ou d'une machine ; relever les plaques
+- **TP 2 — Mesurer une pompe** : relever Q, p, N et C ; calculer ηv, ηhm et ηg
+- **TP 3 — Accumulateur et filtre** : lire la précharge (hors pression), l'indicateur de colmatage, l'état du filtre
+- **TP 4 — Vérin et moteur** : chronométrer une course, calculer F, v et le débit ; repérer le gavage
+- **TP 5 — Distributeur et limiteur** : identifier la commande, câbler, tarer le limiteur et mesurer Δp
+
 </details>
 
 ---
@@ -130,7 +153,7 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 
 **Les 28 sujets**, en six familles : terrassement et BTP (7), levage et manutention (6), véhicules utilitaires et poids lourds (5), agriculture (2), industrie (5), énergie, eau et air (3). Les architectures indiquées sont des cas courants, à confirmer sur le schéma constructeur du modèle choisi ; les valeurs chiffrées se relèvent sur la plaque, la fiche technique ou le manuel.
 
-**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 3 à 5 ne sont pas encore en ligne.
+**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 4 et 5 ne sont pas encore en ligne.
 
 ---
 

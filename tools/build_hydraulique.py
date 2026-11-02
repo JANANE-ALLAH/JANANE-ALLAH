@@ -26,7 +26,13 @@ CH = {
         "de représentation et de repérage ; construction d'un circuit simple à partir d'un cahier "
         "des charges. Exemple fil rouge : commande d'un vérin hydraulique à double effet. Durée "
         "indicative 5 à 7 h, exercices corrigés, QCM d'auto-évaluation."),
- "03": ("Chapitre_03_Technologie_systemes_hydrauliques", "Technologie des systèmes hydrauliques", ""),
+ "03": ("Chapitre_03_Technologie_systemes_hydrauliques", "Technologie des systèmes hydrauliques",
+        "Les composants d'une installation, famille par famille : centrale, réservoirs, filtres, "
+        "accumulateurs, pompes, moteurs, vérins, distributeurs, protection et régulation. Calculs de "
+        "cylindrée, débit, couple et rendements, volume d'un accumulateur, effort et flambage d'un vérin, "
+        "dimensionnement d'une centrale ; diagnostic des symptômes types (cavitation, colmatage, usure "
+        "interne). Durée indicative 12 à 16 h hors TP, 9 exercices corrigés, fiches de formules, QCM "
+        "d'auto-évaluation."),
  "04": ("Chapitre_04_Circuits_hydrauliques", "Circuits hydrauliques", ""),
  "05": ("Chapitre_05_Maintenance_installations", "Maintenance des installations", ""),
 }
@@ -70,6 +76,24 @@ TPS["02"] = [
     ("Câbler un circuit", "réaliser la commande d'un vérin double effet et vérifier les 3 positions"),
     ("Régler et mesurer", "tarer le limiteur de pression, régler la vitesse, lire les manomètres"),
     ("Dessiner et simuler", "dessiner le schéma d'une application et le valider, par simulation si possible"),
+]
+PARTIES["03"] = [
+    ("Centrale hydraulique", "Comment est organisé le groupe de puissance ?"),
+    ("Réservoirs", "Quel volume, quelles règles de conception ?"),
+    ("Filtres", "Où placer le filtre et avec quelle finesse ?"),
+    ("Accumulateurs", "Comment stocker l'énergie et l'amortir ?"),
+    ("Pompes", "Quel type, quelle cylindrée, quel rendement ?"),
+    ("Moteurs hydrauliques", "Quel couple, quelle vitesse ?"),
+    ("Vérins", "Quel effort, quelle tige, quelle course ?"),
+    ("Distributeurs", "Quelle taille, quelle commande ?"),
+    ("Protection et régulation", "Comment limiter la pression et le débit ?"),
+]
+TPS["03"] = [
+    ("Identifier", "nommer les composants d'une centrale ou d'une machine ; relever les plaques"),
+    ("Mesurer une pompe", "relever Q, p, N et C ; calculer ηv, ηhm et ηg"),
+    ("Accumulateur et filtre", "lire la précharge (hors pression), l'indicateur de colmatage, l'état du filtre"),
+    ("Vérin et moteur", "chronométrer une course, calculer F, v et le débit ; repérer le gavage"),
+    ("Distributeur et limiteur", "identifier la commande, câbler, tarer le limiteur et mesurer Δp"),
 ]
 NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
@@ -168,6 +192,17 @@ for n in publies:
 descriptif = "\n".join(desc)
 
 
+def chapitres_absents():
+    """', dont les chapitres 4 et 5 ne sont pas encore en ligne' ; vide si tout est publie."""
+    ns = [str(int(n)) for n in sorted(CH) if n not in publies]
+    if not ns:
+        return ""
+    if len(ns) == 1:
+        return ", dont le chapitre %s n'est pas encore en ligne" % ns[0]
+    return ", dont les chapitres %s ne sont pas encore en ligne" % (
+        "%s et %s" % tuple(ns) if len(ns) == 2 else "%s à %s" % (ns[0], ns[-1]))
+
+
 def mini_projet():
     """Section 'Mini-projets' ; vide tant que ni la liste ni l'exemple ne sont dans le depot."""
     import re, zipfile
@@ -205,9 +240,9 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 
 """
     if os.path.isfile(exemple):
-        texte += u"""**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 3 à 5 ne sont pas encore en ligne.
+        texte += u"""**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours%s.
 
-"""
+""" % chapitres_absents()
     return texte + u"---\n\n"
 
 
