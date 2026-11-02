@@ -134,7 +134,7 @@ Retour au temps : Euler, Runge-Kutta et la question de la stabilité du pas de t
 
 | # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |
 |:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|
-| **11** | Résolution numérique des équations différentielles ordinaires | [PDF](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf) | [TD](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf) | [TP4](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)<br>[TP6](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf) | — | 🚧 |
+| **11** | Résolution numérique des équations différentielles ordinaires | [PDF](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf) | [TD](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/3_TD11_enonce.pdf) | [TP4](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP4_enonce.pdf)<br>[TP6](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/4_TP6_enonce.pdf) | — | [▶ Voir](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view) |
 
 <details>
 <summary><i>Descriptif des chapitres</i></summary>
@@ -215,7 +215,7 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 
 ## 🎥 Vidéos
 
-🎬 **11 capsule(s) en ligne** sur 12 chapitres.
+🎬 **12 capsule(s) en ligne** sur 12 chapitres.
 
 🎯 **[Pourquoi ce module ?](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)** — la vidéo d'accroche à regarder avant tout le reste :
 où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.

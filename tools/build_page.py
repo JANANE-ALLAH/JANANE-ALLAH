@@ -46,6 +46,7 @@ VIDEOS = {
  "08": "https://drive.google.com/file/d/18wNa17e4CPXprrvWbSh1HTMUlAU2F5dD/view",
  "09": "https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view",
  "10": "https://drive.google.com/file/d/1IQh3d69BFptw47AmVj_zgeMaxRPnpFTB/view",
+ "11": "https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view",
 }
 
 # Videos d atelier TP (ex. 7b_Video_TP1_atelier_MATLAB), affichees a cote de
