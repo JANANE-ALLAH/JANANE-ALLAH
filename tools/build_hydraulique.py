@@ -108,7 +108,18 @@ NB_SUJETS = 28
 # avant publication ; les originaux restent chez l'enseignant. Une photo absente du depot est ignoree.
 IMG = "images"
 BANDEAU = "bandeau.jpg"
-GALERIE = [  # (titre, colonnes, [(fichier, legende)])
+GALERIE = [  # (titre, colonnes, [(fichier, legende)]) ; titre vide = suite du bloc precedent
+ ("👷 Sur le terrain", 1, [
+   ("terrain-promotion-sany.jpg", "Sur le site de TP, devant la pelle SANY : une séance de terrain avec plus de 30 participants."),
+ ]),
+ ("", 3, [
+   ("terrain-pelle-cat.jpg", "Sur la pelle CAT : on monte sur la machine pour repérer ses organes."),
+   ("terrain-sur-la-machine.jpg", "Sur le capot de la pelle SANY : on pointe, on identifie, on vérifie."),
+   ("terrain-demontage-moteur.jpg", "Autour d'un moteur démonté, en blouse de TP."),
+   ("terrain-inspection-sany.jpg", "Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe."),
+   ("terrain-equipe-moteur.jpg", "Une équipe en blouse de TP, devant le moteur démonté."),
+   ("terrain-seance-sany.jpg", "Séance sur la pelle SANY : un groupe au pied de la machine, deux participants sur la tourelle."),
+ ]),
  ("🚜 Les machines", 3, [
    ("machine-sany-fleche.jpg", "Pelle SANY, flèche déployée : au TP, on commence par repérer vérins, pompes et distributeur."),
    ("machine-sany-sy215c.jpg", "Pelle SANY SY 215C, sujet n° 01 de la liste des mini-projets."),
@@ -121,12 +132,6 @@ GALERIE = [  # (titre, colonnes, [(fichier, legende)])
    ("composant-pompe-demontee.jpg", "Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques."),
    ("composant-pompe-double-coupe.jpg", "Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation."),
    ("composant-moteur-reducteur-coupe.jpg", "Ensemble moteur hydraulique et réducteur à engrenages, en coupe."),
- ]),
- ("👷 Sur le terrain", 2, [
-   ("terrain-groupe-sany.jpg", "Une partie du groupe devant la pelle SANY."),
-   ("terrain-demontage-moteur.jpg", "Autour d'un moteur démonté, en blouse de TP."),
-   ("terrain-inspection-sany.jpg", "Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe."),
-   ("terrain-sur-la-machine.jpg", "Sur la machine : on pointe, on identifie, on vérifie."),
  ]),
 ]
 
@@ -388,7 +393,7 @@ def galerie():
         items = [i for i in items if fichier_image(i[0])]
         if not items:
             continue
-        t = ["### %s\n" % titre, "<table>"]
+        t = (["### %s\n" % titre] if titre else []) + ["<table>"]
         for k in range(0, len(items), cols):
             t.append("<tr>")
             for f, legende in items[k:k + cols]:

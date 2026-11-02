@@ -227,6 +227,27 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 
 Le module se vit sur machines réelles : lire la machine, mesurer, démonter, vérifier. *Visages floutés pour respecter l'image des étudiants.*
 
+### 👷 Sur le terrain
+
+<table>
+<tr>
+<td width="100%" valign="top"><img src="hydraulique/images/terrain-promotion-sany.jpg" alt="Sur le site de TP, devant la pelle SANY : une séance de terrain avec plus de 30 participants." width="100%"><br><sub>Sur le site de TP, devant la pelle SANY : une séance de terrain avec plus de 30 participants.</sub></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-pelle-cat.jpg" alt="Sur la pelle CAT : on monte sur la machine pour repérer ses organes." width="100%"><br><sub>Sur la pelle CAT : on monte sur la machine pour repérer ses organes.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-sur-la-machine.jpg" alt="Sur le capot de la pelle SANY : on pointe, on identifie, on vérifie." width="100%"><br><sub>Sur le capot de la pelle SANY : on pointe, on identifie, on vérifie.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-demontage-moteur.jpg" alt="Autour d&#x27;un moteur démonté, en blouse de TP." width="100%"><br><sub>Autour d'un moteur démonté, en blouse de TP.</sub></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-inspection-sany.jpg" alt="Au pied de la flèche d&#x27;une pelle SANY : observation et discussion en petit groupe." width="100%"><br><sub>Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-equipe-moteur.jpg" alt="Une équipe en blouse de TP, devant le moteur démonté." width="100%"><br><sub>Une équipe en blouse de TP, devant le moteur démonté.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/terrain-seance-sany.jpg" alt="Séance sur la pelle SANY : un groupe au pied de la machine, deux participants sur la tourelle." width="100%"><br><sub>Séance sur la pelle SANY : un groupe au pied de la machine, deux participants sur la tourelle.</sub></td>
+</tr>
+</table>
+
 ### 🚜 Les machines
 
 <table>
@@ -249,19 +270,6 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <td width="33%" valign="top"><img src="hydraulique/images/composant-pompe-demontee.jpg" alt="Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques." width="100%"><br><sub>Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques.</sub></td>
 <td width="33%" valign="top"><img src="hydraulique/images/composant-pompe-double-coupe.jpg" alt="Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation." width="100%"><br><sub>Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation.</sub></td>
 <td width="33%" valign="top"><img src="hydraulique/images/composant-moteur-reducteur-coupe.jpg" alt="Ensemble moteur hydraulique et réducteur à engrenages, en coupe." width="100%"><br><sub>Ensemble moteur hydraulique et réducteur à engrenages, en coupe.</sub></td>
-</tr>
-</table>
-
-### 👷 Sur le terrain
-
-<table>
-<tr>
-<td width="50%" valign="top"><img src="hydraulique/images/terrain-groupe-sany.jpg" alt="Une partie du groupe devant la pelle SANY." width="100%"><br><sub>Une partie du groupe devant la pelle SANY.</sub></td>
-<td width="50%" valign="top"><img src="hydraulique/images/terrain-demontage-moteur.jpg" alt="Autour d&#x27;un moteur démonté, en blouse de TP." width="100%"><br><sub>Autour d'un moteur démonté, en blouse de TP.</sub></td>
-</tr>
-<tr>
-<td width="50%" valign="top"><img src="hydraulique/images/terrain-inspection-sany.jpg" alt="Au pied de la flèche d&#x27;une pelle SANY : observation et discussion en petit groupe." width="100%"><br><sub>Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe.</sub></td>
-<td width="50%" valign="top"><img src="hydraulique/images/terrain-sur-la-machine.jpg" alt="Sur la machine : on pointe, on identifie, on vérifie." width="100%"><br><sub>Sur la machine : on pointe, on identifie, on vérifie.</sub></td>
 </tr>
 </table>
 
