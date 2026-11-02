@@ -134,78 +134,189 @@ def corriges(num):
     return "<br>".join(out)
 
 
-body = []
+
+def fichiers(num):
+    return sorted(os.listdir(os.path.join(ROOT, B, CH[num][0])))
+
+
+def videos_tp(num):
+    tp = VIDEOS_TP.get(num)
+    if tp and isinstance(tp[0], str):
+        tp = [tp]
+    return tp or []
+
+
+def ressources(num):
+    """Liens d'un module, dans l'ordre de travail : cours, TD, TP, corriges, videos."""
+    d, out = CH[num][0], []
+    chemin = lambda f: "%s/%s/%s" % (B, d, f)
+    for f in fichiers(num):
+        if f.startswith("1_"):
+            out.append(("📄", "Cours — %d pages (PDF)" % CH[num][2], chemin(f)))
+    for f in fichiers(num):
+        if f.startswith("3_") and "corrige" not in f.lower():
+            out.append(("📝", "TD — énoncé (PDF)", chemin(f)))
+    for f in fichiers(num):
+        if f.startswith("4_") and "corrige" not in f.lower():
+            out.append(("🔬", "%s — énoncé (PDF)" % f.split("_")[1], chemin(f)))
+    for f in fichiers(num):
+        if "corrige" in f.lower():
+            ref = f.split("_")[1]
+            quoi = "scripts MATLAB (zip)" if f.lower().endswith(".zip") else "corrigé (PDF)"
+            out.append(("✅", "%s — %s" % (ref, quoi), chemin(f)))
+    if num in VIDEOS:
+        out.append(("🎥", "Vidéo du cours 🔒", VIDEOS[num]))
+    for t in videos_tp(num):
+        out.append(("🎥", "Vidéo %s — %s 🔒" % (t[0], t[2] if len(t) > 2 else "atelier MATLAB"), t[1]))
+    return out
+
+
+def resume(num):
+    """Ligne de resume sous le titre d'un module (comme « ce qui est inclus » sur Coursera)."""
+    r = ressources(num)
+    nb_v = sum(1 for i, _, _ in r if i == "🎥")
+    tps = [l.split(" ")[0] for i, l, _ in r if i == "🔬"]
+    bouts = ["📄 %d pages" % CH[num][2]]
+    if nb_v:
+        bouts.append("🎥 %d vidéo%s" % (nb_v, "s" if nb_v > 1 else ""))
+    if any(i == "📝" for i, _, _ in r):
+        bouts.append("📝 TD")
+    if tps:
+        bouts.append("🔬 " + " · ".join(tps))
+    if any(i == "✅" for i, _, _ in r):
+        bouts.append("✅ corrigé")
+    return " · ".join(bouts)
+
+
+def module(num):
+    lignes = ["<details>",
+              "<summary><b>Module %s · %s</b><br><sub>%s</sub></summary>" % (num, CH[num][1], resume(num)),
+              "<br>", "", CH[num][3], ""]
+    lignes += ["- %s [%s](%s)" % (i, l, u) for i, l, u in ressources(num)]
+    lignes += ["", "</details>", ""]
+    return "\n".join(lignes)
+
+
+programme = []
 for icon, title, nums, blurb in PARTS:
-    body.append("### %s %s\n" % (icon, title))
+    n_pages = sum(CH[n][2] for n in nums)
+    programme.append("### %s %s\n" % (icon, title))
+    programme.append("<sub>%d module%s · %d pages de cours</sub>\n" % (len(nums), "s" if len(nums) > 1 else "", n_pages))
     if blurb:
-        body.append("%s\n" % blurb)
-    body.append("| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |")
-    body.append("|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|")
-    for n in nums:
-        body.append("| **%s** | %s | %s | %s | %s | %s | %s |" % (
-            n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP"),
-            corriges(n), video(n)))
-    body.append("")
-    body.append("<details>\n<summary><i>Descriptif des chapitres</i></summary>\n<br/>\n")
-    for n in nums:
-        body.append("**%s — %s** · %d pages  \n%s\n" % (n, CH[n][1], CH[n][2], CH[n][3]))
-    body.append("</details>\n")
+        programme.append("%s\n" % blurb)
+    programme += [module(n) for n in nums]
+
+# Vue tableau de toutes les ressources (acces rapide, replie par defaut)
+tableau = ["| # | Chapitre | 📄 Cours | 📝 TD | 🔬 TP | ✅ Corrigé | 🎥 Vidéo |",
+           "|:-:|----------|:--------:|:-----:|:-----:|:----------:|:--------:|"]
+for n in sorted(CH):
+    tableau.append("| **%s** | %s | %s | %s | %s | %s | %s |" % (
+        n, CH[n][1], links(n, "1_", "PDF"), links(n, "3_", "TD"), links(n, "4_", "TP"), corriges(n), video(n)))
 
 tree = "\n".join("├── %s/" % CH[n][0] for n in sorted(CH))
 
-TPL = u"""<div align="center">
+# Chiffres cles (bandeau sous l'en-tete), calcules sur les fichiers presents
+NB_PAGES = sum(c[2] for c in CH.values())
+NB_TD = sum(1 for n in CH for f in fichiers(n) if f.startswith("3_") and "corrige" not in f.lower())
+NB_TP = sum(1 for n in CH for f in fichiers(n) if f.startswith("4_") and "corrige" not in f.lower())
+NB_CORRIGES = sum(1 for n in CH for f in fichiers(n) if "corrige" in f.lower())
+NB_VIDEOS = len(VIDEOS) + sum(len(videos_tp(n)) for n in CH)
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=M%C3%A9thodes+Num%C3%A9riques+pour+la+M%C3%A9canique;FSTM+%E2%80%94+Universit%C3%A9+Hassan+II+de+Casablanca;LST+G%C3%A9nie+M%C3%A9canique+%C2%B7+1re+ann%C3%A9e+Ing%C3%A9nieur+GE;12+chapitres+%C2%B7+11+TD+%C2%B7+6+TP+MATLAB" alt="Methodes Numeriques pour la Mecanique" />
+# Ce que vous apprendrez, competences (etiquettes), questions frequentes
+APPRENDRE = [
+ "Choisir une méthode adaptée à la taille et à la structure du problème",
+ "Estimer la précision d'un résultat et reconnaître un calcul qui diverge",
+ "Programmer ces méthodes en **MATLAB** et valider un schéma sur un cas test analytique",
+ "Interpréter physiquement les conditions de stabilité (CFL, critères de convergence)",
+]
+COMPETENCES = ["MATLAB", "Erreurs et conditionnement", "Élimination de Gauss", "Jacobi · Gauss-Seidel · SOR",
+               "Méthode de Newton", "Différences finies", "Stabilité de von Neumann", "Condition CFL",
+               "Crank-Nicolson", "Schéma décentré (upwind)", "Euler et Runge-Kutta"]
 
-**Pr. Mohamed JANANE ALLAH**, PhD — Maître de Conférence<br/>
-Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de Casablanca
 
-🎓 **Public — FSTM, UH2C :** LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)
+def etiquette(texte):
+    from urllib.parse import quote
+    t = quote(texte.replace("-", "--").replace("_", "__"), safe="")
+    return "![%s](https://img.shields.io/badge/%s-E8EEF7?style=flat-square)" % (texte, t)
+
+
+apprendre = "<table>\n%s\n</table>" % "\n".join(
+    "<tr>%s</tr>" % "".join('<td width="50%%" valign="top">✔️ %s</td>' % a.replace("**", "") for a in APPRENDRE[k:k + 2])
+    for k in range(0, len(APPRENDRE), 2))
+
+TPL = u"""[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques pour la mécanique**
+
+<div align="center">
+
+<img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques pour la mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
 
 <br/>
 
-![Volume](https://img.shields.io/badge/Volume-60_heures-2E86AB?style=for-the-badge)
-![Chapitres](https://img.shields.io/badge/Chapitres-12-4C9A2A?style=for-the-badge)
-![TD](https://img.shields.io/badge/TD-11-6A4C93?style=for-the-badge)
-![TP](https://img.shields.io/badge/TP-6-C1121F?style=for-the-badge)
-![Examens](https://img.shields.io/badge/Examens-%(nb_exam)s_sujets-E67E22?style=for-the-badge)
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)
+Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre à la main :<br/>
+**systèmes linéaires et non linéaires**, **équations aux dérivées partielles** par différences finies,
+**équations différentielles ordinaires**.
 
-[![Pourquoi ce module](https://img.shields.io/badge/▶_Pourquoi_ce_module_%3F-Regarder_la_vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
+[![Commencer](https://img.shields.io/badge/▶_Commencer_le_cours-Chapitre_0-0056D2?style=for-the-badge)](%(ch0)s)
+[![Vidéo d'accroche](https://img.shields.io/badge/🎬_Pourquoi_ce_module_%%3F-Vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
 
-[**Plan du cours**](#-plan-du-cours) · [**Examens**](#-examens-archive) · [**Méthode de travail**](#-comment-travailler-ce-module) · [**Vidéos**](#-vidéos) · [**Contact**](#-contact)
+<sub>🎓 Conçu pour les étudiants de la FSTM — Université Hassan II de Casablanca · 🔒 vidéos accessibles avec le compte universitaire UH2C</sub>
 
-[![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
+<table>
+<tr>
+<td align="center" width="20%%"><b>📚 %(nb_ch)s modules</b><br><sub>%(nb_pages)s pages de cours</sub></td>
+<td align="center" width="20%%"><b>🎥 %(nb_videos)s vidéos</b><br><sub>cours et ateliers TP</sub></td>
+<td align="center" width="20%%"><b>🔬 %(nb_tp)s TP MATLAB</b><br><sub>%(nb_corriges)s corrigés en scripts</sub></td>
+<td align="center" width="20%%"><b>📝 %(nb_exam)s sujets d'examen</b><br><sub>archive en accès libre</sub></td>
+<td align="center" width="20%%"><b>⏱️ 60 heures</b><br><sub>%(nb_td)s TD · en français</sub></td>
+</tr>
+</table>
+
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes)
 
 </div>
 
 ---
 
-## 🎯 Objectifs du module
+## 📌 À propos
 
 Ce module donne les outils numériques qui permettent de résoudre, sur ordinateur, les problèmes
 que la mécanique ne sait pas résoudre à la main : **systèmes linéaires** (méthodes directes et
 itératives), **systèmes non linéaires**, **équations aux dérivées partielles** par différences
 finies, et **équations différentielles ordinaires**.
 
-À l'issue du module, vous saurez :
+#### Ce que vous apprendrez
 
-- ✅ choisir une méthode adaptée à la taille et à la structure du problème ;
-- ✅ estimer la précision d'un résultat et reconnaître un calcul qui diverge ;
-- ✅ programmer ces méthodes en **MATLAB** et valider un schéma sur un cas test analytique ;
-- ✅ interpréter physiquement les conditions de stabilité (CFL, critères de convergence).
+%(apprendre)s
 
-> 📌 Module **mutualisé**, à la **FSTM — UH2C**, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE)** :
-> les outils numériques sont exactement les mêmes de part et d'autre, seules changent les applications.
+#### Compétences que vous allez acquérir
+
+%(competences)s
+
+#### Détails à connaître
+
+| 🎓 Public | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
+|---|---|---|---|
+| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
-## 📚 Plan du cours
+## 📚 Programme du module
 
-%(body)s
+Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Ouvrez un module
+pour voir son contenu et accéder à ses supports.
+
+%(programme)s
+<details>
+<summary>📋 <b>Toutes les ressources en un tableau</b> (accès rapide)</summary>
+<br/>
+
+%(tableau)s
+
+</details>
+
 ---
 
-## 📝 Examens (Archive)
+## 📝 Examens
 
 Sujets des sessions précédentes, en accès libre, pour s'entraîner dans les conditions de
 l'épreuve (durée : 2 h). Les sujets **A** et **B** posent les mêmes questions avec des
@@ -217,7 +328,62 @@ données numériques différentes.
 
 ---
 
-## 🧭 Comment travailler ce module
+## 👤 Enseignant
+
+<table>
+<tr>
+<td width="130" align="center" valign="top"><img src="methodes-numeriques/images/enseignant.png" width="96" alt="Monogramme de l'enseignant" /></td>
+<td valign="top">
+<b>Pr. Mohamed JANANE ALLAH</b>, PhD — Maître de Conférence<br/>
+Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan II de Casablanca<br/><br/>
+🔬 Recherche : modélisation numérique des structures — plaques à gradient fonctionnel (FGM), méthodes hybrides éléments finis – sans maillage, réseaux de neurones.<br/>
+📚 Autre cours : <a href="licence-pro-hydraulique.md">Systèmes hydrauliques</a> — Licence Professionnelle IMPI, ENSAM Casablanca.<br/>
+🌐 <a href="https://janane-allah.github.io">Site personnel</a> · <a href="https://janane-allah.github.io/publications/">Publications</a> · <a href="mailto:mohamedjanane147@gmail.com">mohamedjanane147@gmail.com</a>
+</td>
+</tr>
+</table>
+
+🏛️ **Proposé par** la Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de Casablanca · 📍 BP 146, Mohammedia 28806, Maroc
+
+---
+
+## ❓ Questions fréquentes
+
+<details>
+<summary><b>À qui s'adresse ce module ?</b></summary>
+<br/>
+
+Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
+d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre,
+seules changent les applications.
+
+</details>
+
+<details>
+<summary><b>Comment accéder aux vidéos ?</b></summary>
+<br/>
+
+🔒 Les vidéos sont **réservées aux étudiants de l'Université Hassan II de Casablanca**. Connectez-vous à votre
+**compte universitaire** avant d'ouvrir un lien vidéo : depuis un compte personnel, Google affichera une
+demande d'autorisation. Si l'accès vous est refusé alors que vous êtes bien inscrit au module, écrivez-moi.
+
+Commencez par la **[vidéo d'accroche](%(motiv)s)** : où le calcul numérique intervient réellement dans le
+métier d'ingénieur mécanicien.
+
+</details>
+
+<details>
+<summary><b>Quels supports puis-je télécharger ?</b></summary>
+<br/>
+
+Tous les PDF — cours, TD, énoncés de TP, sujets d'examen — et les **corrigés de TP** (scripts MATLAB, en zip)
+sont en accès libre sur cette page. Les vidéos se regardent en ligne, avec le compte universitaire.
+
+</details>
+
+<details>
+<summary><b>Comment travailler un chapitre ?</b></summary>
+<br/>
 
 | Étape | Support | Objectif |
 |:-:|---|---|
@@ -225,10 +391,19 @@ données numériques différentes.
 | 2️⃣ | 📝 **TD** | Faire les exercices à la main : c'est là que les méthodes se comprennent vraiment. |
 | 3️⃣ | 🔬 **TP** | Programmer la méthode en MATLAB et la confronter à un cas test dont on connaît la solution. |
 
-**Prérequis :** algèbre linéaire, analyse (développements de Taylor), bases de MATLAB.
+</details>
 
 <details>
-<summary>📂 <i>Organisation des fichiers</i></summary>
+<summary><b>Comment préparer l'examen ?</b></summary>
+<br/>
+
+Traitez un sujet de l'[archive](#-examens) en temps limité (2 h) avant de relire le cours, puis comparez avec
+vos TD. Les examens de préparation sont de niveau difficile : un bon test avant l'épreuve.
+
+</details>
+
+<details>
+<summary><b>Comment les fichiers sont-ils organisés ?</b></summary>
 <br/>
 
 ```
@@ -246,31 +421,13 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 
 ---
 
-## 🎥 Vidéos
-
-%(videos)s
-
-🎯 **[Pourquoi ce module ?](%(motiv)s)** — la vidéo d'accroche à regarder avant tout le reste :
-où le calcul numérique intervient réellement dans le métier d'ingénieur mécanicien.
-
-Les capsules sont ajoutées au fur et à mesure : la colonne 🎥 du plan donne accès à celles
-qui sont en ligne, 🚧 signale un chapitre dont la vidéo n'est pas encore disponible.
-
-> 🔒 **Accès réservé aux étudiants de l'Université Hassan II de Casablanca.**
-> Connectez-vous à votre **compte universitaire** avant d'ouvrir un lien vidéo : depuis un
-> compte personnel, Google affichera une demande d'autorisation. Si l'accès vous est refusé
-> alors que vous êtes bien inscrit au module, écrivez-moi.
-
----
-
-## 📫 Contact
-
 <div align="center">
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
+[![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
-📍 FSTM — BP 146, Mohammedia 28806, Maroc
+<sub>Page générée par <code>tools/build_page.py</code> · Université Hassan II de Casablanca — FSTM</sub>
 
 </div>
 """
@@ -331,7 +488,17 @@ def examens():
 
 
 texte_examens, nb_examens = examens()
-compteur = u"🎬 **%d capsule(s) en ligne** sur %d chapitres." % (len(VIDEOS), len(CH))
-page = TPL.replace("%(body)s", "\n".join(body)).replace("%(tree)s", tree).replace("%(videos)s", compteur).replace("%(motiv)s", MOTIVATION).replace("%(examens)s", texte_examens).replace("%(nb_exam)s", str(nb_examens))
+ch0 = "%s/%s/%s" % (B, CH["00"][0], next(f for f in fichiers("00") if f.startswith("1_")))
+valeurs = {
+    "programme": "\n".join(programme), "tableau": "\n".join(tableau), "tree": tree,
+    "motiv": MOTIVATION, "ch0": ch0, "examens": texte_examens, "nb_exam": str(nb_examens),
+    "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES), "nb_td": str(NB_TD), "nb_tp": str(NB_TP),
+    "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
+    "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
+}
+page = TPL.replace("%%", "%")
+for k, v in valeurs.items():
+    page = page.replace("%%(%s)s" % k, v)
+assert "%(" not in page, "champ non remplace"
 io.open(os.path.join(ROOT, "licence-genie-mecanique.md"), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %d lignes" % page.count("\n"))
