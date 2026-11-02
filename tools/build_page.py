@@ -51,7 +51,8 @@ VIDEOS = {
 
 # Videos d atelier TP (ex. 7b_Video_TP1_atelier_MATLAB), affichees a cote de
 # la video de cours du meme chapitre. Cle = numero du chapitre, valeur =
-# (numero du TP, url[, description]) ; description par defaut : atelier MATLAB.
+# (numero du TP, url[, description]) ou, si le chapitre a plusieurs TP filmes,
+# une liste de ces tuples ; description par defaut : atelier MATLAB.
 VIDEOS_TP = {
  "02": ("TP1", "https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view"),
  "03": ("TP2", "https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view"),
@@ -59,8 +60,10 @@ VIDEOS_TP = {
         "programmation de Newton"),
  "09": ("TP5", "https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view",
         "correction"),
- "11": ("TP4", "https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view",
-        "programmation complète"),
+ "11": [("TP4", "https://drive.google.com/file/d/1GeBDuM-bsHzrqXIGovBEPhuHptdbIkzp/view",
+         "programmation complète"),
+        ("TP6", "https://drive.google.com/file/d/1FFd2tp73XQvZY2wPG-ukHws2T4iTNNlx/view",
+         "programmation complète")],
 }
 
 
@@ -70,6 +73,8 @@ MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/
 def video(num):
     cours = VIDEOS.get(num)
     tp = VIDEOS_TP.get(num)
+    if tp and isinstance(tp[0], str):
+        tp = [tp]
     if not cours and not tp:
         return "🚧"
     parts = []
@@ -78,9 +83,9 @@ def video(num):
         parts.append("[%s](%s)" % (label, cours))
     elif tp:
         parts.append("🚧 Cours")
-    if tp:
-        tp_num, tp_url = tp[0], tp[1]
-        desc = tp[2] if len(tp) > 2 else "atelier MATLAB"
+    for t in tp or []:
+        tp_num, tp_url = t[0], t[1]
+        desc = t[2] if len(t) > 2 else "atelier MATLAB"
         parts.append("[▶ %s — %s](%s)" % (tp_num, desc, tp_url))
     return "<br>".join(parts)
 
