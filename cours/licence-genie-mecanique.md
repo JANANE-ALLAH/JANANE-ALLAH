@@ -109,6 +109,7 @@ Résolution de Ax = b en un nombre fini d'opérations — la brique de base de t
 [![✅ TP1 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP1-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/4_TP1_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)
 [![▶ Vidéo TP1](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP1-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
+[![🎮 Jeux TP1 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP1%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp1/)
 
 #### Module 03 · Systèmes linéaires : méthodes itératives
 
@@ -120,6 +121,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![✅ TP2 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP2-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/4_TP2_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
 [![▶ Vidéo TP2](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP2-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
+[![🎮 Jeux TP2 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP2%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp2/)
 
 #### Module 04 · Systèmes non linéaires
 
@@ -131,6 +133,7 @@ Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge 
 [![✅ TP3 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP3-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/4_TP3_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/125--JQ7p31u2xEMZVsSO3x2MCeXNOXYA/view)
 [![▶ Vidéo TP3](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP3-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1b4vdrutxz_yeuuil7ytYzb3D7f6wrNUL/view)
+[![🎮 Jeux TP3 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP3%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp3/)
 
 ### 🌡️ Partie II — EDP et différences finies
 
@@ -349,6 +352,51 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 Des jeux, dans le navigateur, pour **manipuler un TP avant de le programmer** : chaque jeu correspond à une
 manipulation de l'énoncé. Tous les nombres affichés sont calculés en direct par le code MATLAB du TP, porté
 ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
+
+### TP1 · Module 02 — le banc d'amortisseurs (méthodes directes)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1/#jeu-1"><img src="methodes-numeriques/images/jeux-tp1/jeu-1.jpg" width="100%" alt="Jeu 1 : Le banc d'essai"></a><br/><b>1 · Le banc d'essai</b><br/><sub>Assembler C, bâti mobile, matrice singulière</sub><br/><a href="https://janane-allah.github.io/jeux/tp1/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1/#jeu-2"><img src="methodes-numeriques/images/jeux-tp1/jeu-2.jpg" width="100%" alt="Jeu 2 : Gauss pas à pas"></a><br/><b>2 · Gauss pas à pas</b><br/><sub>Pivot partiel, multiplicateurs, remontée</sub><br/><a href="https://janane-allah.github.io/jeux/tp1/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1/#jeu-3"><img src="methodes-numeriques/images/jeux-tp1/jeu-3.jpg" width="100%" alt="Jeu 3 : Le compteur d'opérations"></a><br/><b>3 · Le compteur d'opérations</b><br/><sub>n³/3 pour Gauss, n² par second membre</sub><br/><a href="https://janane-allah.github.io/jeux/tp1/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1/#jeu-4"><img src="methodes-numeriques/images/jeux-tp1/jeu-4.jpg" width="100%" alt="Jeu 4 : Les messages d'erreur"></a><br/><b>4 · Les messages d'erreur</b><br/><sub>Huit vrais messages de MATLAB</sub><br/><a href="https://janane-allah.github.io/jeux/tp1/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1/#jeu-5"><img src="methodes-numeriques/images/jeux-tp1/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Les bugs silencieux et le résidu</sub><br/><a href="https://janane-allah.github.io/jeux/tp1/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
+
+### TP2 · Module 03 — la paroi du four (méthodes itératives)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2/#jeu-1"><img src="methodes-numeriques/images/jeux-tp2/jeu-1.jpg" width="100%" alt="Jeu 1 : Jacobi contre Gauss-Seidel"></a><br/><b>1 · Jacobi contre Gauss-Seidel</b><br/><sub>La course, une seule ligne d'écart, ρ_GS = ρ_J²</sub><br/><a href="https://janane-allah.github.io/jeux/tp2/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2/#jeu-2"><img src="methodes-numeriques/images/jeux-tp2/jeu-2.jpg" width="100%" alt="Jeu 2 : La paroi s'affine"></a><br/><b>2 · La paroi s'affine</b><br/><sub>Le nombre d'itérations quand n augmente</sub><br/><a href="https://janane-allah.github.io/jeux/tp2/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2/#jeu-3"><img src="methodes-numeriques/images/jeux-tp2/jeu-3.jpg" width="100%" alt="Jeu 3 : La chasse au ω*"></a><br/><b>3 · La chasse au ω*</b><br/><sub>SOR, formule de Young, courbe asymétrique</sub><br/><a href="https://janane-allah.github.io/jeux/tp2/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2/#jeu-4"><img src="methodes-numeriques/images/jeux-tp2/jeu-4.jpg" width="100%" alt="Jeu 4 : Incrément ou erreur ?"></a><br/><b>4 · Incrément ou erreur ?</b><br/><sub>Le critère d'arrêt et le facteur ρ/(1 − ρ)</sub><br/><a href="https://janane-allah.github.io/jeux/tp2/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2/#jeu-5"><img src="methodes-numeriques/images/jeux-tp2/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Reconnaître un bug à sa sortie console</sub><br/><a href="https://janane-allah.github.io/jeux/tp2/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
+
+### TP3 · Module 04 — le système de pompage (Newton)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp3/#jeu-1"><img src="methodes-numeriques/images/jeux-tp3/jeu-1.jpg" width="100%" alt="Jeu 1 : Newton dans le plan des débits"></a><br/><b>1 · Newton dans le plan des débits</b><br/><sub>Convergence quadratique, deux racines, bassins</sub><br/><a href="https://janane-allah.github.io/jeux/tp3/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp3/#jeu-2"><img src="methodes-numeriques/images/jeux-tp3/jeu-2.jpg" width="100%" alt="Jeu 2 : Newton contre le gradient"></a><br/><b>2 · Newton contre le gradient</b><br/><sub>5 itérations contre 295 923</sub><br/><a href="https://janane-allah.github.io/jeux/tp3/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp3/#jeu-3"><img src="methodes-numeriques/images/jeux-tp3/jeu-3.jpg" width="100%" alt="Jeu 3 : Trois conduites"></a><br/><b>3 · Trois conduites</b><br/><sub>Système 3 × 3, débits en 1/√R</sub><br/><a href="https://janane-allah.github.io/jeux/tp3/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp3/#jeu-4"><img src="methodes-numeriques/images/jeux-tp3/jeu-4.jpg" width="100%" alt="Jeu 4 : La jacobienne à la main"></a><br/><b>4 · La jacobienne à la main</b><br/><sub>Dériver, vérifier par différences finies</sub><br/><a href="https://janane-allah.github.io/jeux/tp3/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp3/#jeu-5"><img src="methodes-numeriques/images/jeux-tp3/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Signe, départ singulier, paramètre capturé</sub><br/><a href="https://janane-allah.github.io/jeux/tp3/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
 
 ### TP4 · Module 11 — la paroi de four (EDO non linéaire)
 

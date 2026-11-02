@@ -74,6 +74,27 @@ MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/
 # GitHub n'execute pas de JavaScript). Cle = chapitre ; valeur = liste de (TP, adresse,
 # sous-titre, [(ancre, titre, notion)]). Vignettes : methodes-numeriques/images/jeux-<tp>/<ancre>.jpg
 JEUX = {
+ "02": [("TP1", "https://janane-allah.github.io/jeux/tp1/", "le banc d'amortisseurs (méthodes directes)", [
+   ("jeu-1", "Le banc d'essai", "Assembler C, bâti mobile, matrice singulière"),
+   ("jeu-2", "Gauss pas à pas", "Pivot partiel, multiplicateurs, remontée"),
+   ("jeu-3", "Le compteur d'opérations", "n³/3 pour Gauss, n² par second membre"),
+   ("jeu-4", "Les messages d'erreur", "Huit vrais messages de MATLAB"),
+   ("jeu-5", "Détective du code", "Les bugs silencieux et le résidu"),
+  ])],
+ "03": [("TP2", "https://janane-allah.github.io/jeux/tp2/", "la paroi du four (méthodes itératives)", [
+   ("jeu-1", "Jacobi contre Gauss-Seidel", "La course, une seule ligne d'écart, ρ_GS = ρ_J²"),
+   ("jeu-2", "La paroi s'affine", "Le nombre d'itérations quand n augmente"),
+   ("jeu-3", "La chasse au ω*", "SOR, formule de Young, courbe asymétrique"),
+   ("jeu-4", "Incrément ou erreur ?", "Le critère d'arrêt et le facteur ρ/(1 − ρ)"),
+   ("jeu-5", "Détective du code", "Reconnaître un bug à sa sortie console"),
+  ])],
+ "04": [("TP3", "https://janane-allah.github.io/jeux/tp3/", "le système de pompage (Newton)", [
+   ("jeu-1", "Newton dans le plan des débits", "Convergence quadratique, deux racines, bassins"),
+   ("jeu-2", "Newton contre le gradient", "5 itérations contre 295 923"),
+   ("jeu-3", "Trois conduites", "Système 3 × 3, débits en 1/√R"),
+   ("jeu-4", "La jacobienne à la main", "Dériver, vérifier par différences finies"),
+   ("jeu-5", "Détective du code", "Signe, départ singulier, paramètre capturé"),
+  ])],
  "09": [("TP5", "https://janane-allah.github.io/jeux/tp5/", "la salle de sport (Poisson 2D)", [
    ("jeu-1", "Numéro, s'il vous plaît !", "La numérotation k = (j − 1)·nx + i"),
    ("jeu-2", "Le pochoir à 5 points", "Assembler une ligne de A et de b"),
