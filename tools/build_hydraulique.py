@@ -78,6 +78,33 @@ NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8
 MINI = "Mini_projet"
 SUJETS = "Liste_28_sujets_mini_projets.pdf"
 EXEMPLE = "Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx"
+NB_SUJETS = 28
+
+# Photos de TP (cours/hydraulique/images/) : visages floutes et metadonnees (GPS...) retirees
+# avant publication ; les originaux restent chez l'enseignant. Une photo absente du depot est ignoree.
+IMG = "images"
+BANDEAU = "bandeau.jpg"
+GALERIE = [  # (titre, colonnes, [(fichier, legende)])
+ ("🚜 Les machines", 3, [
+   ("machine-sany-fleche.jpg", "Pelle SANY, flèche déployée : au TP, on commence par repérer vérins, pompes et distributeur."),
+   ("machine-sany-sy215c.jpg", "Pelle SANY SY 215C, sujet n° 01 de la liste des mini-projets."),
+   ("machine-parc.jpg", "Le parc de machines : plusieurs engins et plusieurs marques à comparer, dont une DOOSAN."),
+ ]),
+ ("🔩 Les composants", 3, [
+   ("composant-pompe-en-place.jpg", "Pompe hydraulique dans son compartiment : bride, orifices et flexibles à repérer."),
+   ("composant-compartiment-pompes.jpg", "Compartiment des pompes d'une SANY : pompe, filtre et flexibles réunis dans un même caisson."),
+   ("composant-filtre-bol.jpg", "Filtre à bol transparent : le dépôt se voit sans rien démonter."),
+   ("composant-pompe-demontee.jpg", "Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques."),
+   ("composant-pompe-double-coupe.jpg", "Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation."),
+   ("composant-moteur-reducteur-coupe.jpg", "Ensemble moteur hydraulique et réducteur à engrenages, en coupe."),
+ ]),
+ ("👷 Sur le terrain", 2, [
+   ("terrain-groupe-sany.jpg", "Une partie du groupe devant la pelle SANY."),
+   ("terrain-demontage-moteur.jpg", "Autour d'un moteur démonté, en blouse de TP."),
+   ("terrain-inspection-sany.jpg", "Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe."),
+   ("terrain-sur-la-machine.jpg", "Sur la machine : on pointe, on identifie, on vérifie."),
+ ]),
+]
 
 
 def fichiers(num):
@@ -186,11 +213,77 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 
 mini = mini_projet()
 
+
+def fichier_image(nom):
+    return os.path.isfile(os.path.join(ROOT, B, IMG, nom))
+
+
+def bandeau():
+    if not fichier_image(BANDEAU):
+        return ""
+    return (u'<img src="%s/%s/%s" alt="Pelle SANY, pompe hydraulique en place, pompe double en coupe et pompe démontée" '
+            u'width="100%%" />\n\n' % (B, IMG, BANDEAU))
+
+
+def parcours():
+    """Schema Mermaid du module : chapitres en ligne, chapitres a venir, mini-projets."""
+    court = {"01": "Généralités", "02": "Schémas", "03": "Technologie", "04": "Circuits", "05": "Maintenance"}
+    noeuds = ['    C%s["%s<br/>%s"]' % (n, n, court.get(n, CH[n][1])) for n in sorted(CH)]
+    noeuds.append('    MP["🧩<br/>Mini-projets"]')
+    chaine = " --> ".join(["C%s" % n for n in sorted(CH)] + ["MP"])
+    en_ligne = ",".join("C%s" % n for n in sorted(CH) if n in publies)
+    a_venir = ",".join("C%s" % n for n in sorted(CH) if n not in publies)
+    lignes = ["flowchart LR"] + noeuds + ["    " + chaine,
+              "    classDef ok fill:#2E86AB,stroke:#1d5d7a,color:#fff",
+              "    classDef soon fill:#eeeeee,stroke:#aaaaaa,color:#555555,stroke-dasharray: 4 3",
+              "    classDef goal fill:#8E44AD,stroke:#6c3483,color:#fff"]
+    if en_ligne:
+        lignes.append("    class %s ok" % en_ligne)
+    if a_venir:
+        lignes.append("    class %s soon" % a_venir)
+    lignes.append("    class MP goal")
+    return "```mermaid\n%s\n```\n\n🟦 chapitre en ligne · ⬜ à venir · 🟪 mini-projets\n\n" % "\n".join(lignes)
+
+
+def badges_stats():
+    """Badges chiffres : pages de cours en ligne, mini-projets, TP."""
+    out = []
+    total = sum(p or 0 for p in (pages(n) for n in publies))
+    if total:
+        out.append("![Cours](https://img.shields.io/badge/Cours_en_ligne-%d_pages-1F6FEB?style=for-the-badge)" % total)
+    if os.path.isfile(os.path.join(ROOT, B, MINI, SUJETS)):
+        out.append("![Mini-projets](https://img.shields.io/badge/Mini--projets-%d_sujets-8E44AD?style=for-the-badge)" % NB_SUJETS)
+    out.append("![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)")
+    return "\n".join(out) + "\n"
+
+
+def galerie():
+    """Section 'Le module en images' : grilles de photos avec legendes."""
+    import html
+    blocs = []
+    for titre, cols, items in GALERIE:
+        items = [i for i in items if fichier_image(i[0])]
+        if not items:
+            continue
+        t = ["### %s\n" % titre, "<table>"]
+        for k in range(0, len(items), cols):
+            t.append("<tr>")
+            for f, legende in items[k:k + cols]:
+                t.append('<td width="%d%%" valign="top"><img src="%s/%s/%s" alt="%s" width="100%%"><br>'
+                         '<sub>%s</sub></td>' % (100 // cols, B, IMG, f, html.escape(legende, quote=True), legende))
+            t.append("</tr>")
+        t.append("</table>\n")
+        blocs.append("\n".join(t))
+    if not blocs:
+        return ""
+    return (u"## 📸 Le module en images\n\nLe module se vit sur machines réelles : lire la machine, mesurer, démonter, "
+            u"vérifier. *Visages floutés pour respecter l'image des étudiants.*\n\n" + "\n".join(blocs) + u"\n---\n\n")
+
 TPL = u"""<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=Syst%C3%A8mes+Hydrauliques;Licence+Professionnelle+IMPI+%E2%80%94+ENSAM+Casablanca;Module+6+%3A+Hydraulique+%C2%B7+5+chapitres" alt="Systemes Hydrauliques" />
 
-**Pr. Mohamed JANANE ALLAH**, PhD<br/>
+%(bandeau)s**Pr. Mohamed JANANE ALLAH**, PhD<br/>
 École Nationale Supérieure d'Arts et Métiers (ENSAM) — Casablanca
 
 🎓 **Public :** Licence Professionnelle Universitaire *Ingénierie Mécanique et Productique Industrielle* (IMPI)
@@ -200,8 +293,8 @@ TPL = u"""<div align="center">
 ![Formation](https://img.shields.io/badge/Licence_Pro-IMPI-2E86AB?style=for-the-badge)
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-%(publies)s_%%2F_5-E67E22?style=for-the-badge)
-
-[**Plan du module**](#-plan-du-module) · %(nav_mini)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+%(stats)s
+[**Plan du module**](#-plan-du-module) · %(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -223,7 +316,7 @@ TPL = u"""<div align="center">
 
 ## 📚 Plan du module
 
-%(plan)s
+%(parcours)s%(plan)s
 
 > 📘 Les chapitres sont publiés au fur et à mesure ; 🚧 signale un chapitre pas encore en ligne.
 
@@ -236,7 +329,7 @@ TPL = u"""<div align="center">
 
 ---
 
-%(mini)s## 🧭 Prérequis et évaluation
+%(mini)s%(galerie)s## 🧭 Prérequis et évaluation
 
 | | |
 |---|---|
@@ -259,6 +352,10 @@ TPL = u"""<div align="center">
 
 page = TPL.replace("%%", "%").replace("%(plan)s", plan).replace("%(descriptif)s", descriptif) \
           .replace("%(publies)s", str(len(publies))).replace("%(mini)s", mini) \
-          .replace("%(nav_mini)s", "[**Mini-projets**](#-mini-projets) · " if mini else "")
+          .replace("%(nav_mini)s", "[**Mini-projets**](#-mini-projets) · " if mini else "") \
+          .replace("%(parcours)s", parcours()).replace("%(stats)s", badges_stats()) \
+          .replace("%(bandeau)s", bandeau()) \
+          .replace("%(nav_images)s", "[**En images**](#-le-module-en-images) · " if galerie() else "") \
+          .replace("%(galerie)s", galerie())
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))

@@ -2,6 +2,8 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=Syst%C3%A8mes+Hydrauliques;Licence+Professionnelle+IMPI+%E2%80%94+ENSAM+Casablanca;Module+6+%3A+Hydraulique+%C2%B7+5+chapitres" alt="Systemes Hydrauliques" />
 
+<img src="hydraulique/images/bandeau.jpg" alt="Pelle SANY, pompe hydraulique en place, pompe double en coupe et pompe démontée" width="100%" />
+
 **Pr. Mohamed JANANE ALLAH**, PhD<br/>
 École Nationale Supérieure d'Arts et Métiers (ENSAM) — Casablanca
 
@@ -12,8 +14,11 @@
 ![Formation](https://img.shields.io/badge/Licence_Pro-IMPI-2E86AB?style=for-the-badge)
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-2_%2F_5-E67E22?style=for-the-badge)
+![Cours](https://img.shields.io/badge/Cours_en_ligne-144_pages-1F6FEB?style=for-the-badge)
+![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
+![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 
-[**Plan du module**](#-plan-du-module) · [**Mini-projets**](#-mini-projets) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -34,6 +39,25 @@
 ---
 
 ## 📚 Plan du module
+
+```mermaid
+flowchart LR
+    C01["01<br/>Généralités"]
+    C02["02<br/>Schémas"]
+    C03["03<br/>Technologie"]
+    C04["04<br/>Circuits"]
+    C05["05<br/>Maintenance"]
+    MP["🧩<br/>Mini-projets"]
+    C01 --> C02 --> C03 --> C04 --> C05 --> MP
+    classDef ok fill:#2E86AB,stroke:#1d5d7a,color:#fff
+    classDef soon fill:#eeeeee,stroke:#aaaaaa,color:#555555,stroke-dasharray: 4 3
+    classDef goal fill:#8E44AD,stroke:#6c3483,color:#fff
+    class C01,C02 ok
+    class C03,C04,C05 soon
+    class MP goal
+```
+
+🟦 chapitre en ligne · ⬜ à venir · 🟪 mini-projets
 
 | # | Chapitre | 📄 Cours | 🎥 Vidéo |
 |:-:|----------|:--------:|:--------:|
@@ -107,6 +131,50 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 **Les 28 sujets**, en six familles : terrassement et BTP (7), levage et manutention (6), véhicules utilitaires et poids lourds (5), agriculture (2), industrie (5), énergie, eau et air (3). Les architectures indiquées sont des cas courants, à confirmer sur le schéma constructeur du modèle choisi ; les valeurs chiffrées se relèvent sur la plaque, la fiche technique ou le manuel.
 
 **Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 3 à 5 ne sont pas encore en ligne.
+
+---
+
+## 📸 Le module en images
+
+Le module se vit sur machines réelles : lire la machine, mesurer, démonter, vérifier. *Visages floutés pour respecter l'image des étudiants.*
+
+### 🚜 Les machines
+
+<table>
+<tr>
+<td width="33%" valign="top"><img src="hydraulique/images/machine-sany-fleche.jpg" alt="Pelle SANY, flèche déployée : au TP, on commence par repérer vérins, pompes et distributeur." width="100%"><br><sub>Pelle SANY, flèche déployée : au TP, on commence par repérer vérins, pompes et distributeur.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/machine-sany-sy215c.jpg" alt="Pelle SANY SY 215C, sujet n° 01 de la liste des mini-projets." width="100%"><br><sub>Pelle SANY SY 215C, sujet n° 01 de la liste des mini-projets.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/machine-parc.jpg" alt="Le parc de machines : plusieurs engins et plusieurs marques à comparer, dont une DOOSAN." width="100%"><br><sub>Le parc de machines : plusieurs engins et plusieurs marques à comparer, dont une DOOSAN.</sub></td>
+</tr>
+</table>
+
+### 🔩 Les composants
+
+<table>
+<tr>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-pompe-en-place.jpg" alt="Pompe hydraulique dans son compartiment : bride, orifices et flexibles à repérer." width="100%"><br><sub>Pompe hydraulique dans son compartiment : bride, orifices et flexibles à repérer.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-compartiment-pompes.jpg" alt="Compartiment des pompes d&#x27;une SANY : pompe, filtre et flexibles réunis dans un même caisson." width="100%"><br><sub>Compartiment des pompes d'une SANY : pompe, filtre et flexibles réunis dans un même caisson.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-filtre-bol.jpg" alt="Filtre à bol transparent : le dépôt se voit sans rien démonter." width="100%"><br><sub>Filtre à bol transparent : le dépôt se voit sans rien démonter.</sub></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-pompe-demontee.jpg" alt="Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques." width="100%"><br><sub>Pompe à pistons axiaux démontée : barillet, pistons à patins, arbre et plaques.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-pompe-double-coupe.jpg" alt="Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation." width="100%"><br><sub>Pompe double à pistons axiaux en coupe : deux barillets et leurs organes de régulation.</sub></td>
+<td width="33%" valign="top"><img src="hydraulique/images/composant-moteur-reducteur-coupe.jpg" alt="Ensemble moteur hydraulique et réducteur à engrenages, en coupe." width="100%"><br><sub>Ensemble moteur hydraulique et réducteur à engrenages, en coupe.</sub></td>
+</tr>
+</table>
+
+### 👷 Sur le terrain
+
+<table>
+<tr>
+<td width="50%" valign="top"><img src="hydraulique/images/terrain-groupe-sany.jpg" alt="Une partie du groupe devant la pelle SANY." width="100%"><br><sub>Une partie du groupe devant la pelle SANY.</sub></td>
+<td width="50%" valign="top"><img src="hydraulique/images/terrain-demontage-moteur.jpg" alt="Autour d&#x27;un moteur démonté, en blouse de TP." width="100%"><br><sub>Autour d'un moteur démonté, en blouse de TP.</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="hydraulique/images/terrain-inspection-sany.jpg" alt="Au pied de la flèche d&#x27;une pelle SANY : observation et discussion en petit groupe." width="100%"><br><sub>Au pied de la flèche d'une pelle SANY : observation et discussion en petit groupe.</sub></td>
+<td width="50%" valign="top"><img src="hydraulique/images/terrain-sur-la-machine.jpg" alt="Sur la machine : on pointe, on identifie, on vérifie." width="100%"><br><sub>Sur la machine : on pointe, on identifie, on vérifie.</sub></td>
+</tr>
+</table>
 
 ---
 
