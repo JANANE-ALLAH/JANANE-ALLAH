@@ -18,7 +18,9 @@
 ![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 
-[**Plan du module**](#-plan-du-module) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+🆕 **Nouveau · 2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP.
+
+[**Plan du module**](#-plan-du-module) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -35,6 +37,27 @@
 3. ✅ **concevoir un circuit** de base ;
 4. ✅ **découvrir la technologie** des systèmes hydrauliques ;
 5. ✅ **assurer la maintenance** des installations.
+
+---
+
+## 🧠 Énigmes de terrain
+
+Chaque chapitre s'ouvre sur quatre questions d'atelier. Cherchez la réponse, puis vérifiez-la dans la partie indiquée du chapitre.
+
+| Ch. | L'énigme | La réponse est dans… |
+|:-:|---|---|
+| **01** | Pourquoi un flexible de pelle est-il chaud au toucher alors qu'il ne fait que transporter de l'huile ? | Partie 8 · pertes de charge |
+| **01** | Pourquoi une pompe « siffle » quand l'huile est froide ou la crépine encrassée ? | Parties 4 et 5 · aspiration, viscosité |
+| **01** | Comment un vérin de 10 cm de diamètre soulève-t-il l'équivalent de 20 tonnes ? | Partie 3 · pression × surface |
+| **01** | Pourquoi la pédale de frein devient-elle « spongieuse » quand il y a de l'air dans le circuit ? | Partie 7 · compressibilité |
+| **02** | Pourquoi une pompe est-elle un cercle avec un triangle plein… et un moteur le même cercle avec le triangle à l'envers ? | Partie 4 · conversion |
+| **02** | Un distributeur 4/3 : comment savoir, en 30 secondes, où va l'huile dans chaque position ? | Partie 3 · distribution |
+| **02** | Le limiteur de pression protège le circuit, pourtant il est dessiné « fermé ». Pourquoi ? | Partie 2 · régulation |
+| **02** | Pourquoi la source est-elle toujours en bas à gauche et les vérins en haut ? | Partie 6 · lire un schéma |
+| **03** | Pourquoi une pompe à pistons axiaux exige-t-elle une huile filtrée à 10–20 µm ? | Parties 3 et 5 |
+| **03** | Pourquoi faut-il décharger un accumulateur avant de le démonter ? | Partie 4 |
+| **03** | Pourquoi la tige d'un vérin peut-elle se tordre alors que la pression est normale ? | Partie 7 |
+| **03** | Pourquoi un moteur hydraulique « avale-t-il » de l'air quand on coupe l'alimentation ? | Partie 6 |
 
 ---
 
@@ -59,18 +82,15 @@ flowchart LR
 
 🟦 chapitre en ligne · ⬜ à venir · 🟪 mini-projets
 
-| # | Chapitre | 📄 Cours | 🎥 Vidéo |
-|:-:|----------|:--------:|:--------:|
-| **01** | Généralités sur les systèmes hydrauliques | [PDF](hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf) | — |
-| **02** | Schémas hydrauliques et pneumatiques | [PDF](hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf) | [▶ Voir](https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view) |
-| **03** | Technologie des systèmes hydrauliques | [PDF](hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf) | — |
-| **04** | *Circuits hydrauliques* | 🚧 À venir | — |
-| **05** | *Maintenance des installations* | 🚧 À venir | — |
+<table>
+<tr><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf"><img src="hydraulique/images/couverture-chapitre-01.jpg" width="100%" alt="Couverture du chapitre 01"></a><br><b>01 · Généralités sur les systèmes hydrauliques</b><br><sub>71 pages · 8 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf">📄 Cours</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf"><img src="hydraulique/images/couverture-chapitre-02.jpg" width="100%" alt="Couverture du chapitre 02"></a><br><b>02 · Schémas hydrauliques et pneumatiques</b><br><sub>73 pages · 6 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf">📄 Cours</a> · <a href="https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view">▶ Vidéo</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf"><img src="hydraulique/images/couverture-chapitre-03.jpg" width="100%" alt="Couverture du chapitre 03"></a><br><b>03 · Technologie des systèmes hydrauliques</b><br><sub>115 pages · 9 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf">📄 Cours</a></td></tr>
+<tr><td width="33%" valign="top" align="center"><img src="hydraulique/images/couverture-a-venir.jpg" width="100%" alt="Chapitre à venir"><br><b>04 · Circuits hydrauliques</b><br><sub>🚧 À venir</sub></td><td width="33%" valign="top" align="center"><img src="hydraulique/images/couverture-a-venir.jpg" width="100%" alt="Chapitre à venir"><br><b>05 · Maintenance des installations</b><br><sub>🚧 À venir</sub></td><td width="33%" valign="top" align="center"><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf"><img src="hydraulique/images/couverture-mini-projets.jpg" width="100%" alt="Liste des mini-projets"></a><br><b>🧩 Mini-projets</b><br><sub>une machine réelle à analyser</sub><br><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf">📋 Les 28 sujets</a> · <a href="hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx">📊 Un exemple</a></td></tr>
+</table>
 
-> 📘 Les chapitres sont publiés au fur et à mesure ; 🚧 signale un chapitre pas encore en ligne.
+> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; les chapitres sont publiés au fur et à mesure.
 
 <details>
-<summary><i>Descriptif des chapitres publiés</i></summary>
+<summary><i>Descriptif des chapitres publiés : parties, TP et points à retenir</i></summary>
 <br/>
 
 **01 — Généralités sur les systèmes hydrauliques** · 71 pages  
@@ -95,6 +115,14 @@ Hydraulique face au pneumatique et à l'électrique, chaîne d'énergie, grandeu
 - **TP 4 — Huile et température** : relever la température, lire la fiche d'huile, estimer le régime (Re)
 - **TP 5 — Pertes et diagnostic** : mesurer Δp d'un filtre ou d'un flexible, lire le vacuomètre d'aspiration
 
+*À retenir :*
+
+> 1. La pompe crée le débit ; la pression naît de la résistance à l'écoulement.  
+> 2. Vitesse ← débit (v = Q / S) · Force ← pression (F = p · S).  
+> 3. Puissance = pression × débit ; l'énergie perdue devient de la chaleur.  
+> 4. La viscosité dépend de la température : elle gouverne le régime, les pertes et le rendement.  
+> 5. L'huile est quasi incompressible, pas totalement : air, dilatation et pertes de charge se calculent.  
+
 **02 — Schémas hydrauliques et pneumatiques** · 73 pages  
 Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et limiteurs ; lecture d'un distributeur et chemin du fluide ; régulation de pression et de débit ; règles de représentation et de repérage ; construction d'un circuit simple à partir d'un cahier des charges. Exemple fil rouge : commande d'un vérin hydraulique à double effet. Durée indicative 5 à 7 h, exercices corrigés, QCM d'auto-évaluation.
 
@@ -114,6 +142,14 @@ Symboles normalisés (ISO 1219) des pompes, vérins, distributeurs, clapets et l
 - **TP 3 — Câbler un circuit** : réaliser la commande d'un vérin double effet et vérifier les 3 positions
 - **TP 4 — Régler et mesurer** : tarer le limiteur de pression, régler la vitesse, lire les manomètres
 - **TP 5 — Dessiner et simuler** : dessiner le schéma d'une application et le valider, par simulation si possible
+
+*À retenir :*
+
+> 1. Un symbole représente une fonction, jamais la forme du composant.  
+> 2. Un distributeur se lit case par case : orifices, positions, commande, repos.  
+> 3. Le limiteur de pression protège (fermé), le réducteur règle l'aval (ouvert), le limiteur de débit règle la vitesse.  
+> 4. Triangle plein : hydraulique, creux : pneumatique ; le sens du triangle distingue pompe et moteur.  
+> 5. On dessine le circuit au repos : source en bas à gauche, actionneurs en haut.  
 
 **03 — Technologie des systèmes hydrauliques** · 115 pages  
 Les composants d'une installation, famille par famille : centrale, réservoirs, filtres, accumulateurs, pompes, moteurs, vérins, distributeurs, protection et régulation. Calculs de cylindrée, débit, couple et rendements, volume d'un accumulateur, effort et flambage d'un vérin, dimensionnement d'une centrale ; diagnostic des symptômes types (cavitation, colmatage, usure interne). Durée indicative 12 à 16 h hors TP, 9 exercices corrigés, fiches de formules, QCM d'auto-évaluation.
@@ -138,7 +174,37 @@ Les composants d'une installation, famille par famille : centrale, réservoirs, 
 - **TP 4 — Vérin et moteur** : chronométrer une course, calculer F, v et le débit ; repérer le gavage
 - **TP 5 — Distributeur et limiteur** : identifier la commande, câbler, tarer le limiteur et mesurer Δp
 
+*À retenir :*
+
+> 1. La propreté de l'huile protège tout : filtre au retour, crépine à l'aspiration, β élevé, code ISO 4406 suivi.  
+> 2. La pompe crée le débit (Cyl · N · ηv) ; le moteur et le vérin le transforment en vitesse, couple et effort.  
+> 3. Tout rendement < 1 : la différence devient chaleur, à évacuer par le réservoir ou un échangeur.  
+> 4. Un accumulateur stocke l'énergie dans l'azote : précharge ≈ 0,9 p₁, décharger avant d'intervenir.  
+> 5. Un vérin se dimensionne deux fois : en pression (alésage) et au flambage (tige).  
+
 </details>
+
+---
+
+## 📌 Mémento du technicien
+
+Les valeurs à connaître par cœur, telles que les donnent les fiches de synthèse des chapitres.
+
+### Chapitre 01 · Généralités sur les systèmes hydrauliques
+
+<table>
+<tr><td align="center" width="25%"><b>≈ 870 kg/m³</b><br><sub>masse volumique de l'huile minérale</sub></td><td align="center" width="25%"><b>≈ 46 mm²/s</b><br><sub>ISO VG 46, à 40 °C</sub></td><td align="center" width="25%"><b>≈ 1 400 MPa</b><br><sub>module de compressibilité de l'huile</sub></td><td align="center" width="25%"><b>≈ 0,7 × 10⁻³ /°C</b><br><sub>coefficient de dilatation de l'huile</sub></td></tr>
+<tr><td align="center" width="25%"><b>1 bar = 10⁵ Pa</b><br><sub>= 10 N par cm² ; 1 MPa = 10 bar</sub></td><td align="center" width="25%"><b>1 L/min</b><br><sub>= 1,667 × 10⁻⁵ m³/s</sub></td><td align="center" width="25%"><b>P [kW] = Q·p / 600</b><br><sub>Q en L/min, p en bar</sub></td><td align="center" width="25%"><b>≈ 0,06 °C / bar</b><br><sub>échauffement par perte de charge</sub></td></tr>
+<tr><td align="center" width="25%"><b>p<sub>asp</sub> ≥ 0,8 bar abs</b><br><sub>limite usuelle à l'aspiration</sub></td><td align="center" width="25%"><b>3 à 6 m/s</b><br><sub>vitesse au refoulement</sub></td><td align="center" width="25%"><b>Re : 2 000 et 3 000</b><br><sub>seuils laminaire / turbulent</sub></td><td align="center" width="25%"><b>1 ch = 736 W</b><br><sub>conversion de puissance</sub></td></tr>
+</table>
+
+### Chapitre 03 · Technologie des systèmes hydrauliques
+
+<table>
+<tr><td align="center" width="25%"><b>3 à 4 × Q</b><br><sub>volume du réservoir (L)</sub></td><td align="center" width="25%"><b>15 à 20 cm</b><br><sub>huile au-dessus de la crépine</sub></td><td align="center" width="25%"><b>β = 200</b><br><sub>efficacité 99,5 %</sub></td><td align="center" width="25%"><b>ISO 18/16/13</b><br><sub>pompes et moteurs à pistons</sub></td></tr>
+<tr><td align="center" width="25%"><b>p₀ ≈ 0,9 p₁</b><br><sub>précharge d'accumulateur</sub></td><td align="center" width="25%"><b>p₂/p₀ ≤ 4</b><br><sub>limite pour une vessie</sub></td><td align="center" width="25%"><b>70–98 %</b><br><sub>rendement volumétrique d'une pompe</sub></td><td align="center" width="25%"><b>52,5–88,2 %</b><br><sub>rendement global d'une pompe</sub></td></tr>
+<tr><td align="center" width="25%"><b>0,85–0,95</b><br><sub>rendement d'un vérin</sub></td><td align="center" width="25%"><b>K = 1 · 2 · 0,7 · 0,5</b><br><sub>coefficients de flambage</sub></td><td align="center" width="25%"><b>Δp ∝ Q²</b><br><sub>perte de charge d'un distributeur</sub></td><td align="center" width="25%"><b>≈ 10 bar/°C</b><br><sub>huile enfermée (chapitre 1)</sub></td></tr>
+</table>
 
 ---
 
@@ -207,8 +273,26 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 |---|---|
 | **Prérequis** | Mécanique générale (forces, travail, puissance) et mathématiques de base — aucun acquis en hydraulique n'est supposé. |
 | **Niveau** | Débutant → intermédiaire. |
+| **Chaque chapitre** | Quatre énigmes d'accroche → feuille de route → cours et exercices corrigés → synthèse et pièges à éviter → QCM d'auto-évaluation → checklist « Prêt pour le TP ? ». |
 | **Évaluation** | QCM d'auto-évaluation en fin de chapitre, TD corrigés, manipulations en TP. |
-| **TP** | Sur banc d'essai : le repère **TP** en haut à droite des diapos signale la notion que vous manipulerez sur machine. |
+| **TP** | Sur banc d'essai ou sur machine : le repère **TP** en haut à droite des diapos signale la notion que vous manipulerez. |
+
+---
+
+## 🗓️ Mises à jour
+
+<details>
+<summary><i>Historique de la page</i></summary>
+<br/>
+
+- **2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP
+- **2 nov. 2026** — galerie de photos de TP, énigmes de terrain et mémento du technicien
+- **1er nov. 2026** — liste des 28 sujets de mini-projets et exemple de présentation
+- **27 oct. 2026** — vidéo du chapitre 2
+- **26 oct. 2026** — chapitre 2 « Schémas hydrauliques et pneumatiques » en ligne
+- **24 oct. 2026** — ouverture de la page, chapitre 1 « Généralités sur les systèmes hydrauliques »
+
+</details>
 
 ---
 
@@ -218,5 +302,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
+
+<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 2 nov. 2026</sub>
 
 </div>

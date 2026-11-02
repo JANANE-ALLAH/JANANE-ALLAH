@@ -130,19 +130,105 @@ GALERIE = [  # (titre, colonnes, [(fichier, legende)])
  ]),
 ]
 
+# Recopies des supports : page « Quatre enigmes », page « Synthese du chapitre » et « Memento ».
+# Seuls les chapitres publies sont affiches ; a completer avec chaque nouveau chapitre.
+ENIGMES = {
+ "01": [
+   ("Pourquoi un flexible de pelle est-il chaud au toucher alors qu'il ne fait que transporter de l'huile ?",
+    "Partie 8 · pertes de charge"),
+   ("Pourquoi une pompe « siffle » quand l'huile est froide ou la crépine encrassée ?",
+    "Parties 4 et 5 · aspiration, viscosité"),
+   ("Comment un vérin de 10 cm de diamètre soulève-t-il l'équivalent de 20 tonnes ?",
+    "Partie 3 · pression × surface"),
+   ("Pourquoi la pédale de frein devient-elle « spongieuse » quand il y a de l'air dans le circuit ?",
+    "Partie 7 · compressibilité"),
+ ],
+ "02": [
+   ("Pourquoi une pompe est-elle un cercle avec un triangle plein… et un moteur le même cercle avec le "
+    "triangle à l'envers ?", "Partie 4 · conversion"),
+   ("Un distributeur 4/3 : comment savoir, en 30 secondes, où va l'huile dans chaque position ?",
+    "Partie 3 · distribution"),
+   ("Le limiteur de pression protège le circuit, pourtant il est dessiné « fermé ». Pourquoi ?",
+    "Partie 2 · régulation"),
+   ("Pourquoi la source est-elle toujours en bas à gauche et les vérins en haut ?",
+    "Partie 6 · lire un schéma"),
+ ],
+ "03": [
+   ("Pourquoi une pompe à pistons axiaux exige-t-elle une huile filtrée à 10–20 µm ?", "Parties 3 et 5"),
+   ("Pourquoi faut-il décharger un accumulateur avant de le démonter ?", "Partie 4"),
+   ("Pourquoi la tige d'un vérin peut-elle se tordre alors que la pression est normale ?", "Partie 7"),
+   ("Pourquoi un moteur hydraulique « avale-t-il » de l'air quand on coupe l'alimentation ?", "Partie 6"),
+ ],
+}
+SYNTHESE = {
+ "01": [
+   "La pompe crée le débit ; la pression naît de la résistance à l'écoulement.",
+   "Vitesse ← débit (v = Q / S) · Force ← pression (F = p · S).",
+   "Puissance = pression × débit ; l'énergie perdue devient de la chaleur.",
+   "La viscosité dépend de la température : elle gouverne le régime, les pertes et le rendement.",
+   "L'huile est quasi incompressible, pas totalement : air, dilatation et pertes de charge se calculent.",
+ ],
+ "02": [
+   "Un symbole représente une fonction, jamais la forme du composant.",
+   "Un distributeur se lit case par case : orifices, positions, commande, repos.",
+   "Le limiteur de pression protège (fermé), le réducteur règle l'aval (ouvert), le limiteur de débit "
+   "règle la vitesse.",
+   "Triangle plein : hydraulique, creux : pneumatique ; le sens du triangle distingue pompe et moteur.",
+   "On dessine le circuit au repos : source en bas à gauche, actionneurs en haut.",
+ ],
+ "03": [
+   "La propreté de l'huile protège tout : filtre au retour, crépine à l'aspiration, β élevé, code ISO 4406 suivi.",
+   "La pompe crée le débit (Cyl · N · ηv) ; le moteur et le vérin le transforment en vitesse, couple et effort.",
+   "Tout rendement < 1 : la différence devient chaleur, à évacuer par le réservoir ou un échangeur.",
+   "Un accumulateur stocke l'énergie dans l'azote : précharge ≈ 0,9 p₁, décharger avant d'intervenir.",
+   "Un vérin se dimensionne deux fois : en pression (alésage) et au flambage (tige).",
+ ],
+}
+MEMENTO = {
+ "01": [
+   ("≈ 870 kg/m³", "masse volumique de l'huile minérale"),
+   ("≈ 46 mm²/s", "ISO VG 46, à 40 °C"),
+   ("≈ 1 400 MPa", "module de compressibilité de l'huile"),
+   ("≈ 0,7 × 10⁻³ /°C", "coefficient de dilatation de l'huile"),
+   ("1 bar = 10⁵ Pa", "= 10 N par cm² ; 1 MPa = 10 bar"),
+   ("1 L/min", "= 1,667 × 10⁻⁵ m³/s"),
+   ("P [kW] = Q·p / 600", "Q en L/min, p en bar"),
+   ("≈ 0,06 °C / bar", "échauffement par perte de charge"),
+   ("p<sub>asp</sub> ≥ 0,8 bar abs", "limite usuelle à l'aspiration"),
+   ("3 à 6 m/s", "vitesse au refoulement"),
+   ("Re : 2 000 et 3 000", "seuils laminaire / turbulent"),
+   ("1 ch = 736 W", "conversion de puissance"),
+ ],
+ "03": [
+   ("3 à 4 × Q", "volume du réservoir (L)"),
+   ("15 à 20 cm", "huile au-dessus de la crépine"),
+   ("β = 200", "efficacité 99,5 %"),
+   ("ISO 18/16/13", "pompes et moteurs à pistons"),
+   ("p₀ ≈ 0,9 p₁", "précharge d'accumulateur"),
+   ("p₂/p₀ ≤ 4", "limite pour une vessie"),
+   ("70–98 %", "rendement volumétrique d'une pompe"),
+   ("52,5–88,2 %", "rendement global d'une pompe"),
+   ("0,85–0,95", "rendement d'un vérin"),
+   ("K = 1 · 2 · 0,7 · 0,5", "coefficients de flambage"),
+   ("Δp ∝ Q²", "perte de charge d'un distributeur"),
+   ("≈ 10 bar/°C", "huile enfermée (chapitre 1)"),
+ ],
+}
+
+# Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
+NOUVEAUTES = [
+ ("2 nov. 2026", "chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP"),
+ ("2 nov. 2026", "galerie de photos de TP, énigmes de terrain et mémento du technicien"),
+ ("1er nov. 2026", "liste des 28 sujets de mini-projets et exemple de présentation"),
+ ("27 oct. 2026", "vidéo du chapitre 2"),
+ ("26 oct. 2026", "chapitre 2 « Schémas hydrauliques et pneumatiques » en ligne"),
+ ("24 oct. 2026", "ouverture de la page, chapitre 1 « Généralités sur les systèmes hydrauliques »"),
+]
+
 
 def fichiers(num):
     d = os.path.join(ROOT, B, CH[num][0])
     return sorted(os.listdir(d)) if os.path.isdir(d) else []
-
-
-def lien(num, f, label):
-    return "[%s](%s/%s/%s)" % (label, B, CH[num][0], f)
-
-
-def cellule(num, test, label):
-    hits = [f for f in fichiers(num) if test(f)]
-    return "<br>".join(lien(num, f, label(f)) for f in hits)
 
 
 def pages(num):
@@ -156,26 +242,25 @@ def pages(num):
         return None
 
 
-COLONNES = [  # (titre, fonction cellule)
-    ("📄 Cours", lambda n: cellule(n, lambda f: f.startswith("1_"), lambda f: "PDF")),
-    ("📝 TD", lambda n: cellule(n, lambda f: f.startswith("3_") and "corrige" not in f.lower(), lambda f: "TD")),
-    ("🔬 TP", lambda n: cellule(n, lambda f: f.startswith("4_") and "corrige" not in f.lower(),
-                               lambda f: f.split("_")[1])),
-    ("✅ Corrigé", lambda n: cellule(n, lambda f: "corrige" in f.lower(), lambda f: "Corrigé")),
-    ("🎥 Vidéo", lambda n: "[▶ Voir](%s)" % VIDEOS[n] if n in VIDEOS else ""),
-]
+def liens_chapitre(num):
+    """Liens HTML d'un chapitre : cours, TD, TP, corriges, video."""
+    out = []
+    for f in fichiers(num):
+        chemin = "%s/%s/%s" % (B, CH[num][0], f)
+        if f.startswith("1_"):
+            out.append(("📄 Cours", chemin))
+        elif "corrige" in f.lower():
+            out.append(("✅ Corrigé", chemin))
+        elif f.startswith("3_"):
+            out.append(("📝 TD", chemin))
+        elif f.startswith("4_"):
+            out.append(("🔬 " + f.split("_")[1], chemin))
+    if num in VIDEOS:
+        out.append(("▶ Vidéo", VIDEOS[num]))
+    return " · ".join('<a href="%s">%s</a>' % (u, t) for t, u in out)
 
-# Le cours est toujours affiche ; les autres colonnes seulement si elles ont du contenu.
-actives = [c for i, c in enumerate(COLONNES) if i == 0 or any(c[1](n) for n in CH)]
-publies = [n for n in CH if COLONNES[0][1](n)]
 
-rows = ["| # | Chapitre | %s |" % " | ".join(c[0] for c in actives),
-        "|:-:|----------|%s|" % "|".join(":--------:" for _ in actives)]
-for n in sorted(CH):
-    cells = [c[1](n) or ("🚧 À venir" if c is actives[0] else "—") for c in actives]
-    titre = CH[n][1] if n in publies else "*%s*" % CH[n][1]
-    rows.append("| **%s** | %s | %s |" % (n, titre, " | ".join(cells)))
-plan = "\n".join(rows)
+publies = [n for n in sorted(CH) if any(f.startswith("1_") for f in fichiers(n))]
 
 desc = []
 for n in publies:
@@ -188,6 +273,9 @@ for n in publies:
     if n in TPS:
         desc.append("\n*Les TP associés, sur machine :*\n")
         desc += ["- **TP %d — %s** : %s" % (i + 1, t, d) for i, (t, d) in enumerate(TPS[n])]
+    if n in SYNTHESE:
+        desc.append("\n*À retenir :*\n")
+        desc += ["> %d. %s  " % (i + 1, s) for i, s in enumerate(SYNTHESE[n])]
     desc.append("")
 descriptif = "\n".join(desc)
 
@@ -314,6 +402,142 @@ def galerie():
     return (u"## 📸 Le module en images\n\nLe module se vit sur machines réelles : lire la machine, mesurer, démonter, "
             u"vérifier. *Visages floutés pour respecter l'image des étudiants.*\n\n" + "\n".join(blocs) + u"\n---\n\n")
 
+
+def enregistrer_jpeg(im, nom):
+    os.makedirs(os.path.join(ROOT, B, IMG), exist_ok=True)
+    im.convert("RGB").save(os.path.join(ROOT, B, IMG, nom), "JPEG", quality=82, optimize=True, progressive=True)
+
+
+def rendre_page1(pdf, nom, ratio=None):
+    """Page 1 d'un PDF en JPEG de 800 px (pymupdf) ; ratio : recadrage par le haut. None si impossible."""
+    try:
+        import pymupdf
+        from PIL import Image
+    except Exception:
+        return None
+    pg = pymupdf.open(pdf)[0]
+    z = 800.0 / pg.rect.width
+    pix = pg.get_pixmap(matrix=pymupdf.Matrix(z, z))
+    im = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+    if ratio:
+        im = im.crop((0, 0, im.width, min(im.height, int(im.width / ratio))))
+    enregistrer_jpeg(im, nom)
+    return nom
+
+
+def couverture(num):
+    """Couverture d'un chapitre (page 1 du cours). Generee une seule fois : supprimer l'image pour la refaire."""
+    nom = "couverture-chapitre-%s.jpg" % num
+    if fichier_image(nom):
+        return nom
+    f = [x for x in fichiers(num) if x.startswith("1_")]
+    return rendre_page1(os.path.join(ROOT, B, CH[num][0], f[0]), nom) if f else None
+
+
+def couverture_mini():
+    nom = "couverture-mini-projets.jpg"
+    if fichier_image(nom):
+        return nom
+    p = os.path.join(ROOT, B, MINI, SUJETS)
+    return rendre_page1(p, nom, ratio=16 / 9.0) if os.path.isfile(p) else None
+
+
+def couverture_a_venir():
+    """Vignette commune des chapitres pas encore en ligne, aux couleurs des supports."""
+    nom = "couverture-a-venir.jpg"
+    if fichier_image(nom):
+        return nom
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except Exception:
+        return None
+    im = Image.new("RGB", (800, 450))
+    d = ImageDraw.Draw(im)
+    for y in range(450):
+        t = y / 449.0
+        d.line([(0, y), (800, y)], fill=(int(14 + 16 * t), int(35 + 22 * t), int(66 + 30 * t)))
+
+    def police(noms, taille):
+        for n in noms:
+            try:
+                return ImageFont.truetype(n, taille)
+            except Exception:
+                pass
+        return ImageFont.load_default()
+    d.text((400, 205), u"À VENIR", anchor="mm", fill=(242, 169, 0), font=police(["georgiab.ttf", "arialbd.ttf"], 72))
+    d.text((400, 275), u"Chapitre publié prochainement", anchor="mm", fill=(220, 228, 240),
+           font=police(["arial.ttf"], 28))
+    enregistrer_jpeg(im, nom)
+    return nom
+
+
+def cartes():
+    """Cartes des supports : couverture cliquable, titre, chiffres, liens ; puis la carte des mini-projets."""
+    cells = []
+    for n in sorted(CH):
+        titre = "<b>%s · %s</b>" % (n, CH[n][1])
+        if n in publies:
+            pdf = "%s/%s/%s" % (B, CH[n][0], [x for x in fichiers(n) if x.startswith("1_")][0])
+            img = couverture(n)
+            infos = [x for x in ("%d pages" % pages(n) if pages(n) else "",
+                                 "%d parties" % len(PARTIES[n]) if n in PARTIES else "",
+                                 "%d TP" % len(TPS[n]) if n in TPS else "") if x]
+            vignette = ('<a href="%s"><img src="%s/%s/%s" width="100%%" alt="Couverture du chapitre %s"></a><br>'
+                        % (pdf, B, IMG, img, n)) if img else ""
+            cells.append('%s%s<br><sub>%s</sub><br>%s' % (vignette, titre, " · ".join(infos), liens_chapitre(n)))
+        else:
+            img = couverture_a_venir()
+            vignette = ('<img src="%s/%s/%s" width="100%%" alt="Chapitre à venir"><br>' % (B, IMG, img)) if img else ""
+            cells.append('%s%s<br><sub>🚧 À venir</sub>' % (vignette, titre))
+    if os.path.isfile(os.path.join(ROOT, B, MINI, SUJETS)):
+        img = couverture_mini()
+        liste = "%s/%s/%s" % (B, MINI, SUJETS)
+        vignette = ('<a href="%s"><img src="%s/%s/%s" width="100%%" alt="Liste des mini-projets"></a><br>'
+                    % (liste, B, IMG, img)) if img else ""
+        liens = ['<a href="%s">📋 Les %d sujets</a>' % (liste, NB_SUJETS)]
+        if os.path.isfile(os.path.join(ROOT, B, MINI, EXEMPLE)):
+            liens.append('<a href="%s/%s/%s">📊 Un exemple</a>' % (B, MINI, EXEMPLE))
+        cells.append('%s<b>🧩 Mini-projets</b><br><sub>une machine réelle à analyser</sub><br>%s'
+                     % (vignette, " · ".join(liens)))
+    rows = ["<tr>%s</tr>" % "".join('<td width="33%%" valign="top" align="center">%s</td>' % c for c in cells[k:k + 3])
+            for k in range(0, len(cells), 3)]
+    return "<table>\n%s\n</table>\n\n" % "\n".join(rows)
+
+
+def enigmes():
+    lignes = ["| **%s** | %s | %s |" % (n, q, r) for n in publies for q, r in ENIGMES.get(n, [])]
+    if not lignes:
+        return ""
+    return (u"## 🧠 Énigmes de terrain\n\nChaque chapitre s'ouvre sur quatre questions d'atelier. Cherchez la réponse, "
+            u"puis vérifiez-la dans la partie indiquée du chapitre.\n\n"
+            u"| Ch. | L'énigme | La réponse est dans… |\n|:-:|---|---|\n" + "\n".join(lignes) + u"\n\n---\n\n")
+
+
+def memento():
+    blocs = []
+    for n in publies:
+        if n not in MEMENTO:
+            continue
+        cells = ['<td align="center" width="25%%"><b>%s</b><br><sub>%s</sub></td>' % (v, d) for v, d in MEMENTO[n]]
+        rows = ["<tr>%s</tr>" % "".join(cells[k:k + 4]) for k in range(0, len(cells), 4)]
+        blocs.append("### Chapitre %s · %s\n\n<table>\n%s\n</table>\n" % (n, CH[n][1], "\n".join(rows)))
+    if not blocs:
+        return ""
+    return (u"## 📌 Mémento du technicien\n\nLes valeurs à connaître par cœur, telles que les donnent les fiches "
+            u"de synthèse des chapitres.\n\n" + "\n".join(blocs) + u"\n---\n\n")
+
+
+def nouveaute():
+    return (u"🆕 **Nouveau · %s** — %s.\n\n" % NOUVEAUTES[0]) if NOUVEAUTES else ""
+
+
+def historique():
+    if not NOUVEAUTES:
+        return ""
+    return (u"## 🗓️ Mises à jour\n\n<details>\n<summary><i>Historique de la page</i></summary>\n<br/>\n\n"
+            + "\n".join("- **%s** — %s" % e for e in NOUVEAUTES) + u"\n\n</details>\n\n---\n\n")
+
+
 TPL = u"""<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=Syst%C3%A8mes+Hydrauliques;Licence+Professionnelle+IMPI+%E2%80%94+ENSAM+Casablanca;Module+6+%3A+Hydraulique+%C2%B7+5+chapitres" alt="Systemes Hydrauliques" />
@@ -329,7 +553,7 @@ TPL = u"""<div align="center">
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-%(publies)s_%%2F_5-E67E22?style=for-the-badge)
 %(stats)s
-[**Plan du module**](#-plan-du-module) · %(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+%(nouveaute)s[**Plan du module**](#-plan-du-module) · %(nav_enigmes)s%(nav_memento)s%(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -349,14 +573,12 @@ TPL = u"""<div align="center">
 
 ---
 
-## 📚 Plan du module
+%(enigmes)s## 📚 Plan du module
 
-%(parcours)s%(plan)s
-
-> 📘 Les chapitres sont publiés au fur et à mesure ; 🚧 signale un chapitre pas encore en ligne.
+%(parcours)s%(cartes)s> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; les chapitres sont publiés au fur et à mesure.
 
 <details>
-<summary><i>Descriptif des chapitres publiés</i></summary>
+<summary><i>Descriptif des chapitres publiés : parties, TP et points à retenir</i></summary>
 <br/>
 
 %(descriptif)s
@@ -364,28 +586,36 @@ TPL = u"""<div align="center">
 
 ---
 
-%(mini)s%(galerie)s## 🧭 Prérequis et évaluation
+%(memento)s%(mini)s%(galerie)s## 🧭 Prérequis et évaluation
 
 | | |
 |---|---|
 | **Prérequis** | Mécanique générale (forces, travail, puissance) et mathématiques de base — aucun acquis en hydraulique n'est supposé. |
 | **Niveau** | Débutant → intermédiaire. |
+| **Chaque chapitre** | Quatre énigmes d'accroche → feuille de route → cours et exercices corrigés → synthèse et pièges à éviter → QCM d'auto-évaluation → checklist « Prêt pour le TP ? ». |
 | **Évaluation** | QCM d'auto-évaluation en fin de chapitre, TD corrigés, manipulations en TP. |
-| **TP** | Sur banc d'essai : le repère **TP** en haut à droite des diapos signale la notion que vous manipulerez sur machine. |
+| **TP** | Sur banc d'essai ou sur machine : le repère **TP** en haut à droite des diapos signale la notion que vous manipulerez. |
 
 ---
 
-## 📫 Contact
+%(historique)s## 📫 Contact
 
 <div align="center">
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
 
+%(maj)s
 </div>
 """
 
-page = TPL.replace("%%", "%").replace("%(plan)s", plan).replace("%(descriptif)s", descriptif) \
+page = TPL.replace("%%", "%").replace("%(cartes)s", cartes()).replace("%(descriptif)s", descriptif) \
+          .replace("%(enigmes)s", enigmes()).replace("%(memento)s", memento()) \
+          .replace("%(nav_enigmes)s", "[**Énigmes**](#-énigmes-de-terrain) · " if enigmes() else "") \
+          .replace("%(nav_memento)s", "[**Mémento**](#-mémento-du-technicien) · " if memento() else "") \
+          .replace("%(nouveaute)s", nouveaute()).replace("%(historique)s", historique()) \
+          .replace("%(maj)s", "<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : %s</sub>\n"
+                   % NOUVEAUTES[0][0] if NOUVEAUTES else "") \
           .replace("%(publies)s", str(len(publies))).replace("%(mini)s", mini) \
           .replace("%(nav_mini)s", "[**Mini-projets**](#-mini-projets) · " if mini else "") \
           .replace("%(parcours)s", parcours()).replace("%(stats)s", badges_stats()) \
