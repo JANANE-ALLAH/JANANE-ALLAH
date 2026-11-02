@@ -70,6 +70,19 @@ VIDEOS_TP = {
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
+# Jeux interactifs d'un TP : pages HTML sur le site janane-allah.github.io (le Markdown de
+# GitHub n'execute pas de JavaScript). Cle = chapitre ; valeur = (TP, adresse, sous-titre,
+# [(ancre, titre, notion)]). Vignettes : methodes-numeriques/images/jeux-<tp>/<ancre>.jpg
+JEUX = {
+ "09": ("TP5", "https://janane-allah.github.io/jeux/tp5/", "la salle de sport (Poisson 2D)", [
+   ("jeu-1", "Numéro, s'il vous plaît !", "La numérotation k = (j − 1)·nx + i"),
+   ("jeu-2", "Le pochoir à 5 points", "Assembler une ligne de A et de b"),
+   ("jeu-3", "Thermostat de la salle", "T = A \\ b, principe du maximum, mur isolé"),
+   ("jeu-4", "Course SOR", "Battre Gauss-Seidel, trouver le ω optimal"),
+   ("jeu-5", "Détective du code", "Reconnaître un bug à sa sortie console"),
+ ]),
+}
+
 
 
 PARTS = [
@@ -95,7 +108,8 @@ def videos_tp(num):
 
 
 # Couleurs des boutons, par type de support
-COULEURS = {"cours": "0056D2", "td": "6A4C93", "tp": "C1121F", "corrige": "2E7D32", "video": "E67E22"}
+COULEURS = {"cours": "0056D2", "td": "6A4C93", "tp": "C1121F", "corrige": "2E7D32", "video": "E67E22",
+            "jeu": "FFB300"}
 
 
 def ressources(num):
@@ -113,6 +127,8 @@ def ressources(num):
     if num in VIDEOS:
         out.append(("video", "▶ Vidéo", "cours", VIDEOS[num]))
     out += [("video", "▶ Vidéo", t[0], t[1]) for t in videos_tp(num)]
+    if num in JEUX:
+        out.append(("jeu", "🎮 Jeux", "%s · %d jeux" % (JEUX[num][0], len(JEUX[num][3])), JEUX[num][1]))
     return out
 
 
@@ -127,6 +143,31 @@ def module(num):
     """Un module en clair : titre, description, puis un bouton par support (rien a deplier)."""
     return "\n".join(["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
                       "\n".join(bouton(*r) for r in ressources(num)), ""])
+
+
+def section_jeux():
+    """Une carte par jeu (vignette, titre, notion, bouton), trois par rangee, puis une carte « Comment jouer »."""
+    from urllib.parse import quote
+    out = []
+    for num in sorted(JEUX):
+        tp, url, sous_titre, liste = JEUX[num]
+        dossier = "%s/images/jeux-%s" % (B, tp.lower())
+        out.append("### %s · Module %s — %s\n" % (tp, num, sous_titre))
+        cartes = []
+        for q, (ancre, titre, notion) in enumerate(liste):
+            lien = "%s#%s" % (url, ancre)
+            badge = "https://img.shields.io/badge/%s-%s?style=for-the-badge" % (quote("▶ Jouer", safe=""), COULEURS["jeu"])
+            cartes.append('<td width="33%%" valign="top" align="center"><a href="%s"><img src="%s/%s.jpg" width="100%%" '
+                          'alt="Jeu %d : %s"></a><br/><b>%d · %s</b><br/><sub>%s</sub><br/><a href="%s"><img src="%s" '
+                          'alt="Jouer"></a></td>' % (lien, dossier, ancre, q + 1, titre, q + 1, titre, notion, lien, badge))
+        cartes.append('<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>'
+                      '💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>'
+                      '⭐ Jusqu\'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>'
+                      '💡 Jouez <b>après</b> avoir lu l\'énoncé et <b>avant</b> d\'écrire votre code MATLAB.</td>')
+        out.append("<table>")
+        out += ["<tr>\n%s\n</tr>" % "\n".join(cartes[k:k + 3]) for k in range(0, len(cartes), 3)]
+        out.append("</table>\n")
+    return "\n".join(out)
 
 
 programme = []
@@ -196,7 +237,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes)
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -230,7 +271,7 @@ finies, et **équations différentielles ordinaires**.
 Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
 
-<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C)</sub>
+<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C) · 🟡 jeux interactifs</sub>
 
 %(programme)s
 ---
@@ -340,6 +381,15 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 
 ---
 
+## 🎮 Jeux interactifs
+
+Des jeux, dans le navigateur, pour **manipuler un TP avant de le programmer** : chaque jeu correspond à une
+manipulation de l'énoncé. Tous les nombres affichés sont calculés en direct par le code MATLAB du TP, porté
+ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
+
+%(jeux)s
+---
+
 <div align="center">
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
@@ -414,6 +464,7 @@ valeurs = {
     "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES), "nb_td": str(NB_TD), "nb_tp": str(NB_TP),
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
     "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
+    "jeux": section_jeux(),
 }
 page = TPL.replace("%%", "%")
 for k, v in valeurs.items():

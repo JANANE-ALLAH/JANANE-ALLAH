@@ -25,7 +25,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes)
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -72,7 +72,7 @@ finies, et **équations différentielles ordinaires**.
 Il y a **12 modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
 
-<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C)</sub>
+<sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C) · 🟡 jeux interactifs</sub>
 
 ### 🚩 Introduction
 
@@ -180,6 +180,7 @@ Discrétisation 2D complète (Dirichlet puis Neumann), validation sur un cas tes
 [![✅ TP5 corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP5-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/4_TP5_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view)
 [![▶ Vidéo TP5](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP5-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1qhSEHFj44XbFneGbJCBylgvrMxVg7l5O/view)
+[![🎮 Jeux TP5 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP5%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp5/)
 
 #### Module 10 · Équation des ondes
 
@@ -338,6 +339,29 @@ Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_suje
 `examen_preparation_N_AAAA_AAAA.pdf`.
 
 </details>
+
+---
+
+## 🎮 Jeux interactifs
+
+Des jeux, dans le navigateur, pour **manipuler un TP avant de le programmer** : chaque jeu correspond à une
+manipulation de l'énoncé. Tous les nombres affichés sont calculés en direct par le code MATLAB du TP, porté
+ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
+
+### TP5 · Module 09 — la salle de sport (Poisson 2D)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-1"><img src="methodes-numeriques/images/jeux-tp5/jeu-1.jpg" width="100%" alt="Jeu 1 : Numéro, s'il vous plaît !"></a><br/><b>1 · Numéro, s'il vous plaît !</b><br/><sub>La numérotation k = (j − 1)·nx + i</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-2"><img src="methodes-numeriques/images/jeux-tp5/jeu-2.jpg" width="100%" alt="Jeu 2 : Le pochoir à 5 points"></a><br/><b>2 · Le pochoir à 5 points</b><br/><sub>Assembler une ligne de A et de b</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-3"><img src="methodes-numeriques/images/jeux-tp5/jeu-3.jpg" width="100%" alt="Jeu 3 : Thermostat de la salle"></a><br/><b>3 · Thermostat de la salle</b><br/><sub>T = A \ b, principe du maximum, mur isolé</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-4"><img src="methodes-numeriques/images/jeux-tp5/jeu-4.jpg" width="100%" alt="Jeu 4 : Course SOR"></a><br/><b>4 · Course SOR</b><br/><sub>Battre Gauss-Seidel, trouver le ω optimal</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp5/#jeu-5"><img src="methodes-numeriques/images/jeux-tp5/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Reconnaître un bug à sa sortie console</sub><br/><a href="https://janane-allah.github.io/jeux/tp5/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
 
 ---
 
