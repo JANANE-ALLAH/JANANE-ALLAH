@@ -59,6 +59,10 @@ researcher = {
 [![Cycle Ingénieur Génie Énergétique](https://img.shields.io/badge/Cycle_Ingénieur_GE_—_1re_année-Méthodes_Numériques_pour_la_Mécanique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-genie-mecanique.md)
 ![Master Matériaux](https://img.shields.io/badge/Master_Matériaux-6A4C93?style=for-the-badge)
 
+🔬 *TP — Travaux pratiques*
+
+[![TP Électricité](https://img.shields.io/badge/Tronc_commun_—_P121_·_P221-TP_Électricité-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/tp-electricite.md)
+
 **ENSAM Casablanca**
 
 [![Licence Professionnelle IMPI](https://img.shields.io/badge/Licence_Professionnelle_IMPI-Hydraulique-2E86AB?style=for-the-badge&logo=bookstack&logoColor=white)](cours/licence-pro-hydraulique.md)
