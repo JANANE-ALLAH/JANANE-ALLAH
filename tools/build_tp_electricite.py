@@ -23,6 +23,17 @@ TPS = [
  (3, "Capacité des sphères métalliques et d'un condensateur sphérique", "Mesurer la capacité de sphères de diamètres différents et d'un condensateur sphérique, et comparer à la théorie.",
   ["C = Q/ΔV", "sphère isolée : C = 4πε₀R", "condensateur sphérique", "moindres carrés"], "18 – 24", (122, "tp3-spheres.jpg")),
 ]
+# Simulations des trois manipulations, pages statiques du site (vignettes copiees dans IMG) :
+# (numero du TP, ancre, vignette, titre, resume, missions)
+SIMUL = "https://janane-allah.github.io/simulations/electricite/"
+SIMULATIONS = [
+ (1, "jeu-1", "sim-transformateur.jpg", "Le transformateur", "Réglez V₁ au rhéostat, lisez les multimètres et remplissez les tableaux, à vide puis en charge.",
+  ["Loi des tensions à vide", "Loi des tensions en charge", "Loi des intensités", "Pertes à vide (trois voltmètres)", "Rendement en charge"]),
+ (2, "jeu-2", "sim-faraday.jpg", "La loi de Faraday", "Une bobine inconnue, un générateur et un oscilloscope : trouvez L et r, puis changez un triangle en créneau.",
+  ["La résonance (C = 1 µF)", "Une autre capacité", "Le montage (b)", "Le montage (c) : L di/dt", "Doubler la fréquence"]),
+ (3, "jeu-3", "sim-spheres.jpg", "Les sphères conductrices", "Chargez sous haute tension, mesurez ΔV en suivant le protocole et comparez à C = 4πε₀R.",
+  ["Première sphère (2 cm)", "Le protocole", "La grande sphère (12 cm)", "Le condensateur sphérique", "Les causes d'erreur"]),
+]
 MATERIEL = ["multimètres (voltmètre, ampèremètre)", "générateur de tension sinusoïdale et générateur de signaux", "oscilloscope",
             "transformateur démontable (N₁ = 500, N₂ = 1000 spires)", "bobine, boîte de condensateurs, résistances",
             "alimentation haute tension 10 kV et amplificateur de mesure", "sphères conductrices et hémisphères de Cavendish"]
@@ -71,8 +82,27 @@ def pages_pdf():
 def carte(t):
     n, titre, buts, notions, pages, (_, image) = t
     return ('<td width="33%%" valign="top"><img src="%s/%s/%s" width="100%%" alt="TP%d : %s"><br/>'
-            '<b>TP%d · %s</b><br/><sub>%s</sub><br/><br/>%s<br/><br/><sub>📄 pages %s du manuel</sub></td>'
-            % (D, IMG, image, n, titre, n, titre, buts, " · ".join("<code>%s</code>" % x for x in notions), pages))
+            '<b>TP%d · %s</b><br/><sub>%s</sub><br/><br/>%s<br/><br/><sub>📄 pages %s du manuel · <a href="%s#jeu-%d">🧪 simulation</a></sub></td>'
+            % (D, IMG, image, n, titre, n, titre, buts, " · ".join("<code>%s</code>" % x for x in notions), pages, SIMUL, n))
+
+
+def section_simulations():
+    """Une carte par manipulation (vignette, titre, missions, bouton), puis le mode d'emploi."""
+    bouton = "https://img.shields.io/badge/%s-FFB300?style=for-the-badge" % quote("▶ Lancer la simulation", safe="")
+    cartes = []
+    for n, ancre, image, titre, resume, etapes in SIMULATIONS:
+        lien = SIMUL + "#" + ancre
+        cartes.append('<td width="33%%" valign="top" align="center"><a href="%s"><img src="%s/%s/%s" width="100%%" alt="Simulation du TP%d : %s"></a><br/>'
+                      '<b>TP%d · %s</b><br/><sub>%s</sub><br/><br/><sub>%s</sub><br/><br/><a href="%s"><img src="%s" alt="Lancer la simulation"></a></td>'
+                      % (lien, D, IMG, image, n, titre, n, titre, resume, " · ".join("%d. %s" % (k + 1, e) for k, e in enumerate(etapes)), lien, bouton))
+    s = ["## 🧪 Simulations des trois manipulations\n",
+         "Une paillasse virtuelle pour préparer chaque séance : multimètres, oscilloscope et amplificateur de charge sont calculés par un "
+         "modèle physique, avec un léger bruit de mesure comme sur de vrais appareils. Réglez, relevez vos mesures, remplissez les tableaux… "
+         "puis venez manipuler en salle de TP.\n",
+         "<table>\n<tr>\n" + "\n".join(cartes) + "\n</tr>\n</table>\n",
+         "💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte · ⭐ jusqu'à 3 étoiles par simulation, la progression reste dans "
+         "votre navigateur · 💡 lisez d'abord le TP dans le manuel : la simulation **prépare** la manipulation, elle ne la remplace pas.\n\n---\n"]
+    return "\n".join(s)
 
 
 def main():
@@ -91,7 +121,7 @@ def main():
     for case in [("🔬 %d TP" % nb[1], "en salle de TP"), ("🧑‍🎓 1<sup>re</sup> année", "GI · GESE · GP · MSD"), ("📅 S1 + S2", "P121 · P221"), ("📄 %d pages" % nb[0], "théorie et manipulations")]:
         s.append('<td align="center" width="25%%"><b>%s</b><br><sub>%s</sub></td>' % case)
     s.append("</tr>\n</table>\n")
-    s.append("[**Les TP**](#-les-trois-tp) · [**Avant la séance**](#-avant-la-séance) · [**Mesures et incertitudes**](#-mesures-et-incertitudes) · [**Le compte rendu**](#-le-compte-rendu) · [**Équipe**](#-équipe-pédagogique)\n")
+    s.append("[**Les TP**](#-les-trois-tp) · [**Avant la séance**](#-avant-la-séance) · [**Mesures et incertitudes**](#-mesures-et-incertitudes) · [**Le compte rendu**](#-le-compte-rendu) · [**Équipe**](#-équipe-pédagogique) · [**🧪 Simulations**](#-simulations-des-trois-manipulations)\n")
     s.append("</div>\n\n---\n")
 
     s.append("## 🔬 Les trois TP\n")
@@ -133,6 +163,7 @@ def main():
     s.append("| %s | 1<sup>re</sup> année FST : %s | Physique — FSTM |\n" % ("<br/>".join(INTERVENANTS), " · ".join(PARCOURS)))
     s.append("📚 Autres enseignements : [Méthodes numériques pour la mécanique](licence-genie-mecanique.md) (LST GM · Cycle Ingénieur GE, FSTM) · "
              "[Systèmes hydrauliques](licence-pro-hydraulique.md) (Licence Pro IMPI, ENSAM Casablanca)\n\n---\n")
+    s.append(section_simulations())
     s.append('<div align="center">\n')
     s.append("[![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)")
     s.append("[![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)")

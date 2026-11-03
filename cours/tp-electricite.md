@@ -20,7 +20,7 @@ Faculté des Sciences et Techniques de Mohammedia — Université Hassan II de C
 </tr>
 </table>
 
-[**Les TP**](#-les-trois-tp) · [**Avant la séance**](#-avant-la-séance) · [**Mesures et incertitudes**](#-mesures-et-incertitudes) · [**Le compte rendu**](#-le-compte-rendu) · [**Équipe**](#-équipe-pédagogique)
+[**Les TP**](#-les-trois-tp) · [**Avant la séance**](#-avant-la-séance) · [**Mesures et incertitudes**](#-mesures-et-incertitudes) · [**Le compte rendu**](#-le-compte-rendu) · [**Équipe**](#-équipe-pédagogique) · [**🧪 Simulations**](#-simulations-des-trois-manipulations)
 
 </div>
 
@@ -32,9 +32,9 @@ Trois expériences fondamentales d'électrocinétique, d'électromagnétisme et 
 
 <table>
 <tr>
-<td width="33%" valign="top"><img src="tp-electricite/images/tp1-transformateur.jpg" width="100%" alt="TP1 : Étude d'un transformateur"><br/><b>TP1 · Étude d'un transformateur</b><br/><sub>Vérifier les lois des tensions et des intensités, puis calculer le rendement et les pertes (à vide et en charge) d'un transformateur monophasé.</sub><br/><br/><code>rapport de transformation m = N₂/N₁</code> · <code>loi des intensités</code> · <code>pertes Joule et pertes fer</code> · <code>rendement ρ = P₂/P₁</code><br/><br/><sub>📄 pages 7 – 13 du manuel</sub></td>
-<td width="33%" valign="top"><img src="tp-electricite/images/tp2-faraday.jpg" width="100%" alt="TP2 : Vérification de la loi de Faraday"><br/><b>TP2 · Vérification de la loi de Faraday</b><br/><sub>Mesurer l'inductance propre et la résistance d'une bobine à la résonance, puis vérifier la loi de Faraday avec un signal triangulaire.</sub><br/><br/><code>induction électromagnétique</code> · <code>résonance LC : LCω₀² = 1</code> · <code>U<sub>L</sub> = ri + L di/dt</code> · <code>oscilloscope</code><br/><br/><sub>📄 pages 14 – 17 du manuel</sub></td>
-<td width="33%" valign="top"><img src="tp-electricite/images/tp3-spheres.jpg" width="100%" alt="TP3 : Capacité des sphères métalliques et d'un condensateur sphérique"><br/><b>TP3 · Capacité des sphères métalliques et d'un condensateur sphérique</b><br/><sub>Mesurer la capacité de sphères de diamètres différents et d'un condensateur sphérique, et comparer à la théorie.</sub><br/><br/><code>C = Q/ΔV</code> · <code>sphère isolée : C = 4πε₀R</code> · <code>condensateur sphérique</code> · <code>moindres carrés</code><br/><br/><sub>📄 pages 18 – 24 du manuel</sub></td>
+<td width="33%" valign="top"><img src="tp-electricite/images/tp1-transformateur.jpg" width="100%" alt="TP1 : Étude d'un transformateur"><br/><b>TP1 · Étude d'un transformateur</b><br/><sub>Vérifier les lois des tensions et des intensités, puis calculer le rendement et les pertes (à vide et en charge) d'un transformateur monophasé.</sub><br/><br/><code>rapport de transformation m = N₂/N₁</code> · <code>loi des intensités</code> · <code>pertes Joule et pertes fer</code> · <code>rendement ρ = P₂/P₁</code><br/><br/><sub>📄 pages 7 – 13 du manuel · <a href="https://janane-allah.github.io/simulations/electricite/#jeu-1">🧪 simulation</a></sub></td>
+<td width="33%" valign="top"><img src="tp-electricite/images/tp2-faraday.jpg" width="100%" alt="TP2 : Vérification de la loi de Faraday"><br/><b>TP2 · Vérification de la loi de Faraday</b><br/><sub>Mesurer l'inductance propre et la résistance d'une bobine à la résonance, puis vérifier la loi de Faraday avec un signal triangulaire.</sub><br/><br/><code>induction électromagnétique</code> · <code>résonance LC : LCω₀² = 1</code> · <code>U<sub>L</sub> = ri + L di/dt</code> · <code>oscilloscope</code><br/><br/><sub>📄 pages 14 – 17 du manuel · <a href="https://janane-allah.github.io/simulations/electricite/#jeu-2">🧪 simulation</a></sub></td>
+<td width="33%" valign="top"><img src="tp-electricite/images/tp3-spheres.jpg" width="100%" alt="TP3 : Capacité des sphères métalliques et d'un condensateur sphérique"><br/><b>TP3 · Capacité des sphères métalliques et d'un condensateur sphérique</b><br/><sub>Mesurer la capacité de sphères de diamètres différents et d'un condensateur sphérique, et comparer à la théorie.</sub><br/><br/><code>C = Q/ΔV</code> · <code>sphère isolée : C = 4πε₀R</code> · <code>condensateur sphérique</code> · <code>moindres carrés</code><br/><br/><sub>📄 pages 18 – 24 du manuel · <a href="https://janane-allah.github.io/simulations/electricite/#jeu-3">🧪 simulation</a></sub></td>
 </tr>
 </table>
 
@@ -96,6 +96,22 @@ Exemple du TP1 : pour le rapport de transformation $m = U_2/U_1$, $\dfrac{\Delta
 | Pr. Mohamed JANANE ALLAH<br/>Pr. Zouhaire SOFIANI<br/>Pr. Toufique TBATOU | 1<sup>re</sup> année FST : Génie Informatique (GI) · Génie Électronique et Systèmes Embarqués (GESE) · Génie des Procédés (GP) · Mathématiques et Science des Données (MSD) | Physique — FSTM |
 
 📚 Autres enseignements : [Méthodes numériques pour la mécanique](licence-genie-mecanique.md) (LST GM · Cycle Ingénieur GE, FSTM) · [Systèmes hydrauliques](licence-pro-hydraulique.md) (Licence Pro IMPI, ENSAM Casablanca)
+
+---
+
+## 🧪 Simulations des trois manipulations
+
+Une paillasse virtuelle pour préparer chaque séance : multimètres, oscilloscope et amplificateur de charge sont calculés par un modèle physique, avec un léger bruit de mesure comme sur de vrais appareils. Réglez, relevez vos mesures, remplissez les tableaux… puis venez manipuler en salle de TP.
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/electricite/#jeu-1"><img src="tp-electricite/images/sim-transformateur.jpg" width="100%" alt="Simulation du TP1 : Le transformateur"></a><br/><b>TP1 · Le transformateur</b><br/><sub>Réglez V₁ au rhéostat, lisez les multimètres et remplissez les tableaux, à vide puis en charge.</sub><br/><br/><sub>1. Loi des tensions à vide · 2. Loi des tensions en charge · 3. Loi des intensités · 4. Pertes à vide (trois voltmètres) · 5. Rendement en charge</sub><br/><br/><a href="https://janane-allah.github.io/simulations/electricite/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Lancer%20la%20simulation-FFB300?style=for-the-badge" alt="Lancer la simulation"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/electricite/#jeu-2"><img src="tp-electricite/images/sim-faraday.jpg" width="100%" alt="Simulation du TP2 : La loi de Faraday"></a><br/><b>TP2 · La loi de Faraday</b><br/><sub>Une bobine inconnue, un générateur et un oscilloscope : trouvez L et r, puis changez un triangle en créneau.</sub><br/><br/><sub>1. La résonance (C = 1 µF) · 2. Une autre capacité · 3. Le montage (b) · 4. Le montage (c) : L di/dt · 5. Doubler la fréquence</sub><br/><br/><a href="https://janane-allah.github.io/simulations/electricite/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Lancer%20la%20simulation-FFB300?style=for-the-badge" alt="Lancer la simulation"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/electricite/#jeu-3"><img src="tp-electricite/images/sim-spheres.jpg" width="100%" alt="Simulation du TP3 : Les sphères conductrices"></a><br/><b>TP3 · Les sphères conductrices</b><br/><sub>Chargez sous haute tension, mesurez ΔV en suivant le protocole et comparez à C = 4πε₀R.</sub><br/><br/><sub>1. Première sphère (2 cm) · 2. Le protocole · 3. La grande sphère (12 cm) · 4. Le condensateur sphérique · 5. Les causes d'erreur</sub><br/><br/><a href="https://janane-allah.github.io/simulations/electricite/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Lancer%20la%20simulation-FFB300?style=for-the-badge" alt="Lancer la simulation"></a></td>
+</tr>
+</table>
+
+💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte · ⭐ jusqu'à 3 étoiles par simulation, la progression reste dans votre navigateur · 💡 lisez d'abord le TP dans le manuel : la simulation **prépare** la manipulation, elle ne la remplace pas.
 
 ---
 
