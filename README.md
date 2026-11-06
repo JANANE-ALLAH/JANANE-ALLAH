@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-6_publications-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=lNF8AUoAAAAJ&hl=fr)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-7_publications-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=lNF8AUoAAAAJ&hl=fr)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5852--9212-A6CE39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0000-0001-5852-9212)
 [![ResearchGate](https://img.shields.io/badge/ResearchGate-Profile-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/M-Allah)
 [![Site académique](https://img.shields.io/badge/Site_Web-janane--allah.github.io-0A66C2?style=for-the-badge&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
@@ -24,7 +24,7 @@ researcher = {
     "PhD"        : "Génie Mécanique, ENSAM Casablanca",
     "research"   : ["FGM plates", "TSDT", "FEM", "ANN surrogate models",
                     "Nonlinear dynamics", "Crashworthiness"],
-    "publications": {"total": 6, "Q1": 5, "book_chapters": 1, "conferences": 8},
+    "publications": {"total": 7, "Q1": 6, "book_chapters": 1, "conferences": 8},
     "contact"    : "mohamedjanane147@gmail.com",
     "location"   : "Casablanca, Maroc 🇲🇦",
 }
@@ -78,6 +78,7 @@ researcher = {
 
 | # | Année | Journal | Impact | Titre |
 |---|-------|---------|--------|-------|
+| J9 | 2026 | *Results in Engineering* | **Q1** Elsevier · Open Access | [Vibration energy absorption characteristics of porous and functionally graded biomechanical implants](https://doi.org/10.1016/j.rineng.2026.114003) |
 | J8 | 2026 | *Engineering Analysis with Boundary Elements* | **Q1** Elsevier | [A 3D extension of weak–strong formulation using a hybrid FE-meshless method for nonlinear structural analysis](https://doi.org/10.1016/j.enganabound.2026.107110) |
 | J1 | 2024 | *Materials Today Communications* | **Q1** Elsevier | [LSTM-based neural network for nonlinear dynamic behavior of FGM viscoelastic porous plates](https://doi.org/10.1016/j.mtcomm.2024.111269) |
 | J2 | 2023 | *Steel and Composite Structures* | **Q1** | [Free vibration of FGM plates — ANN + TSDT optimization](https://doi.org/10.12989/scs.2023.49.6.633) |
@@ -86,7 +87,7 @@ researcher = {
 | C1 | 2022 | *CRC Press* | Livre | [Crashworthiness of Composite Sandwich Structures](https://doi.org/10.1201/9781003143031-16) |
 | J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | [TSDT for free vibration of FGM plates](https://doi.org/10.23939/mmc2021.04.691) |
 
-> 📊 **6 articles · 5 revues Q1 · 8 conférences · 2 en soumission (2025)**
+> 📊 **7 articles · 6 revues Q1 · 8 conférences · 2 en soumission (2025)**
 > 🔗 [Liste complète](https://janane-allah.github.io/publications/)
 
 ---
