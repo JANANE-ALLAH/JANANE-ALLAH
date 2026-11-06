@@ -87,7 +87,7 @@ researcher = {
 | C1 | 2022 | *CRC Press* | Livre | [Crashworthiness of Composite Sandwich Structures](https://doi.org/10.1201/9781003143031-16) |
 | J5 | 2021 | *Mathematical Modeling and Computing* | Q3 | [TSDT for free vibration of FGM plates](https://doi.org/10.23939/mmc2021.04.691) |
 
-> 📊 **7 articles · 6 revues Q1 · 8 conférences · 2 en soumission (2025)**
+> 📊 **7 articles · 6 revues Q1 · 8 conférences · 1 en soumission (2025)**
 > 🔗 [Liste complète](https://janane-allah.github.io/publications/)
 
 ---
