@@ -17,9 +17,9 @@
 ![Cours](https://img.shields.io/badge/Cours_en_ligne-259_pages-1F6FEB?style=for-the-badge)
 ![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
-[![Simulations 3D](https://img.shields.io/badge/Simulations_3D-4_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
+[![Simulations 3D](https://img.shields.io/badge/Simulations_3D-5_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe.
+🆕 **Nouveau · 7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2).
 
 [**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
@@ -189,7 +189,7 @@ Les composants d'une installation, famille par famille : centrale, réservoirs, 
 
 ## 🧊 Simulations 3D
 
-Quatre bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces **en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes et on gonfle l'accumulateur. Chaque banc propose des missions (jusqu'à 3 étoiles) ; les valeurs affichées viennent des formules du cours.
+Cinq bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces **en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes, on gonfle l'accumulateur et on compte les particules qu'arrête un filtre. Chaque banc propose des missions (jusqu'à 3 étoiles) ; les valeurs affichées viennent des formules du cours.
 
 <table>
 <tr>
@@ -199,6 +199,9 @@ Quatre bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : 
 <tr>
 <td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-3"><img src="hydraulique/images/sim3d-pompes.jpg" width="100%" alt="Simulation 3D : Les pompes"></a><br/><b>Les pompes</b> · <sub>chapitre 3, partie 5</sub><br/><sub>Engrenages, palettes et pistons axiaux en mouvement, sur un banc d'essai.</sub><br/><br/><sub>le chemin de l'huile · cylindrée, fuites et ηv · exercices 4 et 5 : bilan de puissance</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
 <td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-4"><img src="hydraulique/images/sim3d-accumulateur.jpg" width="100%" alt="Simulation 3D : L'accumulateur"></a><br/><b>L'accumulateur</b> · <sub>chapitre 3, partie 4</sub><br/><sub>Vessie, piston ou membrane : précharge d'azote, remplissage, restitution.</sub><br/><br/><sub>p₀ = 0,9 p₁ · isotherme ou adiabatique (exercice 3) · les règles de sécurité</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-5"><img src="hydraulique/images/sim3d-filtres.jpg" width="100%" alt="Simulation 3D : Les filtres"></a><br/><b>Les filtres</b> · <sub>chapitre 3, partie 3</sub><br/><sub>Un filtre en coupe entre deux compteurs de particules : rapport β, colmatage et by-pass.</sub><br/><br/><sub>β = N amont / N aval, η = 1 − 1/β · colmatage, indicateur, by-pass · exercice 2 et les quatre emplacements</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
 </tr>
 </table>
 
@@ -313,6 +316,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
+- **7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)
 - **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
 - **2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP
 - **2 nov. 2026** — galerie de photos de TP, énigmes de terrain et mémento du technicien

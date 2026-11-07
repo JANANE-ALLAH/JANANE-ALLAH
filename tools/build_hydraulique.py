@@ -223,6 +223,7 @@ MEMENTO = {
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
+ ("7 nov. 2026", "5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)"),
  ("7 nov. 2026", "simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe"),
  ("2 nov. 2026", "chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP"),
  ("2 nov. 2026", "galerie de photos de TP, énigmes de terrain et mémento du technicien"),
@@ -248,6 +249,9 @@ SIMULATIONS = [
  ("jeu-4", "sim3d-accumulateur.jpg", "L'accumulateur", "Partie 4",
   "Vessie, piston ou membrane : précharge d'azote, remplissage, restitution.",
   ["p₀ = 0,9 p₁", "isotherme ou adiabatique (exercice 3)", "les règles de sécurité"]),
+ ("jeu-5", "sim3d-filtres.jpg", "Les filtres", "Partie 3",
+  "Un filtre en coupe entre deux compteurs de particules : rapport β, colmatage et by-pass.",
+  ["β = N amont / N aval, η = 1 − 1/β", "colmatage, indicateur, by-pass", "exercice 2 et les quatre emplacements"]),
 ]
 
 
@@ -267,8 +271,11 @@ def simulations():
                      % (lien, B, IMG, img, titre, titre, partie.lower(), resume, " · ".join(points), lien, bouton))
         t.append("</tr>")
     t.append("</table>\n")
-    return (u"## 🧊 Simulations 3D\n\nQuatre bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces "
-            u"**en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes et on gonfle l'accumulateur. "
+    nombre = {1: u"Un banc virtuel", 2: u"Deux bancs virtuels", 3: u"Trois bancs virtuels", 4: u"Quatre bancs virtuels",
+              5: u"Cinq bancs virtuels", 6: u"Six bancs virtuels"}.get(len(items), u"%d bancs virtuels" % len(items))
+    return (u"## 🧊 Simulations 3D\n\n" + nombre + u" pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces "
+            u"**en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes, on gonfle l'accumulateur "
+            u"et on compte les particules qu'arrête un filtre. "
             u"Chaque banc propose des missions (jusqu'à 3 étoiles) ; les valeurs affichées viennent des formules du cours.\n\n"
             + "\n".join(t) + u"\n💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte · 🖱 glisser pour tourner, molette pour zoomer · "
             u"🎨 huile en rouge sous pression, en bleu vers le réservoir, en orange emprisonnée sous charge.\n\n---\n\n")
