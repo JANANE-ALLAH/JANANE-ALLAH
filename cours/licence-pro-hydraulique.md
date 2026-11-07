@@ -17,10 +17,11 @@
 ![Cours](https://img.shields.io/badge/Cours_en_ligne-259_pages-1F6FEB?style=for-the-badge)
 ![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
+[![Simulations 3D](https://img.shields.io/badge/Simulations_3D-4_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP.
+🆕 **Nouveau · 7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe.
 
-[**Plan du module**](#-plan-du-module) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -186,6 +187,25 @@ Les composants d'une installation, famille par famille : centrale, réservoirs, 
 
 ---
 
+## 🧊 Simulations 3D
+
+Quatre bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces **en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes et on gonfle l'accumulateur. Chaque banc propose des missions (jusqu'à 3 étoiles) ; les valeurs affichées viennent des formules du cours.
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-1"><img src="hydraulique/images/sim3d-distributeurs.jpg" width="100%" alt="Simulation 3D : Les distributeurs"></a><br/><b>Les distributeurs</b> · <sub>chapitre 3, partie 8</sub><br/><sub>Le tiroir en coupe relié à un vérin chargé : déplacez-le au levier, le symbole ISO suit.</sub><br/><br/><sub>2/2, 3/2, 4/2 et les quatre centres du 4/3 · tenir une charge, décharger la pompe · lire la case active</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
+<td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-2"><img src="hydraulique/images/sim3d-verins.jpg" width="100%" alt="Simulation 3D : Les vérins"></a><br/><b>Les vérins</b> · <sub>chapitre 3, partie 7</sub><br/><sub>Simple effet, double effet, double tige, télescopique et rotatif, sous pression et chronométrés.</sub><br/><br/><sub>nommer les pièces en 3D · F = η p S, Vs = Q/S, Ve = Q/S' · l'exercice 7 : pousser 100 kN</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-3"><img src="hydraulique/images/sim3d-pompes.jpg" width="100%" alt="Simulation 3D : Les pompes"></a><br/><b>Les pompes</b> · <sub>chapitre 3, partie 5</sub><br/><sub>Engrenages, palettes et pistons axiaux en mouvement, sur un banc d'essai.</sub><br/><br/><sub>le chemin de l'huile · cylindrée, fuites et ηv · exercices 4 et 5 : bilan de puissance</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
+<td width="50%" valign="top" align="center"><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-4"><img src="hydraulique/images/sim3d-accumulateur.jpg" width="100%" alt="Simulation 3D : L'accumulateur"></a><br/><b>L'accumulateur</b> · <sub>chapitre 3, partie 4</sub><br/><sub>Vessie, piston ou membrane : précharge d'azote, remplissage, restitution.</sub><br/><br/><sub>p₀ = 0,9 p₁ · isotherme ou adiabatique (exercice 3) · les règles de sécurité</sub><br/><br/><a href="https://janane-allah.github.io/simulations/hydraulique/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Manipuler%20en%203D-FFB300?style=for-the-badge" alt="Manipuler en 3D"></a></td>
+</tr>
+</table>
+
+💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte · 🖱 glisser pour tourner, molette pour zoomer · 🎨 huile en rouge sous pression, en bleu vers le réservoir, en orange emprisonnée sous charge.
+
+---
+
 ## 📌 Mémento du technicien
 
 Les valeurs à connaître par cœur, telles que les donnent les fiches de synthèse des chapitres.
@@ -293,6 +313,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
+- **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
 - **2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP
 - **2 nov. 2026** — galerie de photos de TP, énigmes de terrain et mémento du technicien
 - **1er nov. 2026** — liste des 28 sujets de mini-projets et exemple de présentation
@@ -311,6 +332,6 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
 
-<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 2 nov. 2026</sub>
+<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 7 nov. 2026</sub>
 
 </div>

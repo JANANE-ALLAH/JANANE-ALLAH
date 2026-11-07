@@ -8,6 +8,7 @@
 # Les colonnes TD / TP / Corrige / Video n'apparaissent que si au moins un
 # chapitre en a : on n'affiche pas de colonnes vides.
 import io, os
+from urllib.parse import quote
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cours")
 B = "hydraulique"
@@ -222,6 +223,7 @@ MEMENTO = {
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
+ ("7 nov. 2026", "simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe"),
  ("2 nov. 2026", "chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP"),
  ("2 nov. 2026", "galerie de photos de TP, énigmes de terrain et mémento du technicien"),
  ("1er nov. 2026", "liste des 28 sujets de mini-projets et exemple de présentation"),
@@ -229,6 +231,47 @@ NOUVEAUTES = [
  ("26 oct. 2026", "chapitre 2 « Schémas hydrauliques et pneumatiques » en ligne"),
  ("24 oct. 2026", "ouverture de la page, chapitre 1 « Généralités sur les systèmes hydrauliques »"),
 ]
+
+
+# Simulations 3D (pages statiques du site, three.js) : (ancre, vignette dans IMG, titre, partie du ch. 3, resume, missions)
+SIMUL = "https://janane-allah.github.io/simulations/hydraulique/"
+SIMULATIONS = [
+ ("jeu-1", "sim3d-distributeurs.jpg", "Les distributeurs", "Partie 8",
+  "Le tiroir en coupe relié à un vérin chargé : déplacez-le au levier, le symbole ISO suit.",
+  ["2/2, 3/2, 4/2 et les quatre centres du 4/3", "tenir une charge, décharger la pompe", "lire la case active"]),
+ ("jeu-2", "sim3d-verins.jpg", "Les vérins", "Partie 7",
+  "Simple effet, double effet, double tige, télescopique et rotatif, sous pression et chronométrés.",
+  ["nommer les pièces en 3D", "F = η p S, Vs = Q/S, Ve = Q/S'", "l'exercice 7 : pousser 100 kN"]),
+ ("jeu-3", "sim3d-pompes.jpg", "Les pompes", "Partie 5",
+  "Engrenages, palettes et pistons axiaux en mouvement, sur un banc d'essai.",
+  ["le chemin de l'huile", "cylindrée, fuites et ηv", "exercices 4 et 5 : bilan de puissance"]),
+ ("jeu-4", "sim3d-accumulateur.jpg", "L'accumulateur", "Partie 4",
+  "Vessie, piston ou membrane : précharge d'azote, remplissage, restitution.",
+  ["p₀ = 0,9 p₁", "isotherme ou adiabatique (exercice 3)", "les règles de sécurité"]),
+]
+
+
+def simulations():
+    """Section 'Simulations 3D' : une carte par banc virtuel, deux par rangee."""
+    items = [s for s in SIMULATIONS if fichier_image(s[1])]
+    if not items:
+        return ""
+    bouton = "https://img.shields.io/badge/%s-FFB300?style=for-the-badge" % quote("▶ Manipuler en 3D", safe="")
+    t = ["<table>"]
+    for k in range(0, len(items), 2):
+        t.append("<tr>")
+        for ancre, img, titre, partie, resume, points in items[k:k + 2]:
+            lien = SIMUL + "#" + ancre
+            t.append('<td width="50%%" valign="top" align="center"><a href="%s"><img src="%s/%s/%s" width="100%%" alt="Simulation 3D : %s"></a><br/>'
+                     '<b>%s</b> · <sub>chapitre 3, %s</sub><br/><sub>%s</sub><br/><br/><sub>%s</sub><br/><br/><a href="%s"><img src="%s" alt="Manipuler en 3D"></a></td>'
+                     % (lien, B, IMG, img, titre, titre, partie.lower(), resume, " · ".join(points), lien, bouton))
+        t.append("</tr>")
+    t.append("</table>\n")
+    return (u"## 🧊 Simulations 3D\n\nQuatre bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on fait tourner les pièces "
+            u"**en coupe**, on déplace le tiroir, on met les vérins sous pression, on règle les pompes et on gonfle l'accumulateur. "
+            u"Chaque banc propose des missions (jusqu'à 3 étoiles) ; les valeurs affichées viennent des formules du cours.\n\n"
+            + "\n".join(t) + u"\n💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte · 🖱 glisser pour tourner, molette pour zoomer · "
+            u"🎨 huile en rouge sous pression, en bleu vers le réservoir, en orange emprisonnée sous charge.\n\n---\n\n")
 
 
 def fichiers(num):
@@ -382,6 +425,8 @@ def badges_stats():
     if os.path.isfile(os.path.join(ROOT, B, MINI, SUJETS)):
         out.append("![Mini-projets](https://img.shields.io/badge/Mini--projets-%d_sujets-8E44AD?style=for-the-badge)" % NB_SUJETS)
     out.append("![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)")
+    if any(fichier_image(x[1]) for x in SIMULATIONS):
+        out.append("[![Simulations 3D](https://img.shields.io/badge/Simulations_3D-%d_bancs_virtuels-FFB300?style=for-the-badge)](%s)" % (len(SIMULATIONS), SIMUL))
     return "\n".join(out) + "\n"
 
 
@@ -558,7 +603,7 @@ TPL = u"""<div align="center">
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-%(publies)s_%%2F_5-E67E22?style=for-the-badge)
 %(stats)s
-%(nouveaute)s[**Plan du module**](#-plan-du-module) · %(nav_enigmes)s%(nav_memento)s%(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+%(nouveaute)s[**Plan du module**](#-plan-du-module) · %(nav_simul)s%(nav_enigmes)s%(nav_memento)s%(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -591,7 +636,7 @@ TPL = u"""<div align="center">
 
 ---
 
-%(memento)s%(mini)s%(galerie)s## 🧭 Prérequis et évaluation
+%(simul)s%(memento)s%(mini)s%(galerie)s## 🧭 Prérequis et évaluation
 
 | | |
 |---|---|
@@ -626,6 +671,7 @@ page = TPL.replace("%%", "%").replace("%(cartes)s", cartes()).replace("%(descrip
           .replace("%(parcours)s", parcours()).replace("%(stats)s", badges_stats()) \
           .replace("%(bandeau)s", bandeau()) \
           .replace("%(nav_images)s", "[**En images**](#-le-module-en-images) · " if galerie() else "") \
-          .replace("%(galerie)s", galerie())
+          .replace("%(galerie)s", galerie()).replace("%(simul)s", simulations()) \
+          .replace("%(nav_simul)s", "[**🧊 Simulations 3D**](#-simulations-3d) · " if simulations() else "")
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))
