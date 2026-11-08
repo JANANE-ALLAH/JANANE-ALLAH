@@ -13,13 +13,13 @@
 
 ![Formation](https://img.shields.io/badge/Licence_Pro-IMPI-2E86AB?style=for-the-badge)
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
-![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-3_%2F_5-E67E22?style=for-the-badge)
-![Cours](https://img.shields.io/badge/Cours_en_ligne-259_pages-1F6FEB?style=for-the-badge)
+![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-5_%2F_5-E67E22?style=for-the-badge)
+![Cours](https://img.shields.io/badge/Cours_en_ligne-420_pages-1F6FEB?style=for-the-badge)
 ![Mini-projets](https://img.shields.io/badge/Mini--projets-28_sujets-8E44AD?style=for-the-badge)
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 [![Simulations 3D](https://img.shields.io/badge/Simulations_3D-5_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2).
+🆕 **Nouveau · 8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés.
 
 [**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
@@ -59,6 +59,14 @@ Chaque chapitre s'ouvre sur quatre questions d'atelier. Cherchez la réponse, pu
 | **03** | Pourquoi faut-il décharger un accumulateur avant de le démonter ? | Partie 4 |
 | **03** | Pourquoi la tige d'un vérin peut-elle se tordre alors que la pression est normale ? | Partie 7 |
 | **03** | Pourquoi un moteur hydraulique « avale-t-il » de l'air quand on coupe l'alimentation ? | Partie 6 |
+| **04** | Pourquoi un circuit fermé exige-t-il une seconde pompe, plus petite, en plus de la pompe principale ? | Partie 2 · circuits fermés |
+| **04** | Pourquoi une pompe peut-elle tenir 200 bar au repos sans chauffer l'huile ? | Partie 4 · maintien de pression |
+| **04** | Comment descendre une charge de 2 tonnes sans qu'elle ne s'emballe ? | Partie 5 · commande de débit |
+| **04** | Pourquoi un moteur de 30 kW peut-il entraîner une pompe capable de 73 kW hydrauliques ? | Partie 6 · régulation de puissance |
+| **05** | Pourquoi une pompe devient-elle bruyante alors que la pression affichée n'a pas changé ? | Partie 5 · cavitation |
+| **05** | Pourquoi réduire la pression de 25 % peut-il multiplier par 2,4 la durée de vie d'une pompe ? | Partie 3 · durée de vie |
+| **05** | Pourquoi faut-il décharger l'installation avant de toucher à un accumulateur ? | Partie 2 · maintenance hebdomadaire |
+| **05** | Pourquoi une huile laiteuse ou noire doit-elle alerter, même si la machine fonctionne ? | Partie 1 · maintenance journalière |
 
 ---
 
@@ -76,8 +84,7 @@ flowchart LR
     classDef ok fill:#2E86AB,stroke:#1d5d7a,color:#fff
     classDef soon fill:#eeeeee,stroke:#aaaaaa,color:#555555,stroke-dasharray: 4 3
     classDef goal fill:#8E44AD,stroke:#6c3483,color:#fff
-    class C01,C02,C03 ok
-    class C04,C05 soon
+    class C01,C02,C03,C04,C05 ok
     class MP goal
 ```
 
@@ -85,10 +92,10 @@ flowchart LR
 
 <table>
 <tr><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf"><img src="hydraulique/images/couverture-chapitre-01.jpg" width="100%" alt="Couverture du chapitre 01"></a><br><b>01 · Généralités sur les systèmes hydrauliques</b><br><sub>71 pages · 8 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_01_Generalites_systemes_hydrauliques/1_Cours_chapitre_01.pdf">📄 Cours</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf"><img src="hydraulique/images/couverture-chapitre-02.jpg" width="100%" alt="Couverture du chapitre 02"></a><br><b>02 · Schémas hydrauliques et pneumatiques</b><br><sub>73 pages · 6 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_02_Schemas_hydrauliques_pneumatiques/1_Cours_chapitre_02.pdf">📄 Cours</a> · <a href="https://drive.google.com/file/d/1kPl1OZvTW4uxDxojUoDT9yeFKKKwBmKj/view">▶ Vidéo</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf"><img src="hydraulique/images/couverture-chapitre-03.jpg" width="100%" alt="Couverture du chapitre 03"></a><br><b>03 · Technologie des systèmes hydrauliques</b><br><sub>115 pages · 9 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_03_Technologie_systemes_hydrauliques/1_Cours_chapitre_03.pdf">📄 Cours</a></td></tr>
-<tr><td width="33%" valign="top" align="center"><img src="hydraulique/images/couverture-a-venir.jpg" width="100%" alt="Chapitre à venir"><br><b>04 · Circuits hydrauliques</b><br><sub>🚧 À venir</sub></td><td width="33%" valign="top" align="center"><img src="hydraulique/images/couverture-a-venir.jpg" width="100%" alt="Chapitre à venir"><br><b>05 · Maintenance des installations</b><br><sub>🚧 À venir</sub></td><td width="33%" valign="top" align="center"><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf"><img src="hydraulique/images/couverture-mini-projets.jpg" width="100%" alt="Liste des mini-projets"></a><br><b>🧩 Mini-projets</b><br><sub>une machine réelle à analyser</sub><br><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf">📋 Les 28 sujets</a> · <a href="hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx">📊 Un exemple</a></td></tr>
+<tr><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_04_Circuits_hydrauliques/1_Cours_chapitre_04.pdf"><img src="hydraulique/images/couverture-chapitre-04.jpg" width="100%" alt="Couverture du chapitre 04"></a><br><b>04 · Circuits hydrauliques</b><br><sub>71 pages · 6 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_04_Circuits_hydrauliques/1_Cours_chapitre_04.pdf">📄 Cours</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Chapitre_05_Maintenance_installations/1_Cours_chapitre_05.pdf"><img src="hydraulique/images/couverture-chapitre-05.jpg" width="100%" alt="Couverture du chapitre 05"></a><br><b>05 · Maintenance des installations</b><br><sub>90 pages · 5 parties · 5 TP</sub><br><a href="hydraulique/Chapitre_05_Maintenance_installations/1_Cours_chapitre_05.pdf">📄 Cours</a></td><td width="33%" valign="top" align="center"><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf"><img src="hydraulique/images/couverture-mini-projets.jpg" width="100%" alt="Liste des mini-projets"></a><br><b>🧩 Mini-projets</b><br><sub>une machine réelle à analyser</sub><br><a href="hydraulique/Mini_projet/Liste_28_sujets_mini_projets.pdf">📋 Les 28 sujets</a> · <a href="hydraulique/Mini_projet/Exemple_presentation_mini_projet_DOOSAN_Solar_225LC-V.pptx">📊 Un exemple</a></td></tr>
 </table>
 
-> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; les chapitres sont publiés au fur et à mesure.
+> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; les cinq chapitres du module sont en ligne.
 
 <details>
 <summary><i>Descriptif des chapitres publiés : parties, TP et points à retenir</i></summary>
@@ -183,6 +190,61 @@ Les composants d'une installation, famille par famille : centrale, réservoirs, 
 > 4. Un accumulateur stocke l'énergie dans l'azote : précharge ≈ 0,9 p₁, décharger avant d'intervenir.  
 > 5. Un vérin se dimensionne deux fois : en pression (alésage) et au flambage (tige).  
 
+**04 — Circuits hydrauliques** · 71 pages  
+Les six familles de circuits : principe et lecture d'un schéma, circuits fermés (transmission hydrostatique, gavage, valve d'échange), circuits ouverts (série, parallèle, effet différentiel), maintien de pression (accumulateur et conjoncteur-disjoncteur, pompe autorégulatrice), commande de débit sous charge motrice et régulation de puissance (courbe à puissance constante). Calculs de débits, vitesses, couples, puissances et volume d'accumulateur ; symptômes types (échauffement à vide, patinage, chute de charge, perte de gavage). Durée indicative 8 à 10 h hors TP, 9 exercices corrigés, fiche de formules, QCM d'auto-évaluation.
+
+*Les six parties du chapitre, une question chacune :*
+
+1. **Principe d'un circuit** — Quels blocs, dans quel ordre, et comment lit-on un schéma ?
+2. **Circuits fermés** — Comment transmettre une puissance en boucle, dans les deux sens ?
+3. **Circuits ouverts** — Comment manœuvrer vite, avec un ou plusieurs récepteurs ?
+4. **Maintien de pression** — Comment garder la pression en attente sans gaspiller ?
+5. **Commande de débit** — Comment régler une vitesse quand la charge est motrice ?
+6. **Régulation de puissance** — Comment ne jamais dépasser la puissance disponible ?
+
+*Les TP associés, sur machine :*
+
+- **TP 1 — Lire et câbler** : relever le schéma d'un banc, repérer pression et retour, câbler un circuit simple
+- **TP 2 — Transmission hydrostatique** : mesurer la pression de gavage, Δp entre A et B, la vitesse du moteur ; inverser le sens
+- **TP 3 — Circuit ouvert à vérin** : chronométrer une course, calculer v et le débit, régler le limiteur, lire l'échauffement
+- **TP 4 — Accumulateur** : relever P₁ et P₂ du conjoncteur-disjoncteur, le temps de charge et de décharge
+- **TP 5 — Courbe p–Q** : tracer la caractéristique d'une pompe à régulation, repérer le tarage et la puissance limite
+
+*À retenir :*
+
+> 1. Un circuit est une chaîne d'énergie (source, distribution, récepteur) doublée d'une boucle d'information.  
+> 2. Fermé : le retour va à la pompe, il faut du gavage et un petit réservoir. Ouvert : la pompe aspire au réservoir, c'est la rapidité de manœuvre.  
+> 3. Maintien de pression : l'énergie est en réserve (accumulateur, entre P₁ et P₂) ou la pompe réduit son débit au tarage.  
+> 4. Commande de débit : la vitesse dépend du débit de la pompe ; le limiteur de vitesse retient une charge motrice.  
+> 5. Régulation de puissance : la cylindrée baisse quand la pression monte, pour que p · q reste sous P₀.  
+
+**05 — Maintenance des installations** · 90 pages  
+Une maintenance préventive planifiée : les huit vérifications journalières et les sept hebdomadaires, avec leurs critères (niveau, aspect et température de l'huile, filtres, pressions, fuites, accumulateurs, propreté ISO 4406), consignation et fiche d'historique ; durée de vie d'une pompe selon la vitesse, la pression (L₁₀ = (C/P)³), le fluide et l'alignement ; diagnostic des pannes de pompes, de l'aspect de la pièce à la cause ; cavitation, aération et budget de pression à l'aspiration. Durée indicative 6 à 8 h hors TP, 7 exercices corrigés, fiche de formules, QCM d'auto-évaluation et bilan du module.
+
+*Les cinq parties du chapitre, une question chacune :*
+
+1. **Maintenance journalière** — Quels huit points regarder chaque jour, et avec quels critères ?
+2. **Maintenance hebdomadaire** — Quels sept points demandent un arrêt et une vraie inspection ?
+3. **Durée de vie d'une pompe** — De quoi dépend-elle, et de combien chaque facteur la réduit-il ?
+4. **Diagnostic des pannes** — Comment remonter de l'aspect d'une pièce à la cause du défaut ?
+5. **Cavitation** — Pourquoi se produit-elle, comment l'entend-on, comment l'éviter ?
+
+*Les TP associés, sur machine :*
+
+- **TP 1 — Ronde quotidienne** : parcourir une machine avec la checklist des huit points et remplir la fiche d'historique
+- **TP 2 — Propreté de l'huile** : prélever un échantillon, lire l'indicateur de colmatage et classer le fluide selon ISO 4406
+- **TP 3 — Précharge d'un accumulateur** : consigner, décharger puis mesurer la précharge avec le kit de gonflage
+- **TP 4 — Rendement d'une pompe** : mesurer Q et p, calculer ηv et le comparer à la valeur neuve
+- **TP 5 — Aspiration et cavitation** : lire la dépression à l'aspiration, comparer crépine propre et colmatée
+
+*À retenir :*
+
+> 1. Huit points chaque jour, sept chaque semaine, avec un critère et une trace dans l'historique : sans critère, pas de décision.  
+> 2. Consigner avant d'intervenir, décharger l'accumulateur, ne jamais chercher une fuite à la main.  
+> 3. La pression est le premier facteur de durée de vie : × 1,5 de pression, ÷ 3,4 de durée ; × 1,33 de vitesse, − 25 %.  
+> 4. Un défaut de pompe a une cause : filtration, cavitation, température, pression ou alignement ; on corrige la cause, pas seulement la pièce.  
+> 5. La cavitation se joue à l'aspiration : niveau, crépine, tube, viscosité ; son signe est le bruit.  
+
 </details>
 
 ---
@@ -242,7 +304,7 @@ Chaque étudiant (ou chaque groupe) étudie **une machine réelle** et décrit s
 
 **Les 28 sujets**, en six familles : terrassement et BTP (7), levage et manutention (6), véhicules utilitaires et poids lourds (5), agriculture (2), industrie (5), énergie, eau et air (3). Les architectures indiquées sont des cas courants, à confirmer sur le schéma constructeur du modèle choisi ; les valeurs chiffrées se relèvent sur la plaque, la fiche technique ou le manuel.
 
-**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours, dont les chapitres 4 et 5 ne sont pas encore en ligne.
+**Dans l'exemple de présentation** : 18 diapositives minutées (plus une annexe et les crédits hors minutage), sur le plan Introduction · Réservoir · Filtration · Pompes · Autres composants · Circuit · Maintenance · Conclusion. Il montre comment rattacher chaque partie à un chapitre du cours et à une section du manuel de service, recouper des fiches techniques et refaire sur une machine réelle les calculs du cours (volume du réservoir, régulation de puissance, effort d'un vérin, bilan de puissance). C'est un exemple pédagogique : ses valeurs viennent de fiches publiques et sont à remplacer par les relevés de la machine étudiée ; il renvoie aux chapitres 1 à 5 du cours.
 
 ---
 
@@ -316,6 +378,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
+- **8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés
 - **7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)
 - **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
 - **2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP
@@ -336,6 +399,6 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
 
-<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 7 nov. 2026</sub>
+<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 8 nov. 2026</sub>
 
 </div>

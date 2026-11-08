@@ -34,8 +34,22 @@ CH = {
         "dimensionnement d'une centrale ; diagnostic des symptômes types (cavitation, colmatage, usure "
         "interne). Durée indicative 12 à 16 h hors TP, 9 exercices corrigés, fiches de formules, QCM "
         "d'auto-évaluation."),
- "04": ("Chapitre_04_Circuits_hydrauliques", "Circuits hydrauliques", ""),
- "05": ("Chapitre_05_Maintenance_installations", "Maintenance des installations", ""),
+ "04": ("Chapitre_04_Circuits_hydrauliques", "Circuits hydrauliques",
+        "Les six familles de circuits : principe et lecture d'un schéma, circuits fermés (transmission "
+        "hydrostatique, gavage, valve d'échange), circuits ouverts (série, parallèle, effet différentiel), "
+        "maintien de pression (accumulateur et conjoncteur-disjoncteur, pompe autorégulatrice), commande de "
+        "débit sous charge motrice et régulation de puissance (courbe à puissance constante). Calculs de "
+        "débits, vitesses, couples, puissances et volume d'accumulateur ; symptômes types (échauffement à "
+        "vide, patinage, chute de charge, perte de gavage). Durée indicative 8 à 10 h hors TP, 9 exercices "
+        "corrigés, fiche de formules, QCM d'auto-évaluation."),
+ "05": ("Chapitre_05_Maintenance_installations", "Maintenance des installations",
+        "Une maintenance préventive planifiée : les huit vérifications journalières et les sept hebdomadaires, "
+        "avec leurs critères (niveau, aspect et température de l'huile, filtres, pressions, fuites, "
+        "accumulateurs, propreté ISO 4406), consignation et fiche d'historique ; durée de vie d'une pompe "
+        "selon la vitesse, la pression (L₁₀ = (C/P)³), le fluide et l'alignement ; diagnostic des pannes de "
+        "pompes, de l'aspect de la pièce à la cause ; cavitation, aération et budget de pression à "
+        "l'aspiration. Durée indicative 6 à 8 h hors TP, 7 exercices corrigés, fiche de formules, QCM "
+        "d'auto-évaluation et bilan du module."),
 }
 
 # Liens video par chapitre (meme regle d'acces que l'autre cours : compte UH2C).
@@ -95,6 +109,35 @@ TPS["03"] = [
     ("Accumulateur et filtre", "lire la précharge (hors pression), l'indicateur de colmatage, l'état du filtre"),
     ("Vérin et moteur", "chronométrer une course, calculer F, v et le débit ; repérer le gavage"),
     ("Distributeur et limiteur", "identifier la commande, câbler, tarer le limiteur et mesurer Δp"),
+]
+PARTIES["04"] = [
+    ("Principe d'un circuit", "Quels blocs, dans quel ordre, et comment lit-on un schéma ?"),
+    ("Circuits fermés", "Comment transmettre une puissance en boucle, dans les deux sens ?"),
+    ("Circuits ouverts", "Comment manœuvrer vite, avec un ou plusieurs récepteurs ?"),
+    ("Maintien de pression", "Comment garder la pression en attente sans gaspiller ?"),
+    ("Commande de débit", "Comment régler une vitesse quand la charge est motrice ?"),
+    ("Régulation de puissance", "Comment ne jamais dépasser la puissance disponible ?"),
+]
+TPS["04"] = [
+    ("Lire et câbler", "relever le schéma d'un banc, repérer pression et retour, câbler un circuit simple"),
+    ("Transmission hydrostatique", "mesurer la pression de gavage, Δp entre A et B, la vitesse du moteur ; inverser le sens"),
+    ("Circuit ouvert à vérin", "chronométrer une course, calculer v et le débit, régler le limiteur, lire l'échauffement"),
+    ("Accumulateur", "relever P₁ et P₂ du conjoncteur-disjoncteur, le temps de charge et de décharge"),
+    ("Courbe p–Q", "tracer la caractéristique d'une pompe à régulation, repérer le tarage et la puissance limite"),
+]
+PARTIES["05"] = [
+    ("Maintenance journalière", "Quels huit points regarder chaque jour, et avec quels critères ?"),
+    ("Maintenance hebdomadaire", "Quels sept points demandent un arrêt et une vraie inspection ?"),
+    ("Durée de vie d'une pompe", "De quoi dépend-elle, et de combien chaque facteur la réduit-il ?"),
+    ("Diagnostic des pannes", "Comment remonter de l'aspect d'une pièce à la cause du défaut ?"),
+    ("Cavitation", "Pourquoi se produit-elle, comment l'entend-on, comment l'éviter ?"),
+]
+TPS["05"] = [
+    ("Ronde quotidienne", "parcourir une machine avec la checklist des huit points et remplir la fiche d'historique"),
+    ("Propreté de l'huile", "prélever un échantillon, lire l'indicateur de colmatage et classer le fluide selon ISO 4406"),
+    ("Précharge d'un accumulateur", "consigner, décharger puis mesurer la précharge avec le kit de gonflage"),
+    ("Rendement d'une pompe", "mesurer Q et p, calculer ηv et le comparer à la valeur neuve"),
+    ("Aspiration et cavitation", "lire la dépression à l'aspiration, comparer crépine propre et colmatée"),
 ]
 NOMBRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit", 9: "neuf", 10: "dix"}
 
@@ -165,6 +208,22 @@ ENIGMES = {
    ("Pourquoi la tige d'un vérin peut-elle se tordre alors que la pression est normale ?", "Partie 7"),
    ("Pourquoi un moteur hydraulique « avale-t-il » de l'air quand on coupe l'alimentation ?", "Partie 6"),
  ],
+ "04": [
+   ("Pourquoi un circuit fermé exige-t-il une seconde pompe, plus petite, en plus de la pompe principale ?",
+    "Partie 2 · circuits fermés"),
+   ("Pourquoi une pompe peut-elle tenir 200 bar au repos sans chauffer l'huile ?", "Partie 4 · maintien de pression"),
+   ("Comment descendre une charge de 2 tonnes sans qu'elle ne s'emballe ?", "Partie 5 · commande de débit"),
+   ("Pourquoi un moteur de 30 kW peut-il entraîner une pompe capable de 73 kW hydrauliques ?",
+    "Partie 6 · régulation de puissance"),
+ ],
+ "05": [
+   ("Pourquoi une pompe devient-elle bruyante alors que la pression affichée n'a pas changé ?", "Partie 5 · cavitation"),
+   ("Pourquoi réduire la pression de 25 % peut-il multiplier par 2,4 la durée de vie d'une pompe ?",
+    "Partie 3 · durée de vie"),
+   ("Pourquoi faut-il décharger l'installation avant de toucher à un accumulateur ?", "Partie 2 · maintenance hebdomadaire"),
+   ("Pourquoi une huile laiteuse ou noire doit-elle alerter, même si la machine fonctionne ?",
+    "Partie 1 · maintenance journalière"),
+ ],
 }
 SYNTHESE = {
  "01": [
@@ -188,6 +247,23 @@ SYNTHESE = {
    "Tout rendement < 1 : la différence devient chaleur, à évacuer par le réservoir ou un échangeur.",
    "Un accumulateur stocke l'énergie dans l'azote : précharge ≈ 0,9 p₁, décharger avant d'intervenir.",
    "Un vérin se dimensionne deux fois : en pression (alésage) et au flambage (tige).",
+ ],
+ "04": [
+   "Un circuit est une chaîne d'énergie (source, distribution, récepteur) doublée d'une boucle d'information.",
+   "Fermé : le retour va à la pompe, il faut du gavage et un petit réservoir. Ouvert : la pompe aspire au "
+   "réservoir, c'est la rapidité de manœuvre.",
+   "Maintien de pression : l'énergie est en réserve (accumulateur, entre P₁ et P₂) ou la pompe réduit son débit au tarage.",
+   "Commande de débit : la vitesse dépend du débit de la pompe ; le limiteur de vitesse retient une charge motrice.",
+   "Régulation de puissance : la cylindrée baisse quand la pression monte, pour que p · q reste sous P₀.",
+ ],
+ "05": [
+   "Huit points chaque jour, sept chaque semaine, avec un critère et une trace dans l'historique : sans critère, "
+   "pas de décision.",
+   "Consigner avant d'intervenir, décharger l'accumulateur, ne jamais chercher une fuite à la main.",
+   "La pression est le premier facteur de durée de vie : × 1,5 de pression, ÷ 3,4 de durée ; × 1,33 de vitesse, − 25 %.",
+   "Un défaut de pompe a une cause : filtration, cavitation, température, pression ou alignement ; on corrige la "
+   "cause, pas seulement la pièce.",
+   "La cavitation se joue à l'aspiration : niveau, crépine, tube, viscosité ; son signe est le bruit.",
  ],
 }
 MEMENTO = {
@@ -223,6 +299,8 @@ MEMENTO = {
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
+ ("8 nov. 2026", "chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des "
+                 "installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés"),
  ("7 nov. 2026", "5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)"),
  ("7 nov. 2026", "simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe"),
  ("2 nov. 2026", "chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP"),
@@ -632,7 +710,7 @@ TPL = u"""<div align="center">
 
 %(enigmes)s## 📚 Plan du module
 
-%(parcours)s%(cartes)s> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; les chapitres sont publiés au fur et à mesure.
+%(parcours)s%(cartes)s> 📘 Cliquez sur une couverture pour ouvrir le chapitre ; %(etat_plan)s.
 
 <details>
 <summary><i>Descriptif des chapitres publiés : parties, TP et points à retenir</i></summary>
@@ -674,6 +752,8 @@ page = TPL.replace("%%", "%").replace("%(cartes)s", cartes()).replace("%(descrip
           .replace("%(maj)s", "<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : %s</sub>\n"
                    % NOUVEAUTES[0][0] if NOUVEAUTES else "") \
           .replace("%(publies)s", str(len(publies))).replace("%(mini)s", mini) \
+          .replace("%(etat_plan)s", u"les cinq chapitres du module sont en ligne" if len(publies) == len(CH)
+                   else u"les chapitres sont publiés au fur et à mesure") \
           .replace("%(nav_mini)s", "[**Mini-projets**](#-mini-projets) · " if mini else "") \
           .replace("%(parcours)s", parcours()).replace("%(stats)s", badges_stats()) \
           .replace("%(bandeau)s", bandeau()) \
