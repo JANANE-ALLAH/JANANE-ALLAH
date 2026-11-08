@@ -19,7 +19,7 @@
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 [![Simulations 3D](https://img.shields.io/badge/Simulations_3D-5_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés.
+🆕 **Nouveau · 8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres du module sont publiés.
 
 [**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
 
@@ -273,7 +273,7 @@ Cinq bancs virtuels pour manipuler les composants du chapitre 3 avant le TP : on
 
 ## 📌 Mémento du technicien
 
-Les valeurs à connaître par cœur, telles que les donnent les fiches de synthèse des chapitres.
+Les valeurs à connaître par cœur, telles que les donnent les fiches de synthèse et les fiches de formules des chapitres.
 
 ### Chapitre 01 · Généralités sur les systèmes hydrauliques
 
@@ -289,6 +289,22 @@ Les valeurs à connaître par cœur, telles que les donnent les fiches de synth�
 <tr><td align="center" width="25%"><b>3 à 4 × Q</b><br><sub>volume du réservoir (L)</sub></td><td align="center" width="25%"><b>15 à 20 cm</b><br><sub>huile au-dessus de la crépine</sub></td><td align="center" width="25%"><b>β = 200</b><br><sub>efficacité 99,5 %</sub></td><td align="center" width="25%"><b>ISO 18/16/13</b><br><sub>pompes et moteurs à pistons</sub></td></tr>
 <tr><td align="center" width="25%"><b>p₀ ≈ 0,9 p₁</b><br><sub>précharge d'accumulateur</sub></td><td align="center" width="25%"><b>p₂/p₀ ≤ 4</b><br><sub>limite pour une vessie</sub></td><td align="center" width="25%"><b>70–98 %</b><br><sub>rendement volumétrique d'une pompe</sub></td><td align="center" width="25%"><b>52,5–88,2 %</b><br><sub>rendement global d'une pompe</sub></td></tr>
 <tr><td align="center" width="25%"><b>0,85–0,95</b><br><sub>rendement d'un vérin</sub></td><td align="center" width="25%"><b>K = 1 · 2 · 0,7 · 0,5</b><br><sub>coefficients de flambage</sub></td><td align="center" width="25%"><b>Δp ∝ Q²</b><br><sub>perte de charge d'un distributeur</sub></td><td align="center" width="25%"><b>≈ 10 bar/°C</b><br><sub>huile enfermée (chapitre 1)</sub></td></tr>
+</table>
+
+### Chapitre 04 · Circuits hydrauliques
+
+<table>
+<tr><td align="center" width="25%"><b>Q = Cyl · N · ηv</b><br><sub>débit d'une pompe (cm³/tr × tr/min ÷ 1 000 = L/min)</sub></td><td align="center" width="25%"><b>N = Q · ηv / Cyl</b><br><sub>vitesse d'un moteur hydraulique</sub></td><td align="center" width="25%"><b>C ≈ Cyl · Δp · ηm / 62,8</b><br><sub>couple d'un moteur (N·m, cm³/tr, bar)</sub></td><td align="center" width="25%"><b>V ≈ Q / 4</b><br><sub>réservoir d'un circuit fermé (ouvert : 3 à 4 × Q)</sub></td></tr>
+<tr><td align="center" width="25%"><b>≈ 20 % de Q, ≈ 20 bar</b><br><sub>gavage d'un circuit fermé (ordre de grandeur)</sub></td><td align="center" width="25%"><b>Série : p₁ + p₂</b><br><sub>les pressions s'ajoutent ; en parallèle, le moins chargé démarre d'abord</sub></td><td align="center" width="25%"><b>Q · S / S′</b><br><sub>débit expulsé côté fond à la rentrée : plus que le débit de la pompe</sub></td><td align="center" width="25%"><b>≈ 1 % à 200 bar</b><br><sub>compression de l'huile : le volume mort retarde la montée en pression</sub></td></tr>
+<tr><td align="center" width="25%"><b>V₀ = ΔV / (p₀/P₁ − p₀/P₂)</b><br><sub>volume d'un accumulateur travaillant entre P₁ et P₂</sub></td><td align="center" width="25%"><b>γ = 1,4</b><br><sub>décharge rapide (adiabatique) : accumulateur plus gros</sub></td><td align="center" width="25%"><b>q = 600 · P₀ / p</b><br><sub>débit à puissance constante (P₀ en kW, p en bar)</sub></td><td align="center" width="25%"><b>ΔT = P · t / (m · c)</b><br><sub>échauffement de l'huile, borne haute</sub></td></tr>
+</table>
+
+### Chapitre 05 · Maintenance des installations
+
+<table>
+<tr><td align="center" width="25%"><b>8 + 7 points</b><br><sub>ronde journalière, contrôle hebdomadaire</sub></td><td align="center" width="25%"><b>1 goutte/s ≈ 4,3 L/jour</b><br><sub>≈ 1 600 L par an (goutte de 0,05 mL)</sub></td><td align="center" width="25%"><b>45 à 55 °C</b><br><sub>huile en service ; au-delà de 60 °C, arrêt conseillé</sub></td><td align="center" width="25%"><b>+ 10 °C ⇒ durée ÷ 2</b><br><sub>vie de l'huile au-delà de 55-60 °C</sub></td></tr>
+<tr><td align="center" width="25%"><b>16/14/11 · 18/16/13 · 20/18/15</b><br><sub>ISO 4406 : excellent · bon · acceptable</sub></td><td align="center" width="25%"><b>1 cran = × 2</b><br><sub>ISO 4406 : chaque cran double le nombre de particules</sub></td><td align="center" width="25%"><b>25 à 30 %</b><br><sub>sous la pression de pointe : pression d'utilisation conseillée</sub></td><td align="center" width="25%"><b>L₁/L₂ = N₂/N₁</b><br><sub>durée et vitesse : 1 500 → 2 000 tr/min, − 25 %</sub></td></tr>
+<tr><td align="center" width="25%"><b>L₁₀ = (C/P)³</b><br><sub>durée et pression : × 1,5 ⇒ ÷ 3,4 ; × 2 ⇒ ÷ 8</sub></td><td align="center" width="25%"><b>ηv = Q / (Cyl · N)</b><br><sub>rendement volumétrique ; chaleur = ΔQ · p / 600</sub></td><td align="center" width="25%"><b>≤ 0,2 bar</b><br><sub>dépression à l'entrée d'une pompe, sauf valeur constructeur</sub></td><td align="center" width="25%"><b>≲ 1 m/s</b><br><sub>vitesse dans le tube d'aspiration</sub></td></tr>
 </table>
 
 ---
@@ -378,7 +394,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
-- **8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés
+- **8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres du module sont publiés
 - **7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)
 - **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
 - **2 nov. 2026** — chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP

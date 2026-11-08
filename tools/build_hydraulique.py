@@ -295,12 +295,43 @@ MEMENTO = {
    ("Δp ∝ Q²", "perte de charge d'un distributeur"),
    ("≈ 10 bar/°C", "huile enfermée (chapitre 1)"),
  ],
+ # Ch. 04 et 05 : pas de page « Memento » dans le support ; valeurs tirees de la « Fiche de formules »
+ # (p. 64 et 83) et des encadres « Ordre de grandeur » (ch. 04 p. 23 et 35 ; ch. 05 p. 5, 15, 18, 32, 46, 76).
+ "04": [
+   ("Q = Cyl · N · ηv", "débit d'une pompe (cm³/tr × tr/min ÷ 1 000 = L/min)"),
+   ("N = Q · ηv / Cyl", "vitesse d'un moteur hydraulique"),
+   ("C ≈ Cyl · Δp · ηm / 62,8", "couple d'un moteur (N·m, cm³/tr, bar)"),
+   ("V ≈ Q / 4", "réservoir d'un circuit fermé (ouvert : 3 à 4 × Q)"),
+   ("≈ 20 % de Q, ≈ 20 bar", "gavage d'un circuit fermé (ordre de grandeur)"),
+   ("Série : p₁ + p₂", "les pressions s'ajoutent ; en parallèle, le moins chargé démarre d'abord"),
+   ("Q · S / S′", "débit expulsé côté fond à la rentrée : plus que le débit de la pompe"),
+   ("≈ 1 % à 200 bar", "compression de l'huile : le volume mort retarde la montée en pression"),
+   ("V₀ = ΔV / (p₀/P₁ − p₀/P₂)", "volume d'un accumulateur travaillant entre P₁ et P₂"),
+   ("γ = 1,4", "décharge rapide (adiabatique) : accumulateur plus gros"),
+   ("q = 600 · P₀ / p", "débit à puissance constante (P₀ en kW, p en bar)"),
+   ("ΔT = P · t / (m · c)", "échauffement de l'huile, borne haute"),
+ ],
+ "05": [
+   ("8 + 7 points", "ronde journalière, contrôle hebdomadaire"),
+   ("1 goutte/s ≈ 4,3 L/jour", "≈ 1 600 L par an (goutte de 0,05 mL)"),
+   ("45 à 55 °C", "huile en service ; au-delà de 60 °C, arrêt conseillé"),
+   ("+ 10 °C ⇒ durée ÷ 2", "vie de l'huile au-delà de 55-60 °C"),
+   ("16/14/11 · 18/16/13 · 20/18/15", "ISO 4406 : excellent · bon · acceptable"),
+   ("1 cran = × 2", "ISO 4406 : chaque cran double le nombre de particules"),
+   ("25 à 30 %", "sous la pression de pointe : pression d'utilisation conseillée"),
+   ("L₁/L₂ = N₂/N₁", "durée et vitesse : 1 500 → 2 000 tr/min, − 25 %"),
+   ("L₁₀ = (C/P)³", "durée et pression : × 1,5 ⇒ ÷ 3,4 ; × 2 ⇒ ÷ 8"),
+   ("ηv = Q / (Cyl · N)", "rendement volumétrique ; chaleur = ΔQ · p / 600"),
+   ("≤ 0,2 bar", "dépression à l'entrée d'une pompe, sauf valeur constructeur"),
+   ("≲ 1 m/s", "vitesse dans le tube d'aspiration"),
+ ],
 }
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
  ("8 nov. 2026", "chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des "
-                 "installations » (90 pages, 7 exercices corrigés) en ligne : les cinq chapitres du module sont publiés"),
+                 "installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres "
+                 "du module sont publiés"),
  ("7 nov. 2026", "5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)"),
  ("7 nov. 2026", "simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe"),
  ("2 nov. 2026", "chapitre 3 « Technologie des systèmes hydrauliques » en ligne : 115 pages, 9 exercices corrigés, 5 TP"),
@@ -659,7 +690,7 @@ def memento():
     if not blocs:
         return ""
     return (u"## 📌 Mémento du technicien\n\nLes valeurs à connaître par cœur, telles que les donnent les fiches "
-            u"de synthèse des chapitres.\n\n" + "\n".join(blocs) + u"\n---\n\n")
+            u"de synthèse et les fiches de formules des chapitres.\n\n" + "\n".join(blocs) + u"\n---\n\n")
 
 
 def nouveaute():
