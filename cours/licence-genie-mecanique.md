@@ -21,11 +21,11 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <td align="center" width="20%"><b>🎥 18 vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%"><b>🔬 6 TP MATLAB</b><br><sub>6 corrigés en scripts</sub></td>
 <td align="center" width="20%"><b>📝 8 sujets d'examen</b><br><sub>archive en accès libre</sub></td>
-<td align="center" width="20%"><b>⏱️ 60 heures</b><br><sub>11 TD · en français</sub></td>
+<td align="center" width="20%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · 11 TD</sub></td>
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
+[**À propos**](#-à-propos) · [**GM / GE**](#-deux-parcours--gm-et-ge) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -61,9 +61,62 @@ finies, et **équations différentielles ordinaires**.
 
 #### Détails à connaître
 
-| 🎓 Public | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
-|---|---|---|---|
-| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+| 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
+|---|---|---|---|---|
+| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+
+---
+
+## 🎓 Deux parcours : GM et GE
+
+Le module est suivi par deux publics de la FSTM. **Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. Ce qui change en Cycle d'Ingénieur Génie Énergétique : **le volume horaire** (48 h au lieu de 60 h), **les TP** (cinq au lieu de six) et **le contexte des exemples**, tirés de l'énergétique.
+
+| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |
+|---|---|---|
+| **Volume total** | **60 h** | **48 h** · 16 séances de 3 h |
+| Cours | 28 h | 24 h |
+| TD | 14 h | 9 h |
+| TP | 18 h · 6 séances, TP1 à TP6 | 15 h · 5 séances, TP1 à TP5 |
+| 🚩 Introduction · module 00 | sans horaire séparé | 1 h de cours, séance d'ouverture |
+| 🧮 Partie I · modules 01 à 04 | 9 h de cours · 6 h de TD · TP1, TP2, TP3 | 7 h de cours · 4 h de TD · TP1, TP2, TP3 |
+| 🌡️ Partie II · modules 05 à 11 | 19 h de cours · 8 h de TD · TP4, TP5, TP6 | 16 h de cours · 5 h de TD · TP4, TP5 |
+
+#### Les TP de chaque parcours
+
+| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |
+|:-:|---|---|---|
+| **TP1** | Méthode directe : Gauss avec pivotage, conditionnement | le banc d'amortisseurs | réseau thermique d'un bâtiment ou mur multicouche |
+| **TP2** | Méthodes itératives | la paroi d'un four | identique |
+| **TP3** | Newton | le système de pompage | identique (pompage et Colebrook) |
+| **TP4** | EDO non linéaire : Euler et Runge-Kutta | le refroidissement d'une paroi de four | identique |
+| **TP5** | Poisson 2D | la salle de sport | champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes |
+| **TP6** | Système d'EDO | les attracteurs de Lorenz | — (pas de TP6) |
+
+<sub>Les énoncés de TP en ligne sont communs aux deux parcours ; les versions énergétiques du TP1 et du TP5 sont prévues pour le GE.</sub>
+
+<details>
+<summary><b>⚡ Le programme du Cycle GE, module par module (24 h de cours, 9 h de TD)</b></summary>
+<br/>
+
+| Module | Cours | TD | Applications en énergétique |
+|---|:-:|:-:|---|
+| **00** · Introduction générale | 1 h | – | Quatre cas chiffrés : pompage, solaire, four, réseau. |
+| **01** · Rappels numériques : erreurs, normes et conditionnement | 1 h | 1 h | Bilans d'énergie et rendements : soustraction de grandeurs voisines, arrondi, conditionnement d'un bilan thermique. |
+| **02** · Systèmes linéaires : méthodes directes | 2 h | 1 h | Réseau thermique nodal d'un bâtiment multizone ; réseau hydraulique maillé. |
+| **03** · Systèmes linéaires : méthodes itératives | 2 h | 1 h | Conduction 2D dans un four ou une plaque : grands systèmes creux (Jacobi, Gauss-Seidel, SOR). |
+| **04** · Systèmes non linéaires | 2 h | 1 h | Colebrook (pertes de charge), bilan radiatif en T⁴, point de fonctionnement pompe-réseau : Newton. |
+| **05** · Généralités sur les EDP en mécanique et classification | 1,5 h | 0,5 h | Chaleur, convection-diffusion, Poisson, ondes : un phénomène énergétique pour chaque type d'EDP. |
+| **06** · Principe de la méthode des différences finies | 2,5 h | 0,5 h | Paroi de four (fil rouge), ailette : de l'équation au système A T = b. |
+| **07** · Consistance, stabilité, convergence | 2,5 h | 1 h | Seuil r ≤ 1/2 sur la paroi réfractaire ; CFL pour le transport de chaleur par un fluide. |
+| **08** · Équation de la chaleur | 3 h | 1 h | Paroi, ailette, stockage thermique ; schémas explicite, implicite, θ. |
+| **09** · Équation de Laplace-Poisson et advection-diffusion | 3 h | 1 h | Champ de température d'un bâtiment (2D) ; échangeur et nombre de Péclet. |
+| **10** · Équation des ondes | 1,5 h | 0,5 h | Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit. |
+| **11** · Résolution numérique des équations différentielles ordinaires | 2 h | 0,5 h | Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas. |
+| **Total** | **24 h** | **9 h** | TP : 15 h, en 5 séances |
+
+Le cours du GE est plus dense : même contenu en 24 h au lieu de 28 h. Tous les TD restent disponibles ; certains sont traités en demi-séance, les autres en travail personnel guidé.
+
+</details>
 
 ---
 
@@ -269,8 +322,9 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 <br/>
 
 Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
-d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre,
-seules changent les applications.
+d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
+Changent les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
+([détail des deux parcours](#-deux-parcours--gm-et-ge)).
 
 </details>
 

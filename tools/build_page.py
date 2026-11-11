@@ -233,6 +233,72 @@ COMPETENCES = ["MATLAB", "Erreurs et conditionnement", "Élimination de Gauss", 
                "Crank-Nicolson", "Schéma décentré (upwind)", "Euler et Runge-Kutta"]
 
 
+# Deux parcours, GM et GE. Sources : chapitre 0 (tableau 1, plan du module de 60 h) pour la LST GM ;
+# document de travail « Programme_GE_48h.pdf » (nov. 2026) pour le Cycle d'Ingenieur GE.
+# L'evaluation et les mini-projets du GE, encore a valider, ne sont pas publies.
+VOLUMES = [  # (ligne, LST GM, Cycle GE)
+ ("**Volume total**", "**60 h**", "**48 h** · 16 séances de 3 h"),
+ ("Cours", "28 h", "24 h"),
+ ("TD", "14 h", "9 h"),
+ ("TP", "18 h · 6 séances, TP1 à TP6", "15 h · 5 séances, TP1 à TP5"),
+ ("🚩 Introduction · module 00", "sans horaire séparé", "1 h de cours, séance d'ouverture"),
+ ("🧮 Partie I · modules 01 à 04", "9 h de cours · 6 h de TD · TP1, TP2, TP3", "7 h de cours · 4 h de TD · TP1, TP2, TP3"),
+ ("🌡️ Partie II · modules 05 à 11", "19 h de cours · 8 h de TD · TP4, TP5, TP6", "16 h de cours · 5 h de TD · TP4, TP5"),
+]
+PROGRAMME_GE = [  # (module, cours, TD, applications en energetique)
+ ("00", "1 h", "–", "Quatre cas chiffrés : pompage, solaire, four, réseau."),
+ ("01", "1 h", "1 h", "Bilans d'énergie et rendements : soustraction de grandeurs voisines, arrondi, conditionnement d'un bilan thermique."),
+ ("02", "2 h", "1 h", "Réseau thermique nodal d'un bâtiment multizone ; réseau hydraulique maillé."),
+ ("03", "2 h", "1 h", "Conduction 2D dans un four ou une plaque : grands systèmes creux (Jacobi, Gauss-Seidel, SOR)."),
+ # Module 04 : le tableau du PDF indique 2,5 h, mais ses totaux (Partie I = 7 h = 1+2+2+2, cours = 24 h)
+ # supposent 2 h : on garde 2 h, en attendant la decision de l'enseignant.
+ ("04", "2 h", "1 h", "Colebrook (pertes de charge), bilan radiatif en T⁴, point de fonctionnement pompe-réseau : Newton."),
+ ("05", "1,5 h", "0,5 h", "Chaleur, convection-diffusion, Poisson, ondes : un phénomène énergétique pour chaque type d'EDP."),
+ ("06", "2,5 h", "0,5 h", "Paroi de four (fil rouge), ailette : de l'équation au système A T = b."),
+ ("07", "2,5 h", "1 h", "Seuil r ≤ 1/2 sur la paroi réfractaire ; CFL pour le transport de chaleur par un fluide."),
+ ("08", "3 h", "1 h", "Paroi, ailette, stockage thermique ; schémas explicite, implicite, θ."),
+ ("09", "3 h", "1 h", "Champ de température d'un bâtiment (2D) ; échangeur et nombre de Péclet."),
+ ("10", "1,5 h", "0,5 h", "Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit."),
+ ("11", "2 h", "0,5 h", "Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas."),
+]
+TP_PARCOURS = [  # (TP, methode, LST GM, Cycle GE)
+ ("TP1", "Méthode directe : Gauss avec pivotage, conditionnement", "le banc d'amortisseurs",
+  "réseau thermique d'un bâtiment ou mur multicouche"),
+ ("TP2", "Méthodes itératives", "la paroi d'un four", "identique"),
+ ("TP3", "Newton", "le système de pompage", "identique (pompage et Colebrook)"),
+ ("TP4", "EDO non linéaire : Euler et Runge-Kutta", "le refroidissement d'une paroi de four", "identique"),
+ ("TP5", "Poisson 2D", "la salle de sport", "champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes"),
+ ("TP6", "Système d'EDO", "les attracteurs de Lorenz", "— (pas de TP6)"),
+]
+
+
+def deux_parcours():
+    """Section « Deux parcours : GM et GE » : volumes, programme du GE module par module, TP compares."""
+    def h(x):  # '2,5 h' -> 2.5
+        return float(x.replace(" h", "").replace(",", ".")) if x != "–" else 0.0
+    tc, td = sum(h(c) for _, c, _, _ in PROGRAMME_GE), sum(h(d) for _, _, d, _ in PROGRAMME_GE)
+    assert (tc, td) == (24.0, 9.0), "programme GE : %s h de cours, %s h de TD" % (tc, td)
+    out = [u"## 🎓 Deux parcours : GM et GE\n",
+           u"Le module est suivi par deux publics de la FSTM. **Le contenu scientifique est le même** : les douze "
+           u"modules, les démonstrations, les méthodes et les critères de validation. Ce qui change en Cycle "
+           u"d'Ingénieur Génie Énergétique : **le volume horaire** (48 h au lieu de 60 h), **les TP** (cinq au lieu "
+           u"de six) et **le contexte des exemples**, tirés de l'énergétique.\n",
+           u"| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |", u"|---|---|---|"]
+    out += [u"| %s | %s | %s |" % v for v in VOLUMES]
+    out += [u"", u"#### Les TP de chaque parcours\n",
+            u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
+    out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
+    out += [u"", u"<sub>Les énoncés de TP en ligne sont communs aux deux parcours ; les versions énergétiques du TP1 et du "
+            u"TP5 sont prévues pour le GE.</sub>"]
+    out += [u"", u"<details>", u"<summary><b>⚡ Le programme du Cycle GE, module par module (24 h de cours, 9 h de TD)</b></summary>",
+            u"<br/>\n", u"| Module | Cours | TD | Applications en énergétique |", u"|---|:-:|:-:|---|"]
+    out += [u"| **%s** · %s | %s | %s | %s |" % (n, CH[n][1], c, d, a) for n, c, d, a in PROGRAMME_GE]
+    out += [u"| **Total** | **%s h** | **%s h** | TP : 15 h, en 5 séances |" % (int(tc), int(td)), u"",
+            u"Le cours du GE est plus dense : même contenu en 24 h au lieu de 28 h. Tous les TD restent disponibles ; "
+            u"certains sont traités en demi-séance, les autres en travail personnel guidé.\n", u"</details>\n"]
+    return u"\n".join(out) + u"\n---\n\n"
+
+
 def etiquette(texte):
     from urllib.parse import quote
     t = quote(texte.replace("-", "--").replace("_", "__"), safe="")
@@ -266,11 +332,11 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <td align="center" width="20%%"><b>🎥 %(nb_videos)s vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%%"><b>🔬 %(nb_tp)s TP MATLAB</b><br><sub>%(nb_corriges)s corrigés en scripts</sub></td>
 <td align="center" width="20%%"><b>📝 %(nb_exam)s sujets d'examen</b><br><sub>archive en accès libre</sub></td>
-<td align="center" width="20%%"><b>⏱️ 60 heures</b><br><sub>%(nb_td)s TD · en français</sub></td>
+<td align="center" width="20%%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · %(nb_td)s TD</sub></td>
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
+[**À propos**](#-à-propos) · [**GM / GE**](#-deux-parcours--gm-et-ge) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -293,13 +359,13 @@ finies, et **équations différentielles ordinaires**.
 
 #### Détails à connaître
 
-| 🎓 Public | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
-|---|---|---|---|
-| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+| 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
+|---|---|---|---|---|
+| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
-## 📚 Programme du module
+%(parcours)s## 📚 Programme du module
 
 Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
@@ -347,8 +413,9 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 <br/>
 
 Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
-d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre,
-seules changent les applications.
+d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
+Changent les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
+([détail des deux parcours](#-deux-parcours--gm-et-ge)).
 
 </details>
 
@@ -497,7 +564,7 @@ valeurs = {
     "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES), "nb_td": str(NB_TD), "nb_tp": str(NB_TP),
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
     "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
-    "jeux": section_jeux(),
+    "jeux": section_jeux(), "parcours": deux_parcours(),
 }
 page = TPL.replace("%%", "%")
 for k, v in valeurs.items():
