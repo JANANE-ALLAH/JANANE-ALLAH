@@ -236,6 +236,9 @@ COMPETENCES = ["MATLAB", "Erreurs et conditionnement", "Élimination de Gauss", 
 # Deux parcours, GM et GE. Sources : chapitre 0 (tableau 1, plan du module de 60 h) pour la LST GM ;
 # document de travail « Programme_GE_48h.pdf » (nov. 2026) pour le Cycle d'Ingenieur GE.
 # L'evaluation et les mini-projets du GE, encore a valider, ne sont pas publies.
+# DETAIL_HORAIRE = False : le detail des heures (cours, TD, TP, par partie et par module) est cache sur la
+# page, pour les deux parcours, a la demande de l'enseignant (13 nov. 2026) ; seuls les totaux 60 h / 48 h restent.
+DETAIL_HORAIRE = False
 VOLUMES = [  # (ligne, LST GM, Cycle GE)
  ("**Volume total**", "**60 h**", "**48 h** · 16 séances de 3 h"),
  ("Cours", "28 h", "24 h"),
@@ -282,20 +285,28 @@ def deux_parcours():
            u"Le module est suivi par deux publics de la FSTM. **Le contenu scientifique est le même** : les douze "
            u"modules, les démonstrations, les méthodes et les critères de validation. Ce qui change en Cycle "
            u"d'Ingénieur Génie Énergétique : **le volume horaire** (48 h au lieu de 60 h), **les TP** (cinq au lieu "
-           u"de six) et **le contexte des exemples**, tirés de l'énergétique.\n",
-           u"| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |", u"|---|---|---|"]
-    out += [u"| %s | %s | %s |" % v for v in VOLUMES]
-    out += [u"", u"#### Les TP de chaque parcours\n",
+           u"de six) et **le contexte des exemples**, tirés de l'énergétique.\n"]
+    if DETAIL_HORAIRE:
+        out += [u"| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |", u"|---|---|---|"]
+        out += [u"| %s | %s | %s |" % v for v in VOLUMES]
+        out += [u""]
+    out += [u"#### Les TP de chaque parcours\n",
             u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
     out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
     out += [u"", u"<sub>Les énoncés de TP en ligne sont communs aux deux parcours ; les versions énergétiques du TP1 et du "
             u"TP5 sont prévues pour le GE.</sub>"]
-    out += [u"", u"<details>", u"<summary><b>⚡ Le programme du Cycle GE, module par module (24 h de cours, 9 h de TD)</b></summary>",
-            u"<br/>\n", u"| Module | Cours | TD | Applications en énergétique |", u"|---|:-:|:-:|---|"]
-    out += [u"| **%s** · %s | %s | %s | %s |" % (n, CH[n][1], c, d, a) for n, c, d, a in PROGRAMME_GE]
-    out += [u"| **Total** | **%s h** | **%s h** | TP : 15 h, en 5 séances |" % (int(tc), int(td)), u"",
-            u"Le cours du GE est plus dense : même contenu en 24 h au lieu de 28 h. Tous les TD restent disponibles ; "
-            u"certains sont traités en demi-séance, les autres en travail personnel guidé.\n", u"</details>\n"]
+    if DETAIL_HORAIRE:
+        out += [u"", u"<details>", u"<summary><b>⚡ Le programme du Cycle GE, module par module (24 h de cours, 9 h de TD)</b></summary>",
+                u"<br/>\n", u"| Module | Cours | TD | Applications en énergétique |", u"|---|:-:|:-:|---|"]
+        out += [u"| **%s** · %s | %s | %s | %s |" % (n, CH[n][1], c, d, a) for n, c, d, a in PROGRAMME_GE]
+        out += [u"| **Total** | **%s h** | **%s h** | TP : 15 h, en 5 séances |" % (int(tc), int(td)), u"",
+                u"Le cours du GE est plus dense : même contenu en 24 h au lieu de 28 h. Tous les TD restent disponibles ; "
+                u"certains sont traités en demi-séance, les autres en travail personnel guidé.\n", u"</details>\n"]
+    else:
+        out += [u"", u"<details>", u"<summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>",
+                u"<br/>\n", u"| Module | Applications en énergétique |", u"|---|---|"]
+        out += [u"| **%s** · %s | %s |" % (n, CH[n][1], a) for n, c, d, a in PROGRAMME_GE]
+        out += [u"", u"Tous les TD restent disponibles pour les deux parcours.\n", u"</details>\n"]
     return u"\n".join(out) + u"\n---\n\n"
 
 
