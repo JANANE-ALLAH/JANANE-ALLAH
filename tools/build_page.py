@@ -300,13 +300,11 @@ apprendre = "<table>\n%s\n</table>" % "\n".join(
     "<tr>%s</tr>" % "".join('<td width="50%%" valign="top">✔️ %s</td>' % a.replace("**", "") for a in APPRENDRE[k:k + 2])
     for k in range(0, len(APPRENDRE), 2))
 
-TPL = u"""[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques pour la mécanique**
+TPL = u"""[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques**
 
 <div align="center">
 
-<img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques pour la mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
-
-🔧 **LST Génie Mécanique** : *%(intitule_gm)s* · ⚡ **Cycle d'Ingénieur Génie Énergétique** : *%(intitule_ge)s*
+<img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques — LST Génie Mécanique : %(intitule_gm)s ; 1re année du Cycle d'Ingénieur Génie Énergétique : %(intitule_ge)s — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
 
 <br/>
 

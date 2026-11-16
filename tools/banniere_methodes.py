@@ -47,13 +47,16 @@ def banniere():
                 cmap=LinearSegmentedColormap.from_list("fond", [MARINE, MARINE2]))
     fond.axis("off")
 
+    # Titre commun, puis l'intitule du module dans chaque filiere (GM et GE, 16 nov. 2026).
     fig.text(0.045, 0.80, "FSTM  ·  UNIVERSITÉ HASSAN II DE CASABLANCA", color=AMBRE, fontsize=14, fontweight="bold")
-    fig.text(0.045, 0.56, "Méthodes numériques", color="white", fontsize=44, fontweight="bold")
-    fig.text(0.045, 0.39, "pour la mécanique", color="white", fontsize=44, fontweight="bold")
-    fig.text(0.045, 0.24, "LST Génie Mécanique  ·  1re année Cycle Ingénieur Génie Énergétique",
-             color=GRIS, fontsize=15)
-    fig.text(0.045, 0.11, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  TP MATLAB",
-             color="white", fontsize=15)
+    fig.text(0.045, 0.575, "Méthodes numériques", color="white", fontsize=46, fontweight="bold")
+    for yy, filiere, intitule in ((0.445, "LST GÉNIE MÉCANIQUE", "Méthodes numériques pour la mécanique"),
+                                  (0.285, "1re ANNÉE CYCLE INGÉNIEUR GÉNIE ÉNERGÉTIQUE", "Introduction aux méthodes numériques")):
+        fig.add_artist(plt.Line2D([0.045, 0.045], [yy - 0.085, yy + 0.035], color=AMBRE, lw=3, transform=fig.transFigure))
+        fig.text(0.056, yy, filiere, color=GRIS, fontsize=12, fontweight="bold")
+        fig.text(0.056, yy - 0.072, intitule, color="white", fontsize=20)
+    fig.text(0.045, 0.075, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  TP MATLAB",
+             color=GRIS, fontsize=14)
 
     ax = fig.add_axes([0.575, 0.13, 0.385, 0.77])
     ax.imshow(T, origin="lower", extent=[0, 2, 0, 1], cmap="inferno", vmin=0, vmax=100, aspect="auto")
