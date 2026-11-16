@@ -263,13 +263,21 @@ TP_PARCOURS = [  # (TP, methode, LST GM, Cycle GE)
 ]
 
 
+# Intitule du module dans chaque filiere (demande de l'enseignant, 16 nov. 2026).
+INTITULE_GM = u"Méthodes numériques pour la mécanique"
+INTITULE_GE = u"Introduction aux méthodes numériques"
+
+
 def deux_parcours():
-    """Section « Deux parcours : GM et GE » : TP compares, applications du GE module par module."""
+    """Section « Deux parcours : GM et GE » : intitules, TP compares, applications du GE module par module."""
     out = [u"## 🎓 Deux parcours : GM et GE\n",
-           u"Le module est suivi par deux publics de la FSTM. **Le contenu scientifique est le même** : les douze "
-           u"modules, les démonstrations, les méthodes et les critères de validation. Ce qui change en Cycle "
-           u"d'Ingénieur Génie Énergétique : **le volume horaire** (48 h au lieu de 60 h), **les TP** (cinq au lieu "
-           u"de six) et **le contexte des exemples**, tirés de l'énergétique.\n"]
+           u"Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :\n",
+           u"| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |", u"|---|---|---|",
+           u"| **Intitulé du module** | **%s** | **%s** |" % (INTITULE_GM, INTITULE_GE),
+           u"| **Volume** | 60 h | 48 h |",
+           u"| **TP** | six : TP1 à TP6 | cinq : TP1 à TP5 |", u"",
+           u"**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les "
+           u"critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.\n"]
     out += [u"#### Les TP de chaque parcours\n",
             u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
     out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
@@ -297,6 +305,8 @@ TPL = u"""[⬅ Profil](../README.md) › Enseignement › **Méthodes numérique
 <div align="center">
 
 <img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques pour la mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
+
+🔧 **LST Génie Mécanique** : *%(intitule_gm)s* · ⚡ **Cycle d'Ingénieur Génie Énergétique** : *%(intitule_ge)s*
 
 <br/>
 
@@ -344,7 +354,7 @@ finies, et **équations différentielles ordinaires**.
 
 | 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
 |---|---|---|---|---|
-| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+| LST Génie Mécanique (*%(intitule_gm)s*) · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (*%(intitule_ge)s*), FSTM | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
@@ -397,7 +407,8 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 
 Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
 d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
-Changent les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
+Il s'intitule *%(intitule_gm)s* en LST GM et *%(intitule_ge)s* en Cycle GE.
+Changent aussi les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
 ([détail des deux parcours](#-deux-parcours--gm-et-ge)).
 
 </details>
@@ -548,6 +559,7 @@ valeurs = {
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
     "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
     "jeux": section_jeux(), "parcours": deux_parcours(),
+    "intitule_gm": INTITULE_GM, "intitule_ge": INTITULE_GE,
 }
 page = TPL.replace("%%", "%")
 for k, v in valeurs.items():

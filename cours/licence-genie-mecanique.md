@@ -4,6 +4,8 @@
 
 <img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques pour la mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%" />
 
+🔧 **LST Génie Mécanique** : *Méthodes numériques pour la mécanique* · ⚡ **Cycle d'Ingénieur Génie Énergétique** : *Introduction aux méthodes numériques*
+
 <br/>
 
 Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre à la main :<br/>
@@ -63,13 +65,21 @@ finies, et **équations différentielles ordinaires**.
 
 | 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
 |---|---|---|---|---|
-| LST Génie Mécanique · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (FSTM) | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+| LST Génie Mécanique (*Méthodes numériques pour la mécanique*) · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (*Introduction aux méthodes numériques*), FSTM | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
 ## 🎓 Deux parcours : GM et GE
 
-Le module est suivi par deux publics de la FSTM. **Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. Ce qui change en Cycle d'Ingénieur Génie Énergétique : **le volume horaire** (48 h au lieu de 60 h), **les TP** (cinq au lieu de six) et **le contexte des exemples**, tirés de l'énergétique.
+Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
+
+| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |
+|---|---|---|
+| **Intitulé du module** | **Méthodes numériques pour la mécanique** | **Introduction aux méthodes numériques** |
+| **Volume** | 60 h | 48 h |
+| **TP** | six : TP1 à TP6 | cinq : TP1 à TP5 |
+
+**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.
 
 #### Les TP de chaque parcours
 
@@ -312,7 +322,8 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 
 Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
 d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
-Changent les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
+Il s'intitule *Méthodes numériques pour la mécanique* en LST GM et *Introduction aux méthodes numériques* en Cycle GE.
+Changent aussi les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
 ([détail des deux parcours](#-deux-parcours--gm-et-ge)).
 
 </details>
