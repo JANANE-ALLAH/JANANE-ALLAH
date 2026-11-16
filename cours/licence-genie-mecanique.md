@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="methodes-numeriques/images/banniere.jpg" alt="Méthodes numériques — LST Génie Mécanique : Méthodes numériques pour la mécanique ; 1re année du Cycle d'Ingénieur Génie Énergétique : Introduction aux méthodes numériques — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%" />
+<img src="methodes-numeriques/images/banniere-gm-ge.jpg" alt="Méthodes numériques — LST Génie Mécanique : Méthodes numériques pour la mécanique ; 1re année du Cycle d'Ingénieur Génie Énergétique : Introduction aux méthodes numériques — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%" />
 
 <br/>
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Genere les visuels de la page Methodes numeriques (a lancer une fois, ou apres un changement de texte) :
-#   cours/methodes-numeriques/images/banniere.jpg  : bandeau d'en-tete, titre a gauche et, a droite, un vrai
+#   cours/methodes-numeriques/images/banniere-gm-ge.jpg : bandeau d'en-tete, titre a gauche et, a droite, un vrai
 #       calcul du cours (equation de Laplace sur une plaque, differences finies a 5 points, chapitre 9) ;
 #   cours/methodes-numeriques/images/enseignant.png : monogramme de l'enseignant.
 # Usage :  python tools/banniere_methodes.py      (necessite numpy, matplotlib et Pillow)
@@ -81,7 +81,7 @@ def banniere():
     chemin = os.path.join(SORTIE, "banniere.png")
     fig.savefig(chemin, dpi=100)
     plt.close(fig)
-    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere.jpg"), "JPEG", quality=90,
+    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere-gm-ge.jpg"), "JPEG", quality=90,
                                            optimize=True, progressive=True)
     os.remove(chemin)
 
