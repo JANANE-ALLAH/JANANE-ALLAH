@@ -730,6 +730,25 @@ FORMATION_NIVEAUX = [  # (niveau, pour qui, objectif, au programme)
 ]
 FORMATION_SUJET = "Formation hydraulique sur le terrain"
 
+# Autres contacts (demande de l'enseignant, 21 nov. 2026), en boutons : WhatsApp et LinkedIn.
+# Le logo LinkedIn n'existe plus chez shields.io (retire de Simple Icons) : petit « in » blanc dessine ici.
+WHATSAPP = "212604395004"
+WHATSAPP_AFFICHE = u"+212 6 04 39 50 04"
+LINKEDIN = "https://www.linkedin.com/in/mohamed-janane-allah/"
+_LOGO_IN = ("PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01ID"
+            "MuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0"
+            "LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=")
+
+
+def boutons_contact(style, message=None):
+    """Boutons WhatsApp et LinkedIn (style shields : 'for-the-badge' ou 'flat-square') ; message = texte pre-rempli."""
+    wa = "https://wa.me/%s" % WHATSAPP + ("?text=" + quote(message) if message else "")
+    img_wa = "https://img.shields.io/badge/WhatsApp-%s-25D366?style=%s&logo=whatsapp&logoColor=white" % (
+        quote(WHATSAPP_AFFICHE, safe=""), style)
+    img_li = ("https://img.shields.io/badge/LinkedIn-%s-0A66C2?style=%s&logo=data:image/svg%%2bxml;base64,%s"
+              % (quote(u"Mohamed JANANE ALLAH", safe=""), style, _LOGO_IN))
+    return u"[![WhatsApp](%s)](%s)\n[![LinkedIn](%s)](%s)" % (img_wa, wa, img_li, LINKEDIN)
+
 
 def formation():
     """Section « Formation sur le terrain » pour les jeunes ingenieurs et techniciens specialises."""
@@ -752,10 +771,12 @@ def formation():
          u"| **Objectif** | %s | %s |" % (FORMATION_NIVEAUX[0][2], FORMATION_NIVEAUX[1][2]),
          u"| **Au programme** | %s | %s |" % tuple("<br>".join(u"• " + p for p in n[3]) for n in FORMATION_NIVEAUX),
          u"",
-         u"**Pour vous inscrire**, écrivez-moi en précisant votre niveau (ingénieur ou technicien spécialisé), votre "
-         u"formation et votre expérience, les machines qui vous intéressent, vos disponibilités et votre ville. "
-         u"Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, selon les demandes.\n",
-         u'<div align="center">\n\n[![Demander une formation terrain](%s)](%s)\n\n</div>\n' % (bouton, mail)]
+         u"**Pour vous inscrire**, contactez-moi par e-mail, WhatsApp ou LinkedIn en précisant votre niveau (ingénieur "
+         u"ou technicien spécialisé), votre formation et votre expérience, les machines qui vous intéressent, vos "
+         u"disponibilités et votre ville. Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, "
+         u"selon les demandes.\n",
+         u'<div align="center">\n\n[![Demander une formation terrain](%s)](%s)\n%s\n\n</div>\n'
+         % (bouton, mail, boutons_contact("for-the-badge", u"Bonjour, je souhaite une formation hydraulique sur le terrain."))]
     return u"\n".join(t) + u"\n---\n\n"
 
 
@@ -825,6 +846,7 @@ TPL = u"""<div align="center">
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
+%(contacts)s
 
 %(maj)s
 </div>
@@ -846,6 +868,7 @@ page = TPL.replace("%%", "%").replace("%(cartes)s", cartes()).replace("%(descrip
           .replace("%(nav_images)s", "[**En images**](#-le-module-en-images) · " if galerie() else "") \
           .replace("%(galerie)s", galerie()).replace("%(simul)s", simulations()) \
           .replace("%(nav_simul)s", "[**🧊 Simulations 3D**](#-simulations-3d) · " if simulations() else "") \
-          .replace("%(formation)s", formation())
+          .replace("%(formation)s", formation()) \
+          .replace("%(contacts)s", boutons_contact("flat-square"))
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))
