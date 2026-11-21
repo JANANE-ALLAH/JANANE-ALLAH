@@ -329,8 +329,8 @@ MEMENTO = {
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
- ("21 nov. 2026", "nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens "
-                  "spécialisés en hydraulique et engins"),
+ ("21 nov. 2026", "nouvelle section « Formation sur le terrain » : 30 heures pour les entreprises et les "
+                  "établissements (ingénieurs et techniciens spécialisés en hydraulique et engins)"),
  ("8 nov. 2026", "chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des "
                  "installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres "
                  "du module sont publiés"),
@@ -728,7 +728,10 @@ FORMATION_NIVEAUX = [  # (niveau, pour qui, objectif, au programme)
    u"ronde journalière (8 points), contrôle hebdomadaire (7 points), propreté ISO 4406",
    u"consigner, décharger un accumulateur, contrôler une précharge d'azote"]),
 ]
-FORMATION_SUJET = "Formation hydraulique sur le terrain"
+# Public et duree fixes par l'enseignant (21 nov. 2026) : entreprises et etablissements, 30 heures au total.
+FORMATION_DUREE = u"30 heures"
+FORMATION_SUJET = "Formation hydraulique sur le terrain (30 h)"
+FORMATION_WHATSAPP = u"Bonjour, nous souhaitons organiser une formation hydraulique sur le terrain (30 h)."
 
 # Autres contacts (demande de l'enseignant, 21 nov. 2026), en boutons : WhatsApp et LinkedIn.
 # Le logo LinkedIn n'existe plus chez shields.io (retire de Simple Icons) : petit « in » blanc dessine ici.
@@ -749,32 +752,37 @@ def boutons_contact(style, message=None):
 
 
 def formation():
-    """Section « Formation sur le terrain » pour les jeunes ingenieurs et techniciens specialises."""
+    """Section « Formation sur le terrain » : 30 h, pour les entreprises et les etablissements."""
     mail = "mailto:mohamedjanane147@gmail.com?subject=" + quote(FORMATION_SUJET)
-    bouton = "https://img.shields.io/badge/%s-C0392B?style=for-the-badge" % quote(u"✉ Demander une formation terrain", safe="")
+    bouton = "https://img.shields.io/badge/%s-C0392B?style=for-the-badge" % quote(u"✉ Organiser une formation", safe="")
     photo = (u'<img src="%s/%s/%s" width="100%%" alt="Formation sur le terrain : lire la machine, le circuit '
              u'hydraulique, démonter et diagnostiquer"><br>\n<sub>%s</sub>\n'
              % (B, IMG, FORMATION_PHOTO, FORMATION_LEGENDE)) if fichier_image(FORMATION_PHOTO) else ""
-    points = [u"- 🚜 **Sur machine réelle** : pelles et engins de chantier, comme aux TP du module.",
+    points = [u"- 🏢 **Pour les entreprises et les établissements** : une formation de groupe pour vos ingénieurs et "
+              u"techniciens, ou pour vos élèves et stagiaires.",
+              u"- ⏱️ **%s au total**, sur le terrain." % FORMATION_DUREE,
+              u"- 🚜 **Sur machine réelle** : pelles et engins de chantier, comme aux TP du module.",
               u"- 🧭 **Par niveau** : ingénieur ou technicien spécialisé (tableau ci-dessous).",
-              u"- 📚 **Préparation libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets "
-              u"de cette page.",
-              u"- 🦺 **La sécurité d'abord** : consignation, décharge des accumulateurs, équipements de protection.", u""]
+              u"- 🦺 **La sécurité d'abord** : consignation, décharge des accumulateurs, équipements de protection.",
+              u"- 📚 **Supports en accès libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets "
+              u"de cette page.", u""]
     t = [u"## 🧰 Formation sur le terrain\n",
-         u"**Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre "
-         u"sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : "
-         u"on lit la machine, on mesure, on démonte, on diagnostique.\n", photo] + points + [
+         u"**Une formation pratique de %s, sur le terrain, pour les entreprises et les établissements** qui veulent "
+         u"former leurs ingénieurs et leurs techniciens spécialisés en hydraulique et engins. Elle reprend le contenu "
+         u"du module, mais sur la machine : on lit la machine, on mesure, on démonte, on diagnostique.\n"
+         % FORMATION_DUREE, photo] + points + [
          u"| | %s | %s |" % (FORMATION_NIVEAUX[0][0], FORMATION_NIVEAUX[1][0]), u"|---|---|---|",
-         u"| **Pour qui** | %s | %s |" % (FORMATION_NIVEAUX[0][1], FORMATION_NIVEAUX[1][1]),
+         u"| **Participants** | %s | %s |" % (FORMATION_NIVEAUX[0][1], FORMATION_NIVEAUX[1][1]),
+         u"| **Durée** | %s au total | %s au total |" % (FORMATION_DUREE, FORMATION_DUREE),
          u"| **Objectif** | %s | %s |" % (FORMATION_NIVEAUX[0][2], FORMATION_NIVEAUX[1][2]),
          u"| **Au programme** | %s | %s |" % tuple("<br>".join(u"• " + p for p in n[3]) for n in FORMATION_NIVEAUX),
          u"",
-         u"**Pour vous inscrire**, contactez-moi par e-mail, WhatsApp ou LinkedIn en précisant votre niveau (ingénieur "
-         u"ou technicien spécialisé), votre formation et votre expérience, les machines qui vous intéressent, vos "
-         u"disponibilités et votre ville. Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, "
-         u"selon les demandes.\n",
-         u'<div align="center">\n\n[![Demander une formation terrain](%s)](%s)\n%s\n\n</div>\n'
-         % (bouton, mail, boutons_contact("for-the-badge", u"Bonjour, je souhaite une formation hydraulique sur le terrain."))]
+         u"**Pour organiser la formation**, l'entreprise ou l'établissement me contacte par e-mail, WhatsApp ou "
+         u"LinkedIn en précisant le nombre de participants et leur niveau (ingénieurs ou techniciens spécialisés), "
+         u"les machines disponibles, la période souhaitée et la ville. Le programme des %s est ensuite ajusté à vos "
+         u"machines et à vos besoins ; le lieu, le calendrier et les modalités sont fixés ensemble.\n" % FORMATION_DUREE,
+         u'<div align="center">\n\n[![Organiser une formation](%s)](%s)\n%s\n\n</div>\n'
+         % (bouton, mail, boutons_contact("for-the-badge", FORMATION_WHATSAPP))]
     return u"\n".join(t) + u"\n---\n\n"
 
 

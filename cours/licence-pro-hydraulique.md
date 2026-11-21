@@ -19,7 +19,7 @@
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 [![Simulations 3D](https://img.shields.io/badge/Simulations_3D-5_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 21 nov. 2026** — nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens spécialisés en hydraulique et engins.
+🆕 **Nouveau · 21 nov. 2026** — nouvelle section « Formation sur le terrain » : 30 heures pour les entreprises et les établissements (ingénieurs et techniciens spécialisés en hydraulique et engins).
 
 [**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**🧰 Formation terrain**](#-formation-sur-le-terrain) · [**Contact**](#-contact)
 
@@ -394,7 +394,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
-- **21 nov. 2026** — nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens spécialisés en hydraulique et engins
+- **21 nov. 2026** — nouvelle section « Formation sur le terrain » : 30 heures pour les entreprises et les établissements (ingénieurs et techniciens spécialisés en hydraulique et engins)
 - **8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres du module sont publiés
 - **7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)
 - **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
@@ -411,28 +411,31 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 
 ## 🧰 Formation sur le terrain
 
-**Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : on lit la machine, on mesure, on démonte, on diagnostique.
+**Une formation pratique de 30 heures, sur le terrain, pour les entreprises et les établissements** qui veulent former leurs ingénieurs et leurs techniciens spécialisés en hydraulique et engins. Elle reprend le contenu du module, mais sur la machine : on lit la machine, on mesure, on démonte, on diagnostique.
 
 <img src="hydraulique/images/formation-terrain.jpg" width="100%" alt="Formation sur le terrain : lire la machine, le circuit hydraulique, démonter et diagnostiquer"><br>
 <sub>Sur le terrain : lire la machine (pelle SANY), repérer le circuit hydraulique (pompe en place dans son compartiment), démonter et diagnostiquer (pompe à pistons axiaux).</sub>
 
+- 🏢 **Pour les entreprises et les établissements** : une formation de groupe pour vos ingénieurs et techniciens, ou pour vos élèves et stagiaires.
+- ⏱️ **30 heures au total**, sur le terrain.
 - 🚜 **Sur machine réelle** : pelles et engins de chantier, comme aux TP du module.
 - 🧭 **Par niveau** : ingénieur ou technicien spécialisé (tableau ci-dessous).
-- 📚 **Préparation libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets de cette page.
 - 🦺 **La sécurité d'abord** : consignation, décharge des accumulateurs, équipements de protection.
+- 📚 **Supports en accès libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets de cette page.
 
 | | 🎓 Niveau ingénieur | 🔧 Niveau technicien spécialisé |
 |---|---|---|
-| **Pour qui** | jeunes ingénieurs et élèves ingénieurs | jeunes techniciens spécialisés en hydraulique ou en engins |
+| **Participants** | jeunes ingénieurs et élèves ingénieurs | jeunes techniciens spécialisés en hydraulique ou en engins |
+| **Durée** | 30 heures au total | 30 heures au total |
 | **Objectif** | comprendre, dimensionner et diagnostiquer le circuit hydraulique d'un engin | contrôler, mesurer, entretenir et dépanner une machine en sécurité |
 | **Au programme** | • lire le schéma constructeur d'une machine réelle<br>• circuits ouverts et fermés, maintien de pression, commande de débit, régulation de puissance<br>• dimensionner pompe, moteur, vérin et accumulateur ; faire le bilan de puissance<br>• remonter d'un symptôme à sa cause : échauffement, cavitation, colmatage, usure | • repérer chaque composant sur la machine et sur le schéma<br>• mesurer pression, débit et température ; lire manomètres et indicateurs de colmatage<br>• ronde journalière (8 points), contrôle hebdomadaire (7 points), propreté ISO 4406<br>• consigner, décharger un accumulateur, contrôler une précharge d'azote |
 
-**Pour vous inscrire**, contactez-moi par e-mail, WhatsApp ou LinkedIn en précisant votre niveau (ingénieur ou technicien spécialisé), votre formation et votre expérience, les machines qui vous intéressent, vos disponibilités et votre ville. Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, selon les demandes.
+**Pour organiser la formation**, l'entreprise ou l'établissement me contacte par e-mail, WhatsApp ou LinkedIn en précisant le nombre de participants et leur niveau (ingénieurs ou techniciens spécialisés), les machines disponibles, la période souhaitée et la ville. Le programme des 30 heures est ensuite ajusté à vos machines et à vos besoins ; le lieu, le calendrier et les modalités sont fixés ensemble.
 
 <div align="center">
 
-[![Demander une formation terrain](https://img.shields.io/badge/%E2%9C%89%20Demander%20une%20formation%20terrain-C0392B?style=for-the-badge)](mailto:mohamedjanane147@gmail.com?subject=Formation%20hydraulique%20sur%20le%20terrain)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/212604395004?text=Bonjour%2C%20je%20souhaite%20une%20formation%20hydraulique%20sur%20le%20terrain.)
+[![Organiser une formation](https://img.shields.io/badge/%E2%9C%89%20Organiser%20une%20formation-C0392B?style=for-the-badge)](mailto:mohamedjanane147@gmail.com?subject=Formation%20hydraulique%20sur%20le%20terrain%20%2830%20h%29)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/212604395004?text=Bonjour%2C%20nous%20souhaitons%20organiser%20une%20formation%20hydraulique%20sur%20le%20terrain%20%2830%20h%29.)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDMuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/mohamed-janane-allah/)
 
 </div>
