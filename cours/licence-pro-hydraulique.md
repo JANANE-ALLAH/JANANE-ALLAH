@@ -432,8 +432,8 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <div align="center">
 
 [![Demander une formation terrain](https://img.shields.io/badge/%E2%9C%89%20Demander%20une%20formation%20terrain-C0392B?style=for-the-badge)](mailto:mohamedjanane147@gmail.com?subject=Formation%20hydraulique%20sur%20le%20terrain)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-%2B212%206%2004%2039%2050%2004-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/212604395004?text=Bonjour%2C%20je%20souhaite%20une%20formation%20hydraulique%20sur%20le%20terrain.)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamed%20JANANE%20ALLAH-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDMuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/mohamed-janane-allah/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/212604395004?text=Bonjour%2C%20je%20souhaite%20une%20formation%20hydraulique%20sur%20le%20terrain.)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDMuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/mohamed-janane-allah/)
 
 </div>
 
@@ -445,8 +445,8 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-%2B212%206%2004%2039%2050%2004-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://wa.me/212604395004)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohamed%20JANANE%20ALLAH-0A66C2?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDMuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/mohamed-janane-allah/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://wa.me/212604395004)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDMuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0LjcgMi42IDQuNyA2VjIxaC00di01LjVjMC0xLjQgMC0zLjEtMS45LTMuMXMtMi4zIDEuNS0yLjMgM1YyMWgtNHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/mohamed-janane-allah/)
 
 <sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 21 nov. 2026</sub>
 

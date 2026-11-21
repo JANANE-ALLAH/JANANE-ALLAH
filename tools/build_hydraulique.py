@@ -732,8 +732,8 @@ FORMATION_SUJET = "Formation hydraulique sur le terrain"
 
 # Autres contacts (demande de l'enseignant, 21 nov. 2026), en boutons : WhatsApp et LinkedIn.
 # Le logo LinkedIn n'existe plus chez shields.io (retire de Simple Icons) : petit « in » blanc dessine ici.
+# Le numero n'est pas affiche sur le bouton (demande de l'enseignant) : il n'apparait que dans le lien wa.me.
 WHATSAPP = "212604395004"
-WHATSAPP_AFFICHE = u"+212 6 04 39 50 04"
 LINKEDIN = "https://www.linkedin.com/in/mohamed-janane-allah/"
 _LOGO_IN = ("PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01ID"
             "MuMmEyLjMgMi4zIDAgMSAxIDAgNC42IDIuMyAyLjMgMCAwIDEgMC00LjZ6TTMgOWg0djEySDN6TTkuMiA5SDEzdjEuN2MuNi0xIDEuOS0yIDMuOC0yIDQgMCA0"
@@ -743,10 +743,8 @@ _LOGO_IN = ("PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjA
 def boutons_contact(style, message=None):
     """Boutons WhatsApp et LinkedIn (style shields : 'for-the-badge' ou 'flat-square') ; message = texte pre-rempli."""
     wa = "https://wa.me/%s" % WHATSAPP + ("?text=" + quote(message) if message else "")
-    img_wa = "https://img.shields.io/badge/WhatsApp-%s-25D366?style=%s&logo=whatsapp&logoColor=white" % (
-        quote(WHATSAPP_AFFICHE, safe=""), style)
-    img_li = ("https://img.shields.io/badge/LinkedIn-%s-0A66C2?style=%s&logo=data:image/svg%%2bxml;base64,%s"
-              % (quote(u"Mohamed JANANE ALLAH", safe=""), style, _LOGO_IN))
+    img_wa = "https://img.shields.io/badge/WhatsApp-25D366?style=%s&logo=whatsapp&logoColor=white" % style
+    img_li = "https://img.shields.io/badge/LinkedIn-0A66C2?style=%s&logo=data:image/svg%%2bxml;base64,%s" % (style, _LOGO_IN)
     return u"[![WhatsApp](%s)](%s)\n[![LinkedIn](%s)](%s)" % (img_wa, wa, img_li, LINKEDIN)
 
 
