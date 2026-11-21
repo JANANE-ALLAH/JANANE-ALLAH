@@ -709,7 +709,11 @@ def historique():
 # Section « Formation sur le terrain » (demande de l'enseignant, 21 nov. 2026) : pour les jeunes ingenieurs et
 # techniciens specialises en hydraulique et engins. Le contenu reprend le module (ch. 3 a 5, TP sur machine,
 # mini-projets) ; lieu, duree, places et modalites ne sont pas annonces : ils se fixent par e-mail.
-FORMATION_PHOTO = "terrain-inspection-sany.jpg"
+# Image en trois volets (21 nov. 2026), composee a partir de photos deja publiees (visages floutes, sans EXIF) :
+# terrain-sur-la-machine, composant-pompe-en-place, composant-pompe-demontee. Meme image sur le site.
+FORMATION_PHOTO = "formation-terrain.jpg"
+FORMATION_LEGENDE = (u"Sur le terrain : lire la machine (pelle SANY), repérer le circuit hydraulique (pompe en place "
+                     u"dans son compartiment), démonter et diagnostiquer (pompe à pistons axiaux).")
 FORMATION_NIVEAUX = [  # (niveau, pour qui, objectif, au programme)
  (u"🎓 Niveau ingénieur", u"jeunes ingénieurs et élèves ingénieurs",
   u"comprendre, dimensionner et diagnostiquer le circuit hydraulique d'un engin",
@@ -731,19 +735,18 @@ def formation():
     """Section « Formation sur le terrain » pour les jeunes ingenieurs et techniciens specialises."""
     mail = "mailto:mohamedjanane147@gmail.com?subject=" + quote(FORMATION_SUJET)
     bouton = "https://img.shields.io/badge/%s-C0392B?style=for-the-badge" % quote(u"✉ Demander une formation terrain", safe="")
-    photo = ('<td width="42%%" valign="top"><img src="%s/%s/%s" width="100%%" alt="Séance de terrain au pied d\'une '
-             'pelle SANY"><br><sub>Une séance de terrain du module, au pied d\'une pelle SANY.</sub></td>'
-             % (B, IMG, FORMATION_PHOTO)) if fichier_image(FORMATION_PHOTO) else ""
-    points = (u"🚜 <b>Sur machine réelle</b> : pelles et engins de chantier, comme aux TP du module.<br><br>"
-              u"🧭 <b>Par niveau</b> : ingénieur ou technicien spécialisé (tableau ci-dessous).<br><br>"
-              u"📚 <b>Préparation libre</b> : les cinq chapitres, les simulations 3D et les sujets de mini-projets "
-              u"de cette page.<br><br>"
-              u"🦺 <b>La sécurité d'abord</b> : consignation, décharge des accumulateurs, équipements de protection.")
+    photo = (u'<img src="%s/%s/%s" width="100%%" alt="Formation sur le terrain : lire la machine, le circuit '
+             u'hydraulique, démonter et diagnostiquer"><br>\n<sub>%s</sub>\n'
+             % (B, IMG, FORMATION_PHOTO, FORMATION_LEGENDE)) if fichier_image(FORMATION_PHOTO) else ""
+    points = [u"- 🚜 **Sur machine réelle** : pelles et engins de chantier, comme aux TP du module.",
+              u"- 🧭 **Par niveau** : ingénieur ou technicien spécialisé (tableau ci-dessous).",
+              u"- 📚 **Préparation libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets "
+              u"de cette page.",
+              u"- 🦺 **La sécurité d'abord** : consignation, décharge des accumulateurs, équipements de protection.", u""]
     t = [u"## 🧰 Formation sur le terrain\n",
          u"**Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre "
          u"sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : "
-         u"on lit la machine, on mesure, on démonte, on diagnostique.\n",
-         u"<table>\n<tr>%s<td valign=\"top\">%s</td></tr>\n</table>\n" % (photo, points),
+         u"on lit la machine, on mesure, on démonte, on diagnostique.\n", photo] + points + [
          u"| | %s | %s |" % (FORMATION_NIVEAUX[0][0], FORMATION_NIVEAUX[1][0]), u"|---|---|---|",
          u"| **Pour qui** | %s | %s |" % (FORMATION_NIVEAUX[0][1], FORMATION_NIVEAUX[1][1]),
          u"| **Objectif** | %s | %s |" % (FORMATION_NIVEAUX[0][2], FORMATION_NIVEAUX[1][2]),

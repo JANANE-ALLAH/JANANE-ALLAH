@@ -413,9 +413,13 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 
 **Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : on lit la machine, on mesure, on démonte, on diagnostique.
 
-<table>
-<tr><td width="42%" valign="top"><img src="hydraulique/images/terrain-inspection-sany.jpg" width="100%" alt="Séance de terrain au pied d'une pelle SANY"><br><sub>Une séance de terrain du module, au pied d'une pelle SANY.</sub></td><td valign="top">🚜 <b>Sur machine réelle</b> : pelles et engins de chantier, comme aux TP du module.<br><br>🧭 <b>Par niveau</b> : ingénieur ou technicien spécialisé (tableau ci-dessous).<br><br>📚 <b>Préparation libre</b> : les cinq chapitres, les simulations 3D et les sujets de mini-projets de cette page.<br><br>🦺 <b>La sécurité d'abord</b> : consignation, décharge des accumulateurs, équipements de protection.</td></tr>
-</table>
+<img src="hydraulique/images/formation-terrain.jpg" width="100%" alt="Formation sur le terrain : lire la machine, le circuit hydraulique, démonter et diagnostiquer"><br>
+<sub>Sur le terrain : lire la machine (pelle SANY), repérer le circuit hydraulique (pompe en place dans son compartiment), démonter et diagnostiquer (pompe à pistons axiaux).</sub>
+
+- 🚜 **Sur machine réelle** : pelles et engins de chantier, comme aux TP du module.
+- 🧭 **Par niveau** : ingénieur ou technicien spécialisé (tableau ci-dessous).
+- 📚 **Préparation libre** : les cinq chapitres, les simulations 3D et les sujets de mini-projets de cette page.
+- 🦺 **La sécurité d'abord** : consignation, décharge des accumulateurs, équipements de protection.
 
 | | 🎓 Niveau ingénieur | 🔧 Niveau technicien spécialisé |
 |---|---|---|
