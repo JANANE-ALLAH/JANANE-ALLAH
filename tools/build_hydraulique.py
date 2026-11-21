@@ -329,6 +329,8 @@ MEMENTO = {
 
 # Journal des mises a jour, du plus recent au plus ancien (le premier s'affiche en haut de page).
 NOUVEAUTES = [
+ ("21 nov. 2026", "nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens "
+                  "spécialisés en hydraulique et engins"),
  ("8 nov. 2026", "chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des "
                  "installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres "
                  "du module sont publiés"),
@@ -704,6 +706,56 @@ def historique():
             + "\n".join("- **%s** — %s" % e for e in NOUVEAUTES) + u"\n\n</details>\n\n---\n\n")
 
 
+# Section « Formation sur le terrain » (demande de l'enseignant, 21 nov. 2026) : pour les jeunes ingenieurs et
+# techniciens specialises en hydraulique et engins. Le contenu reprend le module (ch. 3 a 5, TP sur machine,
+# mini-projets) ; lieu, duree, places et modalites ne sont pas annonces : ils se fixent par e-mail.
+FORMATION_PHOTO = "terrain-inspection-sany.jpg"
+FORMATION_NIVEAUX = [  # (niveau, pour qui, objectif, au programme)
+ (u"🎓 Niveau ingénieur", u"jeunes ingénieurs et élèves ingénieurs",
+  u"comprendre, dimensionner et diagnostiquer le circuit hydraulique d'un engin",
+  [u"lire le schéma constructeur d'une machine réelle",
+   u"circuits ouverts et fermés, maintien de pression, commande de débit, régulation de puissance",
+   u"dimensionner pompe, moteur, vérin et accumulateur ; faire le bilan de puissance",
+   u"remonter d'un symptôme à sa cause : échauffement, cavitation, colmatage, usure"]),
+ (u"🔧 Niveau technicien spécialisé", u"jeunes techniciens spécialisés en hydraulique ou en engins",
+  u"contrôler, mesurer, entretenir et dépanner une machine en sécurité",
+  [u"repérer chaque composant sur la machine et sur le schéma",
+   u"mesurer pression, débit et température ; lire manomètres et indicateurs de colmatage",
+   u"ronde journalière (8 points), contrôle hebdomadaire (7 points), propreté ISO 4406",
+   u"consigner, décharger un accumulateur, contrôler une précharge d'azote"]),
+]
+FORMATION_SUJET = "Formation hydraulique sur le terrain"
+
+
+def formation():
+    """Section « Formation sur le terrain » pour les jeunes ingenieurs et techniciens specialises."""
+    mail = "mailto:mohamedjanane147@gmail.com?subject=" + quote(FORMATION_SUJET)
+    bouton = "https://img.shields.io/badge/%s-C0392B?style=for-the-badge" % quote(u"✉ Demander une formation terrain", safe="")
+    photo = ('<td width="42%%" valign="top"><img src="%s/%s/%s" width="100%%" alt="Séance de terrain au pied d\'une '
+             'pelle SANY"><br><sub>Une séance de terrain du module, au pied d\'une pelle SANY.</sub></td>'
+             % (B, IMG, FORMATION_PHOTO)) if fichier_image(FORMATION_PHOTO) else ""
+    points = (u"🚜 <b>Sur machine réelle</b> : pelles et engins de chantier, comme aux TP du module.<br><br>"
+              u"🧭 <b>Par niveau</b> : ingénieur ou technicien spécialisé (tableau ci-dessous).<br><br>"
+              u"📚 <b>Préparation libre</b> : les cinq chapitres, les simulations 3D et les sujets de mini-projets "
+              u"de cette page.<br><br>"
+              u"🦺 <b>La sécurité d'abord</b> : consignation, décharge des accumulateurs, équipements de protection.")
+    t = [u"## 🧰 Formation sur le terrain\n",
+         u"**Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre "
+         u"sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : "
+         u"on lit la machine, on mesure, on démonte, on diagnostique.\n",
+         u"<table>\n<tr>%s<td valign=\"top\">%s</td></tr>\n</table>\n" % (photo, points),
+         u"| | %s | %s |" % (FORMATION_NIVEAUX[0][0], FORMATION_NIVEAUX[1][0]), u"|---|---|---|",
+         u"| **Pour qui** | %s | %s |" % (FORMATION_NIVEAUX[0][1], FORMATION_NIVEAUX[1][1]),
+         u"| **Objectif** | %s | %s |" % (FORMATION_NIVEAUX[0][2], FORMATION_NIVEAUX[1][2]),
+         u"| **Au programme** | %s | %s |" % tuple("<br>".join(u"• " + p for p in n[3]) for n in FORMATION_NIVEAUX),
+         u"",
+         u"**Pour vous inscrire**, écrivez-moi en précisant votre niveau (ingénieur ou technicien spécialisé), votre "
+         u"formation et votre expérience, les machines qui vous intéressent, vos disponibilités et votre ville. "
+         u"Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, selon les demandes.\n",
+         u'<div align="center">\n\n[![Demander une formation terrain](%s)](%s)\n\n</div>\n' % (bouton, mail)]
+    return u"\n".join(t) + u"\n---\n\n"
+
+
 TPL = u"""<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3500&pause=1000&color=2E86AB&center=true&vCenter=true&width=780&lines=Syst%C3%A8mes+Hydrauliques;Licence+Professionnelle+IMPI+%E2%80%94+ENSAM+Casablanca;Module+6+%3A+Hydraulique+%C2%B7+5+chapitres" alt="Systemes Hydrauliques" />
@@ -719,7 +771,7 @@ TPL = u"""<div align="center">
 ![Module](https://img.shields.io/badge/Module_6-Hydraulique-4C9A2A?style=for-the-badge)
 ![Chapitres](https://img.shields.io/badge/Chapitres_en_ligne-%(publies)s_%%2F_5-E67E22?style=for-the-badge)
 %(stats)s
-%(nouveaute)s[**Plan du module**](#-plan-du-module) · %(nav_simul)s%(nav_enigmes)s%(nav_memento)s%(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+%(nouveaute)s[**Plan du module**](#-plan-du-module) · %(nav_simul)s%(nav_enigmes)s%(nav_memento)s%(nav_mini)s%(nav_images)s[**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**🧰 Formation terrain**](#-formation-sur-le-terrain) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -764,7 +816,7 @@ TPL = u"""<div align="center">
 
 ---
 
-%(historique)s## 📫 Contact
+%(historique)s%(formation)s## 📫 Contact
 
 <div align="center">
 
@@ -790,6 +842,7 @@ page = TPL.replace("%%", "%").replace("%(cartes)s", cartes()).replace("%(descrip
           .replace("%(bandeau)s", bandeau()) \
           .replace("%(nav_images)s", "[**En images**](#-le-module-en-images) · " if galerie() else "") \
           .replace("%(galerie)s", galerie()).replace("%(simul)s", simulations()) \
-          .replace("%(nav_simul)s", "[**🧊 Simulations 3D**](#-simulations-3d) · " if simulations() else "")
+          .replace("%(nav_simul)s", "[**🧊 Simulations 3D**](#-simulations-3d) · " if simulations() else "") \
+          .replace("%(formation)s", formation())
 io.open(os.path.join(ROOT, PAGE), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %s : %d lignes, %d/%d chapitre(s) publie(s)" % (PAGE, page.count("\n"), len(publies), len(CH)))

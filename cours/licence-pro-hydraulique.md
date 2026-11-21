@@ -19,9 +19,9 @@
 ![TP](https://img.shields.io/badge/TP-sur_machines_r%C3%A9elles-C0392B?style=for-the-badge)
 [![Simulations 3D](https://img.shields.io/badge/Simulations_3D-5_bancs_virtuels-FFB300?style=for-the-badge)](https://janane-allah.github.io/simulations/hydraulique/)
 
-🆕 **Nouveau · 8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres du module sont publiés.
+🆕 **Nouveau · 21 nov. 2026** — nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens spécialisés en hydraulique et engins.
 
-[**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**Contact**](#-contact)
+[**Plan du module**](#-plan-du-module) · [**🧊 Simulations 3D**](#-simulations-3d) · [**Énigmes**](#-énigmes-de-terrain) · [**Mémento**](#-mémento-du-technicien) · [**Mini-projets**](#-mini-projets) · [**En images**](#-le-module-en-images) · [**Prérequis et évaluation**](#-prérequis-et-évaluation) · [**🧰 Formation terrain**](#-formation-sur-le-terrain) · [**Contact**](#-contact)
 
 [![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
 
@@ -394,6 +394,7 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 <summary><i>Historique de la page</i></summary>
 <br/>
 
+- **21 nov. 2026** — nouvelle section « Formation sur le terrain » pour les jeunes ingénieurs et techniciens spécialisés en hydraulique et engins
 - **8 nov. 2026** — chapitres 4 « Circuits hydrauliques » (71 pages, 9 exercices corrigés) et 5 « Maintenance des installations » (90 pages, 7 exercices corrigés) en ligne, avec leur mémento : les cinq chapitres du module sont publiés
 - **7 nov. 2026** — 5e simulation 3D : les filtres et le rapport β (efficacité, colmatage, by-pass, exercice 2)
 - **7 nov. 2026** — simulations 3D : distributeurs, vérins, pompes et accumulateur à manipuler en coupe
@@ -408,6 +409,30 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 
 ---
 
+## 🧰 Formation sur le terrain
+
+**Vous êtes jeune ingénieur ou technicien spécialisé en hydraulique et engins, et vous voulez apprendre sur une vraie machine ?** Cette formation pratique reprend le contenu du module, mais sur le terrain : on lit la machine, on mesure, on démonte, on diagnostique.
+
+<table>
+<tr><td width="42%" valign="top"><img src="hydraulique/images/terrain-inspection-sany.jpg" width="100%" alt="Séance de terrain au pied d'une pelle SANY"><br><sub>Une séance de terrain du module, au pied d'une pelle SANY.</sub></td><td valign="top">🚜 <b>Sur machine réelle</b> : pelles et engins de chantier, comme aux TP du module.<br><br>🧭 <b>Par niveau</b> : ingénieur ou technicien spécialisé (tableau ci-dessous).<br><br>📚 <b>Préparation libre</b> : les cinq chapitres, les simulations 3D et les sujets de mini-projets de cette page.<br><br>🦺 <b>La sécurité d'abord</b> : consignation, décharge des accumulateurs, équipements de protection.</td></tr>
+</table>
+
+| | 🎓 Niveau ingénieur | 🔧 Niveau technicien spécialisé |
+|---|---|---|
+| **Pour qui** | jeunes ingénieurs et élèves ingénieurs | jeunes techniciens spécialisés en hydraulique ou en engins |
+| **Objectif** | comprendre, dimensionner et diagnostiquer le circuit hydraulique d'un engin | contrôler, mesurer, entretenir et dépanner une machine en sécurité |
+| **Au programme** | • lire le schéma constructeur d'une machine réelle<br>• circuits ouverts et fermés, maintien de pression, commande de débit, régulation de puissance<br>• dimensionner pompe, moteur, vérin et accumulateur ; faire le bilan de puissance<br>• remonter d'un symptôme à sa cause : échauffement, cavitation, colmatage, usure | • repérer chaque composant sur la machine et sur le schéma<br>• mesurer pression, débit et température ; lire manomètres et indicateurs de colmatage<br>• ronde journalière (8 points), contrôle hebdomadaire (7 points), propreté ISO 4406<br>• consigner, décharger un accumulateur, contrôler une précharge d'azote |
+
+**Pour vous inscrire**, écrivez-moi en précisant votre niveau (ingénieur ou technicien spécialisé), votre formation et votre expérience, les machines qui vous intéressent, vos disponibilités et votre ville. Le lieu, la durée, le nombre de places et les modalités sont fixés ensuite, selon les demandes.
+
+<div align="center">
+
+[![Demander une formation terrain](https://img.shields.io/badge/%E2%9C%89%20Demander%20une%20formation%20terrain-C0392B?style=for-the-badge)](mailto:mohamedjanane147@gmail.com?subject=Formation%20hydraulique%20sur%20le%20terrain)
+
+</div>
+
+---
+
 ## 📫 Contact
 
 <div align="center">
@@ -415,6 +440,6 @@ Le module se vit sur machines réelles : lire la machine, mesurer, démonter, v�
 [![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
 [![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
 
-<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 8 nov. 2026</sub>
+<sub>Page générée par <code>tools/build_hydraulique.py</code> · dernière mise à jour : 21 nov. 2026</sub>
 
 </div>
