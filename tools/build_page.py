@@ -70,6 +70,22 @@ VIDEOS_TP = {
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
+# Polycopie complet (cours, TD et TP du module en un seul PDF), publie le 23 nov. 2026. Version publique :
+# le detail des heures (p. 13-14 : cours/TD/TP par filiere et par partie) y est masque a la demande de
+# l'enseignant ; seuls restent 60 h / 48 h. L'original (Chapitres/Polycopie_MN.pdf) reste chez lui.
+POLY = "Polycopie/Polycopie_Methodes_Numeriques.pdf"
+
+
+def poly_pages():
+    chemin = os.path.join(ROOT, B, POLY)
+    if not os.path.isfile(chemin):
+        return 0
+    try:
+        import pypdf
+        return len(pypdf.PdfReader(chemin).pages)
+    except Exception:
+        return 0
+
 # Jeux interactifs des TP : pages HTML sur le site janane-allah.github.io (le Markdown de
 # GitHub n'execute pas de JavaScript). Cle = chapitre ; valeur = liste de (TP, adresse,
 # sous-titre, [(ancre, titre, notion)]). Vignettes : methodes-numeriques/images/jeux-<tp>/<ancre>.jpg
@@ -213,6 +229,8 @@ for icon, title, nums, blurb in PARTS:
     programme += [module(n) for n in nums]
 
 tree = "\n".join("├── %s/" % CH[n][0] for n in sorted(CH))
+if os.path.isfile(os.path.join(ROOT, B, POLY)):
+    tree += "\n├── %s/   (polycopié complet)" % POLY.split("/")[0]
 
 # Chiffres cles (bandeau sous l'en-tete), calcules sur les fichiers presents
 NB_PAGES = sum(c[2] for c in CH.values())
@@ -313,7 +331,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 **équations différentielles ordinaires**.
 
 [![Commencer](https://img.shields.io/badge/▶_Commencer_le_cours-Chapitre_0-0056D2?style=for-the-badge)](%(ch0)s)
-[![Vidéo d'accroche](https://img.shields.io/badge/🎬_Pourquoi_ce_module_%%3F-Vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
+%(poly_bouton)s[![Vidéo d'accroche](https://img.shields.io/badge/🎬_Pourquoi_ce_module_%%3F-Vidéo_d'accroche-C1121F?style=for-the-badge)](%(motiv)s)
 
 <sub>🎓 Conçu pour les étudiants de la FSTM — Université Hassan II de Casablanca · 🔒 vidéos accessibles avec le compte universitaire UH2C</sub>
 
@@ -358,7 +376,7 @@ finies, et **équations différentielles ordinaires**.
 
 %(parcours)s## 📚 Programme du module
 
-Il y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
+%(poly_texte)sIl y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
 
 <sub>🔵 cours (PDF) · 🟣 TD · 🔴 énoncé de TP · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C) · 🟡 jeux interactifs</sub>
@@ -428,7 +446,7 @@ métier d'ingénieur mécanicien.
 <summary><b>Quels supports puis-je télécharger ?</b></summary>
 <br/>
 
-Tous les PDF — cours, TD, énoncés de TP, sujets d'examen — et les **corrigés de TP** (scripts MATLAB, en zip)
+Tous les PDF — %(poly_faq)scours, TD, énoncés de TP, sujets d'examen — et les **corrigés de TP** (scripts MATLAB, en zip)
 sont en accès libre sur cette page. Les vidéos se regardent en ligne, avec le compte universitaire.
 
 </details>
@@ -550,6 +568,18 @@ def examens():
 
 texte_examens, nb_examens = examens()
 ch0 = "%s/%s/%s" % (B, CH["00"][0], next(f for f in fichiers("00") if f.startswith("1_")))
+NB_POLY = poly_pages()
+if NB_POLY:
+    from urllib.parse import quote as _q
+    _lien_poly = "%s/%s" % (B, POLY)
+    poly_bouton = ("[![Polycopié complet](https://img.shields.io/badge/%s-%s-2E7D32?style=for-the-badge)](%s)\n"
+                   % (_q(u"📘 Polycopié complet", safe=""), _q(u"%d pages · PDF" % NB_POLY, safe=""), _lien_poly))
+    poly_texte = (u"> 📘 **Tout le module en un seul PDF** : [le polycopié](%s) (%d pages) réunit l'introduction, les onze "
+                  u"chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD "
+                  u"et de ses TP). Il sert aux deux parcours, LST GM et Cycle GE.\n\n" % (_lien_poly, NB_POLY))
+    poly_faq = u"[polycopié complet](%s), " % _lien_poly
+else:
+    poly_bouton = poly_texte = poly_faq = ""
 valeurs = {
     "programme": "\n".join(programme), "tree": tree,
     "motiv": MOTIVATION, "ch0": ch0, "examens": texte_examens, "nb_exam": str(nb_examens),
@@ -557,6 +587,7 @@ valeurs = {
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
     "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
     "jeux": section_jeux(), "parcours": deux_parcours(),
+    "poly_bouton": poly_bouton, "poly_texte": poly_texte, "poly_faq": poly_faq,
     "intitule_gm": INTITULE_GM, "intitule_ge": INTITULE_GE,
 }
 page = TPL.replace("%%", "%")
