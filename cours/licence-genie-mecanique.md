@@ -188,7 +188,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![▶ Vidéo TP2](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP2-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
 [![🎮 Jeux TP2 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP2%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp2/)
 
-<sub>⚡ <b>Cycle GE</b> : la vidéo de TP propre au GE est sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
+<sub>⚡ <b>Cycle GE</b> : des supports de TP propres au GE (vidéo, corrigé) sont sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
 
 #### Module 04 · Systèmes non linéaires
 

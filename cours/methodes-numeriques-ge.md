@@ -112,6 +112,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 
 [![📄 Cours 12 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-12%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
+[![✅ TP2 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP2%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/4_TP2_GE_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo GE TP2 · programmation](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP2%20%C2%B7%20programmation-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1pxjMcqifEjZVbGEjYPjbjyaYpnnEdPBp/view)
 
 #### Module 04 · Systèmes non linéaires

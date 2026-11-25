@@ -224,9 +224,14 @@ def ressources_ge(num):
     return out
 
 
-# Chapitres dont les TD/TP GE sont en ligne (fichiers du sous-dossier GE/) : sert au « jusqu'au chapitre N ».
-# Une video GE seule (sans enonce) ne fait pas avancer ce compteur.
-CHAPITRES_GE = [n for n in sorted(CH) if fichiers_ge(n)]
+def enonces_ge(num):
+    """Enonces GE (TD 3_ et TP 4_, hors corriges) d'un chapitre."""
+    return [f for f in fichiers_ge(num) if f[:2] in ("3_", "4_") and "corrige" not in f.lower()]
+
+
+# Chapitres dont les ENONCES de TD/TP GE sont en ligne : sert au « jusqu'au chapitre N ».
+# Une video ou un corrige GE seuls (sans enonce) ne font pas avancer ce compteur.
+CHAPITRES_GE = [n for n in sorted(CH) if enonces_ge(n)]
 
 
 # Page du Cycle GE (meme cours, TD/TP/jeux GE) : cours/methodes-numeriques-ge.md, generee plus bas.
@@ -238,11 +243,12 @@ def module(num):
     quand le module a des TD/TP propres au GE, un renvoi vers la page du Cycle GE."""
     lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
               "\n".join(bouton(*r) for r in ressources(num)), ""]
-    if fichiers_ge(num):
+    if enonces_ge(num):
         lignes += [u"<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la "
                    u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
-    elif VIDEOS_GE.get(num):
-        lignes += [u"<sub>⚡ <b>Cycle GE</b> : la vidéo de TP propre au GE est sur la [page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
+    elif ressources_ge(num):
+        lignes += [u"<sub>⚡ <b>Cycle GE</b> : des supports de TP propres au GE (vidéo, corrigé) sont sur la "
+                   u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
     return "\n".join(lignes)
 
 
@@ -358,7 +364,7 @@ def deux_parcours():
     out += [u"#### Les TP de chaque parcours\n",
             u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
     out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
-    tp_ge = sorted(set(f.split("_")[1] for n in CHAPITRES_GE for f in fichiers_ge(n) if f.startswith("4_")))
+    tp_ge = sorted(set(f.split("_")[1] for n in CHAPITRES_GE for f in enonces_ge(n) if f.startswith("4_")))
     out += [u"", u"<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡)%s ; "
             u"les autres versions énergétiques suivront.</sub>"
             % ((u" : " + u", ".join(tp_ge)) if tp_ge else u"")]
