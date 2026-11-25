@@ -200,6 +200,8 @@ MAJ_GE = u"25 nov. 2026"   # date de la derniere mise a jour des supports GE
 # personne ayant le lien et telechargeable (non conforme a la regle UH2C) ; partage a corriger dans Drive.
 VIDEOS_GE = {
  "02": [("TP1", "https://drive.google.com/file/d/1QIeu_jGI170irAdK-mF8Z9z8fKToSlZc/view", "correction")],
+ # TP2 GE (25 nov. 2026) : Jacobi, Gauss-Seidel, SOR ; acces restreint verifie (401 anonyme, pas de telechargement)
+ "03": [("TP2", "https://drive.google.com/file/d/1pxjMcqifEjZVbGEjYPjbjyaYpnnEdPBp/view", "programmation")],
 }
 
 
@@ -222,7 +224,9 @@ def ressources_ge(num):
     return out
 
 
-CHAPITRES_GE = [n for n in sorted(CH) if ressources_ge(n)]
+# Chapitres dont les TD/TP GE sont en ligne (fichiers du sous-dossier GE/) : sert au « jusqu'au chapitre N ».
+# Une video GE seule (sans enonce) ne fait pas avancer ce compteur.
+CHAPITRES_GE = [n for n in sorted(CH) if fichiers_ge(n)]
 
 
 # Page du Cycle GE (meme cours, TD/TP/jeux GE) : cours/methodes-numeriques-ge.md, generee plus bas.
@@ -234,9 +238,11 @@ def module(num):
     quand le module a des TD/TP propres au GE, un renvoi vers la page du Cycle GE."""
     lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
               "\n".join(bouton(*r) for r in ressources(num)), ""]
-    if ressources_ge(num):
+    if fichiers_ge(num):
         lignes += [u"<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la "
                    u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
+    elif VIDEOS_GE.get(num):
+        lignes += [u"<sub>⚡ <b>Cycle GE</b> : la vidéo de TP propre au GE est sur la [page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
     return "\n".join(lignes)
 
 

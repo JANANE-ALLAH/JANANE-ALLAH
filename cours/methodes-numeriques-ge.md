@@ -18,7 +18,7 @@ par différences finies (conduction, convection), **équations différentielles 
 <table>
 <tr>
 <td align="center" width="20%"><b>📚 12 modules</b><br><sub>144 pages de cours</sub></td>
-<td align="center" width="20%"><b>🎥 13 vidéos</b><br><sub>cours et TP GE</sub></td>
+<td align="center" width="20%"><b>🎥 14 vidéos</b><br><sub>cours et TP GE</sub></td>
 <td align="center" width="20%"><b>⚡ 2 TD · 1 TP GE</b><br><sub>jusqu'au chapitre 2</sub></td>
 <td align="center" width="20%"><b>🎮 5 jeux</b><br><sub>TP1 GE</sub></td>
 <td align="center" width="20%"><b>⏱️ 48 h</b><br><sub>5 TP MATLAB</sub></td>
@@ -112,6 +112,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 
 [![📄 Cours 12 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-12%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
+[![▶ Vidéo GE TP2 · programmation](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP2%20%C2%B7%20programmation-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1pxjMcqifEjZVbGEjYPjbjyaYpnnEdPBp/view)
 
 #### Module 04 · Systèmes non linéaires
 
