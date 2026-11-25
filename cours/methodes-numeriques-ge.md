@@ -19,7 +19,7 @@ par différences finies (conduction, convection), **équations différentielles 
 <tr>
 <td align="center" width="20%"><b>📚 12 modules</b><br><sub>144 pages de cours</sub></td>
 <td align="center" width="20%"><b>🎥 14 vidéos</b><br><sub>cours et TP GE</sub></td>
-<td align="center" width="20%"><b>⚡ 2 TD · 1 TP GE</b><br><sub>jusqu'au chapitre 2</sub></td>
+<td align="center" width="20%"><b>⚡ 3 TD · 2 TP GE</b><br><sub>jusqu'au chapitre 3</sub></td>
 <td align="center" width="20%"><b>🎮 5 jeux</b><br><sub>TP1 GE</sub></td>
 <td align="center" width="20%"><b>⏱️ 48 h</b><br><sub>5 TP MATLAB</sub></td>
 </tr>
@@ -39,7 +39,7 @@ linéaires**, **équations aux dérivées partielles** par différences finies, 
 
 > ⚡ **Ce qui est propre au Cycle GE** : le cours (PDF et vidéos) est le même que celui de la LST Génie Mécanique ;
 > les **TD**, les **TP** et les **jeux** sont écrits dans un contexte énergétique (bâtiments, fours, réseaux de chaleur).
-> Mise à jour du 25 nov. 2026 : **jusqu'au chapitre 2** ; les modules suivants recevront leurs TD et TP GE au fur et à mesure.
+> Mise à jour du 25 nov. 2026 : **jusqu'au chapitre 3** ; les modules suivants recevront leurs TD et TP GE au fur et à mesure.
 
 #### Ce que vous apprendrez
 
@@ -112,6 +112,8 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 
 [![📄 Cours 12 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-12%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
+[![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/3_TD03_GE_enonce.pdf)
+[![⚡ TP2 GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TP2%20GE-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/4_TP2_GE_enonce.pdf)
 [![✅ TP2 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP2%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/4_TP2_GE_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo GE TP2 · programmation](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP2%20%C2%B7%20programmation-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1pxjMcqifEjZVbGEjYPjbjyaYpnnEdPBp/view)
 

@@ -80,7 +80,7 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 
 **Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.
 
-> ⚡ **Étudiants du Cycle GE : votre page est [ici](methodes-numeriques-ge.md).** Même cours et mêmes vidéos de cours ; TD, TP et jeux en contexte énergétique, **jusqu'au chapitre 2** pour l'instant (mise à jour du 25 nov. 2026).
+> ⚡ **Étudiants du Cycle GE : votre page est [ici](methodes-numeriques-ge.md).** Même cours et mêmes vidéos de cours ; TD, TP et jeux en contexte énergétique, **jusqu'au chapitre 3** pour l'instant (mise à jour du 25 nov. 2026).
 
 <div align="center">
 
@@ -93,13 +93,13 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 | TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |
 |:-:|---|---|---|
 | **TP1** | Méthode directe : Gauss avec pivotage, Gauss-Jordan | le banc d'amortisseurs | réseau thermique d'un bâtiment à trois zones ⚡ en ligne |
-| **TP2** | Méthodes itératives | la paroi d'un four | identique |
+| **TP2** | Méthodes itératives : Jacobi, Gauss-Seidel, SOR | la paroi d'un four | la paroi d'une étuve industrielle ⚡ en ligne |
 | **TP3** | Newton | le système de pompage | identique (pompage et Colebrook) |
 | **TP4** | EDO non linéaire : Euler et Runge-Kutta | le refroidissement d'une paroi de four | identique |
 | **TP5** | Poisson 2D | la salle de sport | champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes |
 | **TP6** | Système d'EDO | les attracteurs de Lorenz | — (pas de TP6) |
 
-<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡) : TP1 ; les autres versions énergétiques suivront.</sub>
+<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡) : TP1, TP2 ; les autres versions énergétiques suivront.</sub>
 
 <details>
 <summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>
@@ -188,7 +188,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![▶ Vidéo TP2](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP2-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
 [![🎮 Jeux TP2 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP2%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp2/)
 
-<sub>⚡ <b>Cycle GE</b> : des supports de TP propres au GE (vidéo, corrigé) sont sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
+<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
 
 #### Module 04 · Systèmes non linéaires
 

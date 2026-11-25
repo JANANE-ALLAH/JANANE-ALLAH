@@ -332,7 +332,7 @@ PROGRAMME_GE = [  # (module, applications en energetique)
 TP_PARCOURS = [  # (TP, methode, LST GM, Cycle GE)
  ("TP1", "Méthode directe : Gauss avec pivotage, Gauss-Jordan", "le banc d'amortisseurs",
   "réseau thermique d'un bâtiment à trois zones ⚡ en ligne"),
- ("TP2", "Méthodes itératives", "la paroi d'un four", "identique"),
+ ("TP2", "Méthodes itératives : Jacobi, Gauss-Seidel, SOR", "la paroi d'un four", "la paroi d'une étuve industrielle ⚡ en ligne"),
  ("TP3", "Newton", "le système de pompage", "identique (pompage et Colebrook)"),
  ("TP4", "EDO non linéaire : Euler et Runge-Kutta", "le refroidissement d'une paroi de four", "identique"),
  ("TP5", "Poisson 2D", "la salle de sport", "champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes"),
