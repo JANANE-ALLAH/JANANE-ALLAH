@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import io, os, re
+from urllib.parse import quote
 
 # Regenere cours/licence-genie-mecanique.md a partir des PDF presents
 # dans cours/methodes-numeriques/.  Usage :  python tools/build_page.py
@@ -224,25 +225,30 @@ def ressources_ge(num):
 CHAPITRES_GE = [n for n in sorted(CH) if ressources_ge(n)]
 
 
+# Page du Cycle GE (meme cours, TD/TP/jeux GE) : cours/methodes-numeriques-ge.md, generee plus bas.
+PAGE_GE = "methodes-numeriques-ge.md"
+
+
 def module(num):
     """Un module en clair : titre, description, puis un bouton par support (rien a deplier) ;
-    en dessous, les TD et TP propres au Cycle GE quand ils existent."""
+    quand le module a des TD/TP propres au GE, un renvoi vers la page du Cycle GE."""
     lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
               "\n".join(bouton(*r) for r in ressources(num)), ""]
-    ge = ressources_ge(num)
-    if ge:
-        lignes += [u"<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>", "",
-                   "\n".join(bouton(*r) for r in ge), ""]
+    if ressources_ge(num):
+        lignes += [u"<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la "
+                   u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
     return "\n".join(lignes)
 
 
-def section_jeux():
-    """Une carte par jeu (vignette, titre, notion, bouton), trois par rangee, puis une carte « Comment jouer »."""
+def section_jeux(jeux=None, suffixe=""):
+    """Une carte par jeu (vignette, titre, notion, bouton), trois par rangee, puis une carte « Comment jouer ».
+    jeux : dictionnaire au format de JEUX (JEUX par defaut) ; suffixe : ajoute au dossier des vignettes (ex. « -ge »)."""
     from urllib.parse import quote
+    jeux = JEUX if jeux is None else jeux
     out = []
-    for num, (tp, url, sous_titre, liste) in sorted(((n, j) for n in JEUX for j in JEUX[n]), key=lambda x: x[1][0]):
-        dossier = "%s/images/jeux-%s" % (B, tp.lower())
-        out.append("### %s · Module %s — %s\n" % (tp, num, sous_titre))
+    for num, (tp, url, sous_titre, liste) in sorted(((n, j) for n in jeux for j in jeux[n]), key=lambda x: x[1][0]):
+        dossier = "%s/images/jeux-%s%s" % (B, tp.lower(), suffixe)
+        out.append("### %s%s · Module %s — %s\n" % (tp, " GE" if suffixe else "", num, sous_titre))
         cartes = []
         for q, (ancre, titre, notion) in enumerate(liste):
             lien = "%s#%s" % (url, ancre)
@@ -278,7 +284,7 @@ NB_PAGES = sum(c[2] for c in CH.values())
 NB_TD = sum(1 for n in CH for f in fichiers(n) if f.startswith("3_") and "corrige" not in f.lower())
 NB_TP = sum(1 for n in CH for f in fichiers(n) if f.startswith("4_") and "corrige" not in f.lower())
 NB_CORRIGES = sum(1 for n in CH for f in fichiers(n) if "corrige" in f.lower())
-NB_VIDEOS = len(VIDEOS) + sum(len(videos_tp(n)) for n in CH) + sum(len(v) for v in VIDEOS_GE.values())
+NB_VIDEOS = len(VIDEOS) + sum(len(videos_tp(n)) for n in CH)   # page LST GM (les videos GE sont sur la page GE)
 
 # Ce que vous apprendrez, competences (etiquettes), questions frequentes
 APPRENDRE = [
@@ -338,10 +344,11 @@ def deux_parcours():
            u"**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les "
            u"critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.\n"]
     if CHAPITRES_GE:
-        out += [u"> ⚡ **Mise à jour du Cycle GE — %s** : le cours reste celui de la LST GM ; les **TD et TP** passent "
-                u"dans un contexte énergétique, **jusqu'au chapitre %d** pour l'instant. Ils apparaissent sous le "
-                u"repère ⚡ dans le [programme](#-programme-du-module), sous les supports communs.\n"
-                % (MAJ_GE, int(CHAPITRES_GE[-1]))]
+        out += [u"> ⚡ **Étudiants du Cycle GE : votre page est [ici](%s).** Même cours et mêmes vidéos de cours ; "
+                u"TD, TP et jeux en contexte énergétique, **jusqu'au chapitre %d** pour l'instant (mise à jour du %s).\n"
+                % (PAGE_GE, int(CHAPITRES_GE[-1]), MAJ_GE),
+                u'<div align="center">\n\n[![Page du Cycle GE](https://img.shields.io/badge/%s-%s-E67E22?style=for-the-badge)](%s)\n\n</div>\n'
+                % (quote(u"⚡ Page du Cycle GE", safe=""), quote(INTITULE_GE, safe=""), PAGE_GE)]
     out += [u"#### Les TP de chaque parcours\n",
             u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
     out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
@@ -352,7 +359,7 @@ def deux_parcours():
     out += [u"", u"<details>", u"<summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>",
             u"<br/>\n", u"| Module | Applications en énergétique |", u"|---|---|"]
     out += [u"| **%s** · %s | %s |" % (n, CH[n][1], a) for n, a in PROGRAMME_GE]
-    out += [u"", u"Le cours est commun ; les TD et TP GE déjà en ligne sont marqués ⚡ dans le programme.\n", u"</details>\n"]
+    out += [u"", u"Le cours est commun ; les TD et TP GE déjà en ligne sont sur la [page du Cycle GE](%s).\n" % PAGE_GE, u"</details>\n"]
     return u"\n".join(out) + u"\n---\n\n"
 
 
@@ -645,3 +652,185 @@ for k, v in valeurs.items():
 assert "%(" not in page, "champ non remplace"
 io.open(os.path.join(ROOT, "licence-genie-mecanique.md"), "w", encoding="utf-8", newline="\n").write(page)
 print("OK - %d lignes" % page.count("\n"))
+
+
+# ============================================================================================================
+# Page du Cycle d'Ingenieur GE (cours/methodes-numeriques-ge.md), demandee le 25 nov. 2026 : « GE seulement ».
+# Meme cours et memes videos de cours que la LST GM ; TD, TP, corriges, videos de TP et jeux propres au GE,
+# jusqu'au dernier chapitre de CHAPITRES_GE. Au-dela : « TD et TP GE a venir » (pas de supports GM).
+# ============================================================================================================
+JEUX_GE = {
+ "02": [("TP1", "https://janane-allah.github.io/jeux/tp1-ge/", "le réseau thermique d'un bâtiment (méthodes directes)", [
+   ("jeu-1", "Le réseau thermique", "Assembler G, local voisin chauffé, zone isolée"),
+   ("jeu-2", "Gauss pas à pas", "Pivot partiel, multiplicateurs, remontée"),
+   ("jeu-3", "Le compteur d'opérations", "n³/3 pour Gauss, n² par scénario de chauffage"),
+   ("jeu-4", "Les messages d'erreur", "Huit vrais messages de MATLAB"),
+   ("jeu-5", "Détective du code", "Les bugs silencieux et le résidu"),
+  ])],
+}
+APPLI_GE = dict(PROGRAMME_GE)
+DERNIER_GE = CHAPITRES_GE[-1] if CHAPITRES_GE else None
+
+
+def module_ge(num):
+    """Module de la page GE : cours et video de cours communs, puis TD/TP/corriges/videos/jeux GE ou « a venir »."""
+    res = [r for r in ressources(num) if r[0] == "cours"]
+    if num in VIDEOS:
+        res.append(("video", "▶ Vidéo", "cours", VIDEOS[num]))
+    ge = ressources_ge(num) + [("jeu", "🎮 Jeux", "%s GE · %d jeux" % (j[0], len(j[3])), j[1]) for j in JEUX_GE.get(num, [])]
+    lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], ""]
+    if APPLI_GE.get(num):
+        lignes += [u"<sub>⚡ En énergétique : %s</sub>" % APPLI_GE[num], ""]
+    lignes += ["\n".join(bouton(*r) for r in res + ge), ""]
+    if num != "00" and not ge:
+        lignes += [u"<sub>⏳ TD et TP en version GE : à venir.</sub>", ""]
+    return "\n".join(lignes)
+
+
+programme_ge = []
+for icon, title, nums, blurb in PARTS:
+    programme_ge.append("### %s %s\n" % (icon, title))
+    programme_ge.append("<sub>%d module%s · %d pages de cours</sub>\n" % (len(nums), "s" if len(nums) > 1 else "", sum(CH[n][2] for n in nums)))
+    programme_ge += [module_ge(n) for n in nums]
+
+NB_TD_GE = sum(1 for n in CH for f in fichiers_ge(n) if f.startswith("3_") and "corrige" not in f.lower())
+NB_TP_GE = sum(1 for n in CH for f in fichiers_ge(n) if f.startswith("4_") and "corrige" not in f.lower())
+NB_VIDEOS_GE = len(VIDEOS) + sum(len(v) for v in VIDEOS_GE.values())
+NB_JEUX_GE = sum(len(j[3]) for n in JEUX_GE for j in JEUX_GE[n])
+poly_bouton_ge = (u"[![Polycopié du cours](https://img.shields.io/badge/%s-%s-2E7D32?style=for-the-badge)](%s/%s)\n"
+                  % (quote(u"📘 Polycopié du cours", safe=""), quote(u"%d pages · PDF" % NB_POLY, safe=""), B, POLY)) if NB_POLY else ""
+
+TPL_GE = u"""[⬅ Profil](../README.md) › Enseignement › **%(intitule_ge)s** · Cycle d'Ingénieur GE
+
+<div align="center">
+
+<img src="methodes-numeriques/images/banniere-ge.jpg" alt="%(intitule_ge)s — 1re année du Cycle d'Ingénieur Génie Énergétique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
+
+<br/>
+
+Résoudre sur ordinateur les problèmes de l'énergétique qu'on ne sait pas résoudre à la main :<br/>
+**systèmes linéaires et non linéaires** (réseaux thermiques et hydrauliques), **équations aux dérivées partielles**
+par différences finies (conduction, convection), **équations différentielles ordinaires** (dynamique thermique).
+
+[![Commencer](https://img.shields.io/badge/▶_Commencer_le_cours-Chapitre_0-0056D2?style=for-the-badge)](%(ch0)s)
+%(poly_bouton)s
+<sub>🎓 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE) — FSTM, Université Hassan II de Casablanca · 🔒 vidéos accessibles avec le compte universitaire UH2C</sub>
+
+<table>
+<tr>
+<td align="center" width="20%%"><b>📚 %(nb_ch)s modules</b><br><sub>%(nb_pages)s pages de cours</sub></td>
+<td align="center" width="20%%"><b>🎥 %(nb_videos)s vidéos</b><br><sub>cours et TP GE</sub></td>
+<td align="center" width="20%%"><b>⚡ %(nb_td)s TD · %(nb_tp)s TP GE</b><br><sub>jusqu'au chapitre %(dernier)s</sub></td>
+<td align="center" width="20%%"><b>🎮 %(nb_jeux)s jeux</b><br><sub>TP1 GE</sub></td>
+<td align="center" width="20%%"><b>⏱️ 48 h</b><br><sub>5 TP MATLAB</sub></td>
+</tr>
+</table>
+
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**🎮 Jeux**](#-jeux-interactifs) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes)
+
+</div>
+
+---
+
+## 📌 À propos
+
+Ce module donne à l'ingénieur énergéticien les outils numériques qui permettent de résoudre, sur ordinateur, ce
+qu'on ne sait pas résoudre à la main : **systèmes linéaires** (méthodes directes et itératives), **systèmes non
+linéaires**, **équations aux dérivées partielles** par différences finies, et **équations différentielles ordinaires**.
+
+> ⚡ **Ce qui est propre au Cycle GE** : le cours (PDF et vidéos) est le même que celui de la LST Génie Mécanique ;
+> les **TD**, les **TP** et les **jeux** sont écrits dans un contexte énergétique (bâtiments, fours, réseaux de chaleur).
+> Mise à jour du %(maj)s : **jusqu'au chapitre %(dernier)s** ; les modules suivants recevront leurs TD et TP GE au fur et à mesure.
+
+#### Ce que vous apprendrez
+
+%(apprendre)s
+
+#### Détails à connaître
+
+| 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
+|---|---|---|---|---|
+| 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE), FSTM | 48 h · 5 TP (TP1 à TP5) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+
+---
+
+## 📚 Programme du module
+
+Il y a **%(nb_ch)s modules**, en trois parties précédées d'une introduction. Pour chaque module : le cours et sa vidéo
+(communs), puis, quand ils sont en ligne, le TD, le TP, son corrigé, sa vidéo et ses jeux en version GE (⚡).
+
+<sub>🔵 cours (PDF) · 🟣 TD GE · 🔴 énoncé de TP GE · 🟢 corrigé (scripts MATLAB) · 🟠 vidéo (compte UH2C) · 🟡 jeux interactifs</sub>
+
+%(programme)s
+---
+
+## 🎮 Jeux interactifs
+
+Des jeux, dans le navigateur, pour **manipuler un TP avant de le programmer**. Tous les nombres affichés sont calculés
+en direct par le code MATLAB du TP, porté ligne pour ligne en JavaScript : ce sont les mêmes que dans MATLAB.
+
+%(jeux)s
+---
+
+## 👤 Enseignant
+
+<b>Pr. Mohamed JANANE ALLAH</b>, PhD — Maître de Conférence · Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan II de Casablanca<br/>
+🌐 <a href="https://janane-allah.github.io">Site personnel</a> · <a href="mailto:mohamedjanane147@gmail.com">mohamedjanane147@gmail.com</a>
+
+---
+
+## ❓ Questions fréquentes
+
+<details>
+<summary><b>Pourquoi le cours est-il le même qu'en LST Génie Mécanique ?</b></summary>
+<br/>
+
+Le module est mutualisé : les méthodes numériques sont les mêmes de part et d'autre. En Cycle GE, le module
+s'intitule *%(intitule_ge)s* (48 h, cinq TP) ; ses TD, ses TP et ses jeux sont propres au GE. La page de la
+LST Génie Mécanique reste [ici](licence-genie-mecanique.md).
+
+</details>
+
+<details>
+<summary><b>Comment accéder aux vidéos ?</b></summary>
+<br/>
+
+🔒 Connectez-vous à votre **compte universitaire UH2C** avant d'ouvrir un lien vidéo. Si l'accès vous est refusé alors
+que vous êtes bien inscrit au module, écrivez-moi.
+
+</details>
+
+<details>
+<summary><b>Quels supports puis-je télécharger ?</b></summary>
+<br/>
+
+Les PDF du cours, les énoncés des TD et TP GE et les corrigés de TP (scripts MATLAB, en zip) sont en accès libre.
+Le polycopié réunit tout le cours ; ses TD et TP sont ceux de la LST GM : en GE, utilisez les énoncés ⚡ de cette page.
+
+</details>
+
+---
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/mohamedjanane147@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamedjanane147@gmail.com)
+[![Site](https://img.shields.io/badge/janane--allah.github.io-0A66C2?style=flat-square&logo=github-pages&logoColor=white)](https://janane-allah.github.io)
+[![Retour au profil](https://img.shields.io/badge/⬅_Retour_au_profil-555555?style=flat-square)](../README.md)
+
+<sub>Page générée par <code>tools/build_page.py</code> · Université Hassan II de Casablanca — FSTM</sub>
+
+</div>
+"""
+
+valeurs_ge = {
+    "intitule_ge": INTITULE_GE, "ch0": ch0, "poly_bouton": poly_bouton_ge, "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES),
+    "nb_videos": str(NB_VIDEOS_GE), "nb_td": str(NB_TD_GE), "nb_tp": str(NB_TP_GE), "nb_jeux": str(NB_JEUX_GE),
+    "dernier": str(int(DERNIER_GE)) if DERNIER_GE else "0", "maj": MAJ_GE, "apprendre": apprendre,
+    "programme": "\n".join(programme_ge), "jeux": section_jeux(JEUX_GE, "-ge"),
+}
+page_ge = TPL_GE.replace("%%", "%")
+for k, v in valeurs_ge.items():
+    page_ge = page_ge.replace("%%(%s)s" % k, v)
+assert "%(" not in page_ge, "champ non remplace (page GE)"
+io.open(os.path.join(ROOT, PAGE_GE), "w", encoding="utf-8", newline="\n").write(page_ge)
+print("OK - %s : %d lignes" % (PAGE_GE, page_ge.count("\n")))

@@ -39,7 +39,8 @@ def laplace(nx=81, ny=41, tol=1e-6):
     return x, y, T
 
 
-def banniere():
+def banniere(ge=False):
+    """ge=False : banniere commune (deux intitules) ; ge=True : banniere de la page du Cycle GE (banniere-ge.jpg)."""
     x, y, T = laplace()
     fig = plt.figure(figsize=(16, 5), dpi=100)
     fond = fig.add_axes([0, 0, 1, 1])
@@ -49,14 +50,21 @@ def banniere():
 
     # Titre commun, puis l'intitule du module dans chaque filiere (GM et GE, 16 nov. 2026).
     fig.text(0.045, 0.80, "FSTM  ·  UNIVERSITÉ HASSAN II DE CASABLANCA", color=AMBRE, fontsize=14, fontweight="bold")
-    fig.text(0.045, 0.575, "Méthodes numériques", color="white", fontsize=46, fontweight="bold")
-    for yy, filiere, intitule in ((0.445, "LST GÉNIE MÉCANIQUE", "Méthodes numériques pour la mécanique"),
-                                  (0.285, "1re ANNÉE CYCLE INGÉNIEUR GÉNIE ÉNERGÉTIQUE", "Introduction aux méthodes numériques")):
-        fig.add_artist(plt.Line2D([0.045, 0.045], [yy - 0.085, yy + 0.035], color=AMBRE, lw=3, transform=fig.transFigure))
-        fig.text(0.056, yy, filiere, color=GRIS, fontsize=12, fontweight="bold")
-        fig.text(0.056, yy - 0.072, intitule, color="white", fontsize=20)
-    fig.text(0.045, 0.075, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  TP MATLAB",
-             color=GRIS, fontsize=14)
+    if ge:
+        fig.text(0.045, 0.56, "Introduction aux", color="white", fontsize=44, fontweight="bold")
+        fig.text(0.045, 0.39, "méthodes numériques", color="white", fontsize=44, fontweight="bold")
+        fig.text(0.045, 0.24, "1re année  ·  Cycle d'Ingénieur Génie Énergétique (GE)", color=GRIS, fontsize=15)
+        fig.text(0.045, 0.11, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD et TP en énergétique  ·  MATLAB",
+                 color="white", fontsize=14)
+    else:
+        fig.text(0.045, 0.575, "Méthodes numériques", color="white", fontsize=46, fontweight="bold")
+        for yy, filiere, intitule in ((0.445, "LST GÉNIE MÉCANIQUE", "Méthodes numériques pour la mécanique"),
+                                      (0.285, "1re ANNÉE CYCLE INGÉNIEUR GÉNIE ÉNERGÉTIQUE", "Introduction aux méthodes numériques")):
+            fig.add_artist(plt.Line2D([0.045, 0.045], [yy - 0.085, yy + 0.035], color=AMBRE, lw=3, transform=fig.transFigure))
+            fig.text(0.056, yy, filiere, color=GRIS, fontsize=12, fontweight="bold")
+            fig.text(0.056, yy - 0.072, intitule, color="white", fontsize=20)
+        fig.text(0.045, 0.075, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  TP MATLAB",
+                 color=GRIS, fontsize=14)
 
     ax = fig.add_axes([0.575, 0.13, 0.385, 0.77])
     ax.imshow(T, origin="lower", extent=[0, 2, 0, 1], cmap="inferno", vmin=0, vmax=100, aspect="auto")
@@ -81,8 +89,8 @@ def banniere():
     chemin = os.path.join(SORTIE, "banniere.png")
     fig.savefig(chemin, dpi=100)
     plt.close(fig)
-    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere-gm-ge.jpg"), "JPEG", quality=90,
-                                           optimize=True, progressive=True)
+    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere-ge.jpg" if ge else "banniere-gm-ge.jpg"), "JPEG",
+                                           quality=90, optimize=True, progressive=True)
     os.remove(chemin)
 
 
@@ -100,5 +108,6 @@ def monogramme():
 
 
 banniere()
+banniere(ge=True)
 monogramme()
 print("OK -", ", ".join(sorted(os.listdir(SORTIE))))

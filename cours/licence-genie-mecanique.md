@@ -19,7 +19,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <table>
 <tr>
 <td align="center" width="20%"><b>📚 12 modules</b><br><sub>144 pages de cours</sub></td>
-<td align="center" width="20%"><b>🎥 19 vidéos</b><br><sub>cours et ateliers TP</sub></td>
+<td align="center" width="20%"><b>🎥 18 vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%"><b>🔬 6 TP MATLAB</b><br><sub>6 corrigés en scripts</sub></td>
 <td align="center" width="20%"><b>📝 8 sujets d'examen</b><br><sub>archive en accès libre</sub></td>
 <td align="center" width="20%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · 11 TD</sub></td>
@@ -80,7 +80,13 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 
 **Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.
 
-> ⚡ **Mise à jour du Cycle GE — 25 nov. 2026** : le cours reste celui de la LST GM ; les **TD et TP** passent dans un contexte énergétique, **jusqu'au chapitre 2** pour l'instant. Ils apparaissent sous le repère ⚡ dans le [programme](#-programme-du-module), sous les supports communs.
+> ⚡ **Étudiants du Cycle GE : votre page est [ici](methodes-numeriques-ge.md).** Même cours et mêmes vidéos de cours ; TD, TP et jeux en contexte énergétique, **jusqu'au chapitre 2** pour l'instant (mise à jour du 25 nov. 2026).
+
+<div align="center">
+
+[![Page du Cycle GE](https://img.shields.io/badge/%E2%9A%A1%20Page%20du%20Cycle%20GE-Introduction%20aux%20m%C3%A9thodes%20num%C3%A9riques-E67E22?style=for-the-badge)](methodes-numeriques-ge.md)
+
+</div>
 
 #### Les TP de chaque parcours
 
@@ -114,7 +120,7 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 | **10** · Équation des ondes | Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit. |
 | **11** · Résolution numérique des équations différentielles ordinaires | Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas. |
 
-Le cours est commun ; les TD et TP GE déjà en ligne sont marqués ⚡ dans le programme.
+Le cours est commun ; les TD et TP GE déjà en ligne sont sur la [page du Cycle GE](methodes-numeriques-ge.md).
 
 </details>
 
@@ -154,9 +160,7 @@ Un ordinateur ne calcule jamais exactement : erreurs d'arrondi, normes vectoriel
 [![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view)
 
-<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>
-
-[![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/GE/3_TD01_GE_enonce.pdf)
+<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
 
 #### Module 02 · Systèmes linéaires : méthodes directes
 
@@ -170,12 +174,7 @@ Résolution de Ax = b en un nombre fini d'opérations — la brique de base de t
 [![▶ Vidéo TP1](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP1-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
 [![🎮 Jeux TP1 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP1%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp1/)
 
-<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>
-
-[![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/3_TD02_GE_enonce.pdf)
-[![⚡ TP1 GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TP1%20GE-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_enonce.pdf)
-[![✅ TP1 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP1%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_corrige_scripts_MATLAB.zip)
-[![▶ Vidéo GE TP1 · correction](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP1%20%C2%B7%20correction-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1QIeu_jGI170irAdK-mF8Z9z8fKToSlZc/view)
+<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
 
 #### Module 03 · Systèmes linéaires : méthodes itératives
 
