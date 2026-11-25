@@ -189,10 +189,46 @@ def bouton(typ, libelle, message, url):
     return "[![%s %s](%s)](%s)" % (libelle, message, image, url)
 
 
+# Supports propres au Cycle GE : le cours reste celui de la GM, seuls les TD et TP changent (contexte
+# energetique). Fichiers dans le sous-dossier GE/ de chaque chapitre, meme convention (3_ TD, 4_ TP,
+# « corrige » = corrige). Mise a jour du 25 nov. 2026 : jusqu'au chapitre 2 (TD01, TD02, TP1).
+GE = "GE"
+MAJ_GE = u"25 nov. 2026"   # date de la derniere mise a jour des supports GE
+VIDEOS_GE = {}   # cle = chapitre, valeur = liste de (TP, url) : videos GE sur Drive (compte UH2C)
+
+
+def fichiers_ge(num):
+    d = os.path.join(ROOT, B, CH[num][0], GE)
+    return sorted(os.listdir(d)) if os.path.isdir(d) else []
+
+
+def ressources_ge(num):
+    """Supports GE d'un module : TD, TP, corriges, videos (meme format que ressources)."""
+    d, out = CH[num][0], []
+    chemin = lambda f: "%s/%s/%s/%s" % (B, d, GE, f)
+    fs = fichiers_ge(num)
+    out += [("td", "⚡ TD GE", "énoncé", chemin(f)) for f in fs if f.startswith("3_") and "corrige" not in f.lower()]
+    out += [("tp", "⚡ %s GE" % f.split("_")[1], "énoncé", chemin(f))
+            for f in fs if f.startswith("4_") and "corrige" not in f.lower()]
+    out += [("corrige", "✅ %s GE" % f.split("_")[1], "corrigé MATLAB" if f.lower().endswith(".zip") else "corrigé",
+             chemin(f)) for f in fs if "corrige" in f.lower()]
+    out += [("video", "▶ Vidéo GE", tp, url) for tp, url in VIDEOS_GE.get(num, [])]
+    return out
+
+
+CHAPITRES_GE = [n for n in sorted(CH) if ressources_ge(n)]
+
+
 def module(num):
-    """Un module en clair : titre, description, puis un bouton par support (rien a deplier)."""
-    return "\n".join(["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
-                      "\n".join(bouton(*r) for r in ressources(num)), ""])
+    """Un module en clair : titre, description, puis un bouton par support (rien a deplier) ;
+    en dessous, les TD et TP propres au Cycle GE quand ils existent."""
+    lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
+              "\n".join(bouton(*r) for r in ressources(num)), ""]
+    ge = ressources_ge(num)
+    if ge:
+        lignes += [u"<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>", "",
+                   "\n".join(bouton(*r) for r in ge), ""]
+    return "\n".join(lignes)
 
 
 def section_jeux():
@@ -271,8 +307,8 @@ PROGRAMME_GE = [  # (module, applications en energetique)
  ("11", "Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas."),
 ]
 TP_PARCOURS = [  # (TP, methode, LST GM, Cycle GE)
- ("TP1", "Méthode directe : Gauss avec pivotage, conditionnement", "le banc d'amortisseurs",
-  "réseau thermique d'un bâtiment ou mur multicouche"),
+ ("TP1", "Méthode directe : Gauss avec pivotage, Gauss-Jordan", "le banc d'amortisseurs",
+  "réseau thermique d'un bâtiment à trois zones ⚡ en ligne"),
  ("TP2", "Méthodes itératives", "la paroi d'un four", "identique"),
  ("TP3", "Newton", "le système de pompage", "identique (pompage et Colebrook)"),
  ("TP4", "EDO non linéaire : Euler et Runge-Kutta", "le refroidissement d'une paroi de four", "identique"),
@@ -296,15 +332,22 @@ def deux_parcours():
            u"| **TP** | six : TP1 à TP6 | cinq : TP1 à TP5 |", u"",
            u"**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les "
            u"critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.\n"]
+    if CHAPITRES_GE:
+        out += [u"> ⚡ **Mise à jour du Cycle GE — %s** : le cours reste celui de la LST GM ; les **TD et TP** passent "
+                u"dans un contexte énergétique, **jusqu'au chapitre %d** pour l'instant. Ils apparaissent sous le "
+                u"repère ⚡ dans le [programme](#-programme-du-module), sous les supports communs.\n"
+                % (MAJ_GE, int(CHAPITRES_GE[-1]))]
     out += [u"#### Les TP de chaque parcours\n",
             u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
     out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
-    out += [u"", u"<sub>Les énoncés de TP en ligne sont communs aux deux parcours ; les versions énergétiques du TP1 et du "
-            u"TP5 sont prévues pour le GE.</sub>"]
+    tp_ge = sorted(set(f.split("_")[1] for n in CHAPITRES_GE for f in fichiers_ge(n) if f.startswith("4_")))
+    out += [u"", u"<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡)%s ; "
+            u"les autres versions énergétiques suivront.</sub>"
+            % ((u" : " + u", ".join(tp_ge)) if tp_ge else u"")]
     out += [u"", u"<details>", u"<summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>",
             u"<br/>\n", u"| Module | Applications en énergétique |", u"|---|---|"]
     out += [u"| **%s** · %s | %s |" % (n, CH[n][1], a) for n, a in PROGRAMME_GE]
-    out += [u"", u"Tous les TD restent disponibles pour les deux parcours.\n", u"</details>\n"]
+    out += [u"", u"Le cours est commun ; les TD et TP GE déjà en ligne sont marqués ⚡ dans le programme.\n", u"</details>\n"]
     return u"\n".join(out) + u"\n---\n\n"
 
 
@@ -483,7 +526,8 @@ cours/methodes-numeriques/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
-et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable). Le sous-dossier `GE/` d'un chapitre
+contient les TD et TP du Cycle GE (même convention, avec `GE` dans le nom).
 Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
 `examen_preparation_N_AAAA_AAAA.pdf`.
 

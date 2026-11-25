@@ -80,18 +80,20 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 
 **Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.
 
+> ⚡ **Mise à jour du Cycle GE — 25 nov. 2026** : le cours reste celui de la LST GM ; les **TD et TP** passent dans un contexte énergétique, **jusqu'au chapitre 2** pour l'instant. Ils apparaissent sous le repère ⚡ dans le [programme](#-programme-du-module), sous les supports communs.
+
 #### Les TP de chaque parcours
 
 | TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |
 |:-:|---|---|---|
-| **TP1** | Méthode directe : Gauss avec pivotage, conditionnement | le banc d'amortisseurs | réseau thermique d'un bâtiment ou mur multicouche |
+| **TP1** | Méthode directe : Gauss avec pivotage, Gauss-Jordan | le banc d'amortisseurs | réseau thermique d'un bâtiment à trois zones ⚡ en ligne |
 | **TP2** | Méthodes itératives | la paroi d'un four | identique |
 | **TP3** | Newton | le système de pompage | identique (pompage et Colebrook) |
 | **TP4** | EDO non linéaire : Euler et Runge-Kutta | le refroidissement d'une paroi de four | identique |
 | **TP5** | Poisson 2D | la salle de sport | champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes |
 | **TP6** | Système d'EDO | les attracteurs de Lorenz | — (pas de TP6) |
 
-<sub>Les énoncés de TP en ligne sont communs aux deux parcours ; les versions énergétiques du TP1 et du TP5 sont prévues pour le GE.</sub>
+<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡) : TP1 ; les autres versions énergétiques suivront.</sub>
 
 <details>
 <summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>
@@ -112,7 +114,7 @@ Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
 | **10** · Équation des ondes | Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit. |
 | **11** · Résolution numérique des équations différentielles ordinaires | Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas. |
 
-Tous les TD restent disponibles pour les deux parcours.
+Le cours est commun ; les TD et TP GE déjà en ligne sont marqués ⚡ dans le programme.
 
 </details>
 
@@ -152,6 +154,10 @@ Un ordinateur ne calcule jamais exactement : erreurs d'arrondi, normes vectoriel
 [![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view)
 
+<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>
+
+[![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/GE/3_TD01_GE_enonce.pdf)
+
 #### Module 02 · Systèmes linéaires : méthodes directes
 
 Résolution de Ax = b en un nombre fini d'opérations — la brique de base de tout calcul par éléments finis.
@@ -163,6 +169,12 @@ Résolution de Ax = b en un nombre fini d'opérations — la brique de base de t
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19rK9Xc4acZQ77KQnYxwGSc7pkNBj1MKc/view)
 [![▶ Vidéo TP1](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP1-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
 [![🎮 Jeux TP1 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP1%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp1/)
+
+<sub>⚡ <b>Cycle GE</b> : même cours ; TD et TP dans un contexte énergétique</sub>
+
+[![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/3_TD02_GE_enonce.pdf)
+[![⚡ TP1 GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TP1%20GE-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_enonce.pdf)
+[![✅ TP1 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP1%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_corrige_scripts_MATLAB.zip)
 
 #### Module 03 · Systèmes linéaires : méthodes itératives
 
@@ -395,7 +407,8 @@ cours/methodes-numeriques/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
-et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable). Le sous-dossier `GE/` d'un chapitre
+contient les TD et TP du Cycle GE (même convention, avec `GE` dans le nom).
 Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
 `examen_preparation_N_AAAA_AAAA.pdf`.
 
