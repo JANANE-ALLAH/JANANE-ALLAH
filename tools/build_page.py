@@ -679,6 +679,13 @@ JEUX_GE = {
    ("jeu-4", "Les messages d'erreur", "Huit vrais messages de MATLAB"),
    ("jeu-5", "Détective du code", "Les bugs silencieux et le résidu"),
   ])],
+ "03": [("TP2", "https://janane-allah.github.io/jeux/tp2-ge/", "la paroi d'une étuve (méthodes itératives)", [
+   ("jeu-1", "Jacobi contre Gauss-Seidel", "La course, ρ_GS = ρ_J², le flux de chaleur"),
+   ("jeu-2", "La paroi s'affine", "Le nombre d'itérations quand n augmente"),
+   ("jeu-3", "La chasse au ω*", "SOR, formule de Young, courbe asymétrique"),
+   ("jeu-4", "Incrément ou erreur ?", "Le critère d'arrêt et le facteur ρ/(1 − ρ)"),
+   ("jeu-5", "Détective du code", "Avertissements, ω périmé, étuve à l'envers"),
+  ])],
 }
 APPLI_GE = dict(PROGRAMME_GE)
 DERNIER_GE = CHAPITRES_GE[-1] if CHAPITRES_GE else None
@@ -732,7 +739,7 @@ par différences finies (conduction, convection), **équations différentielles 
 <td align="center" width="20%%"><b>📚 %(nb_ch)s modules</b><br><sub>%(nb_pages)s pages de cours</sub></td>
 <td align="center" width="20%%"><b>🎥 %(nb_videos)s vidéos</b><br><sub>cours et TP GE</sub></td>
 <td align="center" width="20%%"><b>⚡ %(nb_td)s TD · %(nb_tp)s TP GE</b><br><sub>jusqu'au chapitre %(dernier)s</sub></td>
-<td align="center" width="20%%"><b>🎮 %(nb_jeux)s jeux</b><br><sub>TP1 GE</sub></td>
+<td align="center" width="20%%"><b>🎮 %(nb_jeux)s jeux</b><br><sub>%(tp_jeux)s</sub></td>
 <td align="center" width="20%%"><b>⏱️ 48 h</b><br><sub>5 TP MATLAB</sub></td>
 </tr>
 </table>
@@ -835,7 +842,7 @@ Le polycopié réunit tout le cours ; ses TD et TP sont ceux de la LST GM : en G
 
 valeurs_ge = {
     "intitule_ge": INTITULE_GE, "ch0": ch0, "poly_bouton": poly_bouton_ge, "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES),
-    "nb_videos": str(NB_VIDEOS_GE), "nb_td": str(NB_TD_GE), "nb_tp": str(NB_TP_GE), "nb_jeux": str(NB_JEUX_GE),
+    "nb_videos": str(NB_VIDEOS_GE), "nb_td": str(NB_TD_GE), "nb_tp": str(NB_TP_GE), "nb_jeux": str(NB_JEUX_GE), "tp_jeux": " et ".join(j[0] for n in sorted(JEUX_GE) for j in JEUX_GE[n]) + " GE",
     "dernier": str(int(DERNIER_GE)) if DERNIER_GE else "0", "maj": MAJ_GE, "apprendre": apprendre,
     "programme": "\n".join(programme_ge), "jeux": section_jeux(JEUX_GE, "-ge"),
 }

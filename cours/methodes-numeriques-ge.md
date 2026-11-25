@@ -20,7 +20,7 @@ par différences finies (conduction, convection), **équations différentielles 
 <td align="center" width="20%"><b>📚 12 modules</b><br><sub>144 pages de cours</sub></td>
 <td align="center" width="20%"><b>🎥 14 vidéos</b><br><sub>cours et TP GE</sub></td>
 <td align="center" width="20%"><b>⚡ 3 TD · 2 TP GE</b><br><sub>jusqu'au chapitre 3</sub></td>
-<td align="center" width="20%"><b>🎮 5 jeux</b><br><sub>TP1 GE</sub></td>
+<td align="center" width="20%"><b>🎮 10 jeux</b><br><sub>TP1 et TP2 GE</sub></td>
 <td align="center" width="20%"><b>⏱️ 48 h</b><br><sub>5 TP MATLAB</sub></td>
 </tr>
 </table>
@@ -116,6 +116,7 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![⚡ TP2 GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TP2%20GE-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/4_TP2_GE_enonce.pdf)
 [![✅ TP2 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP2%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/GE/4_TP2_GE_corrige_scripts_MATLAB.zip)
 [![▶ Vidéo GE TP2 · programmation](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP2%20%C2%B7%20programmation-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1pxjMcqifEjZVbGEjYPjbjyaYpnnEdPBp/view)
+[![🎮 Jeux TP2 GE · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP2%20GE%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp2-ge/)
 
 #### Module 04 · Systèmes non linéaires
 
@@ -215,6 +216,21 @@ en direct par le code MATLAB du TP, porté ligne pour ligne en JavaScript : ce s
 <tr>
 <td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1-ge/#jeu-4"><img src="methodes-numeriques/images/jeux-tp1-ge/jeu-4.jpg" width="100%" alt="Jeu 4 : Les messages d'erreur"></a><br/><b>4 · Les messages d'erreur</b><br/><sub>Huit vrais messages de MATLAB</sub><br/><a href="https://janane-allah.github.io/jeux/tp1-ge/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
 <td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp1-ge/#jeu-5"><img src="methodes-numeriques/images/jeux-tp1-ge/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Les bugs silencieux et le résidu</sub><br/><a href="https://janane-allah.github.io/jeux/tp1-ge/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
+</tr>
+</table>
+
+### TP2 GE · Module 03 — la paroi d'une étuve (méthodes itératives)
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-1"><img src="methodes-numeriques/images/jeux-tp2-ge/jeu-1.jpg" width="100%" alt="Jeu 1 : Jacobi contre Gauss-Seidel"></a><br/><b>1 · Jacobi contre Gauss-Seidel</b><br/><sub>La course, ρ_GS = ρ_J², le flux de chaleur</sub><br/><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-1"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-2"><img src="methodes-numeriques/images/jeux-tp2-ge/jeu-2.jpg" width="100%" alt="Jeu 2 : La paroi s'affine"></a><br/><b>2 · La paroi s'affine</b><br/><sub>Le nombre d'itérations quand n augmente</sub><br/><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-2"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-3"><img src="methodes-numeriques/images/jeux-tp2-ge/jeu-3.jpg" width="100%" alt="Jeu 3 : La chasse au ω*"></a><br/><b>3 · La chasse au ω*</b><br/><sub>SOR, formule de Young, courbe asymétrique</sub><br/><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-3"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+</tr>
+<tr>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-4"><img src="methodes-numeriques/images/jeux-tp2-ge/jeu-4.jpg" width="100%" alt="Jeu 4 : Incrément ou erreur ?"></a><br/><b>4 · Incrément ou erreur ?</b><br/><sub>Le critère d'arrêt et le facteur ρ/(1 − ρ)</sub><br/><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-4"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
+<td width="33%" valign="top" align="center"><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-5"><img src="methodes-numeriques/images/jeux-tp2-ge/jeu-5.jpg" width="100%" alt="Jeu 5 : Détective du code"></a><br/><b>5 · Détective du code</b><br/><sub>Avertissements, ω périmé, étuve à l'envers</sub><br/><a href="https://janane-allah.github.io/jeux/tp2-ge/#jeu-5"><img src="https://img.shields.io/badge/%E2%96%B6%20Jouer-FFB300?style=for-the-badge" alt="Jouer"></a></td>
 <td width="33%" valign="top">🏆 <b>Comment jouer</b><br/><br/>💻📱 Sur ordinateur ou sur téléphone, sans installation ni compte.<br/><br/>⭐ Jusqu'à 3 étoiles par jeu ; la progression reste dans votre navigateur.<br/><br/>💡 Jouez <b>après</b> avoir lu l'énoncé et <b>avant</b> d'écrire votre code MATLAB.</td>
 </tr>
 </table>
