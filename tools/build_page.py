@@ -673,7 +673,8 @@ DERNIER_GE = CHAPITRES_GE[-1] if CHAPITRES_GE else None
 
 
 def module_ge(num):
-    """Module de la page GE : cours et video de cours communs, puis TD/TP/corriges/videos/jeux GE ou « a venir »."""
+    """Module de la page GE : cours et video de cours communs, puis TD/TP/corriges/videos/jeux GE s'ils existent
+    (rien d'autre au-dela du dernier chapitre GE : mention « a venir » retiree a la demande de l'enseignant, 25 nov.)."""
     res = [r for r in ressources(num) if r[0] == "cours"]
     if num in VIDEOS:
         res.append(("video", "▶ Vidéo", "cours", VIDEOS[num]))
@@ -682,8 +683,6 @@ def module_ge(num):
     if APPLI_GE.get(num):
         lignes += [u"<sub>⚡ En énergétique : %s</sub>" % APPLI_GE[num], ""]
     lignes += ["\n".join(bouton(*r) for r in res + ge), ""]
-    if num != "00" and not ge:
-        lignes += [u"<sub>⏳ TD et TP en version GE : à venir.</sub>", ""]
     return "\n".join(lignes)
 
 

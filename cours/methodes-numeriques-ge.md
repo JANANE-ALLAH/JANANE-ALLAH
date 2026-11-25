@@ -113,8 +113,6 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![📄 Cours 12 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-12%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_03_Systemes_lineaires_iteratifs/1_Cours_chapitre_03.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
 
-<sub>⏳ TD et TP en version GE : à venir.</sub>
-
 #### Module 04 · Systèmes non linéaires
 
 Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge quadratiques, ressort durcissant, grandes déformations.
@@ -123,8 +121,6 @@ Résoudre F(x) = 0 quand la physique cesse d'être linéaire : pertes de charge 
 
 [![📄 Cours 18 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-18%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_04_Systemes_non_lineaires/1_Cours_chapitre_04.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/125--JQ7p31u2xEMZVsSO3x2MCeXNOXYA/view)
-
-<sub>⏳ TD et TP en version GE : à venir.</sub>
 
 ### 🌡️ Partie II — EDP et différences finies
 
@@ -139,8 +135,6 @@ L'inconnue n'est plus un vecteur mais un champ. Classification elliptique / para
 [![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_05_Generalites_EDP/1_Cours_chapitre_05.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1wxEG6bzlLQPGz-evjzRmrmuqnVQsqqgs/view)
 
-<sub>⏳ TD et TP en version GE : à venir.</sub>
-
 #### Module 06 · Principe de la méthode des différences finies
 
 L'étape décisive : remplacer les dérivées, objets continus, par des quantités calculables sur ordinateur.
@@ -149,8 +143,6 @@ L'étape décisive : remplacer les dérivées, objets continus, par des quantit�
 
 [![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_06_Principe_differences_finies/1_Cours_chapitre_06.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1F-IuYtpVuRNhaj7w13zxnSUldtZj1PoB/view)
-
-<sub>⏳ TD et TP en version GE : à venir.</sub>
 
 #### Module 07 · Consistance, stabilité, convergence
 
@@ -161,8 +153,6 @@ Pourquoi un schéma parfaitement construit sur le papier peut produire des résu
 [![📄 Cours 10 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-10%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_07_Consistance_stabilite_convergence/1_Cours_chapitre_07.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1AT_64YZW3ebVt21abcGkxcZUoLHFnnkg/view)
 
-<sub>⏳ TD et TP en version GE : à venir.</sub>
-
 #### Module 08 · Équation de la chaleur
 
 Un problème physique résolu de bout en bout : la paroi de four en régime transitoire, de l'état initial jusqu'à l'équilibre.
@@ -171,8 +161,6 @@ Un problème physique résolu de bout en bout : la paroi de four en régime tran
 
 [![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_08_Equation_chaleur/1_Cours_chapitre_08.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/18wNa17e4CPXprrvWbSh1HTMUlAU2F5dD/view)
-
-<sub>⏳ TD et TP en version GE : à venir.</sub>
 
 #### Module 09 · Équation de Laplace-Poisson et advection-diffusion
 
@@ -183,8 +171,6 @@ Discrétisation 2D complète (Dirichlet puis Neumann), validation sur un cas tes
 [![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_09_Laplace_Poisson_advection/1_Cours_chapitre_09.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1YinQ_oHGrndBm2nsGVBWTBDI62pUBbBE/view)
 
-<sub>⏳ TD et TP en version GE : à venir.</sub>
-
 #### Module 10 · Équation des ondes
 
 La corde vibrante et sa condition de stabilité — la condition CFL, avec son interprétation géométrique remarquable.
@@ -193,8 +179,6 @@ La corde vibrante et sa condition de stabilité — la condition CFL, avec son i
 
 [![📄 Cours 11 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-11%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_10_Equation_ondes/1_Cours_chapitre_10.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1IQh3d69BFptw47AmVj_zgeMaxRPnpFTB/view)
-
-<sub>⏳ TD et TP en version GE : à venir.</sub>
 
 ### 📈 Partie III — Équations différentielles ordinaires
 
@@ -208,8 +192,6 @@ L'évolution temporelle des systèmes à nombre fini de degrés de liberté : os
 
 [![📄 Cours 14 pages](https://img.shields.io/badge/%F0%9F%93%84%20Cours-14%20pages-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_11_EDO_Euler_Runge_Kutta/1_Cours_chapitre_11.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1OZqZkwXP--N1ZcmgipRbnzRsleo4AnD8/view)
-
-<sub>⏳ TD et TP en version GE : à venir.</sub>
 
 ---
 
