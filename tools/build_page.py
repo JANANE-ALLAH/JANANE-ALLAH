@@ -194,7 +194,12 @@ def bouton(typ, libelle, message, url):
 # « corrige » = corrige). Mise a jour du 25 nov. 2026 : jusqu'au chapitre 2 (TD01, TD02, TP1).
 GE = "GE"
 MAJ_GE = u"25 nov. 2026"   # date de la derniere mise a jour des supports GE
-VIDEOS_GE = {}   # cle = chapitre, valeur = liste de (TP, url) : videos GE sur Drive (compte UH2C)
+# Videos GE sur Drive : cle = chapitre, valeur = liste de (TP, url[, description]).
+# TP1 GE (25 nov. 2026) : publiee a la demande explicite de l'enseignant alors qu'elle etait ouverte a toute
+# personne ayant le lien et telechargeable (non conforme a la regle UH2C) ; partage a corriger dans Drive.
+VIDEOS_GE = {
+ "02": [("TP1", "https://drive.google.com/file/d/1QIeu_jGI170irAdK-mF8Z9z8fKToSlZc/view", "correction")],
+}
 
 
 def fichiers_ge(num):
@@ -212,7 +217,7 @@ def ressources_ge(num):
             for f in fs if f.startswith("4_") and "corrige" not in f.lower()]
     out += [("corrige", "✅ %s GE" % f.split("_")[1], "corrigé MATLAB" if f.lower().endswith(".zip") else "corrigé",
              chemin(f)) for f in fs if "corrige" in f.lower()]
-    out += [("video", "▶ Vidéo GE", tp, url) for tp, url in VIDEOS_GE.get(num, [])]
+    out += [("video", "▶ Vidéo GE", t[0] + (" · " + t[2] if len(t) > 2 else ""), t[1]) for t in VIDEOS_GE.get(num, [])]
     return out
 
 
@@ -273,7 +278,7 @@ NB_PAGES = sum(c[2] for c in CH.values())
 NB_TD = sum(1 for n in CH for f in fichiers(n) if f.startswith("3_") and "corrige" not in f.lower())
 NB_TP = sum(1 for n in CH for f in fichiers(n) if f.startswith("4_") and "corrige" not in f.lower())
 NB_CORRIGES = sum(1 for n in CH for f in fichiers(n) if "corrige" in f.lower())
-NB_VIDEOS = len(VIDEOS) + sum(len(videos_tp(n)) for n in CH)
+NB_VIDEOS = len(VIDEOS) + sum(len(videos_tp(n)) for n in CH) + sum(len(v) for v in VIDEOS_GE.values())
 
 # Ce que vous apprendrez, competences (etiquettes), questions frequentes
 APPRENDRE = [

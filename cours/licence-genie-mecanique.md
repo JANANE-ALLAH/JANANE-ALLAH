@@ -19,7 +19,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <table>
 <tr>
 <td align="center" width="20%"><b>📚 12 modules</b><br><sub>144 pages de cours</sub></td>
-<td align="center" width="20%"><b>🎥 18 vidéos</b><br><sub>cours et ateliers TP</sub></td>
+<td align="center" width="20%"><b>🎥 19 vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%"><b>🔬 6 TP MATLAB</b><br><sub>6 corrigés en scripts</sub></td>
 <td align="center" width="20%"><b>📝 8 sujets d'examen</b><br><sub>archive en accès libre</sub></td>
 <td align="center" width="20%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · 11 TD</sub></td>
@@ -175,6 +175,7 @@ Résolution de Ax = b en un nombre fini d'opérations — la brique de base de t
 [![⚡ TD GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TD%20GE-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/3_TD02_GE_enonce.pdf)
 [![⚡ TP1 GE énoncé](https://img.shields.io/badge/%E2%9A%A1%20TP1%20GE-%C3%A9nonc%C3%A9-C1121F?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_enonce.pdf)
 [![✅ TP1 GE corrigé MATLAB](https://img.shields.io/badge/%E2%9C%85%20TP1%20GE-corrig%C3%A9%20MATLAB-2E7D32?style=for-the-badge)](methodes-numeriques/Chapitre_02_Systemes_lineaires_directs/GE/4_TP1_GE_corrige_scripts_MATLAB.zip)
+[![▶ Vidéo GE TP1 · correction](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o%20GE-TP1%20%C2%B7%20correction-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1QIeu_jGI170irAdK-mF8Z9z8fKToSlZc/view)
 
 #### Module 03 · Systèmes linéaires : méthodes itératives
 
