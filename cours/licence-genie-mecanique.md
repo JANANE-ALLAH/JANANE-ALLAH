@@ -11,7 +11,7 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 **équations différentielles ordinaires**.
 
 [![Commencer](https://img.shields.io/badge/▶_Commencer_le_cours-Chapitre_0-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf)
-[![Polycopié complet](https://img.shields.io/badge/%F0%9F%93%98%20Polycopi%C3%A9%20complet-203%20pages%20%C2%B7%20PDF-2E7D32?style=for-the-badge)](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques.pdf)
+[![Polycopié complet](https://img.shields.io/badge/%F0%9F%93%98%20Polycopi%C3%A9%20complet-203%20pages%20%C2%B7%20PDF-2E7D32?style=for-the-badge)](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GM.pdf)
 [![Vidéo d'accroche](https://img.shields.io/badge/🎬_Pourquoi_ce_module_%3F-Vidéo_d'accroche-C1121F?style=for-the-badge)](https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view)
 
 <sub>🎓 Conçu pour les étudiants de la FSTM — Université Hassan II de Casablanca · 🔒 vidéos accessibles avec le compte universitaire UH2C</sub>
@@ -128,7 +128,7 @@ Le cours est commun ; les TD et TP GE déjà en ligne sont sur la [page du Cycle
 
 ## 📚 Programme du module
 
-> 📘 **Tout le module en un seul PDF** : [le polycopié](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques.pdf) (203 pages) réunit l'introduction, les onze chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD et de ses TP). Il sert aux deux parcours, LST GM et Cycle GE.
+> 📘 **Tout le module en un seul PDF** : [le polycopié](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GM.pdf) (203 pages) réunit l'introduction, les onze chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD et de ses TP). C'est la version LST Génie Mécanique ; le Cycle GE a [son polycopié](methodes-numeriques-ge.md).
 
 Il y a **12 modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
@@ -360,7 +360,7 @@ métier d'ingénieur mécanicien.
 <summary><b>Quels supports puis-je télécharger ?</b></summary>
 <br/>
 
-Tous les PDF — [polycopié complet](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques.pdf), cours, TD, énoncés de TP, sujets d'examen — et les **corrigés de TP** (scripts MATLAB, en zip)
+Tous les PDF — [polycopié complet](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GM.pdf), cours, TD, énoncés de TP, sujets d'examen — et les **corrigés de TP** (scripts MATLAB, en zip)
 sont en accès libre sur cette page. Les vidéos se regardent en ligne, avec le compte universitaire.
 
 </details>

@@ -11,7 +11,7 @@ Résoudre sur ordinateur les problèmes de l'énergétique qu'on ne sait pas ré
 par différences finies (conduction, convection), **équations différentielles ordinaires** (dynamique thermique).
 
 [![Commencer](https://img.shields.io/badge/▶_Commencer_le_cours-Chapitre_0-0056D2?style=for-the-badge)](methodes-numeriques/Chapitre_00_Introduction_generale/1_Cours_chapitre_00.pdf)
-[![Polycopié du cours](https://img.shields.io/badge/%F0%9F%93%98%20Polycopi%C3%A9%20du%20cours-203%20pages%20%C2%B7%20PDF-2E7D32?style=for-the-badge)](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques.pdf)
+[![Polycopié du cours](https://img.shields.io/badge/%F0%9F%93%98%20Polycopi%C3%A9%20du%20cours-200%20pages%20%C2%B7%20PDF-2E7D32?style=for-the-badge)](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GE.pdf)
 
 <sub>🎓 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (GE) — FSTM, Université Hassan II de Casablanca · 🔒 vidéos accessibles avec le compte universitaire UH2C</sub>
 
@@ -270,7 +270,8 @@ que vous êtes bien inscrit au module, écrivez-moi.
 <br/>
 
 Les PDF du cours, les énoncés des TD et TP GE et les corrigés de TP (scripts MATLAB, en zip) sont en accès libre.
-Le polycopié réunit tout le cours ; ses TD et TP sont ceux de la LST GM : en GE, utilisez les énoncés ⚡ de cette page.
+Le [polycopié du Cycle GE](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GE.pdf) réunit tout le cours et les TP1 à TP5 ;
+le contexte de ses TD et TP est celui de la LST GM : en GE, utilisez les énoncés ⚡ de cette page.
 
 </details>
 

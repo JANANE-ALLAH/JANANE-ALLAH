@@ -71,14 +71,16 @@ VIDEOS_TP = {
 # Video d accroche, hors chapitres : montre a quoi sert le calcul numerique.
 MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/view"
 
-# Polycopie complet (cours, TD et TP du module en un seul PDF), publie le 23 nov. 2026. Version publique :
-# le detail des heures (p. 13-14 : cours/TD/TP par filiere et par partie) y est masque a la demande de
-# l'enseignant ; seuls restent 60 h / 48 h. L'original (Chapitres/Polycopie_MN.pdf) reste chez lui.
-POLY = "Polycopie/Polycopie_Methodes_Numeriques.pdf"
+# Polycopies (cours, TD et TP du module en un seul PDF) : un par filiere depuis le 26 nov. 2026, chacun sur sa page.
+# Versions publiques (compiler_polycopie.py public) : la repartition des heures cours/TD/TP y est masquee a la demande
+# de l'enseignant ; seuls restent 60 h / 48 h. L'ancien polycopie commun (Polycopie_Methodes_Numeriques.pdf, 23 nov.)
+# reste dans le dossier mais n'est plus lie par les pages.
+POLY = "Polycopie/Polycopie_Methodes_Numeriques_GM.pdf"
+POLY_GE = "Polycopie/Polycopie_Methodes_Numeriques_GE.pdf"
 
 
-def poly_pages():
-    chemin = os.path.join(ROOT, B, POLY)
+def poly_pages(fichier=POLY):
+    chemin = os.path.join(ROOT, B, fichier)
     if not os.path.isfile(chemin):
         return 0
     try:
@@ -644,7 +646,8 @@ if NB_POLY:
                    % (_q(u"📘 Polycopié complet", safe=""), _q(u"%d pages · PDF" % NB_POLY, safe=""), _lien_poly))
     poly_texte = (u"> 📘 **Tout le module en un seul PDF** : [le polycopié](%s) (%d pages) réunit l'introduction, les onze "
                   u"chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD "
-                  u"et de ses TP). Il sert aux deux parcours, LST GM et Cycle GE.\n\n" % (_lien_poly, NB_POLY))
+                  u"et de ses TP). C'est la version LST Génie Mécanique ; le Cycle GE a [son polycopié](%s).\n\n"
+                  % (_lien_poly, NB_POLY, PAGE_GE))
     poly_faq = u"[polycopié complet](%s), " % _lien_poly
 else:
     poly_bouton = poly_texte = poly_faq = ""
@@ -715,8 +718,9 @@ NB_TD_GE = sum(1 for n in CH for f in fichiers_ge(n) if f.startswith("3_") and "
 NB_TP_GE = sum(1 for n in CH for f in fichiers_ge(n) if f.startswith("4_") and "corrige" not in f.lower())
 NB_VIDEOS_GE = len(VIDEOS) + sum(len(v) for v in VIDEOS_GE.values())
 NB_JEUX_GE = sum(len(j[3]) for n in JEUX_GE for j in JEUX_GE[n])
+NB_POLY_GE = poly_pages(POLY_GE)
 poly_bouton_ge = (u"[![Polycopié du cours](https://img.shields.io/badge/%s-%s-2E7D32?style=for-the-badge)](%s/%s)\n"
-                  % (quote(u"📘 Polycopié du cours", safe=""), quote(u"%d pages · PDF" % NB_POLY, safe=""), B, POLY)) if NB_POLY else ""
+                  % (quote(u"📘 Polycopié du cours", safe=""), quote(u"%d pages · PDF" % NB_POLY_GE, safe=""), B, POLY_GE)) if NB_POLY_GE else ""
 
 TPL_GE = u"""[⬅ Profil](../README.md) › Enseignement › **%(intitule_ge)s** · Cycle d'Ingénieur GE
 
@@ -823,7 +827,8 @@ que vous êtes bien inscrit au module, écrivez-moi.
 <br/>
 
 Les PDF du cours, les énoncés des TD et TP GE et les corrigés de TP (scripts MATLAB, en zip) sont en accès libre.
-Le polycopié réunit tout le cours ; ses TD et TP sont ceux de la LST GM : en GE, utilisez les énoncés ⚡ de cette page.
+Le [polycopié du Cycle GE](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GE.pdf) réunit tout le cours et les TP1 à TP5 ;
+le contexte de ses TD et TP est celui de la LST GM : en GE, utilisez les énoncés ⚡ de cette page.
 
 </details>
 
