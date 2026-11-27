@@ -1,8 +1,8 @@
-[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques**
+[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques pour la mécanique** · LST Génie Mécanique
 
 <div align="center">
 
-<img src="methodes-numeriques/images/banniere-gm-ge.jpg" alt="Méthodes numériques — LST Génie Mécanique : Méthodes numériques pour la mécanique ; 1re année du Cycle d'Ingénieur Génie Énergétique : Introduction aux méthodes numériques — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%" />
+<img src="methodes-numeriques/images/banniere-gm.jpg" alt="Méthodes numériques pour la mécanique — LST Génie Mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%" />
 
 <br/>
 
@@ -22,11 +22,11 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <td align="center" width="20%"><b>🎥 18 vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%"><b>🔬 6 TP MATLAB</b><br><sub>6 corrigés en scripts</sub></td>
 <td align="center" width="20%"><b>📝 8 sujets d'examen</b><br><sub>archive en accès libre</sub></td>
-<td align="center" width="20%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · 11 TD</sub></td>
+<td align="center" width="20%"><b>⏱️ 60 heures</b><br><sub>11 TD · en français</sub></td>
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**GM / GE**](#-deux-parcours--gm-et-ge) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -64,71 +64,13 @@ finies, et **équations différentielles ordinaires**.
 
 | 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
 |---|---|---|---|---|
-| LST Génie Mécanique (*Méthodes numériques pour la mécanique*) · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (*Introduction aux méthodes numériques*), FSTM | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
-
----
-
-## 🎓 Deux parcours : GM et GE
-
-Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :
-
-| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |
-|---|---|---|
-| **Intitulé du module** | **Méthodes numériques pour la mécanique** | **Introduction aux méthodes numériques** |
-| **Volume** | 60 h | 48 h |
-| **TP** | six : TP1 à TP6 | cinq : TP1 à TP5 |
-
-**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.
-
-> ⚡ **Étudiants du Cycle GE : votre page est [ici](methodes-numeriques-ge.md).** Même cours et mêmes vidéos de cours ; TD, TP et jeux en contexte énergétique, **jusqu'au chapitre 3** pour l'instant (mise à jour du 25 nov. 2026).
-
-<div align="center">
-
-[![Page du Cycle GE](https://img.shields.io/badge/%E2%9A%A1%20Page%20du%20Cycle%20GE-Introduction%20aux%20m%C3%A9thodes%20num%C3%A9riques-E67E22?style=for-the-badge)](methodes-numeriques-ge.md)
-
-</div>
-
-#### Les TP de chaque parcours
-
-| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |
-|:-:|---|---|---|
-| **TP1** | Méthode directe : Gauss avec pivotage, Gauss-Jordan | le banc d'amortisseurs | réseau thermique d'un bâtiment à trois zones ⚡ en ligne |
-| **TP2** | Méthodes itératives : Jacobi, Gauss-Seidel, SOR | la paroi d'un four | la paroi d'une étuve industrielle ⚡ en ligne |
-| **TP3** | Newton | le système de pompage | identique (pompage et Colebrook) |
-| **TP4** | EDO non linéaire : Euler et Runge-Kutta | le refroidissement d'une paroi de four | identique |
-| **TP5** | Poisson 2D | la salle de sport | champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes |
-| **TP6** | Système d'EDO | les attracteurs de Lorenz | — (pas de TP6) |
-
-<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡) : TP1, TP2 ; les autres versions énergétiques suivront.</sub>
-
-<details>
-<summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>
-<br/>
-
-| Module | Applications en énergétique |
-|---|---|
-| **00** · Introduction générale | Quatre cas chiffrés : pompage, solaire, four, réseau. |
-| **01** · Rappels numériques : erreurs, normes et conditionnement | Bilans d'énergie et rendements : soustraction de grandeurs voisines, arrondi, conditionnement d'un bilan thermique. |
-| **02** · Systèmes linéaires : méthodes directes | Réseau thermique nodal d'un bâtiment multizone ; réseau hydraulique maillé. |
-| **03** · Systèmes linéaires : méthodes itératives | Conduction 2D dans un four ou une plaque : grands systèmes creux (Jacobi, Gauss-Seidel, SOR). |
-| **04** · Systèmes non linéaires | Colebrook (pertes de charge), bilan radiatif en T⁴, point de fonctionnement pompe-réseau : Newton. |
-| **05** · Généralités sur les EDP en mécanique et classification | Chaleur, convection-diffusion, Poisson, ondes : un phénomène énergétique pour chaque type d'EDP. |
-| **06** · Principe de la méthode des différences finies | Paroi de four (fil rouge), ailette : de l'équation au système A T = b. |
-| **07** · Consistance, stabilité, convergence | Seuil r ≤ 1/2 sur la paroi réfractaire ; CFL pour le transport de chaleur par un fluide. |
-| **08** · Équation de la chaleur | Paroi, ailette, stockage thermique ; schémas explicite, implicite, θ. |
-| **09** · Équation de Laplace-Poisson et advection-diffusion | Champ de température d'un bâtiment (2D) ; échangeur et nombre de Péclet. |
-| **10** · Équation des ondes | Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit. |
-| **11** · Résolution numérique des équations différentielles ordinaires | Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas. |
-
-Le cours est commun ; les TD et TP GE déjà en ligne sont sur la [page du Cycle GE](methodes-numeriques-ge.md).
-
-</details>
+| LST Génie Mécanique, FSTM | 60 h · 6 TP MATLAB (TP1 à TP6) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
 ## 📚 Programme du module
 
-> 📘 **Tout le module en un seul PDF** : [le polycopié](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GM.pdf) (203 pages) réunit l'introduction, les onze chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD et de ses TP). C'est la version LST Génie Mécanique ; le Cycle GE a [son polycopié](methodes-numeriques-ge.md).
+> 📘 **Tout le module en un seul PDF** : [le polycopié](methodes-numeriques/Polycopie/Polycopie_Methodes_Numeriques_GM.pdf) (203 pages) réunit l'introduction, les onze chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD et de ses TP).
 
 Il y a **12 modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
@@ -160,8 +102,6 @@ Un ordinateur ne calcule jamais exactement : erreurs d'arrondi, normes vectoriel
 [![📝 TD énoncé](https://img.shields.io/badge/%F0%9F%93%9D%20TD-%C3%A9nonc%C3%A9-6A4C93?style=for-the-badge)](methodes-numeriques/Chapitre_01_Rappels_numeriques/3_TD01_enonce.pdf)
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/13uDHLzPXsp9XpujDGj60SXAgyNtyW84X/view)
 
-<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
-
 #### Module 02 · Systèmes linéaires : méthodes directes
 
 Résolution de Ax = b en un nombre fini d'opérations — la brique de base de tout calcul par éléments finis.
@@ -174,8 +114,6 @@ Résolution de Ax = b en un nombre fini d'opérations — la brique de base de t
 [![▶ Vidéo TP1](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP1-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1kmhqkhzH1HCGq9E5eakniAzW5kthOiE-/view)
 [![🎮 Jeux TP1 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP1%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp1/)
 
-<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
-
 #### Module 03 · Systèmes linéaires : méthodes itératives
 
 Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination de Gauss coûte trop cher et détruit le caractère creux (fill-in).
@@ -187,8 +125,6 @@ Pour les grands systèmes creux issus d'un maillage fin, là où l'élimination 
 [![▶ Vidéo cours](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-cours-E67E22?style=for-the-badge)](https://drive.google.com/file/d/19Q7Vj94XDHRTuFz_X4l-3xFFBQQcJwZI/view)
 [![▶ Vidéo TP2](https://img.shields.io/badge/%E2%96%B6%20Vid%C3%A9o-TP2-E67E22?style=for-the-badge)](https://drive.google.com/file/d/1dw82htm3bDXOKr3v-Jziv230Bs23vpe0/view)
 [![🎮 Jeux TP2 · 5 jeux](https://img.shields.io/badge/%F0%9F%8E%AE%20Jeux-TP2%20%C2%B7%205%20jeux-FFB300?style=for-the-badge)](https://janane-allah.github.io/jeux/tp2/)
-
-<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la [page du Cycle GE](methodes-numeriques-ge.md).</sub>
 
 #### Module 04 · Systèmes non linéaires
 
@@ -335,11 +271,8 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 <summary><b>À qui s'adresse ce module ?</b></summary>
 <br/>
 
-Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
-d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
-Il s'intitule *Méthodes numériques pour la mécanique* en LST GM et *Introduction aux méthodes numériques* en Cycle GE.
-Changent aussi les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
-([détail des deux parcours](#-deux-parcours--gm-et-ge)).
+Aux étudiants de la **LST Génie Mécanique** de la FSTM — Université Hassan II de Casablanca. Le module
+*Méthodes numériques pour la mécanique* compte 60 heures : cours, TD et six TP MATLAB (TP1 à TP6).
 
 </details>
 
@@ -409,8 +342,7 @@ cours/methodes-numeriques/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
-et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable). Le sous-dossier `GE/` d'un chapitre
-contient les TD et TP du Cycle GE (même convention, avec `GE` dans le nom).
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
 Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
 `examen_preparation_N_AAAA_AAAA.pdf`.
 

@@ -241,17 +241,10 @@ PAGE_GE = "methodes-numeriques-ge.md"
 
 
 def module(num):
-    """Un module en clair : titre, description, puis un bouton par support (rien a deplier) ;
-    quand le module a des TD/TP propres au GE, un renvoi vers la page du Cycle GE."""
-    lignes = ["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
-              "\n".join(bouton(*r) for r in ressources(num)), ""]
-    if enonces_ge(num):
-        lignes += [u"<sub>⚡ <b>Cycle GE</b> : les TD et TP de ce module existent en version énergétique sur la "
-                   u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
-    elif ressources_ge(num):
-        lignes += [u"<sub>⚡ <b>Cycle GE</b> : des supports de TP propres au GE (vidéo, corrigé) sont sur la "
-                   u"[page du Cycle GE](%s).</sub>" % PAGE_GE, ""]
-    return "\n".join(lignes)
+    """Un module de la page LST GM : titre, description, puis un bouton par support (rien a deplier).
+    Depuis le 27 nov. 2026, la page LST GM ne parle que de la GM (le Cycle GE a sa propre page)."""
+    return "\n".join(["#### Module %s · %s" % (num, CH[num][1]), "", CH[num][3], "",
+                      "\n".join(bouton(*r) for r in ressources(num)), ""])
 
 
 def section_jeux(jeux=None, suffixe=""):
@@ -331,50 +324,9 @@ PROGRAMME_GE = [  # (module, applications en energetique)
  ("10", "Vibrations de tuyauteries et d'aubes ; acoustique d'un conduit."),
  ("11", "Dynamique thermique d'un four ou d'un ballon de stockage ; raideur et choix du pas."),
 ]
-TP_PARCOURS = [  # (TP, methode, LST GM, Cycle GE)
- ("TP1", "Méthode directe : Gauss avec pivotage, Gauss-Jordan", "le banc d'amortisseurs",
-  "réseau thermique d'un bâtiment à trois zones ⚡ en ligne"),
- ("TP2", "Méthodes itératives : Jacobi, Gauss-Seidel, SOR", "la paroi d'un four", "la paroi d'une étuve industrielle ⚡ en ligne"),
- ("TP3", "Newton", "le système de pompage", "identique (pompage et Colebrook)"),
- ("TP4", "EDO non linéaire : Euler et Runge-Kutta", "le refroidissement d'une paroi de four", "identique"),
- ("TP5", "Poisson 2D", "la salle de sport", "champ de température d'une salle ou d'un bâtiment, conditions aux limites mixtes"),
- ("TP6", "Système d'EDO", "les attracteurs de Lorenz", "— (pas de TP6)"),
-]
-
-
 # Intitule du module dans chaque filiere (demande de l'enseignant, 16 nov. 2026).
 INTITULE_GM = u"Méthodes numériques pour la mécanique"
 INTITULE_GE = u"Introduction aux méthodes numériques"
-
-
-def deux_parcours():
-    """Section « Deux parcours : GM et GE » : intitules, TP compares, applications du GE module par module."""
-    out = [u"## 🎓 Deux parcours : GM et GE\n",
-           u"Le module est suivi par deux publics de la FSTM, chacun avec son intitulé :\n",
-           u"| | 🔧 LST Génie Mécanique | ⚡ Cycle d'Ingénieur GE, 1ʳᵉ année |", u"|---|---|---|",
-           u"| **Intitulé du module** | **%s** | **%s** |" % (INTITULE_GM, INTITULE_GE),
-           u"| **Volume** | 60 h | 48 h |",
-           u"| **TP** | six : TP1 à TP6 | cinq : TP1 à TP5 |", u"",
-           u"**Le contenu scientifique est le même** : les douze modules, les démonstrations, les méthodes et les "
-           u"critères de validation. En Cycle GE, les exemples sont tirés de l'énergétique.\n"]
-    if CHAPITRES_GE:
-        out += [u"> ⚡ **Étudiants du Cycle GE : votre page est [ici](%s).** Même cours et mêmes vidéos de cours ; "
-                u"TD, TP et jeux en contexte énergétique, **jusqu'au chapitre %d** pour l'instant (mise à jour du %s).\n"
-                % (PAGE_GE, int(CHAPITRES_GE[-1]), MAJ_GE),
-                u'<div align="center">\n\n[![Page du Cycle GE](https://img.shields.io/badge/%s-%s-E67E22?style=for-the-badge)](%s)\n\n</div>\n'
-                % (quote(u"⚡ Page du Cycle GE", safe=""), quote(INTITULE_GE, safe=""), PAGE_GE)]
-    out += [u"#### Les TP de chaque parcours\n",
-            u"| TP | Méthode | 🔧 LST GM | ⚡ Cycle GE |", u"|:-:|---|---|---|"]
-    out += [u"| **%s** | %s | %s | %s |" % t for t in TP_PARCOURS]
-    tp_ge = sorted(set(f.split("_")[1] for n in CHAPITRES_GE for f in enonces_ge(n) if f.startswith("4_")))
-    out += [u"", u"<sub>Les énoncés de TP sont communs aux deux parcours, sauf ceux qui ont leur version GE (⚡)%s ; "
-            u"les autres versions énergétiques suivront.</sub>"
-            % ((u" : " + u", ".join(tp_ge)) if tp_ge else u"")]
-    out += [u"", u"<details>", u"<summary><b>⚡ Le Cycle GE, module par module : les applications en énergétique</b></summary>",
-            u"<br/>\n", u"| Module | Applications en énergétique |", u"|---|---|"]
-    out += [u"| **%s** · %s | %s |" % (n, CH[n][1], a) for n, a in PROGRAMME_GE]
-    out += [u"", u"Le cours est commun ; les TD et TP GE déjà en ligne sont sur la [page du Cycle GE](%s).\n" % PAGE_GE, u"</details>\n"]
-    return u"\n".join(out) + u"\n---\n\n"
 
 
 def etiquette(texte):
@@ -387,11 +339,11 @@ apprendre = "<table>\n%s\n</table>" % "\n".join(
     "<tr>%s</tr>" % "".join('<td width="50%%" valign="top">✔️ %s</td>' % a.replace("**", "") for a in APPRENDRE[k:k + 2])
     for k in range(0, len(APPRENDRE), 2))
 
-TPL = u"""[⬅ Profil](../README.md) › Enseignement › **Méthodes numériques**
+TPL = u"""[⬅ Profil](../README.md) › Enseignement › **%(intitule_gm)s** · LST Génie Mécanique
 
 <div align="center">
 
-<img src="methodes-numeriques/images/banniere-gm-ge.jpg" alt="Méthodes numériques — LST Génie Mécanique : %(intitule_gm)s ; 1re année du Cycle d'Ingénieur Génie Énergétique : %(intitule_ge)s — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
+<img src="methodes-numeriques/images/banniere-gm.jpg" alt="%(intitule_gm)s — LST Génie Mécanique — FSTM, Université Hassan II de Casablanca — Pr. Mohamed JANANE ALLAH" width="100%%" />
 
 <br/>
 
@@ -410,11 +362,11 @@ Résoudre sur ordinateur les problèmes que la mécanique ne sait pas résoudre 
 <td align="center" width="20%%"><b>🎥 %(nb_videos)s vidéos</b><br><sub>cours et ateliers TP</sub></td>
 <td align="center" width="20%%"><b>🔬 %(nb_tp)s TP MATLAB</b><br><sub>%(nb_corriges)s corrigés en scripts</sub></td>
 <td align="center" width="20%%"><b>📝 %(nb_exam)s sujets d'examen</b><br><sub>archive en accès libre</sub></td>
-<td align="center" width="20%%"><b>⏱️ 60 h · 48 h</b><br><sub>LST GM · Cycle GE · %(nb_td)s TD</sub></td>
+<td align="center" width="20%%"><b>⏱️ 60 heures</b><br><sub>%(nb_td)s TD · en français</sub></td>
 </tr>
 </table>
 
-[**À propos**](#-à-propos) · [**GM / GE**](#-deux-parcours--gm-et-ge) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
+[**À propos**](#-à-propos) · [**Programme**](#-programme-du-module) · [**Examens**](#-examens) · [**Enseignant**](#-enseignant) · [**Questions fréquentes**](#-questions-fréquentes) · [**🎮 Jeux**](#-jeux-interactifs)
 
 </div>
 
@@ -439,11 +391,11 @@ finies, et **équations différentielles ordinaires**.
 
 | 🎓 Public | ⏱️ Volume | 🧩 Prérequis | 💻 Logiciel | 🗣️ Langue |
 |---|---|---|---|---|
-| LST Génie Mécanique (*%(intitule_gm)s*) · 1ʳᵉ année du Cycle d'Ingénieur Génie Énergétique (*%(intitule_ge)s*), FSTM | 60 h en LST GM · 48 h en Cycle GE ([détail](#-deux-parcours--gm-et-ge)) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
+| LST Génie Mécanique, FSTM | 60 h · 6 TP MATLAB (TP1 à TP6) | Algèbre linéaire, analyse (développements de Taylor), bases de MATLAB | MATLAB | Français |
 
 ---
 
-%(parcours)s## 📚 Programme du module
+## 📚 Programme du module
 
 %(poly_texte)sIl y a **%(nb_ch)s modules** dans ce cours, en trois parties précédées d'une introduction. Chaque module
 donne accès directement à ses supports : un clic sur un bouton ouvre le document ou la vidéo.
@@ -490,11 +442,8 @@ Faculté des Sciences et Techniques de Mohammedia (FSTM) — Université Hassan 
 <summary><b>À qui s'adresse ce module ?</b></summary>
 <br/>
 
-Le module est **mutualisé**, à la FSTM — UH2C, entre la **LST Génie Mécanique** et la **1ʳᵉ année du Cycle
-d'Ingénieur Génie Énergétique (GE)** : les outils numériques sont exactement les mêmes de part et d'autre.
-Il s'intitule *%(intitule_gm)s* en LST GM et *%(intitule_ge)s* en Cycle GE.
-Changent aussi les applications, le volume horaire et les TP : 60 h et six TP en LST GM, 48 h et cinq TP en Cycle GE
-([détail des deux parcours](#-deux-parcours--gm-et-ge)).
+Aux étudiants de la **LST Génie Mécanique** de la FSTM — Université Hassan II de Casablanca. Le module
+*%(intitule_gm)s* compte 60 heures : cours, TD et six TP MATLAB (TP1 à TP6).
 
 </details>
 
@@ -552,8 +501,7 @@ cours/methodes-numeriques/
 ```
 
 Dans chaque dossier : `1_Cours_chapitre_XX.pdf`, `3_TDXX_enonce.pdf`, `4_TPX_enonce.pdf`,
-et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable). Le sous-dossier `GE/` d'un chapitre
-contient les TD et TP du Cycle GE (même convention, avec `GE` dans le nom).
+et, quand il existe, `4_TPX_corrige_...` (corrigé librement téléchargeable).
 Sujets d'examen dans `Examens/` : `examen_<partie1|partie2|mixte>_AAAA_AAAA_sujetX.pdf`,
 `examen_preparation_N_AAAA_AAAA.pdf`.
 
@@ -646,8 +594,8 @@ if NB_POLY:
                    % (_q(u"📘 Polycopié complet", safe=""), _q(u"%d pages · PDF" % NB_POLY, safe=""), _lien_poly))
     poly_texte = (u"> 📘 **Tout le module en un seul PDF** : [le polycopié](%s) (%d pages) réunit l'introduction, les onze "
                   u"chapitres, les 11 TD et les 6 TP MATLAB, dans l'ordre où l'on travaille (chaque chapitre suivi de son TD "
-                  u"et de ses TP). C'est la version LST Génie Mécanique ; le Cycle GE a [son polycopié](%s).\n\n"
-                  % (_lien_poly, NB_POLY, PAGE_GE))
+                  u"et de ses TP).\n\n"
+                  % (_lien_poly, NB_POLY))
     poly_faq = u"[polycopié complet](%s), " % _lien_poly
 else:
     poly_bouton = poly_texte = poly_faq = ""
@@ -657,7 +605,7 @@ valeurs = {
     "nb_ch": str(len(CH)), "nb_pages": str(NB_PAGES), "nb_td": str(NB_TD), "nb_tp": str(NB_TP),
     "nb_corriges": str(NB_CORRIGES), "nb_videos": str(NB_VIDEOS),
     "apprendre": apprendre, "competences": "\n".join(etiquette(c) for c in COMPETENCES),
-    "jeux": section_jeux(), "parcours": deux_parcours(),
+    "jeux": section_jeux(),
     "poly_bouton": poly_bouton, "poly_texte": poly_texte, "poly_faq": poly_faq,
     "intitule_gm": INTITULE_GM, "intitule_ge": INTITULE_GE,
 }

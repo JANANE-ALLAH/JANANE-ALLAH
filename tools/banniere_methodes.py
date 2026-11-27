@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # Genere les visuels de la page Methodes numeriques (a lancer une fois, ou apres un changement de texte) :
-#   cours/methodes-numeriques/images/banniere-gm-ge.jpg : bandeau d'en-tete, titre a gauche et, a droite, un vrai
-#       calcul du cours (equation de Laplace sur une plaque, differences finies a 5 points, chapitre 9) ;
+#   cours/methodes-numeriques/images/banniere-gm.jpg (page LST GM) et banniere-ge.jpg (page du Cycle GE) : bandeau
+#       d'en-tete, titre a gauche et, a droite, un vrai calcul du cours (equation de Laplace sur une plaque,
+#       differences finies a 5 points, chapitre 9) ;
 #   cours/methodes-numeriques/images/enseignant.png : monogramme de l'enseignant.
 # Usage :  python tools/banniere_methodes.py      (necessite numpy, matplotlib et Pillow)
 import os
@@ -40,7 +41,8 @@ def laplace(nx=81, ny=41, tol=1e-6):
 
 
 def banniere(ge=False):
-    """ge=False : banniere commune (deux intitules) ; ge=True : banniere de la page du Cycle GE (banniere-ge.jpg)."""
+    """ge=False : banniere de la page LST GM (banniere-gm.jpg) ; ge=True : banniere de la page du Cycle GE (banniere-ge.jpg).
+    Depuis le 27 nov. 2026, chaque filiere a sa page et sa banniere (l'ancienne banniere commune s'appelait banniere-gm-ge.jpg)."""
     x, y, T = laplace()
     fig = plt.figure(figsize=(16, 5), dpi=100)
     fond = fig.add_axes([0, 0, 1, 1])
@@ -48,7 +50,6 @@ def banniere(ge=False):
                 cmap=LinearSegmentedColormap.from_list("fond", [MARINE, MARINE2]))
     fond.axis("off")
 
-    # Titre commun, puis l'intitule du module dans chaque filiere (GM et GE, 16 nov. 2026).
     fig.text(0.045, 0.80, "FSTM  ·  UNIVERSITÉ HASSAN II DE CASABLANCA", color=AMBRE, fontsize=14, fontweight="bold")
     if ge:
         fig.text(0.045, 0.56, "Introduction aux", color="white", fontsize=44, fontweight="bold")
@@ -57,14 +58,11 @@ def banniere(ge=False):
         fig.text(0.045, 0.11, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD et TP en énergétique  ·  MATLAB",
                  color="white", fontsize=14)
     else:
-        fig.text(0.045, 0.575, "Méthodes numériques", color="white", fontsize=46, fontweight="bold")
-        for yy, filiere, intitule in ((0.445, "LST GÉNIE MÉCANIQUE", "Méthodes numériques pour la mécanique"),
-                                      (0.285, "1re ANNÉE CYCLE INGÉNIEUR GÉNIE ÉNERGÉTIQUE", "Introduction aux méthodes numériques")):
-            fig.add_artist(plt.Line2D([0.045, 0.045], [yy - 0.085, yy + 0.035], color=AMBRE, lw=3, transform=fig.transFigure))
-            fig.text(0.056, yy, filiere, color=GRIS, fontsize=12, fontweight="bold")
-            fig.text(0.056, yy - 0.072, intitule, color="white", fontsize=20)
-        fig.text(0.045, 0.075, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  TP MATLAB",
-                 color=GRIS, fontsize=14)
+        fig.text(0.045, 0.56, "Méthodes numériques", color="white", fontsize=44, fontweight="bold")
+        fig.text(0.045, 0.39, "pour la mécanique", color="white", fontsize=44, fontweight="bold")
+        fig.text(0.045, 0.24, "Licence Sciences et Techniques  ·  Génie Mécanique (LST GM)", color=GRIS, fontsize=15)
+        fig.text(0.045, 0.11, "Pr. Mohamed JANANE ALLAH   |   12 chapitres  ·  TD  ·  6 TP MATLAB",
+                 color="white", fontsize=14)
 
     ax = fig.add_axes([0.575, 0.13, 0.385, 0.77])
     ax.imshow(T, origin="lower", extent=[0, 2, 0, 1], cmap="inferno", vmin=0, vmax=100, aspect="auto")
@@ -89,7 +87,7 @@ def banniere(ge=False):
     chemin = os.path.join(SORTIE, "banniere.png")
     fig.savefig(chemin, dpi=100)
     plt.close(fig)
-    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere-ge.jpg" if ge else "banniere-gm-ge.jpg"), "JPEG",
+    Image.open(chemin).convert("RGB").save(os.path.join(SORTIE, "banniere-ge.jpg" if ge else "banniere-gm.jpg"), "JPEG",
                                            quality=90, optimize=True, progressive=True)
     os.remove(chemin)
 
