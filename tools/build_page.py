@@ -74,7 +74,7 @@ MOTIVATION = "https://drive.google.com/file/d/1dc97-wJZVYQ1Gan3rmW4U6hYal3hQO9W/
 # Polycopies (cours, TD et TP du module en un seul PDF) : un par filiere depuis le 26 nov. 2026, chacun sur sa page.
 # Versions publiques (compiler_polycopie.py public) : la repartition des heures cours/TD/TP y est masquee a la demande
 # de l'enseignant ; seuls restent 60 h / 48 h. L'ancien polycopie commun (Polycopie_Methodes_Numeriques.pdf, 23 nov.)
-# reste dans le dossier mais n'est plus lie par les pages.
+# a ete supprime du depot le 27 nov. 2026 (toujours dans l'historique git).
 POLY = "Polycopie/Polycopie_Methodes_Numeriques_GM.pdf"
 POLY_GE = "Polycopie/Polycopie_Methodes_Numeriques_GE.pdf"
 

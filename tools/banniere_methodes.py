@@ -42,7 +42,7 @@ def laplace(nx=81, ny=41, tol=1e-6):
 
 def banniere(ge=False):
     """ge=False : banniere de la page LST GM (banniere-gm.jpg) ; ge=True : banniere de la page du Cycle GE (banniere-ge.jpg).
-    Depuis le 27 nov. 2026, chaque filiere a sa page et sa banniere (l'ancienne banniere commune s'appelait banniere-gm-ge.jpg)."""
+    Depuis le 27 nov. 2026, chaque filiere a sa page et sa banniere (l'ancienne banniere commune, banniere-gm-ge.jpg, a ete supprimee le 27 nov. 2026)."""
     x, y, T = laplace()
     fig = plt.figure(figsize=(16, 5), dpi=100)
     fond = fig.add_axes([0, 0, 1, 1])
